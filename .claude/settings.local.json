@@ -16,7 +16,9 @@
       "Bash(for file in about.html contact.html destination.html blog.html)",
       "Bash(grep:*)",
       "Bash(for file in index.html sri-lanka-tour-packages.html srilanka-destinations.html contact.html)",
-      "Bash(for:*)"
+      "Bash(for:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
     ],
     "deny": [],
     "ask": []
