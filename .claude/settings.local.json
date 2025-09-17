@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir)",
+      "Bash(for file in package.html package-v2.html package-details.html team.html team-details.html gallary.html faq.html)",
+      "Bash(do echo \"Processing $file...\")",
+      "Bash(done)",
+      "Bash(sed:*)",
+      "Bash(find:*)",
+      "Read(//c/Users/minuk/Music/**)",
+      "WebSearch",
+      "Bash(for file in index.html index-2.html index-3.html about.html contact.html blog.html destination.html team.html faq.html gallary.html)",
+      "Bash(do echo \"=== $file ===\")",
+      "Bash(rg:*)",
+      "Bash(do echo \"Updating $file...\")",
+      "Bash(for file in about.html contact.html destination.html blog.html)",
+      "Bash(grep:*)",
+      "Bash(for file in index.html sri-lanka-tour-packages.html srilanka-destinations.html contact.html)",
+      "Bash(for:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en" class="rent-car-page">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Rent a car in Sri Lanka with personalized trip planning. Select destinations, choose vehicles, and book your perfect Sri Lankan adventure with Marshall Holidays">
+    <meta name="keywords" content="Sri Lanka car rental, trip planning, vehicle rental Ceylon, Marshall Holidays car hire, Sri Lankan road trip">
+    <meta name="robots" content="INDEX,FOLLOW">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rent a Car & Plan Your Trip | Marshall Holidays Sri Lanka</title>
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/images/logo/favicon.png">
+    
+    <!-- Google Fonts - Philosopher -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <!-- Custom Rent Car CSS -->
+    <link rel="stylesheet" href="assets/css/rent-car-custom.css">
+</head>
+
+<body>
+    
+    <!--========= Start Prealoader =============-->
+    <div class="preloader">
+        <div class="loader_34">
+            <div class="ytp-spinner">
+                <div class="ytp-spinner-container">
+                    <div class="ytp-spinner-rotator">
+                        <div class="ytp-spinner-left">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                        <div class="ytp-spinner-right">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--========= End Prealoader ==============-->
+
+    <!-- Custom Cursor Start -->
+    <div class="cursor"></div>
+    <span class="dot"></span>
+    <!-- Custom Cursor End -->
+
+    <!-- ==================== Mobile Menu Start Here ==================== -->
+    <div class="mobile-menu d-lg-none d-block scroll-sm position-fixed bg-white tw-w-300-px tw-h-screen overflow-y-auto tw-p-6 tw-z-999 tw--translate-x-full tw-pb-68 ">
+        <button type="button" class="close-button position-absolute tw-end-0 top-0 tw-me-2 tw-mt-2 tw-w-605 tw-h-605 rounded-circle d-flex justify-content-center align-items-center text-neutral-900 bg-neutral-200 hover-bg-neutral-900 hover-text-white"> 
+            <i class="ph ph-x"></i>
+        </button>
+
+        <div class="mobile-menu__inner">
+            <ul class="nav-menu d-lg-flex align-items-center nav-menu--mobile d-block tw-mt-8 bg-white tw-px-12 tw-rounded-4xl">
+                <li class="nav-menu__item">
+                    <a href="index.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Home</a>
+                </li>
+                <li class="nav-menu__item">
+                    <a href="sri-lanka-tour-packages.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Tour Packages</a>
+                </li>
+                <li class="nav-menu__item">
+                    <a href="srilanka-destinations.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Customize Your Trip</a>
+                </li>
+                <li class="nav-menu__item">
+                    <a href="rent-a-car.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Rent a car</a>
+                </li>
+                <li class="nav-menu__item">
+                    <a href="about.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">About</a>
+                </li>
+                <li class="nav-menu__item">
+                    <a href="contact.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- ==================== Mobile Menu End Here ==================== -->
+
+    <!-- ==================== Header Start Here ==================== -->
+    <header class="header header-two transition-all">
+        <div class="container-fluid">
+            <nav class="d-flex align-items-center justify-content-between">
+                <!-- Logo Start -->
+                <div class="logo">
+                    <a href="index.html" class="link">
+                        <h3 class="mb-0 text-main-600 fw-bold font-heading">Marshel Tourism</h3>
+                    </a>
+                </div>
+                <!-- Logo End  -->
+
+                <!-- Menu Start  -->
+                <div class="header-menu header-two-menu d-lg-block d-none">
+                    <ul class="nav-menu d-lg-flex align-items-center tw-gap-6">
+                        <li class="nav-menu__item">
+                            <a href="index.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Home</a>
+                        </li>
+                        <li class="nav-menu__item">
+                            <a href="sri-lanka-tour-packages.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Tour Packages</a>
+                        </li>
+                        <li class="nav-menu__item">
+                            <a href="srilanka-destinations.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Customize Your Trip</a>
+                        </li>
+                        <li class="nav-menu__item">
+                            <a href="rent-a-car.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Rent a car</a>
+                        </li>
+                        <li class="nav-menu__item">
+                            <a href="about.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">About</a>
+                        </li>
+                        <li class="nav-menu__item">
+                            <a href="contact.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Menu End  -->
+
+                <!-- Header Right start -->
+                <div class="">
+                    <div class="d-flex align-items-center tw-gap-29">
+                        <div class="header-button">
+                            <a class="primary-btn bg-white text-main-600 tw-py-5 tw-px-10 fs-15 text-uppercase fw-bold font-heading tw-gap-2 d-inline-flex align-items-center tw-rounded-4xl" href="contact.html">Contact Us <i class="ph ph-arrow-up-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="toggle-mobileMenu leading-none d-lg-none ms-3 text-neutral-800 tw-text-9">
+                    <i class="ph ph-list"></i>
+                </button>
+                <!-- Header Right End  -->
+            </nav>
+        </div>
+    </header>
+    <!-- ==================== Header End Here ==================== -->
+
+    <div id="scrollSmoother-container">
+
+        <!-- ==================== Breadcrumb Start Here ==================== -->
+        <section class="breadcrumb-area background-img" data-background-image="assets/images/breadcrumb/breadcrumb-bg.jpg" style="background-image: url('assets/images/breadcrumb/breadcrumb-bg.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; min-height: 300px; display: flex; align-items: center;">
+            <div class="container-fluid">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div>
+                            <h2 class="breadcrumb-title text-center tw-mb-6 char-animation" style="font-size: 2.5rem; color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">Rent a Car & Plan Your Trip</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ==================== Breadcrumb End Here ==================== -->
+
+        <!-- ==================== Map Selection Section Start ==================== -->
+        <section class="rent-car-map-section">
+            <div class="container-fluid">
+                <div class="row align-items-center mb-5">
+                    <div class="col-12">
+                        <h1 class="rent-car-map-title">Plan Your Perfect Journey</h1>
+                        <p class="rent-car-map-subtitle">Select your destinations and create a personalized route through Sri Lanka</p>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <!-- Map Container -->
+                    <div class="col-lg-8 mb-4">
+                        <div class="rent-car-map-container">
+                            <img src="assets/images/sri-lanka-image.png" alt="Sri Lanka Map" class="rent-car-sri-lanka-map">
+                            
+                            <!-- Location Pins -->
+                            <div class="rent-car-location-pin" style="top: 15%; left: 25%;" data-location="colombo">
+                                <i class="ph-fill ph-map-pin"></i>
+                            </div>
+                            <div class="rent-car-location-pin" style="top: 35%; left: 45%;" data-location="kandy">
+                                <i class="ph-fill ph-map-pin"></i>
+                            </div>
+                            <div class="rent-car-location-pin" style="top: 25%; left: 35%;" data-location="anuradhapura">
+                                <i class="ph-fill ph-map-pin"></i>
+                            </div>
+                            <div class="rent-car-location-pin" style="top: 70%; left: 30%;" data-location="galle">
+                                <i class="ph-fill ph-map-pin"></i>
+                            </div>
+                            <div class="rent-car-location-pin" style="top: 60%; left: 65%;" data-location="ella">
+                                <i class="ph-fill ph-map-pin"></i>
+                            </div>
+                            <div class="rent-car-location-pin" style="top: 75%; left: 65%;" data-location="mirissa">
+                                <i class="ph-fill ph-map-pin"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Selected Destinations -->
+                    <div class="col-lg-4">
+                        <div class="d-flex flex-column">
+                            <h3 class="rent-car-destinations-title">Selected Destinations</h3>
+                            <div class="rent-car-destinations-container" id="selectedDestinations">
+                                <p class="text-muted text-center py-5">Click on map locations to add them to your trip</p>
+                            </div>
+                            <div class="mt-4">
+                                <button class="rent-car-proceed-btn" onclick="scrollToSection('vehicleSection')" id="proceedToVehicles" disabled>
+                                    Choose Your Vehicle <i class="ph ph-arrow-down ms-2"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ==================== Map Selection Section End ==================== -->
+
+        <!-- ==================== Vehicle Selection Section Start ==================== -->
+        <section class="rent-car-vehicle-section" id="vehicleSection">
+            <div class="container">
+                <div class="row align-items-center mb-5">
+                    <div class="col-12">
+                        <h2 class="rent-car-vehicle-title">Choose Your Perfect Vehicle</h2>
+                        <p class="rent-car-vehicle-subtitle">Select the ideal car for your Sri Lankan adventure</p>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="rent-car-vehicle-card" data-vehicle="economy">
+                            <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=300&h=200&fit=crop" alt="Economy Car" class="img-fluid" style="height: 200px; width: 100%; object-fit: cover;">
+                            <h4>Economy Car</h4>
+                            <p>Perfect for city tours and short trips</p>
+                            <ul class="list-unstyled">
+                                <li><i class="ph ph-check text-success me-2"></i>5 Seats</li>
+                                <li><i class="ph ph-check text-success me-2"></i>Manual/Auto</li>
+                                <li><i class="ph ph-check text-success me-2"></i>Air Conditioning</li>
+                                <li><i class="ph ph-check text-success me-2"></i>Fuel Efficient</li>
+                            </ul>
+                            <h5 class="text-primary">$35/day</h5>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="rent-car-vehicle-card" data-vehicle="suv">
+                            <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=300&h=200&fit=crop" alt="SUV" class="img-fluid" style="height: 200px; width: 100%; object-fit: cover;">
+                            <h4>SUV</h4>
+                            <p>Ideal for families and mountain areas</p>
+                            <ul class="list-unstyled">
+                                <li><i class="ph ph-check text-success me-2"></i>7 Seats</li>
+                                <li><i class="ph ph-check text-success me-2"></i>4WD Available</li>
+                                <li><i class="ph ph-check text-success me-2"></i>Extra Luggage Space</li>
+                                <li><i class="ph ph-check text-success me-2"></i>High Ground Clearance</li>
+                            </ul>
+                            <h5 class="text-primary">$65/day</h5>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="rent-car-vehicle-card" data-vehicle="van">
+                            <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=300&h=200&fit=crop" alt="Van" class="img-fluid" style="height: 200px; width: 100%; object-fit: cover;">
+                            <h4>Van</h4>
+                            <p>Perfect for large groups and tours</p>
+                            <ul class="list-unstyled">
+                                <li><i class="ph ph-check text-success me-2"></i>12 Seats</li>
+                                <li><i class="ph ph-check text-success me-2"></i>Professional Driver</li>
+                                <li><i class="ph ph-check text-success me-2"></i>Maximum Comfort</li>
+                                <li><i class="ph ph-check text-success me-2"></i>Tour Guide Available</li>
+                            </ul>
+                            <h5 class="text-primary">$85/day</h5>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row mt-4">
+                    <div class="col-12 text-center">
+                        <button class="rent-car-proceed-btn" onclick="scrollToSection('bookingSection')" id="proceedToBooking" disabled style="max-width: 400px;">
+                            Complete Your Booking <i class="ph ph-arrow-down ms-2"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ==================== Vehicle Selection Section End ==================== -->
+
+        <!-- ==================== Booking Section Start ==================== -->
+        <section class="rent-car-booking-section" id="bookingSection">
+            <div class="container">
+                <div class="row align-items-center mb-5">
+                    <div class="col-12">
+                        <h2 class="rent-car-booking-title">Complete Your Booking</h2>
+                        <p class="rent-car-booking-subtitle">Confirm your trip details and provide your information</p>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <!-- Booking Summary -->
+                    <div class="col-lg-5 mb-4">
+                        <div class="rent-car-booking-card">
+                            <h4>Trip Summary</h4>
+                            
+                            <div class="mb-4">
+                                <h6>Selected Route</h6>
+                                <div id="routeSummary">
+                                    <p class="text-muted">No destinations selected</p>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <h6>Vehicle</h6>
+                                <div id="vehicleSummary">
+                                    <p class="text-muted">No vehicle selected</p>
+                                </div>
+                            </div>
+                            
+                            <hr>
+                            
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5>Total Cost</h5>
+                                <h4 id="totalCost">$0</h4>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Booking Form -->
+                    <div class="col-lg-7">
+                        <div class="rent-car-booking-card">
+                            <h4>Your Information</h4>
+                            
+                            <form id="bookingForm">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label class="rent-car-form-label">First Name</label>
+                                        <input type="text" class="rent-car-form-control" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label class="rent-car-form-label">Last Name</label>
+                                        <input type="text" class="rent-car-form-control" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label class="rent-car-form-label">Email</label>
+                                        <input type="email" class="rent-car-form-control" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label class="rent-car-form-label">Phone</label>
+                                        <input type="tel" class="rent-car-form-control" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label class="rent-car-form-label">Start Date</label>
+                                        <input type="date" class="rent-car-form-control" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label class="rent-car-form-label">Duration (days)</label>
+                                        <select class="rent-car-form-control" required>
+                                            <option value="">Select duration</option>
+                                            <option value="1">1 Day</option>
+                                            <option value="2">2 Days</option>
+                                            <option value="3">3 Days</option>
+                                            <option value="5">5 Days</option>
+                                            <option value="7">1 Week</option>
+                                            <option value="14">2 Weeks</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-4">
+                                    <label class="rent-car-form-label">Special Requirements</label>
+                                    <textarea class="rent-car-form-control" rows="3" placeholder="Any special requests or requirements..."></textarea>
+                                </div>
+                                
+                                <button type="submit" class="rent-car-submit-btn">
+                                    Book Now <i class="ph ph-check-circle ms-2"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ==================== Booking Section End ==================== -->
+
+    </div>
+
+    <!-- ==================== Custom Footer Start ==================== -->
+    <footer class="rent-car-custom-footer">
+        <div class="container">
+            <div class="row">
+                <!-- Brand Section -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h3 class="rent-car-footer-brand">Marshall Holidays</h3>
+                    <p class="rent-car-footer-text">Your trusted partner for authentic Sri Lankan experiences. We specialize in personalized car rentals, cultural tours, and spiritual journeys.</p>
+                    <div class="d-flex flex-wrap">
+                        <a href="#" class="rent-car-social-icon"><i class="ph-bold ph-facebook-logo"></i></a>
+                        <a href="#" class="rent-car-social-icon"><i class="ph-bold ph-instagram-logo"></i></a>
+                        <a href="#" class="rent-car-social-icon"><i class="ph-bold ph-twitter-logo"></i></a>
+                        <a href="#" class="rent-car-social-icon"><i class="ph-bold ph-linkedin-logo"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="rent-car-footer-title">Quick Links</h5>
+                    <a href="index.html" class="rent-car-footer-link">Home</a>
+                    <a href="about.html" class="rent-car-footer-link">About Us</a>
+                    <a href="sri-lanka-tour-packages.html" class="rent-car-footer-link">Tour Packages</a>
+                    <a href="rent-a-car.html" class="rent-car-footer-link">Rent a Car</a>
+                    <a href="contact.html" class="rent-car-footer-link">Contact</a>
+                </div>
+                
+                <!-- Services -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="rent-car-footer-title">Our Services</h5>
+                    <a href="#" class="rent-car-footer-link">Vehicle Rentals</a>
+                    <a href="#" class="rent-car-footer-link">Cultural Tours</a>
+                    <a href="#" class="rent-car-footer-link">Airport Transfers</a>
+                    <a href="#" class="rent-car-footer-link">Custom Itineraries</a>
+                    <a href="#" class="rent-car-footer-link">Travel Planning</a>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="rent-car-footer-title">Get in Touch</h5>
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="ph ph-envelope me-3" style="color: #2c5aa0;"></i>
+                        <a href="mailto:info@marshallholidays.com" class="rent-car-footer-link mb-0">info@marshallholidays.com</a>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="ph ph-phone me-3" style="color: #2c5aa0;"></i>
+                        <a href="tel:+94252223456" class="rent-car-footer-link mb-0">+94 25 222 3456</a>
+                    </div>
+                    <div class="d-flex align-items-start">
+                        <i class="ph ph-map-pin me-3 mt-1" style="color: #2c5aa0;"></i>
+                        <span class="rent-car-footer-link mb-0">Anuradhapura,<br>Sri Lanka</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Footer Bottom -->
+            <div class="rent-car-footer-bottom">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="rent-car-footer-bottom-text mb-0">&copy; 2024 Marshall Holidays Pvt Ltd. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <a href="#" class="rent-car-footer-link d-inline me-4">Privacy Policy</a>
+                        <a href="#" class="rent-car-footer-link d-inline">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ==================== Custom Footer End ==================== -->
+
+    <!-- JavaScript for Interactive Features -->
+    <script>
+        // Location data
+        const locations = {
+            colombo: { name: "Colombo", description: "Commercial capital with vibrant city life", image: "https://images.unsplash.com/photo-1566552881671-11a4acc8e76b?w=300&h=200&fit=crop" },
+            kandy: { name: "Kandy", description: "Cultural capital and Temple of Tooth", image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=300&h=200&fit=crop" },
+            anuradhapura: { name: "Anuradhapura", description: "Ancient Buddhist capital", image: "https://images.unsplash.com/photo-1605640585731-3d1d0ba7e8a3?w=300&h=200&fit=crop" },
+            galle: { name: "Galle", description: "Historic Dutch fort and coastal beauty", image: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=300&h=200&fit=crop" },
+            ella: { name: "Ella", description: "Hill country paradise with tea plantations", image: "https://images.unsplash.com/photo-1566552881671-11a4acc8e76b?w=300&h=200&fit=crop" },
+            mirissa: { name: "Mirissa", description: "Pristine beaches and whale watching", image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=300&h=200&fit=crop" }
+        };
+
+        const vehicles = {
+            economy: { name: "Economy Car", price: 35 },
+            suv: { name: "SUV", price: 65 },
+            van: { name: "Van", price: 85 }
+        };
+
+        let selectedDestinations = [];
+        let selectedVehicle = null;
+
+        // Location pin click handlers
+        document.querySelectorAll('.rent-car-location-pin').forEach(pin => {
+            pin.addEventListener('click', function() {
+                const locationKey = this.getAttribute('data-location');
+                toggleDestination(locationKey, this);
+            });
+        });
+
+        function toggleDestination(locationKey, pinElement) {
+            const index = selectedDestinations.indexOf(locationKey);
+            
+            if (index > -1) {
+                selectedDestinations.splice(index, 1);
+                pinElement.classList.remove('selected');
+            } else {
+                selectedDestinations.push(locationKey);
+                pinElement.classList.add('selected');
+            }
+            
+            updateDestinationsList();
+            updateProceedButton();
+        }
+
+        function updateDestinationsList() {
+            const container = document.getElementById('selectedDestinations');
+            
+            if (selectedDestinations.length === 0) {
+                container.innerHTML = '<p class="text-muted text-center py-5">Click on map locations to add them to your trip</p>';
+                return;
+            }
+            
+            let html = '';
+            selectedDestinations.forEach((locKey, index) => {
+                const loc = locations[locKey];
+                html += `
+                    <div class="rent-car-destination-card selected">
+                        <div class="row align-items-center">
+                            <div class="col-3">
+                                <img src="${loc.image}" alt="${loc.name}" class="img-fluid rounded" style="height: 60px; width: 100%; object-fit: cover;">
+                            </div>
+                            <div class="col-9">
+                                <h6>${index + 1}. ${loc.name}</h6>
+                                <p>${loc.description}</p>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+            
+            container.innerHTML = html;
+        }
+
+        function updateProceedButton() {
+            const btn = document.getElementById('proceedToVehicles');
+            btn.disabled = selectedDestinations.length === 0;
+        }
+
+        // Vehicle selection
+        document.querySelectorAll('.rent-car-vehicle-card').forEach(card => {
+            card.addEventListener('click', function() {
+                document.querySelectorAll('.rent-car-vehicle-card').forEach(c => c.classList.remove('selected'));
+                this.classList.add('selected');
+                selectedVehicle = this.getAttribute('data-vehicle');
+                document.getElementById('proceedToBooking').disabled = false;
+                updateBookingSummary();
+            });
+        });
+
+        function updateBookingSummary() {
+            // Update route summary
+            if (selectedDestinations.length > 0) {
+                const routeText = selectedDestinations.map((loc, index) => 
+                    `${index + 1}. ${locations[loc].name}`
+                ).join('<br>');
+                document.getElementById('routeSummary').innerHTML = routeText;
+            }
+            
+            // Update vehicle summary
+            if (selectedVehicle) {
+                const vehicle = vehicles[selectedVehicle];
+                document.getElementById('vehicleSummary').innerHTML = `
+                    <strong>${vehicle.name}</strong><br>
+                    <span style="color: #2c5aa0;">$${vehicle.price}/day</span>
+                `;
+                document.getElementById('totalCost').textContent = `$${vehicle.price}`;
+            }
+        }
+
+        // Smooth scrolling
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ 
+                behavior: 'smooth' 
+            });
+        }
+
+        // Form submission
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your booking! We will contact you shortly to confirm your reservation.');
+        });
+    </script>
+
+    <!-- Include necessary JS files -->
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/phosphor-icon.js"></script>
+    <script src="assets/js/boostrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>

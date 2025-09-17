@@ -1,0 +1,457 @@
+/* ============================================
+   RENT A CAR PAGE CUSTOM STYLES
+   ============================================ */
+
+/* Reset and base styles */
+.rent-car-page {
+    font-family: 'Philosopher', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* ============================================
+   MAP SELECTION SECTION STYLES
+   ============================================ */
+.rent-car-map-section {
+    background-color: #f8faff;
+    padding: 60px 0 40px 0;
+    min-height: auto;
+}
+
+.rent-car-map-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #2c5aa0;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.rent-car-map-subtitle {
+    font-size: 1.25rem;
+    color: #64748b;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.rent-car-map-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    padding: 0 20px;
+    margin-left: -60px;
+}
+
+.rent-car-sri-lanka-map {
+    width: 60%;
+    max-height: 620px;
+    height: auto;
+    object-fit: contain;
+    margin-top: -70px;
+}
+
+.rent-car-location-pin {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    background-color: #2c5aa0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(44, 90, 160, 0.3);
+    border: 3px solid white;
+}
+
+.rent-car-location-pin:hover {
+    background-color: #1e3a5f;
+    transform: scale(1.15);
+    box-shadow: 0 6px 20px rgba(44, 90, 160, 0.4);
+}
+
+.rent-car-location-pin.selected {
+    background-color: #ff6b35;
+    animation: rent-car-pulse 2s infinite;
+}
+
+@keyframes rent-car-pulse {
+    0% { box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4); }
+    50% { box-shadow: 0 6px 25px rgba(255, 107, 53, 0.7); }
+    100% { box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4); }
+}
+
+.rent-car-destinations-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2c5aa0;
+    margin-bottom: 25px;
+    margin-top: 20px;
+    margin-left: -40px;
+}
+
+.rent-car-destinations-container {
+    max-height: 350px;
+    overflow-y: auto;
+    min-height: 180px;
+    padding-right: 15px;
+    margin-bottom: 20px;
+    margin-left: -40px;
+}
+
+.rent-car-destination-card {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    border-left: 4px solid #2c5aa0;
+}
+
+.rent-car-destination-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.rent-car-destination-card.selected {
+    border-left-color: #ff6b35;
+    background: linear-gradient(135deg, #fff5f0 0%, #ffffff 100%);
+}
+
+.rent-car-destination-card h6 {
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 5px;
+}
+
+.rent-car-destination-card p {
+    color: #64748b;
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}
+
+.rent-car-proceed-btn {
+    background-color: #2c5aa0;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-left: -40px;
+}
+
+.rent-car-proceed-btn:hover {
+    background-color: #1e3a5f;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(44, 90, 160, 0.3);
+}
+
+.rent-car-proceed-btn:disabled {
+    background-color: #94a3b8;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* ============================================
+   VEHICLE SELECTION SECTION STYLES
+   ============================================ */
+.rent-car-vehicle-section {
+    background-color: #f8fafc;
+    padding: 80px 0;
+}
+
+.rent-car-vehicle-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #2c5aa0;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.rent-car-vehicle-subtitle {
+    font-size: 1.25rem;
+    color: #64748b;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.rent-car-vehicle-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #333;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    border: 2px solid transparent;
+    margin-bottom: 30px;
+}
+
+.rent-car-vehicle-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+    border-color: #e0f2fe;
+}
+
+.rent-car-vehicle-card.selected {
+    background: #e3f2fd;
+    border-color: #2c5aa0;
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(44,90,160,0.2);
+}
+
+.rent-car-vehicle-card img {
+    border-radius: 15px;
+    margin-bottom: 25px;
+}
+
+.rent-car-vehicle-card h4 {
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #1e293b;
+}
+
+.rent-car-vehicle-card p {
+    color: #64748b;
+    margin-bottom: 20px;
+}
+
+.rent-car-vehicle-card ul {
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+.rent-car-vehicle-card li {
+    color: #64748b;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.rent-car-vehicle-card .text-primary {
+    color: #2c5aa0 !important;
+}
+
+/* ============================================
+   BOOKING SECTION STYLES
+   ============================================ */
+.rent-car-booking-section {
+    background-color: #fafbfc;
+    padding: 80px 0;
+}
+
+.rent-car-booking-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #2c5aa0;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.rent-car-booking-subtitle {
+    font-size: 1.25rem;
+    color: #64748b;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.rent-car-booking-card {
+    background: white;
+    border-radius: 20px;
+    padding: 35px;
+    color: #333;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    border: 1px solid #f0f4f8;
+    height: 100%;
+}
+
+.rent-car-booking-card h4 {
+    color: #2c5aa0;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.rent-car-booking-card h6 {
+    color: #64748b;
+    font-weight: 600;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.rent-car-booking-card p {
+    color: #64748b;
+}
+
+.rent-car-form-label {
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 8px;
+}
+
+.rent-car-form-control {
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 12px 16px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.rent-car-form-control:focus {
+    border-color: #2c5aa0;
+    box-shadow: 0 0 0 3px rgba(44, 90, 160, 0.1);
+    outline: none;
+}
+
+.rent-car-submit-btn {
+    background-color: #2c5aa0;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.rent-car-submit-btn:hover {
+    background-color: #1e3a5f;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(44, 90, 160, 0.3);
+}
+
+#routeSummary, #vehicleSummary {
+    color: #64748b;
+}
+
+#totalCost {
+    color: #2c5aa0;
+    font-weight: 700;
+}
+
+/* ============================================
+   FOOTER STYLES
+   ============================================ */
+.rent-car-custom-footer {
+    background-color: #ffffff;
+    border-top: 2px solid #e2e8f0;
+    padding: 60px 0 30px;
+    margin-top: 0;
+    position: static;
+    width: 100%;
+    display: block;
+    clear: both;
+}
+
+.rent-car-footer-brand {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #2c5aa0;
+}
+
+.rent-car-footer-text {
+    color: #64748b;
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.rent-car-footer-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 20px;
+}
+
+.rent-car-footer-link {
+    color: #64748b;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: block;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.rent-car-footer-link:hover {
+    color: #2c5aa0;
+    text-decoration: none;
+}
+
+.rent-car-social-icon {
+    width: 45px;
+    height: 45px;
+    background-color: #f1f5f9;
+    border-radius: 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px 10px 0;
+    transition: all 0.3s ease;
+    color: #64748b;
+    text-decoration: none;
+}
+
+.rent-car-social-icon:hover {
+    background-color: #2c5aa0;
+    color: white;
+    transform: translateY(-3px);
+    text-decoration: none;
+}
+
+.rent-car-footer-bottom {
+    border-top: 1px solid #e2e8f0;
+    padding-top: 30px;
+    margin-top: 40px;
+}
+
+.rent-car-footer-bottom-text {
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+/* ============================================
+   RESPONSIVE STYLES
+   ============================================ */
+@media (max-width: 768px) {
+    .rent-car-map-title,
+    .rent-car-vehicle-title,
+    .rent-car-booking-title {
+        font-size: 2.5rem;
+    }
+    
+    .rent-car-map-container {
+        height: 350px;
+    }
+    
+    .rent-car-destinations-container {
+        max-height: 300px;
+    }
+    
+    .rent-car-vehicle-card,
+    .rent-car-booking-card {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .rent-car-map-title,
+    .rent-car-vehicle-title,
+    .rent-car-booking-title {
+        font-size: 2rem;
+    }
+    
+    .rent-car-map-container {
+        height: 300px;
+    }
+}
