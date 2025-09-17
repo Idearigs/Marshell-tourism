@@ -13,7 +13,7 @@
    MAP SELECTION SECTION STYLES
    ============================================ */
 .rent-car-map-section {
-    background-color: #f8faff;
+    background-color: #ffffff;
     padding: 60px 0 40px 0;
     min-height: auto;
 }
@@ -30,7 +30,7 @@
     font-size: 1.25rem;
     color: #64748b;
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 80px;
 }
 
 .rent-car-map-container {
@@ -92,7 +92,7 @@
     color: #2c5aa0;
     margin-bottom: 25px;
     margin-top: 20px;
-    margin-left: -40px;
+    margin-left: -70px;
 }
 
 .rent-car-destinations-container {
@@ -101,7 +101,7 @@
     min-height: 180px;
     padding-right: 15px;
     margin-bottom: 20px;
-    margin-left: -40px;
+    margin-left: -70px;
 }
 
 .rent-car-destination-card {
@@ -146,7 +146,7 @@
     border-radius: 12px;
     transition: all 0.3s ease;
     width: 100%;
-    margin-left: -40px;
+    margin-left: -70px;
 }
 
 .rent-car-proceed-btn:hover {
@@ -166,7 +166,7 @@
    VEHICLE SELECTION SECTION STYLES
    ============================================ */
 .rent-car-vehicle-section {
-    background-color: #f8fafc;
+    background-color: #E9F8FF;
     padding: 80px 0;
 }
 
@@ -246,7 +246,7 @@
    BOOKING SECTION STYLES
    ============================================ */
 .rent-car-booking-section {
-    background-color: #fafbfc;
+    background-color: #ffffff;
     padding: 80px 0;
 }
 
@@ -343,7 +343,7 @@
    FOOTER STYLES
    ============================================ */
 .rent-car-custom-footer {
-    background-color: #ffffff;
+    background-color: #f8f9fa;
     border-top: 2px solid #e2e8f0;
     padding: 60px 0 30px;
     margin-top: 0;
