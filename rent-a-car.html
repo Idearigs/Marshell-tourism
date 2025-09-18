@@ -163,7 +163,7 @@
                     <div class="col-12">
                         <h1 class="rent-car-map-title">Plan Your Perfect Journey</h1>
                         <p class="rent-car-map-subtitle">Select your destinations and create a personalized route through Sri Lanka</p>
-                        <div class="text-center mb-3">
+                        <div class="text-center mb-3" id="editModeControls" style="display: none;">
                             <button id="editModeToggle" class="btn btn-outline-primary me-2">Enable Edit Mode</button>
                             <button id="addLocationBtn" class="btn btn-success me-2" style="display: none;">Add New Location</button>
                             <button id="saveLocationsBtn" class="btn btn-info me-2" style="display: none;">Save Layout</button>
@@ -242,7 +242,7 @@
                                 <li><i class="ph ph-check text-success me-2"></i>Air Conditioning</li>
                                 <li><i class="ph ph-check text-success me-2"></i>Fuel Efficient</li>
                             </ul>
-                            <h5 class="text-primary">$35/day</h5>
+                            <p class="text-primary fw-bold">Request Quote</p>
                         </div>
                     </div>
                     
@@ -257,7 +257,7 @@
                                 <li><i class="ph ph-check text-success me-2"></i>Extra Luggage Space</li>
                                 <li><i class="ph ph-check text-success me-2"></i>High Ground Clearance</li>
                             </ul>
-                            <h5 class="text-primary">$65/day</h5>
+                            <p class="text-primary fw-bold">Request Quote</p>
                         </div>
                     </div>
                     
@@ -272,7 +272,7 @@
                                 <li><i class="ph ph-check text-success me-2"></i>Maximum Comfort</li>
                                 <li><i class="ph ph-check text-success me-2"></i>Tour Guide Available</li>
                             </ul>
-                            <h5 class="text-primary">$85/day</h5>
+                            <p class="text-primary fw-bold">Request Quote</p>
                         </div>
                     </div>
                 </div>
@@ -317,12 +317,11 @@
                                     <p class="text-muted">No vehicle selected</p>
                                 </div>
                             </div>
-                            
-                            <hr>
-                            
-                            <div class="d-flex justify-content-between align-items-center">
-                                <h5>Total Cost</h5>
-                                <h4 id="totalCost">$0</h4>
+
+                            <div class="pricing-note">
+                                <p class="text-muted text-center p-3" style="background-color: #f8faff; border-radius: 8px; border-left: 4px solid #2c5aa0;">
+                                    <i class="ph ph-info me-2"></i>We'll send you a detailed quotation with current costs and expenses after reviewing your trip details.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -1177,9 +1176,8 @@
                 const vehicle = vehicles[selectedVehicle];
                 document.getElementById('vehicleSummary').innerHTML = `
                     <strong>${vehicle.name}</strong><br>
-                    <span style="color: #2c5aa0;">$${vehicle.price}/day</span>
+                    <span style="color: #64748b; font-size: 0.9rem;">Selected vehicle for your trip</span>
                 `;
-                document.getElementById('totalCost').textContent = `$${vehicle.price}`;
             }
         }
 
@@ -1293,6 +1291,76 @@
             }, 3000);
         }
 
+        // Secret activation method for edit mode
+        let secretSequence = [];
+        const targetSequence = ['e', 'd', 'i', 't', 'm', 'o', 'd', 'e'];
+        let lastKeyTime = 0;
+
+        document.addEventListener('keydown', function(e) {
+            const currentTime = Date.now();
+
+            // Reset sequence if too much time has passed (3 seconds)
+            if (currentTime - lastKeyTime > 3000) {
+                secretSequence = [];
+            }
+
+            lastKeyTime = currentTime;
+            secretSequence.push(e.key.toLowerCase());
+
+            // Keep only the last 8 characters
+            if (secretSequence.length > 8) {
+                secretSequence.shift();
+            }
+
+            // Check if sequence matches
+            if (secretSequence.join('') === targetSequence.join('')) {
+                activateEditMode();
+                secretSequence = []; // Reset sequence
+            }
+        });
+
+        function activateEditMode() {
+            const controls = document.getElementById('editModeControls');
+            controls.style.display = 'block';
+
+            // Show activation notification
+            showNotification('🎛️ Edit Mode Activated! Use the buttons above to manage locations.', 'success');
+
+            // Add visual indicator to the map container
+            const mapContainer = document.querySelector('.rent-car-map-container');
+            mapContainer.style.border = '2px dashed rgba(44, 90, 160, 0.3)';
+
+            // Log activation for debugging
+            console.log('🎛️ Location Edit Mode Activated');
+            console.log('Available commands:');
+            console.log('- Enable Edit Mode: Start editing locations');
+            console.log('- Add New Location: Create custom locations');
+            console.log('- Save Layout: Persist current setup');
+            console.log('- Load Saved: Restore previous layout');
+            console.log('- Reset Default: Return to original locations');
+        }
+
+        // Alternative activation methods
+        window.activateLocationEditMode = activateEditMode; // Global function
+
+        // Konami code activation (↑↑↓↓←→←→BA)
+        let konamiSequence = [];
+        const konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'KeyB', 'KeyA'];
+
+        document.addEventListener('keydown', function(e) {
+            konamiSequence.push(e.code);
+
+            if (konamiSequence.length > 10) {
+                konamiSequence.shift();
+            }
+
+            if (konamiSequence.join(',') === konamiCode.join(',')) {
+                activateEditMode();
+                showNotification('🎮 Konami Code Detected! Edit Mode Unlocked!', 'success');
+                konamiSequence = [];
+            }
+        });
+
         // Initialize on page load
         document.addEventListener('DOMContentLoaded', function() {
             // Check if there are saved locations on page load
@@ -1306,6 +1374,11 @@
                     console.log('Error loading saved locations, using defaults');
                 }
             }
+
+            // Show hint in console for developers
+            console.log('🗺️ Marshall Tourism - Sri Lanka Location Manager');
+            console.log('💡 Tip: Type "editmode" or use ↑↑↓↓←→←→BA to activate edit mode');
+            console.log('🔧 Or call: activateLocationEditMode()');
         });
     </script>
 
