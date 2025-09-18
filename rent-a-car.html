@@ -70,7 +70,7 @@
                     <a href="sri-lanka-tour-packages.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Tour Packages</a>
                 </li>
                 <li class="nav-menu__item">
-                    <a href="srilanka-destinations.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Customize Your Trip</a>
+                    <a href="customize-your-trip.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Customize Your Trip</a>
                 </li>
                 <li class="nav-menu__item">
                     <a href="rent-a-car.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Rent a car</a>
@@ -108,7 +108,7 @@
                             <a href="sri-lanka-tour-packages.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Tour Packages</a>
                         </li>
                         <li class="nav-menu__item">
-                            <a href="srilanka-destinations.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Customize Your Trip</a>
+                            <a href="customize-your-trip.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Customize Your Trip</a>
                         </li>
                         <li class="nav-menu__item">
                             <a href="rent-a-car.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Rent a car</a>
@@ -163,6 +163,13 @@
                     <div class="col-12">
                         <h1 class="rent-car-map-title">Plan Your Perfect Journey</h1>
                         <p class="rent-car-map-subtitle">Select your destinations and create a personalized route through Sri Lanka</p>
+                        <div class="text-center mb-3">
+                            <button id="editModeToggle" class="btn btn-outline-primary me-2">Enable Edit Mode</button>
+                            <button id="addLocationBtn" class="btn btn-success me-2" style="display: none;">Add New Location</button>
+                            <button id="saveLocationsBtn" class="btn btn-info me-2" style="display: none;">Save Layout</button>
+                            <button id="loadLocationsBtn" class="btn btn-warning me-2" style="display: none;">Load Saved</button>
+                            <button id="resetLocationsBtn" class="btn btn-secondary" style="display: none;">Reset Default</button>
+                        </div>
                     </div>
                 </div>
                 
@@ -173,23 +180,23 @@
                             <img src="assets/images/sri-lanka-image.png" alt="Sri Lanka Map" class="rent-car-sri-lanka-map">
                             
                             <!-- Location Pins -->
-                            <div class="rent-car-location-pin" style="top: 15%; left: 25%;" data-location="colombo">
+                            <div class="rent-car-location-pin" style="top: 15%; left: 25%;" data-location="colombo" data-name="Colombo" data-description="Commercial capital with vibrant city life" data-category="normal">
                                 <i class="ph-fill ph-map-pin"></i>
                             </div>
-                            <div class="rent-car-location-pin" style="top: 35%; left: 45%;" data-location="kandy">
+                            <div class="rent-car-location-pin" style="top: 35%; left: 45%;" data-location="kandy" data-name="Kandy" data-description="Cultural capital and Temple of Tooth" data-category="religious">
+                                <i class="ph-fill ph-flower-lotus"></i>
+                            </div>
+                            <div class="rent-car-location-pin" style="top: 25%; left: 35%;" data-location="anuradhapura" data-name="Anuradhapura" data-description="Ancient Buddhist capital" data-category="religious">
+                                <i class="ph-fill ph-flower-lotus"></i>
+                            </div>
+                            <div class="rent-car-location-pin" style="top: 70%; left: 30%;" data-location="galle" data-name="Galle" data-description="Historic Dutch fort and coastal beauty" data-category="normal">
                                 <i class="ph-fill ph-map-pin"></i>
                             </div>
-                            <div class="rent-car-location-pin" style="top: 25%; left: 35%;" data-location="anuradhapura">
+                            <div class="rent-car-location-pin" style="top: 60%; left: 65%;" data-location="ella" data-name="Ella" data-description="Hill country paradise with tea plantations" data-category="normal">
                                 <i class="ph-fill ph-map-pin"></i>
                             </div>
-                            <div class="rent-car-location-pin" style="top: 70%; left: 30%;" data-location="galle">
-                                <i class="ph-fill ph-map-pin"></i>
-                            </div>
-                            <div class="rent-car-location-pin" style="top: 60%; left: 65%;" data-location="ella">
-                                <i class="ph-fill ph-map-pin"></i>
-                            </div>
-                            <div class="rent-car-location-pin" style="top: 75%; left: 65%;" data-location="mirissa">
-                                <i class="ph-fill ph-map-pin"></i>
+                            <div class="rent-car-location-pin" style="top: 75%; left: 65%;" data-location="mirissa" data-name="Mirissa" data-description="Pristine beaches and whale watching" data-category="beach">
+                                <i class="ph-fill ph-sun"></i>
                             </div>
                         </div>
                     </div>
@@ -457,15 +464,61 @@
 
     <!-- JavaScript for Interactive Features -->
     <script>
-        // Location data
-        const locations = {
-            colombo: { name: "Colombo", description: "Commercial capital with vibrant city life", image: "https://images.unsplash.com/photo-1566552881671-11a4acc8e76b?w=300&h=200&fit=crop" },
-            kandy: { name: "Kandy", description: "Cultural capital and Temple of Tooth", image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=300&h=200&fit=crop" },
-            anuradhapura: { name: "Anuradhapura", description: "Ancient Buddhist capital", image: "https://images.unsplash.com/photo-1605640585731-3d1d0ba7e8a3?w=300&h=200&fit=crop" },
-            galle: { name: "Galle", description: "Historic Dutch fort and coastal beauty", image: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=300&h=200&fit=crop" },
-            ella: { name: "Ella", description: "Hill country paradise with tea plantations", image: "https://images.unsplash.com/photo-1566552881671-11a4acc8e76b?w=300&h=200&fit=crop" },
-            mirissa: { name: "Mirissa", description: "Pristine beaches and whale watching", image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=300&h=200&fit=crop" }
+        // Location categories and their icons
+        const categories = {
+            normal: { icon: "ph-map-pin", color: "#2c5aa0", name: "Normal Location" },
+            beach: { icon: "ph-sun", color: "#f59e0b", name: "Beach/Relaxing" },
+            religious: { icon: "ph-flower-lotus", color: "#7c3aed", name: "Religious Temple" }
         };
+
+        // Default location data (backup for reset)
+        const defaultLocations = {
+            colombo: {
+                name: "Colombo",
+                description: "Commercial capital with vibrant city life",
+                image: "https://images.unsplash.com/photo-1566552881671-11a4acc8e76b?w=300&h=200&fit=crop",
+                category: "normal",
+                position: { top: "15%", left: "25%" }
+            },
+            kandy: {
+                name: "Kandy",
+                description: "Cultural capital and Temple of Tooth",
+                image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=300&h=200&fit=crop",
+                category: "religious",
+                position: { top: "35%", left: "45%" }
+            },
+            anuradhapura: {
+                name: "Anuradhapura",
+                description: "Ancient Buddhist capital",
+                image: "https://images.unsplash.com/photo-1605640585731-3d1d0ba7e8a3?w=300&h=200&fit=crop",
+                category: "religious",
+                position: { top: "25%", left: "35%" }
+            },
+            galle: {
+                name: "Galle",
+                description: "Historic Dutch fort and coastal beauty",
+                image: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=300&h=200&fit=crop",
+                category: "normal",
+                position: { top: "70%", left: "30%" }
+            },
+            ella: {
+                name: "Ella",
+                description: "Hill country paradise with tea plantations",
+                image: "https://images.unsplash.com/photo-1566552881671-11a4acc8e76b?w=300&h=200&fit=crop",
+                category: "normal",
+                position: { top: "60%", left: "65%" }
+            },
+            mirissa: {
+                name: "Mirissa",
+                description: "Pristine beaches and whale watching",
+                image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=300&h=200&fit=crop",
+                category: "beach",
+                position: { top: "75%", left: "65%" }
+            }
+        };
+
+        // Working location data (copy of default on load)
+        let locations = JSON.parse(JSON.stringify(defaultLocations));
 
         const vehicles = {
             economy: { name: "Economy Car", price: 35 },
@@ -475,18 +528,544 @@
 
         let selectedDestinations = [];
         let selectedVehicle = null;
+        let editMode = false;
+        let draggedElement = null;
 
-        // Location pin click handlers
-        document.querySelectorAll('.rent-car-location-pin').forEach(pin => {
-            pin.addEventListener('click', function() {
-                const locationKey = this.getAttribute('data-location');
-                toggleDestination(locationKey, this);
+        // Edit mode functionality
+        document.getElementById('editModeToggle').addEventListener('click', function() {
+            editMode = !editMode;
+            this.textContent = editMode ? 'Exit Edit Mode' : 'Enable Edit Mode';
+            this.className = editMode ? 'btn btn-danger me-2' : 'btn btn-outline-primary me-2';
+
+            // Show/hide all edit mode buttons
+            const editButtons = ['addLocationBtn', 'saveLocationsBtn', 'loadLocationsBtn', 'resetLocationsBtn'];
+            editButtons.forEach(btnId => {
+                document.getElementById(btnId).style.display = editMode ? 'inline-block' : 'none';
+            });
+
+            const pins = document.querySelectorAll('.rent-car-location-pin');
+            pins.forEach(pin => {
+                if (editMode) {
+                    enableDragAndEdit(pin);
+                } else {
+                    disableDragAndEdit(pin);
+                }
             });
         });
 
+        // Add new location functionality
+        document.getElementById('addLocationBtn').addEventListener('click', function() {
+            createNewLocation();
+        });
+
+        // Save locations functionality
+        document.getElementById('saveLocationsBtn').addEventListener('click', function() {
+            saveLocations();
+        });
+
+        // Load locations functionality
+        document.getElementById('loadLocationsBtn').addEventListener('click', function() {
+            loadLocations();
+        });
+
+        // Reset locations functionality
+        document.getElementById('resetLocationsBtn').addEventListener('click', function() {
+            resetLocations();
+        });
+
+        function enableDragAndEdit(pin) {
+            pin.draggable = true;
+            pin.style.cursor = 'grab';
+            pin.style.border = '2px dashed #ff6b35';
+
+            // Drag events
+            pin.addEventListener('dragstart', handleDragStart);
+            pin.addEventListener('dragend', handleDragEnd);
+
+            // Double click to edit
+            pin.addEventListener('dblclick', handleEdit);
+
+            // Prevent normal click in edit mode
+            pin.removeEventListener('click', handleNormalClick);
+        }
+
+        function disableDragAndEdit(pin) {
+            pin.draggable = false;
+            pin.style.cursor = 'pointer';
+            pin.style.border = '3px solid white';
+
+            // Remove drag events
+            pin.removeEventListener('dragstart', handleDragStart);
+            pin.removeEventListener('dragend', handleDragEnd);
+            pin.removeEventListener('dblclick', handleEdit);
+
+            // Re-enable normal click
+            pin.addEventListener('click', handleNormalClick);
+        }
+
+        function handleDragStart(e) {
+            draggedElement = this;
+            this.style.opacity = '0.5';
+            this.style.cursor = 'grabbing';
+            e.dataTransfer.effectAllowed = 'move';
+        }
+
+        function handleDragEnd(e) {
+            this.style.opacity = '1';
+            this.style.cursor = 'grab';
+            draggedElement = null;
+        }
+
+        function handleEdit(e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            const pin = this;
+            const currentName = pin.getAttribute('data-name');
+            const currentDescription = pin.getAttribute('data-description');
+            const currentCategory = pin.getAttribute('data-category') || 'normal';
+            const locationKey = pin.getAttribute('data-location');
+            const currentImage = locations[locationKey] ? locations[locationKey].image : '';
+
+            // Create category options
+            const categoryOptions = Object.keys(categories).map(key =>
+                `<option value="${key}" ${key === currentCategory ? 'selected' : ''}>${categories[key].name}</option>`
+            ).join('');
+
+            // Create edit modal
+            const modal = document.createElement('div');
+            modal.className = 'edit-modal';
+            modal.innerHTML = `
+                <div class="edit-modal-content">
+                    <h4>Edit Location</h4>
+                    <div class="form-group mb-3">
+                        <label>Location Name:</label>
+                        <input type="text" id="editName" value="${currentName}" class="form-control">
+                    </div>
+                    <div class="form-group mb-3">
+                        <label>Description:</label>
+                        <textarea id="editDescription" class="form-control" rows="3">${currentDescription}</textarea>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label>Category:</label>
+                        <select id="editCategory" class="form-control">
+                            ${categoryOptions}
+                        </select>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label>Image URL:</label>
+                        <input type="url" id="editImage" value="${currentImage}" class="form-control" placeholder="https://example.com/image.jpg">
+                        <small class="text-muted">Enter a URL for the location image (optional)</small>
+                    </div>
+                    <div class="form-group mb-3" id="imagePreviewContainer" style="display: none;">
+                        <label>Image Preview:</label>
+                        <img id="imagePreview" src="" alt="Preview" style="width: 100%; max-height: 150px; object-fit: cover; border-radius: 8px;">
+                    </div>
+                    <div class="modal-buttons">
+                        <button id="saveEdit" class="btn btn-primary">Save</button>
+                        <button id="cancelEdit" class="btn btn-secondary">Cancel</button>
+                        <button id="deleteLocation" class="btn btn-danger">Delete</button>
+                    </div>
+                </div>
+            `;
+
+            document.body.appendChild(modal);
+
+            // Image preview functionality
+            const imageInput = document.getElementById('editImage');
+            const previewContainer = document.getElementById('imagePreviewContainer');
+            const previewImage = document.getElementById('imagePreview');
+
+            // Show preview if image already exists
+            if (currentImage) {
+                previewImage.src = currentImage;
+                previewContainer.style.display = 'block';
+            }
+
+            imageInput.addEventListener('input', function() {
+                const imageUrl = this.value.trim();
+                if (imageUrl) {
+                    previewImage.src = imageUrl;
+                    previewContainer.style.display = 'block';
+
+                    // Handle image load errors
+                    previewImage.onerror = function() {
+                        previewContainer.style.display = 'none';
+                    };
+                } else {
+                    previewContainer.style.display = 'none';
+                }
+            });
+
+            // Handle save
+            document.getElementById('saveEdit').addEventListener('click', function() {
+                const newName = document.getElementById('editName').value;
+                const newDescription = document.getElementById('editDescription').value;
+                const newCategory = document.getElementById('editCategory').value;
+                const newImage = document.getElementById('editImage').value.trim();
+
+                pin.setAttribute('data-name', newName);
+                pin.setAttribute('data-description', newDescription);
+                pin.setAttribute('data-category', newCategory);
+
+                // Update icon and color based on category
+                updatePinAppearance(pin, newCategory);
+
+                // Update locations object
+                const locationKey = pin.getAttribute('data-location');
+                locations[locationKey].name = newName;
+                locations[locationKey].description = newDescription;
+                locations[locationKey].category = newCategory;
+                locations[locationKey].image = newImage || locations[locationKey].image; // Keep existing if empty
+
+                document.body.removeChild(modal);
+                updateDestinationsList();
+            });
+
+            // Handle cancel
+            document.getElementById('cancelEdit').addEventListener('click', function() {
+                document.body.removeChild(modal);
+            });
+
+            // Handle delete
+            document.getElementById('deleteLocation').addEventListener('click', function() {
+                if (confirm('Are you sure you want to delete this location?')) {
+                    const locationKey = pin.getAttribute('data-location');
+                    delete locations[locationKey];
+                    pin.remove();
+                    document.body.removeChild(modal);
+                    updateDestinationsList();
+                }
+            });
+        }
+
+        function updatePinAppearance(pin, category) {
+            const categoryData = categories[category];
+            const icon = pin.querySelector('i');
+            icon.className = `ph-fill ${categoryData.icon}`;
+            pin.style.backgroundColor = categoryData.color;
+        }
+
+        function createNewLocation() {
+            const modal = document.createElement('div');
+            modal.className = 'edit-modal';
+
+            const categoryOptions = Object.keys(categories).map(key =>
+                `<option value="${key}">${categories[key].name}</option>`
+            ).join('');
+
+            modal.innerHTML = `
+                <div class="edit-modal-content">
+                    <h4>Add New Location</h4>
+                    <div class="form-group mb-3">
+                        <label>Location Name:</label>
+                        <input type="text" id="newName" placeholder="Enter location name" class="form-control">
+                    </div>
+                    <div class="form-group mb-3">
+                        <label>Description:</label>
+                        <textarea id="newDescription" class="form-control" rows="3" placeholder="Enter description"></textarea>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label>Category:</label>
+                        <select id="newCategory" class="form-control">
+                            ${categoryOptions}
+                        </select>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label>Image URL:</label>
+                        <input type="url" id="newImage" class="form-control" placeholder="https://example.com/image.jpg">
+                        <small class="text-muted">Enter a URL for the location image (optional)</small>
+                    </div>
+                    <div class="form-group mb-3" id="newImagePreviewContainer" style="display: none;">
+                        <label>Image Preview:</label>
+                        <img id="newImagePreview" src="" alt="Preview" style="width: 100%; max-height: 150px; object-fit: cover; border-radius: 8px;">
+                    </div>
+                    <div class="form-group mb-3">
+                        <label>Position:</label>
+                        <p class="text-muted">Click anywhere on the map after creating to place the pin</p>
+                    </div>
+                    <div class="modal-buttons">
+                        <button id="createLocation" class="btn btn-primary">Create</button>
+                        <button id="cancelCreate" class="btn btn-secondary">Cancel</button>
+                    </div>
+                </div>
+            `;
+
+            document.body.appendChild(modal);
+
+            // Image preview functionality for new location
+            const newImageInput = document.getElementById('newImage');
+            const newPreviewContainer = document.getElementById('newImagePreviewContainer');
+            const newPreviewImage = document.getElementById('newImagePreview');
+
+            newImageInput.addEventListener('input', function() {
+                const imageUrl = this.value.trim();
+                if (imageUrl) {
+                    newPreviewImage.src = imageUrl;
+                    newPreviewContainer.style.display = 'block';
+
+                    // Handle image load errors
+                    newPreviewImage.onerror = function() {
+                        newPreviewContainer.style.display = 'none';
+                    };
+                } else {
+                    newPreviewContainer.style.display = 'none';
+                }
+            });
+
+            // Handle create
+            document.getElementById('createLocation').addEventListener('click', function() {
+                const name = document.getElementById('newName').value;
+                const description = document.getElementById('newDescription').value;
+                const category = document.getElementById('newCategory').value;
+                const image = document.getElementById('newImage').value.trim();
+
+                if (!name.trim()) {
+                    alert('Please enter a location name');
+                    return;
+                }
+
+                // Create unique location key
+                const locationKey = name.toLowerCase().replace(/\s+/g, '').replace(/[^a-z0-9]/g, '');
+
+                // Add to locations object
+                locations[locationKey] = {
+                    name: name,
+                    description: description,
+                    category: category,
+                    image: image || "https://images.unsplash.com/photo-1566552881671-11a4acc8e76b?w=300&h=200&fit=crop",
+                    position: { top: "50%", left: "50%" } // Will be updated when placed
+                };
+
+                document.body.removeChild(modal);
+
+                // Enable click-to-place mode
+                enableClickToPlace(locationKey, category);
+            });
+
+            // Handle cancel
+            document.getElementById('cancelCreate').addEventListener('click', function() {
+                document.body.removeChild(modal);
+            });
+        }
+
+        function enableClickToPlace(locationKey, category) {
+            const mapContainer = document.querySelector('.rent-car-map-container');
+            mapContainer.style.cursor = 'crosshair';
+
+            const instruction = document.createElement('div');
+            instruction.className = 'click-to-place-instruction';
+            instruction.innerHTML = 'Click on the map to place your new location';
+            mapContainer.appendChild(instruction);
+
+            function placeLocation(e) {
+                e.stopPropagation();
+
+                const rect = mapContainer.getBoundingClientRect();
+                const x = ((e.clientX - rect.left) / rect.width) * 100;
+                const y = ((e.clientY - rect.top) / rect.height) * 100;
+
+                // Constrain to map boundaries
+                const constrainedX = Math.max(5, Math.min(95, x));
+                const constrainedY = Math.max(5, Math.min(95, y));
+
+                // Create new pin
+                const newPin = document.createElement('div');
+                newPin.className = 'rent-car-location-pin';
+                newPin.style.top = constrainedY + '%';
+                newPin.style.left = constrainedX + '%';
+                newPin.setAttribute('data-location', locationKey);
+                newPin.setAttribute('data-name', locations[locationKey].name);
+                newPin.setAttribute('data-description', locations[locationKey].description);
+                newPin.setAttribute('data-category', category);
+
+                // Update position in locations object
+                locations[locationKey].position = {
+                    top: constrainedY + '%',
+                    left: constrainedX + '%'
+                };
+
+                const categoryData = categories[category];
+                newPin.innerHTML = `<i class="ph-fill ${categoryData.icon}"></i>`;
+                newPin.style.backgroundColor = categoryData.color;
+
+                mapContainer.appendChild(newPin);
+
+                // Enable drag and edit for new pin
+                enableDragAndEdit(newPin);
+                newPin.addEventListener('click', handleNormalClick);
+                addHoverTooltip(newPin);
+
+                // Clean up
+                mapContainer.style.cursor = '';
+                mapContainer.removeChild(instruction);
+                mapContainer.removeEventListener('click', placeLocation);
+            }
+
+            mapContainer.addEventListener('click', placeLocation);
+        }
+
+        function handleNormalClick() {
+            if (!editMode) {
+                const locationKey = this.getAttribute('data-location');
+                toggleDestination(locationKey, this);
+            }
+        }
+
+        // Map container drag over events
+        const mapContainer = document.querySelector('.rent-car-map-container');
+        mapContainer.addEventListener('dragover', function(e) {
+            e.preventDefault();
+            e.dataTransfer.dropEffect = 'move';
+        });
+
+        mapContainer.addEventListener('drop', function(e) {
+            e.preventDefault();
+
+            if (draggedElement && editMode) {
+                const rect = this.getBoundingClientRect();
+                const x = ((e.clientX - rect.left) / rect.width) * 100;
+                const y = ((e.clientY - rect.top) / rect.height) * 100;
+
+                // Constrain to map boundaries
+                const constrainedX = Math.max(5, Math.min(95, x));
+                const constrainedY = Math.max(5, Math.min(95, y));
+
+                draggedElement.style.left = constrainedX + '%';
+                draggedElement.style.top = constrainedY + '%';
+
+                // Update location data with new position
+                const locationKey = draggedElement.getAttribute('data-location');
+                if (locations[locationKey]) {
+                    locations[locationKey].position = {
+                        top: constrainedY + '%',
+                        left: constrainedX + '%'
+                    };
+                }
+            }
+        });
+
+        // Initialize normal click handlers and hover tooltips
+        document.querySelectorAll('.rent-car-location-pin').forEach(pin => {
+            pin.addEventListener('click', handleNormalClick);
+            addHoverTooltip(pin);
+        });
+
+        // Tooltip functionality
+        let currentTooltip = null;
+
+        function createTooltip(pin) {
+            const locationKey = pin.getAttribute('data-location');
+            const location = locations[locationKey];
+            if (!location) return null;
+
+            const tooltip = document.createElement('div');
+            tooltip.className = 'location-tooltip';
+            tooltip.innerHTML = `
+                <img src="${location.image}" alt="${location.name}" class="location-tooltip-image" onerror="this.style.display='none'">
+                <div class="location-tooltip-name">${location.name}</div>
+                <div class="location-tooltip-description">${location.description}</div>
+                <div class="location-tooltip-category ${location.category}">${categories[location.category].name}</div>
+            `;
+
+            return tooltip;
+        }
+
+        function positionTooltip(tooltip, pin) {
+            const mapContainer = document.querySelector('.rent-car-map-container');
+            const mapRect = mapContainer.getBoundingClientRect();
+            const pinRect = pin.getBoundingClientRect();
+
+            // Calculate position relative to map container
+            const pinCenterX = pinRect.left - mapRect.left + (pinRect.width / 2);
+            const pinTop = pinRect.top - mapRect.top;
+
+            // Position tooltip above the pin
+            let tooltipLeft = pinCenterX - (tooltip.offsetWidth / 2);
+            let tooltipTop = pinTop - tooltip.offsetHeight - 15; // 15px gap above pin
+
+            // Keep tooltip within map boundaries
+            const tooltipWidth = tooltip.offsetWidth;
+            const mapWidth = mapRect.width;
+
+            if (tooltipLeft < 10) {
+                tooltipLeft = 10;
+            } else if (tooltipLeft + tooltipWidth > mapWidth - 10) {
+                tooltipLeft = mapWidth - tooltipWidth - 10;
+            }
+
+            // If tooltip would go above map, show it below the pin
+            if (tooltipTop < 10) {
+                tooltipTop = pinTop + pinRect.height + 15;
+                // Flip arrow to point up
+                tooltip.style.setProperty('--arrow-direction', 'up');
+            }
+
+            tooltip.style.left = tooltipLeft + 'px';
+            tooltip.style.top = tooltipTop + 'px';
+        }
+
+        function showTooltip(pin) {
+            // Only show tooltip in normal mode (not edit mode)
+            if (editMode) return;
+
+            // Remove any existing tooltip
+            hideTooltip();
+
+            const tooltip = createTooltip(pin);
+            if (!tooltip) return;
+
+            const mapContainer = document.querySelector('.rent-car-map-container');
+            mapContainer.appendChild(tooltip);
+
+            // Position after adding to DOM so we can get dimensions
+            positionTooltip(tooltip, pin);
+
+            // Show with animation
+            setTimeout(() => {
+                tooltip.classList.add('show');
+            }, 10);
+
+            currentTooltip = tooltip;
+        }
+
+        function hideTooltip() {
+            if (currentTooltip) {
+                currentTooltip.classList.remove('show');
+                setTimeout(() => {
+                    if (currentTooltip && currentTooltip.parentNode) {
+                        currentTooltip.parentNode.removeChild(currentTooltip);
+                    }
+                    currentTooltip = null;
+                }, 300); // Match CSS transition duration
+            }
+        }
+
+        function addHoverTooltip(pin) {
+            let hoverTimeout;
+
+            pin.addEventListener('mouseenter', function() {
+                // Clear any existing timeout
+                clearTimeout(hoverTimeout);
+
+                // Show tooltip after small delay
+                hoverTimeout = setTimeout(() => {
+                    showTooltip(this);
+                }, 200);
+            });
+
+            pin.addEventListener('mouseleave', function() {
+                // Clear timeout if mouse leaves before showing
+                clearTimeout(hoverTimeout);
+
+                // Hide tooltip
+                hideTooltip();
+            });
+        }
+
         function toggleDestination(locationKey, pinElement) {
             const index = selectedDestinations.indexOf(locationKey);
-            
+
             if (index > -1) {
                 selectedDestinations.splice(index, 1);
                 pinElement.classList.remove('selected');
@@ -494,43 +1073,83 @@
                 selectedDestinations.push(locationKey);
                 pinElement.classList.add('selected');
             }
-            
+
             updateDestinationsList();
             updateProceedButton();
         }
 
         function updateDestinationsList() {
             const container = document.getElementById('selectedDestinations');
-            
+
             if (selectedDestinations.length === 0) {
                 container.innerHTML = '<p class="text-muted text-center py-5">Click on map locations to add them to your trip</p>';
                 return;
             }
-            
+
             let html = '';
             selectedDestinations.forEach((locKey, index) => {
                 const loc = locations[locKey];
                 html += `
                     <div class="rent-car-destination-card selected">
-                        <div class="row align-items-center">
-                            <div class="col-3">
-                                <img src="${loc.image}" alt="${loc.name}" class="img-fluid rounded" style="height: 60px; width: 100%; object-fit: cover;">
+                        <div class="d-flex align-items-center">
+                            <div class="destination-image-container">
+                                <img src="${loc.image}" alt="${loc.name}" class="destination-image">
+                                <div class="destination-number">${index + 1}</div>
                             </div>
-                            <div class="col-9">
-                                <h6>${index + 1}. ${loc.name}</h6>
-                                <p>${loc.description}</p>
+                            <div class="destination-content">
+                                <h6 class="destination-name">${loc.name}</h6>
+                                <a href="#" class="read-more-link" onclick="showLocationDetails('${locKey}'); return false;">
+                                    <i class="ph ph-arrow-right me-1"></i>Read more
+                                </a>
                             </div>
                         </div>
                     </div>
                 `;
             });
-            
+
             container.innerHTML = html;
         }
 
         function updateProceedButton() {
             const btn = document.getElementById('proceedToVehicles');
             btn.disabled = selectedDestinations.length === 0;
+        }
+
+        function showLocationDetails(locationKey) {
+            const location = locations[locationKey];
+            if (!location) return;
+
+            const modal = document.createElement('div');
+            modal.className = 'edit-modal';
+            modal.innerHTML = `
+                <div class="edit-modal-content">
+                    <h4>${location.name}</h4>
+                    <div class="mb-3">
+                        <img src="${location.image}" alt="${location.name}" class="img-fluid rounded" style="width: 100%; max-height: 200px; object-fit: cover;">
+                    </div>
+                    <div class="mb-3">
+                        <span class="location-tooltip-category ${location.category}">${categories[location.category].name}</span>
+                    </div>
+                    <p>${location.description}</p>
+                    <div class="modal-buttons">
+                        <button id="closeDetails" class="btn btn-secondary">Close</button>
+                    </div>
+                </div>
+            `;
+
+            document.body.appendChild(modal);
+
+            // Handle close
+            document.getElementById('closeDetails').addEventListener('click', function() {
+                document.body.removeChild(modal);
+            });
+
+            // Close on backdrop click
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    document.body.removeChild(modal);
+                }
+            });
         }
 
         // Vehicle selection
@@ -547,12 +1166,12 @@
         function updateBookingSummary() {
             // Update route summary
             if (selectedDestinations.length > 0) {
-                const routeText = selectedDestinations.map((loc, index) => 
+                const routeText = selectedDestinations.map((loc, index) =>
                     `${index + 1}. ${locations[loc].name}`
                 ).join('<br>');
                 document.getElementById('routeSummary').innerHTML = routeText;
             }
-            
+
             // Update vehicle summary
             if (selectedVehicle) {
                 const vehicle = vehicles[selectedVehicle];
@@ -566,8 +1185,8 @@
 
         // Smooth scrolling
         function scrollToSection(sectionId) {
-            document.getElementById(sectionId).scrollIntoView({ 
-                behavior: 'smooth' 
+            document.getElementById(sectionId).scrollIntoView({
+                behavior: 'smooth'
             });
         }
 
@@ -575,6 +1194,118 @@
         document.getElementById('bookingForm').addEventListener('submit', function(e) {
             e.preventDefault();
             alert('Thank you for your booking! We will contact you shortly to confirm your reservation.');
+        });
+
+        // Save/Load/Reset Functions
+        function saveLocations() {
+            const locationData = {
+                locations: locations,
+                timestamp: new Date().toISOString()
+            };
+
+            localStorage.setItem('sriLankaLocations', JSON.stringify(locationData));
+
+            // Show success message
+            showNotification('Locations saved successfully!', 'success');
+        }
+
+        function loadLocations() {
+            const savedData = localStorage.getItem('sriLankaLocations');
+
+            if (!savedData) {
+                showNotification('No saved locations found!', 'warning');
+                return;
+            }
+
+            try {
+                const locationData = JSON.parse(savedData);
+                locations = locationData.locations;
+
+                // Rebuild the map with loaded data
+                rebuildLocationPins();
+                updateDestinationsList();
+
+                showNotification('Locations loaded successfully!', 'success');
+            } catch (error) {
+                showNotification('Error loading saved locations!', 'error');
+            }
+        }
+
+        function resetLocations() {
+            if (confirm('Are you sure you want to reset to default locations? This will remove all custom locations and positions.')) {
+                locations = JSON.parse(JSON.stringify(defaultLocations));
+
+                // Rebuild the map with default data
+                rebuildLocationPins();
+                updateDestinationsList();
+
+                showNotification('Locations reset to default!', 'info');
+            }
+        }
+
+        function rebuildLocationPins() {
+            // Remove all existing pins
+            const existingPins = document.querySelectorAll('.rent-car-location-pin');
+            existingPins.forEach(pin => pin.remove());
+
+            // Create new pins from location data
+            const mapContainer = document.querySelector('.rent-car-map-container');
+
+            Object.keys(locations).forEach(locationKey => {
+                const location = locations[locationKey];
+                const pin = document.createElement('div');
+                pin.className = 'rent-car-location-pin';
+                pin.style.top = location.position.top;
+                pin.style.left = location.position.left;
+                pin.setAttribute('data-location', locationKey);
+                pin.setAttribute('data-name', location.name);
+                pin.setAttribute('data-description', location.description);
+                pin.setAttribute('data-category', location.category);
+
+                const categoryData = categories[location.category];
+                pin.innerHTML = `<i class="ph-fill ${categoryData.icon}"></i>`;
+                pin.style.backgroundColor = categoryData.color;
+
+                mapContainer.appendChild(pin);
+
+                // Add event listeners
+                pin.addEventListener('click', handleNormalClick);
+                addHoverTooltip(pin);
+
+                if (editMode) {
+                    enableDragAndEdit(pin);
+                }
+            });
+        }
+
+        function showNotification(message, type) {
+            const notification = document.createElement('div');
+            notification.className = `notification notification-${type}`;
+            notification.textContent = message;
+
+            document.body.appendChild(notification);
+
+            // Auto remove after 3 seconds
+            setTimeout(() => {
+                if (notification.parentNode) {
+                    notification.parentNode.removeChild(notification);
+                }
+            }, 3000);
+        }
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check if there are saved locations on page load
+            const savedData = localStorage.getItem('sriLankaLocations');
+            if (savedData) {
+                try {
+                    const locationData = JSON.parse(savedData);
+                    locations = locationData.locations;
+                    rebuildLocationPins();
+                } catch (error) {
+                    console.log('Error loading saved locations, using defaults');
+                }
+            }
         });
     </script>
 
