@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Rent a car in Sri Lanka with personalized trip planning. Select destinations, choose vehicles, and book your perfect Sri Lankan adventure with Marshall Holidays">
-    <meta name="keywords" content="Sri Lanka car rental, trip planning, vehicle rental Ceylon, Marshall Holidays car hire, Sri Lankan road trip">
+    <meta name="description" content="Rent a car in Sri Lanka with personalized trip planning. Select destinations, choose vehicles, and book your perfect Sri Lankan adventure with Marshell Holidays">
+    <meta name="keywords" content="Sri Lanka car rental, trip planning, vehicle rental Ceylon, Marshell Holidays car hire, Sri Lankan road trip">
     <meta name="robots" content="INDEX,FOLLOW">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rent a Car & Plan Your Trip | Marshall Holidays Sri Lanka</title>
+    <title>Rent a Car & Plan Your Trip | Marshell Holidays Sri Lanka</title>
     
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/images/logo/favicon.png">
@@ -62,12 +62,17 @@
         </button>
 
         <div class="mobile-menu__inner">
-            <ul class="nav-menu d-lg-flex align-items-center nav-menu--mobile d-block tw-mt-8 bg-white tw-px-12 tw-rounded-4xl">
+            <a href="index.html" class="mobile-menu__logo">
+                <h4 class="mb-0 text-main-600 fw-bold font-heading">Marshell Holidays</h4>
+            </a>
+            <div class="mobile-menu__menu">
+                <!-- Nav menu Start -->
+                <ul class="nav-menu d-lg-flex align-items-center nav-menu--mobile d-block tw-mt-8 bg-white tw-px-12 tw-rounded-4xl">
                 <li class="nav-menu__item">
                     <a href="index.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Home</a>
                 </li>
                 <li class="nav-menu__item">
-                    <a href="sri-lanka-tour-packages.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Tour Packages</a>
+                    <a href="sri-lanka-tour-packages.php" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Tour Packages</a>
                 </li>
                 <li class="nav-menu__item">
                     <a href="customize-your-trip.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Customize Your Trip</a>
@@ -82,9 +87,14 @@
                     <a href="contact.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Contact</a>
                 </li>
             </ul>
+            <!-- Nav menu End  -->
+            </div>
         </div>
     </div>
     <!-- ==================== Mobile Menu End Here ==================== -->
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay d-lg-none"></div>
 
     <!-- ==================== Header Start Here ==================== -->
     <header class="header header-two transition-all">
@@ -93,7 +103,7 @@
                 <!-- Logo Start -->
                 <div class="logo">
                     <a href="index.html" class="link">
-                        <h3 class="mb-0 text-main-600 fw-bold font-heading">Marshel Tourism</h3>
+                        <h3 class="mb-0 text-main-600 fw-bold font-heading">Marshell Holidays</h3>
                     </a>
                 </div>
                 <!-- Logo End  -->
@@ -105,7 +115,7 @@
                             <a href="index.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Home</a>
                         </li>
                         <li class="nav-menu__item">
-                            <a href="sri-lanka-tour-packages.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Tour Packages</a>
+                            <a href="sri-lanka-tour-packages.php" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Tour Packages</a>
                         </li>
                         <li class="nav-menu__item">
                             <a href="customize-your-trip.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Customize Your Trip</a>
@@ -143,12 +153,12 @@
     <div id="scrollSmoother-container">
 
         <!-- ==================== Breadcrumb Start Here ==================== -->
-        <section class="breadcrumb-area background-img" data-background-image="assets/images/breadcrumb/breadcrumb-bg.jpg" style="background-image: url('assets/images/breadcrumb/breadcrumb-bg.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; min-height: 300px; display: flex; align-items: center;">
+        <section class="breadcrumb-area background-img" data-background-image="Mainimg/img/Tangalle Beach/tanmain.jpg" style="background-image: url('Mainimg/img/Tangalle Beach/tanmain.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; min-height: 250px; display: flex; align-items: center;">
             <div class="container-fluid">
                 <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <div>
-                            <h2 class="breadcrumb-title text-center tw-mb-6 char-animation" style="font-size: 2.5rem; color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">Rent a Car & Plan Your Trip</h2>
+                    <div class="col-lg-8 col-md-10 col-sm-12">
+                        <div class="text-center px-3">
+                            <h2 class="breadcrumb-title char-animation" style="font-size: 2.5rem; color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); margin-bottom: 0; line-height: 1.2;">Rent a Car & Plan Your Trip</h2>
                         </div>
                     </div>
                 </div>
@@ -229,8 +239,18 @@
                         <p class="rent-car-vehicle-subtitle">Select the ideal car for your Sri Lankan adventure</p>
                     </div>
                 </div>
-                
-                <div class="row">
+
+                <!-- Navigation Arrows for Mobile -->
+                <div class="vehicle-nav-arrows d-lg-none">
+                    <button class="vehicle-nav-arrow" id="vehiclePrevBtn" onclick="scrollVehicles('left')">
+                        <i class="ph ph-arrow-left"></i>
+                    </button>
+                    <button class="vehicle-nav-arrow" id="vehicleNextBtn" onclick="scrollVehicles('right')">
+                        <i class="ph ph-arrow-right"></i>
+                    </button>
+                </div>
+
+                <div class="row" id="vehicleCardsContainer">
                     <div class="col-lg-4 col-md-6 mb-4">
                         <div class="rent-car-vehicle-card" data-vehicle="economy">
                             <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=300&h=200&fit=crop" alt="Economy Car" class="img-fluid" style="height: 200px; width: 100%; object-fit: cover;">
@@ -397,7 +417,7 @@
             <div class="row">
                 <!-- Brand Section -->
                 <div class="col-lg-4 col-md-6 mb-4">
-                    <h3 class="rent-car-footer-brand">Marshall Holidays</h3>
+                    <h3 class="rent-car-footer-brand">Marshell Holidays</h3>
                     <p class="rent-car-footer-text">Your trusted partner for authentic Sri Lankan experiences. We specialize in personalized car rentals, cultural tours, and spiritual journeys.</p>
                     <div class="d-flex flex-wrap">
                         <a href="#" class="rent-car-social-icon"><i class="ph-bold ph-facebook-logo"></i></a>
@@ -412,7 +432,7 @@
                     <h5 class="rent-car-footer-title">Quick Links</h5>
                     <a href="index.html" class="rent-car-footer-link">Home</a>
                     <a href="about.html" class="rent-car-footer-link">About Us</a>
-                    <a href="sri-lanka-tour-packages.html" class="rent-car-footer-link">Tour Packages</a>
+                    <a href="sri-lanka-tour-packages.php" class="rent-car-footer-link">Tour Packages</a>
                     <a href="rent-a-car.html" class="rent-car-footer-link">Rent a Car</a>
                     <a href="contact.html" class="rent-car-footer-link">Contact</a>
                 </div>
@@ -449,7 +469,7 @@
             <div class="rent-car-footer-bottom">
                 <div class="row align-items-center">
                     <div class="col-md-6">
-                        <p class="rent-car-footer-bottom-text mb-0">&copy; 2024 Marshall Holidays Pvt Ltd. All rights reserved.</p>
+                        <p class="rent-car-footer-bottom-text mb-0">&copy; 2024 Marshell Holidays Pvt Ltd. All rights reserved.</p>
                     </div>
                     <div class="col-md-6 text-md-end">
                         <a href="#" class="rent-car-footer-link d-inline me-4">Privacy Policy</a>
@@ -1376,7 +1396,7 @@
             }
 
             // Show hint in console for developers
-            console.log('🗺️ Marshall Tourism - Sri Lanka Location Manager');
+            console.log('🗺️ Marshell Holidays - Sri Lanka Location Manager');
             console.log('💡 Tip: Type "editmode" or use ↑↑↓↓←→←→BA to activate edit mode');
             console.log('🔧 Or call: activateLocationEditMode()');
         });
@@ -1387,6 +1407,115 @@
     <script src="assets/js/phosphor-icon.js"></script>
     <script src="assets/js/boostrap.bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
+
+    <!-- Vehicle Cards Navigation Script -->
+    <script>
+        function scrollVehicles(direction) {
+            const container = document.getElementById('vehicleCardsContainer');
+            const scrollAmount = container.offsetWidth * 0.8; // Scroll by 80% of container width
+
+            if (direction === 'left') {
+                container.scrollBy({
+                    left: -scrollAmount,
+                    behavior: 'smooth'
+                });
+            } else {
+                container.scrollBy({
+                    left: scrollAmount,
+                    behavior: 'smooth'
+                });
+            }
+
+            // Update arrow states after scroll
+            setTimeout(() => {
+                updateArrowStates();
+            }, 300);
+        }
+
+        function updateArrowStates() {
+            const container = document.getElementById('vehicleCardsContainer');
+            const prevBtn = document.getElementById('vehiclePrevBtn');
+            const nextBtn = document.getElementById('vehicleNextBtn');
+
+            if (container && prevBtn && nextBtn) {
+                const isAtStart = container.scrollLeft <= 0;
+                const isAtEnd = container.scrollLeft >= (container.scrollWidth - container.clientWidth);
+
+                prevBtn.disabled = isAtStart;
+                nextBtn.disabled = isAtEnd;
+            }
+        }
+
+        // Initialize arrow states on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            updateArrowStates();
+
+            // Update arrow states on scroll
+            const container = document.getElementById('vehicleCardsContainer');
+            if (container) {
+                container.addEventListener('scroll', updateArrowStates);
+            }
+
+            // Mobile menu functionality with animation
+            const mobileMenuToggle = document.querySelector('.toggle-mobileMenu');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            const mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
+            const closeButton = document.querySelector('.mobile-menu .close-button');
+
+            function openMobileMenu() {
+                if (mobileMenu && mobileMenuOverlay) {
+                    mobileMenu.classList.remove('tw--translate-x-full');
+                    mobileMenu.classList.add('show');
+                    mobileMenuOverlay.classList.add('show');
+                    document.body.style.overflow = 'hidden'; // Prevent scrolling
+                }
+            }
+
+            function closeMobileMenu() {
+                if (mobileMenu && mobileMenuOverlay) {
+                    mobileMenu.classList.remove('show');
+                    mobileMenuOverlay.classList.remove('show');
+                    document.body.style.overflow = ''; // Restore scrolling
+                    setTimeout(() => {
+                        mobileMenu.classList.add('tw--translate-x-full');
+                    }, 300); // Wait for animation to complete
+                }
+            }
+
+            if (mobileMenuToggle) {
+                mobileMenuToggle.addEventListener('click', function(event) {
+                    event.stopPropagation();
+                    if (mobileMenu.classList.contains('show')) {
+                        closeMobileMenu();
+                    } else {
+                        openMobileMenu();
+                    }
+                });
+            }
+
+            if (closeButton) {
+                closeButton.addEventListener('click', function() {
+                    closeMobileMenu();
+                });
+            }
+
+            // Close menu when clicking overlay
+            if (mobileMenuOverlay) {
+                mobileMenuOverlay.addEventListener('click', function() {
+                    closeMobileMenu();
+                });
+            }
+
+            // Close mobile menu when clicking outside (optional, since we have overlay)
+            document.addEventListener('click', function(event) {
+                if (mobileMenu && mobileMenu.classList.contains('show') &&
+                    !mobileMenu.contains(event.target) &&
+                    !mobileMenuToggle.contains(event.target)) {
+                    closeMobileMenu();
+                }
+            });
+        });
+    </script>
 
 </body>
 </html>

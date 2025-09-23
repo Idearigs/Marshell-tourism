@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Standalone Star Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        .star-container {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .star-rating {
+            display: flex;
+            gap: 5px;
+            margin: 10px 0;
+        }
+        .star {
+            cursor: pointer;
+            font-size: 30px;
+            color: #ddd;
+            transition: color 0.2s;
+            user-select: none;
+        }
+        .star:hover,
+        .star.hover {
+            color: #ffeb3b;
+        }
+        .star.selected {
+            color: #ffc107;
+        }
+        .result {
+            background: #f0f0f0;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Standalone Star Rating Test</h1>
+    <p>This test uses pure HTML/CSS/JS with no external dependencies.</p>
+
+    <div class="star-container">
+        <label><strong>Overall Rating:</strong></label>
+        <div class="star-rating" data-name="overall">
+            <span class="star" data-value="1">★</span>
+            <span class="star" data-value="2">★</span>
+            <span class="star" data-value="3">★</span>
+            <span class="star" data-value="4">★</span>
+            <span class="star" data-value="5">★</span>
+        </div>
+        <input type="hidden" name="overall_rating" value="0">
+        <div class="result">Selected: <span class="display">0</span> stars</div>
+    </div>
+
+    <div class="star-container">
+        <label><strong>Comfort:</strong></label>
+        <div class="star-rating" data-name="comfort">
+            <span class="star" data-value="1">★</span>
+            <span class="star" data-value="2">★</span>
+            <span class="star" data-value="3">★</span>
+            <span class="star" data-value="4">★</span>
+            <span class="star" data-value="5">★</span>
+        </div>
+        <input type="hidden" name="comfort_rating" value="0">
+        <div class="result">Selected: <span class="display">0</span> stars</div>
+    </div>
+
+    <div class="star-container">
+        <label><strong>Destination:</strong></label>
+        <div class="star-rating" data-name="destination">
+            <span class="star" data-value="1">★</span>
+            <span class="star" data-value="2">★</span>
+            <span class="star" data-value="3">★</span>
+            <span class="star" data-value="4">★</span>
+            <span class="star" data-value="5">★</span>
+        </div>
+        <input type="hidden" name="destination_rating" value="0">
+        <div class="result">Selected: <span class="display">0</span> stars</div>
+    </div>
+
+    <button onclick="getAllRatings()">Get All Ratings</button>
+    <button onclick="resetAllRatings()">Reset All</button>
+
+    <div id="allResults" class="result" style="margin-top: 20px;">
+        Click "Get All Ratings" to see form values
+    </div>
+
+    <script>
+        class SimpleStarRating {
+            constructor() {
+                this.init();
+            }
+
+            init() {
+                console.log('Simple star rating initializing...');
+                const containers = document.querySelectorAll('.star-rating');
+
+                containers.forEach(container => {
+                    const stars = container.querySelectorAll('.star');
+                    const input = container.parentElement.querySelector('input[type="hidden"]');
+                    const display = container.parentElement.querySelector('.display');
+
+                    stars.forEach((star, index) => {
+                        star.addEventListener('click', () => {
+                            const value = parseInt(star.getAttribute('data-value'));
+                            console.log('Star clicked:', value);
+
+                            // Update input
+                            input.value = value;
+
+                            // Update display
+                            display.textContent = value;
+
+                            // Update visual state
+                            stars.forEach((s, i) => {
+                                if (i < value) {
+                                    s.classList.add('selected');
+                                    s.classList.remove('hover');
+                                } else {
+                                    s.classList.remove('selected', 'hover');
+                                }
+                            });
+                        });
+
+                        star.addEventListener('mouseenter', () => {
+                            const value = parseInt(star.getAttribute('data-value'));
+                            const currentValue = parseInt(input.value) || 0;
+
+                            stars.forEach((s, i) => {
+                                if (i < value) {
+                                    s.classList.add('hover');
+                                } else if (i >= currentValue) {
+                                    s.classList.remove('hover');
+                                }
+                            });
+                        });
+
+                        star.addEventListener('mouseleave', () => {
+                            stars.forEach(s => s.classList.remove('hover'));
+                        });
+                    });
+                });
+            }
+        }
+
+        function getAllRatings() {
+            const inputs = document.querySelectorAll('input[type="hidden"]');
+            let results = {};
+
+            inputs.forEach(input => {
+                results[input.name] = input.value;
+            });
+
+            document.getElementById('allResults').innerHTML =
+                '<strong>All Ratings:</strong><br>' +
+                JSON.stringify(results, null, 2).replace(/\n/g, '<br>').replace(/ /g, '&nbsp;');
+        }
+
+        function resetAllRatings() {
+            const inputs = document.querySelectorAll('input[type="hidden"]');
+            const displays = document.querySelectorAll('.display');
+            const stars = document.querySelectorAll('.star');
+
+            inputs.forEach(input => input.value = '0');
+            displays.forEach(display => display.textContent = '0');
+            stars.forEach(star => star.classList.remove('selected', 'hover'));
+        }
+
+        // Initialize when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Page loaded, initializing stars...');
+            new SimpleStarRating();
+        });
+    </script>
+</body>
+</html>

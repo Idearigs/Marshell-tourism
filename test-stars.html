@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Star Rating Test</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <style>
+        .star-rating {
+            display: flex;
+            gap: 5px;
+            margin: 20px 0;
+        }
+
+        .star {
+            font-size: 30px;
+            color: #ddd;
+            cursor: pointer;
+            transition: color 0.2s;
+            user-select: none;
+        }
+
+        .star.selected {
+            color: #ffc107 !important;
+        }
+
+        .star:hover {
+            color: #ffeb3b;
+        }
+    </style>
+    <script src="assets/js/phosphor-icon.js"></script>
+</head>
+<body style="padding: 50px;">
+    <h2>Star Rating Test</h2>
+
+    <div class="rating-section">
+        <label>Overall Rating:</label>
+        <div class="star-rating" data-rating="overall">
+            <input type="hidden" name="overall_rating" value="">
+            <i class="star ph ph-star" data-value="1"></i>
+            <i class="star ph ph-star" data-value="2"></i>
+            <i class="star ph ph-star" data-value="3"></i>
+            <i class="star ph ph-star" data-value="4"></i>
+            <i class="star ph ph-star" data-value="5"></i>
+        </div>
+        <span class="rating-display">No rating selected</span>
+    </div>
+
+    <div class="rating-section">
+        <label>Comfort:</label>
+        <div class="star-rating" data-rating="comfort">
+            <input type="hidden" name="comfort_rating" value="">
+            <i class="star ph ph-star" data-value="1"></i>
+            <i class="star ph ph-star" data-value="2"></i>
+            <i class="star ph ph-star" data-value="3"></i>
+            <i class="star ph ph-star" data-value="4"></i>
+            <i class="star ph ph-star" data-value="5"></i>
+        </div>
+        <span class="rating-display">No rating selected</span>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Star rating test initialized');
+
+            const ratingContainers = document.querySelectorAll('.star-rating');
+
+            ratingContainers.forEach(container => {
+                const stars = container.querySelectorAll('.star');
+                const input = container.querySelector('input[type="hidden"]');
+                const display = container.parentElement.querySelector('.rating-display');
+
+                stars.forEach((star, index) => {
+                    star.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+
+                        const value = parseInt(this.getAttribute('data-value'));
+                        console.log('Star clicked:', value);
+
+                        // Update input value
+                        input.value = value;
+
+                        // Update visual state
+                        stars.forEach((s, i) => {
+                            if (i < value) {
+                                s.classList.remove('ph-star');
+                                s.classList.add('ph-star-fill', 'selected');
+                                s.style.color = '#ffc107';
+                            } else {
+                                s.classList.remove('ph-star-fill', 'selected');
+                                s.classList.add('ph-star');
+                                s.style.color = '#ddd';
+                            }
+                        });
+
+                        // Update display
+                        display.textContent = `${value} star${value > 1 ? 's' : ''} selected`;
+
+                        return false;
+                    });
+
+                    star.addEventListener('mouseover', function() {
+                        const value = parseInt(this.getAttribute('data-value'));
+                        const currentValue = parseInt(input.value) || 0;
+
+                        stars.forEach((s, i) => {
+                            if (i < value) {
+                                s.style.color = '#ffeb3b';
+                            } else if (i >= currentValue) {
+                                s.style.color = '#ddd';
+                            }
+                        });
+                    });
+
+                    star.addEventListener('mouseout', function() {
+                        const currentValue = parseInt(input.value) || 0;
+
+                        stars.forEach((s, i) => {
+                            if (i < currentValue) {
+                                s.style.color = '#ffc107';
+                            } else {
+                                s.style.color = '#ddd';
+                            }
+                        });
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

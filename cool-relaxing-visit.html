@@ -9,7 +9,7 @@
     <meta name="robots" content="INDEX,FOLLOW">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Title -->
-    <title>Cool Relaxing Visit - 7 Days 6 Nights | Marshel Tourism</title>
+    <title>Cool Relaxing Visit - 7 Days 6 Nights | Marshell Holidays</title>
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/images/logo/favicon.png">
     <!-- Google Fonts - Philosopher -->
@@ -22,29 +22,13 @@
     <link rel="stylesheet" href="assets/css/aos.css">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/rent-car-custom.css">
+    <!-- Review System CSS -->
+    <link rel="stylesheet" href="assets/css/reviews.css">
 </head>
 
-<body class="bg-neutral-50">
+<body class="bg-neutral-50" data-package-slug="cool-relaxing-visit">
 
-<!--========= Start Prealoader ==============-->
-<div class="loading-screen" id="loading-screen">
-    <span class="bar top-bar"></span>
-    <span class="bar down-bar"></span>
-    <div class="animation-preloader">
-        <div class="spinner"><img src="assets/images/loader.gif" alt=""></div>
-        <div class="txt-loading">
-            <span data-text-preloader="T" class="letters-loading">T</span>
-            <span data-text-preloader="r" class="letters-loading">r</span>
-            <span data-text-preloader="a" class="letters-loading">a</span>
-            <span data-text-preloader="v" class="letters-loading">v</span>
-            <span data-text-preloader="e" class="letters-loading">e</span>
-            <span data-text-preloader="l" class="letters-loading">l</span>
-            <span data-text-preloader="o" class="letters-loading">o</span>
-            <span data-text-preloader="r" class="letters-loading">r</span>
-        </div>
-    </div>
-</div>
-<!--========= End Prealoader ==============-->
 
 <!-- Search Popup Start -->
 <div class="search_popup">
@@ -128,7 +112,7 @@
                     </div>
                 </div>
             </div>
-            <button type="button" class="toggle-mobileMenu leading-none d-lg-none ms-3 text-neutral-800 tw-text-9">
+            <button type="button" id="mobile-menu-toggle" class="d-lg-none ms-3 text-neutral-800" style="font-size: 24px; background: none; border: none;">
                 <i class="ph ph-list"></i>
             </button>
         </nav>
@@ -136,14 +120,48 @@
 </header>
 <!-- ==================== Header End Here ==================== -->
 
+<!-- ==================== New Mobile Menu Start Here ==================== -->
+<div id="mobile-sidebar" class="mobile-sidebar">
+    <div class="mobile-sidebar-header">
+        <h4 class="mobile-logo">Marshell Holidays</h4>
+        <button id="mobile-close-btn" class="mobile-close-btn">
+            <i class="ph ph-x"></i>
+        </button>
+    </div>
+    <nav class="mobile-nav">
+        <ul class="mobile-nav-list">
+            <li class="mobile-nav-item">
+                <a href="index.php" class="mobile-nav-link">Home</a>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="sri-lanka-tour-packages.php" class="mobile-nav-link">Tour Packages</a>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="customize-your-trip.html" class="mobile-nav-link">Customize Your Trip</a>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="rent-a-car.html" class="mobile-nav-link">Rent a Car</a>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="about.html" class="mobile-nav-link">About</a>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="contact.html" class="mobile-nav-link">Contact</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+<div id="mobile-overlay" class="mobile-overlay"></div>
+<!-- ==================== New Mobile Menu End Here ==================== -->
+
 <div id="scrollSmoother-container">
     <!-- ==================== Breadcrumb Start Here ==================== -->
-    <section class="breadcrumb-area background-img" data-background-image="assets/images/breadcrumb/breadcrumb-bg.jpg">
+    <section class="breadcrumb-area background-img" data-background-image="MissingIMG/img/Nuwara Eliya/nwr2.jpg">
         <div class="container-fluid">
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div>
-                        <h2 class="breadcrumb-title text-center tw-mb-6 char-animation">Cool Relaxing Visit</h2>
+                        <h2 class="breadcrumb-title text-center tw-mb-6 char-animation" style="font-size: 2.5rem;">Cool Relaxing Visit</h2>
                     </div>
                 </div>
             </div>
@@ -161,9 +179,12 @@
                                 <div>
                                     <span class="bg-main-two-600 fw-medium tw-pt-1 tw-pb-2 tw-px-5 tw-rounded-3xl text-white">Relaxation & Wellness</span>
                                 </div>
+                                <div>
+                                    <p><span class="text-main-two-600"><i class="ph ph-eye"></i></span> 1,956 people viewed this package</p>
+                                </div>
                             </div>
                             <div class="tw-mb-3">
-                                <h2 class="tw-text-13 char-animation">Cool Relaxing Visit</h2>
+                                <h2 class="tw-text-13 char-animation" style="font-size: 2rem;">Cool Relaxing Visit</h2>
                             </div>
                             <div>
                                 <ul class="d-flex tw-gap-6 flex-wrap row-gap-3">
@@ -182,8 +203,8 @@
                                     <i class="text-main-two-600 ph ph-star"></i>
                                     <i class="text-main-two-600 ph ph-star"></i>
                                 </div>
-                                <div>
-                                    <p class="mb-0">(Perfect for Wellness)</p>
+                                <div class="package-rating">
+                                    <p class="mb-0">Loading reviews...</p>
                                 </div>
                             </div>
                         </div>
@@ -200,22 +221,40 @@
                     <div class="package-details-slide position-relative z-index-1" data-aos-duration="1000" data-aos-delay="200">
                         <div class="package-details-active swiper-container">
                             <div class="package-details-swiper-wrapper swiper-wrapper">
-                                <!-- slide 1 -->
+                                <!-- slide 1 - Temple of Sacred Tooth Relic -->
                                 <div class="position-relative z-index-1 swiper-slide">
                                     <div>
-                                        <img class="tw-rounded-lg" src="assets/images/package/package-details-slide-thumb1.jpg" alt="Cool Hill Country">
+                                        <img class="tw-rounded-lg" src="MissingIMG/img/Kandy/knd2.jpg" alt="Kandy Temple">
                                     </div>
                                 </div>
-                                <!-- slide 2 -->
+                                <!-- slide 2 - Tangalle Beach (South Coast) -->
                                 <div class="position-relative z-index-1 swiper-slide">
                                     <div>
-                                        <img class="tw-rounded-lg" src="assets/images/package/package-details-slide-thumb2.jpg" alt="Relaxing Temples">
+                                        <img class="tw-rounded-lg" src="MissingIMG/img/Nuwara Eliya/nwr3.jpg" alt="Nuwara Eliya Hill Station">
                                     </div>
                                 </div>
-                                <!-- slide 3 -->
+                                <!-- slide 3 - Unawatuna Beach (Galle area) -->
                                 <div class="position-relative z-index-1 swiper-slide">
                                     <div>
-                                        <img class="tw-rounded-lg" src="assets/images/package/package-details-slide-thumb3.jpg" alt="Peaceful Locations">
+                                        <img class="tw-rounded-lg" src="MissingIMG/img/Ella/ninearch.jpg" alt="Nine Arch Bridge Ella">
+                                    </div>
+                                </div>
+                                <!-- slide 4 - Temple of Sacred Tooth Relic Detail -->
+                                <div class="position-relative z-index-1 swiper-slide">
+                                    <div>
+                                        <img class="tw-rounded-lg" src="MissingIMG/img/Tea Plantations/tp1.jpg" alt="Tea Plantations">
+                                    </div>
+                                </div>
+                                <!-- slide 5 - Tangalle Beach 2 -->
+                                <div class="position-relative z-index-1 swiper-slide">
+                                    <div>
+                                        <img class="tw-rounded-lg" src="MissingIMG/img/Nuwara Eliya/nwr4.jpg" alt="Nuwara Eliya">
+                                    </div>
+                                </div>
+                                <!-- slide 6 - Unawatuna Beach 2 -->
+                                <div class="position-relative z-index-1 swiper-slide">
+                                    <div>
+                                        <img class="tw-rounded-lg" src="MissingIMG/img/Ella/ellhigh.jpg" alt="Ella Heights">
                                     </div>
                                 </div>
                             </div>
@@ -241,7 +280,7 @@
                     <div class="tw-mb-7">
                         <div class="tw-mb-14" data-aos-duration="1000" data-aos-delay="200">
                             <h2 class="tw-text-10 tw-mb-4">Journey Overview:</h2>
-                            <p class="tw-text-lg tw-w-845-px">Escape to Sri Lanka's most tranquil and serene destinations on this 7-day relaxing journey. Experience the cool climate of the hill country, visit peaceful temples, explore botanical gardens, and unwind in the most beautiful and calming locations the island has to offer.</p>
+                            <p class="tw-text-lg tw-w-845-px">Discover inner peace and rejuvenation on this carefully crafted 7-day Cool Relaxing Visit through Sri Lanka's most serene and tranquil destinations. Escape to the cool hill country of Nuwara Eliya and Ella, find spiritual solace at peaceful Buddhist monasteries, stroll through enchanting botanical gardens, and unwind along the historic coastal city of Galle. This gentle journey emphasizes relaxation, mindfulness, and connecting with nature's beauty in Sri Lanka's most calming environments.</p>
                         </div>
 
                         <div class="tw-mb-16" data-aos-duration="1000" data-aos-delay="300">
@@ -318,36 +357,227 @@
                             </div>
                         </div>
 
-                        <div class="package-details-included" data-aos-duration="1000" data-aos-delay="300">
-                            <h2 class="tw-text-10 tw-mb-8">Tour Includes:</h2> 
+                        <!-- <div class="package-details-included" data-aos-duration="1000" data-aos-delay="300">
+                            <h2 class="tw-text-10 tw-mb-8">Tour Includes:</h2>
                             <div>
                                 <ul>
-                                    <li class="float-start w-50 tw-text-lg fw-normal tw-mb-4 d-inline-flex align-items-center tw-gap-3"><span><img src="assets/images/icon/package-details-Included.svg" alt=""></span> Airport Transfers</li>  
-                                    <li class="float-start w-50 tw-text-lg fw-normal tw-mb-4 d-inline-flex align-items-center tw-gap-3"><span><img src="assets/images/icon/package-details-Included.svg" alt=""></span> Professional Guide Service</li>  
-                                    <li class="float-start w-50 tw-text-lg fw-normal tw-mb-4 d-inline-flex align-items-center tw-gap-3"><span><img src="assets/images/icon/package-details-Included.svg" alt=""></span> Daily Breakfast</li>  
-                                    <li class="float-start w-50 tw-text-lg fw-normal tw-mb-4 d-inline-flex align-items-center tw-gap-3"><span><img src="assets/images/icon/package-details-Included.svg" alt=""></span> Accommodation (6 Nights)</li>  
-                                    <li class="float-start w-50 tw-text-lg fw-normal tw-mb-4 d-inline-flex align-items-center tw-gap-3"><span><img src="assets/images/icon/package-details-Included.svg" alt=""></span> Temple & Garden Entrance Fees</li>  
-                                    <li class="float-start w-50 tw-text-lg fw-normal tw-mb-4 d-inline-flex align-items-center tw-gap-3"><span><img src="assets/images/icon/package-details-Included.svg" alt=""></span> Comfortable Transportation</li>  
-                                    <li class="float-start w-50 tw-text-lg fw-normal tw-mb-4 d-inline-flex align-items-center tw-gap-3"><span><img src="assets/images/icon/package-details-Included.svg" alt=""></span> Cultural Performances</li>  
-                                    <li class="float-start w-50 tw-text-lg fw-normal tw-mb-4 d-inline-flex align-items-center tw-gap-3"><span><img src="assets/images/icon/package-details-Included.svg" alt=""></span> Refreshments & Mineral Water</li>  
+                                    <li class="float-start w-50 tw-text-lg fw-normal tw-mb-4 d-inline-flex align-items-center tw-gap-3"><span><img src="assets/images/icon/package-details-Included.svg" alt=""></span> Airport Transfers</li>
+                                    <li class="float-start w-50 tw-text-lg fw-normal tw-mb-4 d-inline-flex align-items-center tw-gap-3"><span><img src="assets/images/icon/package-details-Included.svg" alt=""></span> Professional Guide Service</li>
+                                    <li class="float-start w-50 tw-text-lg fw-normal tw-mb-4 d-inline-flex align-items-center tw-gap-3"><span><img src="assets/images/icon/package-details-Included.svg" alt=""></span> Daily Breakfast</li>
+                                    <li class="float-start w-50 tw-text-lg fw-normal tw-mb-4 d-inline-flex align-items-center tw-gap-3"><span><img src="assets/images/icon/package-details-Included.svg" alt=""></span> Accommodation (6 Nights)</li>
+                                    <li class="float-start w-50 tw-text-lg fw-normal tw-mb-4 d-inline-flex align-items-center tw-gap-3"><span><img src="assets/images/icon/package-details-Included.svg" alt=""></span> Temple & Garden Entrance Fees</li>
+                                    <li class="float-start w-50 tw-text-lg fw-normal tw-mb-4 d-inline-flex align-items-center tw-gap-3"><span><img src="assets/images/icon/package-details-Included.svg" alt=""></span> Comfortable Transportation</li>
+                                    <li class="float-start w-50 tw-text-lg fw-normal tw-mb-4 d-inline-flex align-items-center tw-gap-3"><span><img src="assets/images/icon/package-details-Included.svg" alt=""></span> Cultural Performances</li>
+                                    <li class="float-start w-50 tw-text-lg fw-normal tw-mb-4 d-inline-flex align-items-center tw-gap-3"><span><img src="assets/images/icon/package-details-Included.svg" alt=""></span> Refreshments & Mineral Water</li>
                                 </ul>
                             </div>
-                        </div>
+                        </div> -->
 
                         <div class="tw-mb-14" data-aos-duration="1000" data-aos-delay="300">
                             <h2 class="tw-text-10 tw-mb-4">Perfect For:</h2>
                             <p class="tw-text-lg">This tour is specially designed for travelers seeking peace, tranquility, and spiritual renewal. Ideal for those who want to experience Sri Lanka's natural beauty, cultural heritage, and peaceful environments away from the hustle and bustle of city life.</p>
+                        </div>
+
+                        <!-- Package Statistics -->
+                        <div class="package-stats" data-aos-duration="1000" data-aos-delay="300">
+                            <h3 class="tw-text-10 tw-mb-6">Package Overview</h3>
+                            <div class="package-rating text-center">
+                                <div class="stars">Loading...</div>
+                            </div>
+                            <div class="view-count"><i class="ph ph-eye"></i>Loading views...</div>
+
+                            <!-- Detailed Ratings -->
+                            <div class="rating-breakdown">
+                                <h6 class="tw-mb-4">Detailed Ratings</h6>
+                                <div class="rating-item" data-rating="comfort">
+                                    <span class="rating-label">Comfort</span>
+                                    <div class="progress">
+                                        <div class="progress-bar" style="width: 0%"></div>
+                                    </div>
+                                    <span class="rating-text">0.0</span>
+                                </div>
+                                <div class="rating-item" data-rating="destination">
+                                    <span class="rating-label">Destination</span>
+                                    <div class="progress">
+                                        <div class="progress-bar" style="width: 0%"></div>
+                                    </div>
+                                    <span class="rating-text">0.0</span>
+                                </div>
+                                <div class="rating-item" data-rating="accommodation">
+                                    <span class="rating-label">Accommodation</span>
+                                    <div class="progress">
+                                        <div class="progress-bar" style="width: 0%"></div>
+                                    </div>
+                                    <span class="rating-text">0.0</span>
+                                </div>
+                                <div class="rating-item" data-rating="transport">
+                                    <span class="rating-label">Transport</span>
+                                    <div class="progress">
+                                        <div class="progress-bar" style="width: 0%"></div>
+                                    </div>
+                                    <span class="rating-text">0.0</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Reviews Section -->
+                        <div class="review-section" data-aos-duration="1000" data-aos-delay="300">
+                            <div class="review-header">
+                                <h3 class="tw-text-10">Customer Reviews</h3>
+                            </div>
+                            <div class="review-content">
+                                <div id="reviews-container">
+                                    <div class="loading">
+                                        <i class="ph ph-spinner"></i>
+                                        <p>Loading reviews...</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Review Form Section -->
+                        <div class="review-form-section" data-aos-duration="1000" data-aos-delay="300">
+                            <h4 class="tw-mb-6">Share Your Experience</h4>
+                            <div id="review-message"></div>
+                            <form id="review-form">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="reviewer_name">Your Name *</label>
+                                            <input type="text" class="form-control" name="reviewer_name" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="reviewer_email">Email Address *</label>
+                                            <input type="email" class="form-control" name="reviewer_email" required>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Overall Rating *</label>
+                                    <div data-star-rating="rating" data-value="0"></div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="review_text">Your Review *</label>
+                                    <textarea class="form-control" name="review_text" rows="4" placeholder="Share your experience with this tour package..." required></textarea>
+                                </div>
+
+                                <h6 class="tw-mb-4">Detailed Ratings</h6>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="rating-input-group">
+                                            <label>Comfort</label>
+                                            <div data-star-rating="comfort_rating" data-value="5"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="rating-input-group">
+                                            <label>Destination</label>
+                                            <div data-star-rating="destination_rating" data-value="5"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="rating-input-group">
+                                            <label>Accommodation</label>
+                                            <div data-star-rating="accommodation_rating" data-value="5"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="rating-input-group">
+                                            <label>Transport</label>
+                                            <div data-star-rating="transport_rating" data-value="5"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button type="submit" class="btn-submit-review">
+                                    Submit Review
+                                </button>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- ==================== Custom Footer Start ==================== -->
+    <footer class="rent-car-custom-footer">
+        <div class="container">
+            <div class="row">
+                <!-- Brand Section -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h3 class="rent-car-footer-brand">Marshell Holidays</h3>
+                    <p class="rent-car-footer-text">Your trusted partner for authentic Sri Lankan experiences. We specialize in personalized car rentals, cultural tours, and spiritual journeys.</p>
+                    <div class="d-flex flex-wrap">
+                        <a href="#" class="rent-car-social-icon"><i class="ph-bold ph-facebook-logo"></i></a>
+                        <a href="#" class="rent-car-social-icon"><i class="ph-bold ph-instagram-logo"></i></a>
+                        <a href="#" class="rent-car-social-icon"><i class="ph-bold ph-twitter-logo"></i></a>
+                        <a href="#" class="rent-car-social-icon"><i class="ph-bold ph-linkedin-logo"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="rent-car-footer-title">Quick Links</h5>
+                    <a href="index.html" class="rent-car-footer-link">Home</a>
+                    <a href="about.html" class="rent-car-footer-link">About Us</a>
+                    <a href="sri-lanka-tour-packages.html" class="rent-car-footer-link">Tour Packages</a>
+                    <a href="rent-a-car.html" class="rent-car-footer-link">Rent a Car</a>
+                    <a href="contact.html" class="rent-car-footer-link">Contact</a>
+                </div>
+
+                <!-- Services -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="rent-car-footer-title">Our Services</h5>
+                    <a href="#" class="rent-car-footer-link">Vehicle Rentals</a>
+                    <a href="#" class="rent-car-footer-link">Cultural Tours</a>
+                    <a href="#" class="rent-car-footer-link">Airport Transfers</a>
+                    <a href="#" class="rent-car-footer-link">Custom Itineraries</a>
+                    <a href="#" class="rent-car-footer-link">Travel Planning</a>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="rent-car-footer-title">Get in Touch</h5>
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="ph ph-envelope me-3" style="color: #2c5aa0;"></i>
+                        <a href="mailto:info@marshallholidays.com" class="rent-car-footer-link mb-0">info@marshallholidays.com</a>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="ph ph-phone me-3" style="color: #2c5aa0;"></i>
+                        <a href="tel:+94252223456" class="rent-car-footer-link mb-0">+94 25 222 3456</a>
+                    </div>
+                    <div class="d-flex align-items-start">
+                        <i class="ph ph-map-pin me-3 mt-1" style="color: #2c5aa0;"></i>
+                        <span class="rent-car-footer-link mb-0">Anuradhapura,<br>Sri Lanka</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="rent-car-footer-bottom">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="rent-car-footer-bottom-text mb-0">&copy; 2024 Marshell Holidays Pvt Ltd. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <a href="#" class="rent-car-footer-link d-inline me-4">Privacy Policy</a>
+                        <a href="#" class="rent-car-footer-link d-inline">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ==================== Custom Footer End ==================== -->
 </div>
 
 <!-- Scripts -->
 <script src="assets/js/jquery-3.6.0.min.js"></script>
-<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/boostrap.bundle.min.js"></script>
 <script src="assets/js/slick.min.js"></script>
 <script src="assets/js/swiper-bundle.min.js"></script>
 <script src="assets/js/aos.js"></script>
@@ -356,6 +586,231 @@
 <script src="assets/js/ScrollSmoother.min.js"></script>
 <script src="assets/js/custom-gsap.js"></script>
 <script src="assets/js/script.js"></script>
+<!-- Custom Star Rating System -->
+<script src="assets/js/custom-stars.js"></script>
+<!-- Review System JS -->
+<script src="assets/js/reviews.js"></script>
+
+<style>
+    /* Hero Section Mobile Responsive */
+    .breadcrumb-title, .hero-title {
+        text-align: center !important;
+        max-width: 100% !important;
+    }
+
+    @media (max-width: 768px) {
+        .breadcrumb-title, .hero-title {
+            font-size: 1.8rem !important;
+            line-height: 1.2 !important;
+            padding: 0 20px !important;
+            margin-bottom: 1rem !important;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .breadcrumb-title, .hero-title {
+            font-size: 1.5rem !important;
+            line-height: 1.3 !important;
+            padding: 0 15px !important;
+            margin-bottom: 1rem !important;
+        }
+    }
+
+    .breadcrumb-area, .hero-area {
+        display: flex !important;
+        align-items: center !important;
+        min-height: 200px !important;
+    }
+
+    /* New Mobile Sidebar Styles */
+    .mobile-sidebar {
+        position: fixed;
+        top: 0;
+        left: -320px;
+        width: 320px;
+        height: 100vh;
+        background: #ffffff;
+        box-shadow: 2px 0 20px rgba(0, 0, 0, 0.1);
+        z-index: 9999;
+        transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        overflow-y: auto;
+    }
+
+    .mobile-sidebar.active {
+        left: 0;
+    }
+
+    .mobile-sidebar-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        border-bottom: 1px solid #e2e8f0;
+    }
+
+    .mobile-logo {
+        color: #2c5aa0;
+        font-weight: 700;
+        font-size: 1.25rem;
+        margin: 0;
+        font-family: 'Philosopher', serif;
+    }
+
+    .mobile-close-btn {
+        background: #f1f5f9;
+        border: none;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #64748b;
+        font-size: 18px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+
+    .mobile-close-btn:hover {
+        background: #e2e8f0;
+        color: #334155;
+    }
+
+    .mobile-nav {
+        padding: 20px 0;
+    }
+
+    .mobile-nav-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .mobile-nav-item {
+        margin: 0;
+    }
+
+    .mobile-nav-link {
+        display: block;
+        padding: 15px 20px;
+        color: #334155;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 16px;
+        transition: all 0.2s ease;
+        border-left: 3px solid transparent;
+    }
+
+    .mobile-nav-link:hover,
+    .mobile-nav-link.active {
+        background: #f8faff;
+        color: #2c5aa0;
+        border-left-color: #2c5aa0;
+    }
+
+    .mobile-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 9998;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.4s ease;
+    }
+
+    .mobile-overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* Hide on desktop */
+    @media (min-width: 992px) {
+        .mobile-sidebar,
+        .mobile-overlay {
+            display: none;
+        }
+    }
+</style>
+
+<script>
+    // New Mobile Menu Implementation
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuToggle = document.getElementById('mobile-menu-toggle');
+        const sidebar = document.getElementById('mobile-sidebar');
+        const overlay = document.getElementById('mobile-overlay');
+        const closeBtn = document.getElementById('mobile-close-btn');
+
+        console.log('New mobile menu elements:', {
+            toggle: !!menuToggle,
+            sidebar: !!sidebar,
+            overlay: !!overlay,
+            closeBtn: !!closeBtn
+        });
+
+        function openMenu() {
+            console.log('Opening mobile menu');
+            sidebar.classList.add('active');
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMenu() {
+            console.log('Closing mobile menu');
+            sidebar.classList.remove('active');
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Toggle button click
+        if (menuToggle) {
+            menuToggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                console.log('Menu toggle clicked');
+                openMenu();
+            });
+        }
+
+        // Close button click
+        if (closeBtn) {
+            closeBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                console.log('Close button clicked');
+                closeMenu();
+            });
+        }
+
+        // Overlay click to close
+        if (overlay) {
+            overlay.addEventListener('click', function(e) {
+                e.preventDefault();
+                console.log('Overlay clicked');
+                closeMenu();
+            });
+        }
+
+        // ESC key to close
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && sidebar.classList.contains('active')) {
+                console.log('ESC key pressed');
+                closeMenu();
+            }
+        });
+
+        // Close menu when clicking on menu links
+        const menuLinks = document.querySelectorAll('.mobile-nav-link');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                console.log('Menu link clicked');
+                setTimeout(() => closeMenu(), 100);
+            });
+        });
+    });
+</script>
 
 </body>
 </html>

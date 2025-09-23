@@ -106,13 +106,21 @@
 .rent-car-destinations-container {
     max-height: 350px;
     overflow-y: auto;
-    min-height: 180px;
+    min-height: 120px;
     padding-right: 15px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     margin-left: -70px;
     background: transparent;
     border: none;
     box-shadow: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+/* Reduce spacing in the default text */
+.rent-car-destinations-container .text-muted {
+    padding: 15px 0 !important;
+    margin: 0 !important;
 }
 
 .rent-car-destination-card {
@@ -939,37 +947,404 @@
 }
 
 /* ============================================
+   DESKTOP STYLES (PRESERVE ORIGINAL BEHAVIOR)
+   ============================================ */
+@media (min-width: 769px) {
+    /* Ensure desktop vehicle section remains in grid layout */
+    .rent-car-vehicle-section .container .row {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        overflow: visible !important;
+        scroll-snap-type: none !important;
+        padding: 0 !important;
+        margin: 0 -15px !important;
+    }
+
+    .rent-car-vehicle-section .container .row .col-lg-4,
+    .rent-car-vehicle-section .container .row .col-md-6 {
+        flex: 0 0 auto !important;
+        max-width: none !important;
+        margin-right: 0 !important;
+        scroll-snap-align: none !important;
+    }
+
+    .rent-car-vehicle-card img {
+        height: 200px !important;
+    }
+
+    .rent-car-vehicle-section::after {
+        display: none !important;
+    }
+
+    .vehicle-nav-arrows {
+        display: none !important;
+    }
+
+    /* Hide mobile menu overlay on desktop */
+    .mobile-menu-overlay {
+        display: none !important;
+    }
+}
+
+/* ============================================
    RESPONSIVE STYLES
    ============================================ */
+/* ============================================
+   MOBILE MENU ANIMATION STYLES
+   ============================================ */
+.mobile-menu {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 9999;
+}
+
+.mobile-menu.show {
+    transform: translateX(0) !important;
+}
+
+.mobile-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9998;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu-overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
 @media (max-width: 768px) {
+    /* Header mobile optimization */
+    .header {
+        padding: 10px 0;
+    }
+
+    .logo h3 {
+        font-size: 1.3rem !important;
+    }
+
+    .header-button .primary-btn {
+        padding: 8px 15px !important;
+        font-size: 0.8rem !important;
+    }
+
+    /* Breadcrumb mobile fixes for all pages */
+    .breadcrumb-area {
+        min-height: 200px !important;
+        padding: 20px 0;
+        background-size: cover !important;
+        background-position: center !important;
+        background-attachment: scroll !important;
+    }
+
+    .breadcrumb-title {
+        font-size: 1.8rem !important;
+        line-height: 1.3 !important;
+        padding: 0 20px;
+        word-wrap: break-word;
+        text-align: center !important;
+        color: white !important;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.7) !important;
+    }
+
+    /* About page specific breadcrumb fixes */
+    .breadcrumb-area .container-fluid {
+        padding: 0 15px;
+    }
+
+    .breadcrumb-area .row {
+        margin: 0;
+    }
+
+    .breadcrumb-area .col-lg-8 {
+        padding: 0 10px;
+    }
+
+    /* Reset negative margins for mobile */
+    .rent-car-map-container {
+        margin-left: 0;
+        padding: 0 15px;
+        height: 350px;
+    }
+
+    .rent-car-destinations-title {
+        margin-left: 0;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .rent-car-destinations-container {
+        margin-left: 0;
+        max-height: 300px;
+        padding-right: 15px;
+    }
+
+    .rent-car-proceed-btn {
+        margin-left: 0;
+    }
+
     .rent-car-map-title,
     .rent-car-vehicle-title,
     .rent-car-booking-title {
         font-size: 2.5rem;
     }
-    
-    .rent-car-map-container {
-        height: 350px;
-    }
-    
-    .rent-car-destinations-container {
-        max-height: 300px;
-    }
-    
+
     .rent-car-vehicle-card,
     .rent-car-booking-card {
         padding: 20px;
     }
+
+    /* Fix Sri Lanka map sizing for mobile */
+    .rent-car-sri-lanka-map {
+        width: 65%;
+        margin-top: -30px;
+        margin-bottom: 50px;
+    }
+
+    /* Mobile Vehicle Cards Slider */
+    .rent-car-vehicle-section .container .row {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto;
+        overflow-y: hidden;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        padding: 0 10px;
+        margin: 0 -10px;
+    }
+
+    .rent-car-vehicle-section .container .row .col-lg-4,
+    .rent-car-vehicle-section .container .row .col-md-6 {
+        flex: 0 0 85% !important;
+        max-width: 85% !important;
+        scroll-snap-align: center;
+        margin-right: 15px;
+    }
+
+    .rent-car-vehicle-section .container .row .col-lg-4:last-child,
+    .rent-car-vehicle-section .container .row .col-md-6:last-child {
+        margin-right: 20px;
+    }
+
+    /* Hide scrollbar but keep functionality */
+    .rent-car-vehicle-section .container .row::-webkit-scrollbar {
+        display: none;
+    }
+
+    .rent-car-vehicle-section .container .row {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        scroll-behavior: smooth;
+    }
+
+    /* Make vehicle card images bigger on mobile */
+    .rent-car-vehicle-card img {
+        height: 250px !important;
+        border-radius: 15px;
+        margin-bottom: 25px;
+    }
+
+    /* Add scroll indicator and navigation for mobile vehicle section */
+    .rent-car-vehicle-section {
+        position: relative;
+    }
+
+    .rent-car-vehicle-section::after {
+        content: "← Swipe to see more →";
+        display: block;
+        text-align: center;
+        font-size: 0.8rem;
+        color: #64748b;
+        margin-top: 15px;
+        font-style: italic;
+    }
+
+    /* Vehicle Cards Navigation Arrows */
+    .vehicle-nav-arrows {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        pointer-events: none;
+        padding: 0 10px;
+    }
+
+    .vehicle-nav-arrow {
+        width: 35px;
+        height: 35px;
+        background: rgba(255, 255, 255, 0.2);
+        border: 1px solid rgba(44, 90, 160, 0.3);
+        border-radius: 50%;
+        color: #2c5aa0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        pointer-events: all;
+        backdrop-filter: blur(5px);
+    }
+
+    .vehicle-nav-arrow:hover {
+        background: rgba(255, 255, 255, 0.4);
+        border-color: rgba(44, 90, 160, 0.6);
+        transform: scale(1.05);
+    }
+
+    .vehicle-nav-arrow:disabled {
+        opacity: 0.2;
+        cursor: not-allowed;
+        transform: none;
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    .vehicle-nav-arrow i {
+        font-size: 14px;
+    }
+
+
+    /* Adjust map title and subtitle for mobile */
+    .rent-car-map-title {
+        font-size: 2.2rem;
+        margin-bottom: 10px;
+    }
+
+    .rent-car-map-subtitle {
+        font-size: 1rem;
+        margin-bottom: 40px;
+        padding: 0 15px;
+    }
+
+    /* Ensure proper spacing in map section */
+    .rent-car-map-section {
+        padding: 40px 0 20px 0;
+    }
+
+    /* Reduce spacing in destinations container */
+    .rent-car-destinations-container {
+        margin-left: 0;
+        max-height: 200px;
+        padding-right: 15px;
+        margin-bottom: 5px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    /* Reduce padding in the text inside destinations container */
+    .rent-car-destinations-container .text-muted {
+        padding: 10px 0 !important;
+        margin: 0 !important;
+    }
+
+    /* Fix location pins for mobile */
+    .rent-car-location-pin {
+        width: 30px;
+        height: 30px;
+        font-size: 0.9rem;
+    }
 }
 
 @media (max-width: 576px) {
+    /* Breadcrumb for very small screens */
+    .breadcrumb-area {
+        min-height: 180px !important;
+        padding: 15px 0;
+        background-attachment: scroll !important;
+    }
+
+    .breadcrumb-title {
+        font-size: 1.5rem !important;
+        line-height: 1.3 !important;
+        padding: 0 15px;
+        text-align: center !important;
+        color: white !important;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.8) !important;
+        word-break: break-word;
+    }
+
+    /* Ensure proper container spacing on small screens */
+    .breadcrumb-area .container-fluid {
+        padding: 0 10px;
+    }
+
+    .breadcrumb-area .col-lg-8 {
+        padding: 0 5px;
+    }
+
     .rent-car-map-title,
     .rent-car-vehicle-title,
     .rent-car-booking-title {
         font-size: 2rem;
     }
-    
+
     .rent-car-map-container {
         height: 300px;
+        padding: 0 10px;
+    }
+
+    .rent-car-sri-lanka-map {
+        width: 70%;
+        margin-top: -20px;
+        margin-bottom: 40px;
+    }
+
+    /* Further adjust titles for small screens */
+    .rent-car-map-title {
+        font-size: 1.8rem;
+        line-height: 1.2;
+    }
+
+    .rent-car-map-subtitle {
+        font-size: 0.9rem;
+        margin-bottom: 30px;
+    }
+
+    /* Smaller location pins for very small screens */
+    .rent-car-location-pin {
+        width: 25px;
+        height: 25px;
+        font-size: 0.8rem;
+    }
+
+    /* Adjust destination cards for small screens */
+    .rent-car-destination-card {
+        padding: 15px;
+        margin-bottom: 12px;
+    }
+
+    .destination-image-container {
+        width: 45px;
+        height: 45px;
+        margin-right: 12px;
+    }
+
+    .destination-number {
+        width: 20px;
+        height: 20px;
+        font-size: 0.7rem;
+    }
+
+    .destination-name {
+        font-size: 0.9rem;
+    }
+
+    /* Vehicle cards for very small screens */
+    .rent-car-vehicle-section .container .row .col-lg-4,
+    .rent-car-vehicle-section .container .row .col-md-6 {
+        flex: 0 0 90% !important;
+        max-width: 90% !important;
+    }
+
+    .rent-car-vehicle-card img {
+        height: 220px !important;
     }
 }

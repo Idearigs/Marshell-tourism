@@ -10,7 +10,7 @@
     <meta name="robots" content="INDEX,FOLLOW">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Title -->
-    <title>Ella - Hill Country Paradise & Tea Plantations | Marshel Tourism</title>
+    <title>Ella - Hill Country Paradise & Tea Plantations | Marshell Holidays</title>
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/images/logo/favicon.png">
     
@@ -28,6 +28,8 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!-- Main css -->
     <link rel="stylesheet" href="assets/css/main.css">
+    <!-- Custom Rent Car CSS -->
+    <link rel="stylesheet" href="assets/css/rent-car-custom.css">
 </head>
 
 <body class="bg-neutral-50">
@@ -175,8 +177,8 @@
     </button>
 
     <div class="mobile-menu__inner">
-        <a href="index.html" class="mobile-menu__logo">
-            <img src="assets/images/logo/logo.png" alt="Logo">
+        <a href="index.php" class="mobile-menu__logo">
+            <h4 class="mb-0 text-main-600 fw-bold font-heading">Marshell Holidays</h4>
         </a>
         <div class="mobile-menu__menu">
             <!-- Nav menu Start -->
@@ -259,6 +261,8 @@
         </div>
     </div>
 </div>
+<!-- Mobile Menu Overlay -->
+<div class="mobile-menu-overlay"></div>
 <!-- ==================== Mobile Menu End Here ==================== -->
 <!-- ==================== Header Start Here ==================== -->
 <header class="header header-two transition-all">
@@ -480,15 +484,6 @@
                     </div>
                     <div class="col-xl-4 col-lg-6 col-md-7">
                          <div class="destination-details-sideber tw-ms-8">
-                              <div class="search bg-white tw-pt-9 tw-pb-7 tw-px-11 tw-mb-8 tw-rounded-xl" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                                   <h6 class="tw-text-505 text-capitalize tw-mb-3 border-start border-3 border-main-600 tw-ps-2">search here</h6>
-                                   <form action="#" class="position-relative">
-                                        <input type="text" class="tw-ps-4 tw-pe-12 tw-py-4 bg-neutral-100 tw-rounded-xl tw-placeholder-text-main-two-600 focus-outline-0 w-100 tw-placeholder-transition-2 focus-tw-placeholder-text-hidden shadow-none flex-grow-1 border border-white focus-border-main-600 tw-duration-300" placeholder="Search here...">
-                                        <button type="submit" class="position-absolute top-50 tw--translate-y-50 tw-end-0 text-main-600 tw-text-xl d-flex tw-me-5">
-                                             <i class="ph-bold ph-magnifying-glass"></i>
-                                        </button>
-                                   </form>
-                              </div>
                               <div class="catagori bg-white tw-pt-9 tw-pb-7 tw-px-11 tw-mb-8 tw-rounded-xl" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                                    <h6 class="tw-text-505 text-capitalize tw-mb-10 border-start border-3 border-main-600 tw-ps-2">Catagories</h6>
                                    <div>
@@ -777,7 +772,7 @@
         <div class="border-top border-dashed border-0 tw-py-8">
             <div class="container container-two">
                 <div class="footer-copyright-wrap d-flex align-items-center justify-content-between flex-wrap">
-                    <p class="text-line-1 fw-normal text-main-600">Copyright - Marshel Tourism <span class="fw-semibold"></span> Creating memorable travel experiences for mature adventurers</p>
+                    <p class="text-line-1 fw-normal text-main-600">Copyright - Marshell Holidays <span class="fw-semibold"></span> Creating memorable travel experiences for mature adventurers</p>
                     <div class="">
                         <ul class="footer-copyright-social d-flex tw-gap-16">
                             <li>
@@ -845,6 +840,59 @@
     <script src="assets/js/custom-gsap.js"></script>
     <!-- main js -->
     <script src="assets/js/main.js"></script>
+
+    <script>
+        // Mobile menu functionality with animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuToggle = document.querySelector('.toggle-mobileMenu');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            const mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
+            const closeButton = document.querySelector('.mobile-menu .close-button');
+
+            function openMobileMenu() {
+                if (mobileMenu && mobileMenuOverlay) {
+                    mobileMenu.classList.remove('tw--translate-x-full');
+                    mobileMenu.classList.add('show');
+                    mobileMenuOverlay.classList.add('show');
+                    document.body.style.overflow = 'hidden';
+                }
+            }
+
+            function closeMobileMenu() {
+                if (mobileMenu && mobileMenuOverlay) {
+                    mobileMenu.classList.remove('show');
+                    mobileMenuOverlay.classList.remove('show');
+                    document.body.style.overflow = '';
+                    setTimeout(() => {
+                        mobileMenu.classList.add('tw--translate-x-full');
+                    }, 300);
+                }
+            }
+
+            if (mobileMenuToggle) {
+                mobileMenuToggle.addEventListener('click', function(event) {
+                    event.stopPropagation();
+                    if (mobileMenu.classList.contains('show')) {
+                        closeMobileMenu();
+                    } else {
+                        openMobileMenu();
+                    }
+                });
+            }
+
+            if (closeButton) {
+                closeButton.addEventListener('click', function() {
+                    closeMobileMenu();
+                });
+            }
+
+            if (mobileMenuOverlay) {
+                mobileMenuOverlay.addEventListener('click', function() {
+                    closeMobileMenu();
+                });
+            }
+        });
+    </script>
 
 </body>
 

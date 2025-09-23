@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Star Rating Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        .test-section {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .form-group {
+            margin: 20px 0;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .rating-input-group {
+            margin: 15px 0;
+        }
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px 5px;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        .result {
+            background: #e9ecef;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Custom Star Rating System Test</h1>
+
+    <div class="test-section">
+        <h3>Test Form with Custom Star Ratings</h3>
+
+        <form id="testForm">
+            <div class="form-group">
+                <label>Overall Rating:</label>
+                <div data-star-rating="overall_rating" data-value="0"></div>
+            </div>
+
+            <div class="rating-input-group">
+                <label>Comfort:</label>
+                <div data-star-rating="comfort_rating" data-value="5"></div>
+            </div>
+
+            <div class="rating-input-group">
+                <label>Destination:</label>
+                <div data-star-rating="destination_rating" data-value="3"></div>
+            </div>
+
+            <div class="rating-input-group">
+                <label>Accommodation:</label>
+                <div data-star-rating="accommodation_rating" data-value="0"></div>
+            </div>
+
+            <div class="rating-input-group">
+                <label>Transport:</label>
+                <div data-star-rating="transport_rating" data-value="4"></div>
+            </div>
+
+            <button type="button" onclick="getFormValues()">Get Form Values</button>
+            <button type="button" onclick="resetForm()">Reset All</button>
+            <button type="button" onclick="setRandomValues()">Set Random Values</button>
+        </form>
+
+        <div class="result" id="result">
+            <strong>Form Values:</strong> Click "Get Form Values" to see the current ratings
+        </div>
+    </div>
+
+    <script src="assets/js/custom-stars.js"></script>
+
+    <script>
+        function getFormValues() {
+            const form = document.getElementById('testForm');
+            const formData = new FormData(form);
+
+            let values = {};
+            for (let [key, value] of formData.entries()) {
+                values[key] = value;
+            }
+
+            document.getElementById('result').innerHTML =
+                '<strong>Form Values:</strong><br>' +
+                JSON.stringify(values, null, 2).replace(/\n/g, '<br>').replace(/ /g, '&nbsp;');
+        }
+
+        function resetForm() {
+            if (window.customStarRating) {
+                // Reset all ratings to 0
+                for (let i = 0; i < 5; i++) {
+                    window.customStarRating.setRating(i, 0);
+                }
+            }
+        }
+
+        function setRandomValues() {
+            if (window.customStarRating) {
+                // Set random ratings
+                for (let i = 0; i < 5; i++) {
+                    const randomValue = Math.floor(Math.random() * 5) + 1;
+                    window.customStarRating.setRating(i, randomValue);
+                }
+            }
+        }
+
+        // Test the system after a short delay
+        setTimeout(() => {
+            console.log('Testing star rating system...');
+            if (window.customStarRating) {
+                console.log('Custom star rating system loaded successfully');
+            } else {
+                console.error('Custom star rating system not loaded');
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
