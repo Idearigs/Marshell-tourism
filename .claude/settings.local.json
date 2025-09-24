@@ -1,23 +1,13 @@
 {
   "permissions": {
     "allow": [
-      "Bash(do echo \"File: $file\")",
-      "Bash(do if [ -f \"$file\" ])",
-      "Bash(then echo \"File exists: $file\")",
-      "Bash(for file in index.html about.html contact.html srilanka-destinations.html customize-your-trip.html rent-a-car.html sri-lanka-tour-packages.html)",
-      "Bash(do if grep -q \"Marshel Tourism\\|Marshall Holidays\" \"$file\")",
-      "Bash(then echo \"ISSUE: $file still contains old branding\")",
-      "Bash(else echo \"OK: $file updated\")",
-      "Bash(fi)",
-      "Bash(done)",
-      "Bash(for file in jewels-of-ceylon-grand-tour.html ceylon-discovery-explorer.html buddhist-cultural-visit.html cool-relaxing-visit.html paradise-coastal-adventure.html sacred-ceylon-wellness-retreat.html)",
-      "Bash(find:*)",
-      "Bash(for file in index.html about.html contact.html customize-your-trip.html rent-a-car.html sri-lanka-tour-packages.html srilanka-destinations.html)",
-      "Bash(if [ -f \"$file\" ])",
-      "Bash(then if grep -q \"Marshel Tourism\\|Marshall Holidays\\|Marshe Holidays\" \"$file\")",
-      "Bash(for file in *.html)",
-      "Bash(do if grep -qi \"Marshe Holidays\\|Marshel Tourism\\|Marshall Holidays\\|Marshall Tourism\" \"$file\")",
-      "Bash(then echo \"Processing $file\")"
+      "Read(//c/**)",
+      "Bash(move about.html about.php)",
+      "Bash(php:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(del rent-a-car.html)",
+      "Bash(del \"C:\\xampp\\htdocs\\Marshel-Tourism\\customize-your-trip.html\")"
     ],
     "deny": [],
     "ask": []

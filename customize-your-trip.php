@@ -46,7 +46,7 @@
 
 <body class="bg-neutral-50">
 
-  
+
     <!-- Search Popup End-->
 
     <!--==================== mouse cursor drag start ====================-->
@@ -100,117 +100,19 @@
     <span class="dot"></span>
     <!-- Custom Cursor End -->
 
-    <!-- ==================== Mobile Menu Start Here ==================== -->
-<div class="mobile-menu d-lg-none d-block scroll-sm position-fixed bg-white tw-w-300-px tw-h-screen overflow-y-auto tw-p-6 tw-z-999 tw--translate-x-full tw-pb-68 ">
-
-    <button type="button" class="close-button position-absolute tw-end-0 top-0 tw-me-2 tw-mt-2 tw-w-605 tw-h-605 rounded-circle d-flex justify-content-center align-items-center text-neutral-900 bg-neutral-200 hover-bg-neutral-900 hover-text-white">
-        <i class="ph ph-x"></i>
-    </button>
-
-    <div class="mobile-menu__inner">
-        <a href="index.html" class="mobile-menu__logo">
-            <h4 class="mb-0 text-main-600 fw-bold font-heading">Marshell Holidays</h4>
-        </a>
-        <div class="mobile-menu__menu">
-            <!-- Nav menu Start -->
-<ul class="nav-menu d-lg-flex align-items-center nav-menu--mobile d-block tw-mt-8 bg-white tw-px-12 tw-rounded-4xl">
-    <li class="nav-menu__item">
-        <a href="index.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Home</a>
-    </li>
-    <li class="nav-menu__item">
-        <a href="sri-lanka-tour-packages.php" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Tour Packages</a>
-    </li>
-    <li class="nav-menu__item">
-        <a href="customize-your-trip.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Customize Your Trip</a>
-    </li>
-    <li class="nav-menu__item">
-        <a href="rent-a-car.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Rent a car</a>
-    </li>
-    <li class="nav-menu__item">
-        <a href="about.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">About</a>
-    </li>
-    <li class="nav-menu__item">
-        <a href="contact.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Contact</a>
-    </li>
-</ul>
-<!-- Nav menu End  -->
-        </div>
-    </div>
-
-</div>
-<!-- ==================== Mobile Menu End Here ==================== -->
-
-<!-- ==================== Header Start Here ==================== -->
-<header class="header header-two transition-all">
-    <div class="container-fluid">
-        <nav class="d-flex align-items-center justify-content-between">
-            <!-- Logo Start -->
-            <div class="logo">
-                <a href="index.html" class="link">
-                    <h3 class="mb-0 text-main-600 fw-bold font-heading">Marshell Holidays</h3>
-                </a>
-            </div>
-            <!-- Logo End  -->
-
-            <!-- Menu Start  -->
-            <div class="header-menu header-two-menu d-lg-block d-none">
-                <!-- Nav menu Start -->
-<ul class="nav-menu d-lg-flex align-items-center tw-gap-6">
-    <li class="nav-menu__item">
-        <a href="index.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Home</a>
-    </li>
-    <li class="nav-menu__item">
-        <a href="sri-lanka-tour-packages.php" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Tour Packages</a>
-    </li>
-    <li class="nav-menu__item activePage">
-        <a href="customize-your-trip.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Customize Your Trip</a>
-    </li>
-    <li class="nav-menu__item">
-        <a href="rent-a-car.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Rent a car</a>
-    </li>
-    <li class="nav-menu__item">
-        <a href="about.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">About</a>
-    </li>
-    <li class="nav-menu__item">
-        <a href="contact.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Contact</a>
-    </li>
-</ul>
-<!-- Nav menu End  -->
-            </div>
-            <!-- Menu End  -->
-
-            <!-- Header Right start -->
-            <div class="">
-                <div class="d-flex align-items-center tw-gap-29">
-                    <div class="header-button">
-                        <a class="primary-btn bg-white text-main-600 tw-py-5 tw-px-10 fs-15 text-uppercase fw-bold font-heading tw-gap-2 d-inline-flex align-items-center tw-rounded-4xl" href="contact.html">Contact Us <i class="ph ph-arrow-up-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            <!-- Header Right End  -->
-
-            <!-- Mobile Menu Button Start -->
-            <div class="mobile-menu-button d-lg-none d-block">
-                <button type="button" class="mobile-menu-btn">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
-            <!-- Mobile Menu Button End -->
-
-        </nav>
-    </div>
-</header>
-<!-- ==================== Header End Here ==================== -->
+<?php include 'includes/tour-navbar.php'; ?>
 <div id="scrollSmoother-container">
      <!-- ==================== Breadcrumb Start Here ==================== -->
-<section class="breadcrumb-area background-img" data-background-image="Mainimg/img/Dambulla Cave Temple/dc1.jpg">
+<section class="breadcrumb-area background-img" data-background-image="MissingIMG/img/Sigiriya Rock Fortress/sig1.jpg" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('MissingIMG/img/Sigiriya Rock Fortress/sig1.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; min-height: 250px; display: flex; align-items: center;">
     <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-lg-8">
                 <div>
-                    <h2 class="breadcrumb-title text-center tw-mb-6 char-animation">Customize Your Trip</h2>
+                    <h2 class="breadcrumb-title text-center tw-mb-6 char-animation" style="font-size: 2.5rem; color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); margin-bottom: 0; line-height: 1.2; font-weight: 600;">
+                        <span class="title-line-1">Create Your</span>
+                        <br>
+                        <span class="title-line-2">Perfect Journey</span>
+                    </h2>
                 </div>
             </div>
         </div>
@@ -661,7 +563,7 @@
                             <li><a href="index.html" class="rent-car-footer-link">Home</a></li>
                             <li><a href="about.html" class="rent-car-footer-link">About Us</a></li>
                             <li><a href="sri-lanka-tour-packages.php" class="rent-car-footer-link">Tour Packages</a></li>
-                            <li><a href="customize-your-trip.html" class="rent-car-footer-link">Customize Trip</a></li>
+                            <li><a href="customize-your-trip.php" class="rent-car-footer-link">Customize Trip</a></li>
                             <li><a href="contact.html" class="rent-car-footer-link">Contact</a></li>
                         </ul>
                     </div>

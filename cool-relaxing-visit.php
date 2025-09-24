@@ -25,6 +25,30 @@
     <link rel="stylesheet" href="assets/css/rent-car-custom.css">
     <!-- Review System CSS -->
     <link rel="stylesheet" href="assets/css/reviews.css">
+
+    <!-- Tour Package Gallery Fix -->
+    <style>
+    .package-details-swiper-wrapper .swiper-slide {
+        height: 400px !important; /* Fixed height for all slides */
+    }
+
+    .package-details-swiper-wrapper .swiper-slide div {
+        height: 100% !important;
+        width: 100% !important;
+        overflow: hidden !important;
+    }
+
+    .package-details-swiper-wrapper .swiper-slide img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important; /* Maintain aspect ratio while filling container */
+        border-radius: 12px !important;
+    }
+
+    .package-details-active {
+        height: 400px !important;
+    }
+    </style>
 </head>
 
 <body class="bg-neutral-50" data-package-slug="cool-relaxing-visit">
@@ -73,103 +97,19 @@
 <!-- Search Popup End -->
 
 <!-- ==================== Header Start Here ==================== -->
-<header class="header-area header-sticky">
-    <div class="container">
-        <nav class="d-flex align-items-center justify-content-between">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="assets/images/logo/logo.png" alt="Logo">
-                </a>
-            </div>
-            
-            <!-- Menu Start  -->
-            <div class="header-menu d-lg-block d-none">
-                <ul class="nav-menu d-flex align-items-center tw-gap-12">
-                    <li class="nav-menu__item">
-                        <a href="index.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Home</a>
-                    </li>
-                    <li class="nav-menu__item">
-                        <a href="package.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Tour Packages</a>
-                    </li>
-                    <li class="nav-menu__item">
-                        <a href="destination.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Destinations</a>
-                    </li>
-                    <li class="nav-menu__item">
-                        <a href="about.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">About</a>
-                    </li>
-                    <li class="nav-menu__item">
-                        <a href="contact.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- Menu End  -->
-
-            <!-- Header Right start -->
-            <div class="">
-                <div class="d-flex align-items-center tw-gap-29">
-                    <div class="header-button">
-                        <a class="primary-btn bg-white text-main-600 tw-py-5 tw-px-10 fs-15 text-uppercase fw-bold font-heading tw-gap-2 d-inline-flex align-items-center tw-rounded-4xl" href="contact.html">Contact Us <i class="ph ph-arrow-up-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            <button type="button" id="mobile-menu-toggle" class="d-lg-none ms-3 text-neutral-800" style="font-size: 24px; background: none; border: none;">
-                <i class="ph ph-list"></i>
-            </button>
-        </nav>
-    </div>
-</header>
-<!-- ==================== Header End Here ==================== -->
-
-<!-- ==================== New Mobile Menu Start Here ==================== -->
-<div id="mobile-sidebar" class="mobile-sidebar">
-    <div class="mobile-sidebar-header">
-        <h4 class="mobile-logo">Marshell Holidays</h4>
-        <button id="mobile-close-btn" class="mobile-close-btn">
-            <i class="ph ph-x"></i>
-        </button>
-    </div>
-    <nav class="mobile-nav">
-        <ul class="mobile-nav-list">
-            <li class="mobile-nav-item">
-                <a href="index.php" class="mobile-nav-link">Home</a>
-            </li>
-            <li class="mobile-nav-item">
-                <a href="sri-lanka-tour-packages.php" class="mobile-nav-link">Tour Packages</a>
-            </li>
-            <li class="mobile-nav-item">
-                <a href="customize-your-trip.html" class="mobile-nav-link">Customize Your Trip</a>
-            </li>
-            <li class="mobile-nav-item">
-                <a href="rent-a-car.html" class="mobile-nav-link">Rent a Car</a>
-            </li>
-            <li class="mobile-nav-item">
-                <a href="about.html" class="mobile-nav-link">About</a>
-            </li>
-            <li class="mobile-nav-item">
-                <a href="contact.html" class="mobile-nav-link">Contact</a>
-            </li>
-        </ul>
-    </nav>
-</div>
-<div id="mobile-overlay" class="mobile-overlay"></div>
-<!-- ==================== New Mobile Menu End Here ==================== -->
+<?php include 'includes/tour-navbar.php'; ?>
 
 <div id="scrollSmoother-container">
-    <!-- ==================== Breadcrumb Start Here ==================== -->
-    <section class="breadcrumb-area background-img" data-background-image="MissingIMG/img/Nuwara Eliya/nwr2.jpg">
-        <div class="container-fluid">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div>
-                        <h2 class="breadcrumb-title text-center tw-mb-6 char-animation" style="font-size: 2.5rem;">Cool Relaxing Visit</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ==================== Breadcrumb End Here ==================== -->
+    <!-- ==================== Hero Section Start Here ==================== -->
+    <?php
+    $hero_image = 'MissingIMG/img/Nuwara Eliya/nwr2.jpg';
+    $hero_title = 'Cool Relaxing Visit';
+    $hero_subtitle = '7 Days 6 Nights • Perfect for Relaxation • Hill Country & Temples, Sri Lanka';
+    include 'includes/tour-hero.php';
+    ?>
+    <!-- ==================== Hero Section End Here ==================== -->
     
-    <section class="page pt-140">
+    <section id="package-details" class="page pt-140">
         <div class="container">
             <div class="row">
                 <div class="col-xl-12">

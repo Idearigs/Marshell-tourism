@@ -14,7 +14,7 @@ $packageRatings = getAllPackageRatings();
     <meta name="robots" content="INDEX,FOLLOW">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Title -->
-    <title>Sri Lanka Tour Packages - Meditation & Cultural Experiences | Marshel Tourism</title>
+    <title>Sri Lanka Tour Packages - Meditation & Cultural Experiences | Marshell Holidays</title>
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/images/logo/favicon.png">
     <!-- Aos -->
@@ -65,6 +65,44 @@ $packageRatings = getAllPackageRatings();
         .review-count {
             color: #64748b;
             font-size: 0.9rem;
+        }
+
+        /* Tour Package Card Image Standardization */
+        .service-two-thumb {
+            height: 200px !important;
+            overflow: hidden !important;
+        }
+
+        .service-two-thumb img {
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover !important;
+            border-radius: 12px !important;
+        }
+
+        .service-two-wrapper {
+            min-height: 600px !important;
+            display: flex !important;
+            flex-direction: column !important;
+        }
+
+        .service-two-content {
+            flex: 1 !important;
+            display: flex !important;
+            flex-direction: column !important;
+        }
+
+        .service-two-paragraph {
+            flex: 1 !important;
+            overflow: hidden !important;
+            display: -webkit-box !important;
+            -webkit-line-clamp: 3 !important;
+            -webkit-box-orient: vertical !important;
+            min-height: 72px !important;
+        }
+
+        .service-two-wrap {
+            margin-top: auto !important;
         }
     </style>
 </head>
@@ -174,103 +212,16 @@ $packageRatings = getAllPackageRatings();
     <span class="dot"></span>
     <!-- Custom Cursor End -->
 
-    <!-- ==================== New Mobile Menu Start Here ==================== -->
-<div id="mobile-sidebar" class="mobile-sidebar">
-    <div class="mobile-sidebar-header">
-        <h4 class="mobile-logo">Marshel Tourism</h4>
-        <button id="mobile-close-btn" class="mobile-close-btn">
-            <i class="ph ph-x"></i>
-        </button>
-    </div>
-    <nav class="mobile-nav">
-        <ul class="mobile-nav-list">
-            <li class="mobile-nav-item">
-                <a href="index.php" class="mobile-nav-link">Home</a>
-            </li>
-            <li class="mobile-nav-item">
-                <a href="sri-lanka-tour-packages.php" class="mobile-nav-link active">Tour Packages</a>
-            </li>
-            <li class="mobile-nav-item">
-                <a href="customize-your-trip.html" class="mobile-nav-link">Customize Your Trip</a>
-            </li>
-            <li class="mobile-nav-item">
-                <a href="rent-a-car.html" class="mobile-nav-link">Rent a Car</a>
-            </li>
-            <li class="mobile-nav-item">
-                <a href="about.html" class="mobile-nav-link">About</a>
-            </li>
-            <li class="mobile-nav-item">
-                <a href="contact.html" class="mobile-nav-link">Contact</a>
-            </li>
-        </ul>
-    </nav>
-</div>
-<div id="mobile-overlay" class="mobile-overlay"></div>
-<!-- ==================== New Mobile Menu End Here ==================== -->
-<!-- ==================== Header Start Here ==================== -->
-<header class="header header-two transition-all">
-    <div class="container-fluid">
-        <nav class="d-flex align-items-center justify-content-between">
-            <!-- Logo Start -->
-            <div class="logo">
-                <a href="index.php" class="link">
-                    <h3 class="mb-0 text-main-600 fw-bold font-heading">Marshel Tourism</h3>
-                </a>
-            </div>
-            <!-- Logo End  -->
-
-            <!-- Menu Start  -->
-            <div class="header-menu header-two-menu d-lg-block d-none">
-                <!-- Nav menu Start -->
-<ul class="nav-menu d-lg-flex align-items-center tw-gap-6">
-    <li class="nav-menu__item">
-        <a href="index.php" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Home</a>
-    </li>
-    <li class="nav-menu__item">
-        <a href="sri-lanka-tour-packages.php" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Tour Packages</a>
-    </li>
-    <li class="nav-menu__item">
-        <a href="customize-your-trip.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Customize Your Trip</a>
-    </li>
-    <li class="nav-menu__item">
-        <a href="blog.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Rent a car</a>
-    </li>
-    <li class="nav-menu__item">
-        <a href="about.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">About</a>
-    </li>
-    <li class="nav-menu__item">
-        <a href="contact.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Contact</a>
-    </li>
-</ul>
-<!-- Nav menu End  -->
-            </div>
-            <!-- Menu End  -->
-
-            <!-- Header Right start -->
-            <div class="">
-                <div class="d-flex align-items-center tw-gap-29">
-                    <div class="header-button">
-                        <a class="primary-btn bg-white text-main-600 tw-py-5 tw-px-10 fs-15 text-uppercase fw-bold font-heading tw-gap-2 d-inline-flex align-items-center tw-rounded-4xl" href="contact.html">Contact Us <i class="ph ph-arrow-up-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            <button type="button" id="mobile-menu-toggle" class="d-lg-none ms-3 text-neutral-800" style="font-size: 24px; background: none; border: none;">
-                <i class="ph ph-list"></i>
-            </button>
-            <!-- Header Right End  -->
-        </nav>
-    </div>
-</header>
-<!-- ==================== Header End Here ==================== -->
+<?php include 'includes/tour-navbar.php'; ?>
 <div id="scrollSmoother-container">
      <!-- ==================== Breadcrumb Start Here ==================== -->
-<section class="breadcrumb-area background-img" data-background-image="assets/images/breadcrumb/breadcrumb-bg.jpg">
+<section class="breadcrumb-area background-img" data-background-image="MissingIMG/img/Sigiriya Rock Fortress/sigwide.jpg" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('MissingIMG/img/Sigiriya Rock Fortress/sigwide.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; min-height: 250px; display: flex; align-items: center;">
     <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-lg-8">
                 <div>
-                    <h2 class="breadcrumb-title text-center tw-mb-6 char-animation" style="font-size: 2.5rem;">
-                        <span class="title-line-1">Marshel Holiday</span>
+                    <h2 class="breadcrumb-title text-center tw-mb-6 char-animation" style="font-size: 2.5rem; color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); font-weight: 600;">
+                        <span class="title-line-1">Marshell Holidays</span>
                         <br>
                         <span class="title-line-2">Tour Packages</span>
                     </h2>
@@ -331,11 +282,11 @@ $packageRatings = getAllPackageRatings();
                     <div class="col-xl-4 col-lg-6 col-md-6 d-flex package-card" data-duration="14" data-type="cultural" data-name="JEWELS OF CEYLON GRAND TOUR">
                          <div class="service-two-wrapper bg-white tw-p-6 tw-rounded-xl d-flex flex-column h-100 w-100">
                               <div class="service-two-thumb tw-mb-5">
-                                   <a href="jewels-of-ceylon-grand-tour.html"><img class="tw-rounded-xl w-100" src="assets/images/service/service-two-thumb1.jpg" alt="thumb"></a>
+                                   <a href="jewels-of-ceylon-grand-tour.php"><img class="tw-rounded-xl w-100" src="MissingIMG/img/Sigiriya Rock Fortress/sigmain.jpg" alt="Jewels of Ceylon Grand Tour"></a>
                               </div>
                               <div class="service-two-content tw-px-4 d-flex flex-column flex-grow-1">
                                    <span class="service-two-location tw-mb-3 d-block"><i class="ph ph-map-pin"></i> Sri Lanka</span>
-                                   <h4 class="tw-text-6 fw-normal text-capitalize tw-mb-4 tw-mt-2"><a class="hover-text-secondary" href="jewels-of-ceylon-grand-tour.html">JEWELS OF CEYLON GRAND TOUR</a></h4>
+                                   <h4 class="tw-text-6 fw-normal text-capitalize tw-mb-4 tw-mt-2"><a class="hover-text-secondary" href="jewels-of-ceylon-grand-tour.php">JEWELS OF CEYLON GRAND TOUR</a></h4>
                                    <p class="service-two-paragraph tw-mb-6 tw-leading-relaxed">14 Days/13 Nights cultural odyssey exploring ancient kingdoms, UNESCO sites, wildlife sanctuaries, hill country tea estates, and pristine beaches.</p>
                                    <div class="flex-grow-1"></div>
                                    <div class="service-two-wrap tw-rounded-xl tw-py-5 tw-px-6">
@@ -353,7 +304,7 @@ $packageRatings = getAllPackageRatings();
                                                   <p>/ For Best Rates</p>
                                              </div>
                                              <div>
-                                                  <a class="font-heading tw-text-sm text-uppercase text-main-600 fw-bold hover-text-secondary" href="jewels-of-ceylon-grand-tour.html">EXPLORE MORE <i class="tw-text-base ph ph-arrow-up-right"></i></a>
+                                                  <a class="font-heading tw-text-sm text-uppercase text-main-600 fw-bold hover-text-secondary" href="jewels-of-ceylon-grand-tour.php">EXPLORE MORE <i class="tw-text-base ph ph-arrow-up-right"></i></a>
                                              </div>
                                         </div>
                                    </div>
@@ -365,11 +316,11 @@ $packageRatings = getAllPackageRatings();
                     <div class="col-xl-4 col-lg-6 col-md-6 d-flex package-card" data-duration="14" data-type="cultural" data-name="CEYLON DISCOVERY EXPLORER">
                          <div class="service-two-wrapper bg-white tw-p-6 tw-rounded-xl d-flex flex-column h-100 w-100">
                               <div class="service-two-thumb tw-mb-5">
-                                   <a href="ceylon-discovery-explorer.html"><img class="tw-rounded-xl w-100" src="assets/images/service/service-two-thumb2.jpg" alt="thumb"></a>
+                                   <a href="ceylon-discovery-explorer.php"><img class="tw-rounded-xl w-100" src="MissingIMG/img/Kandy/knd2.jpg" alt="Ceylon Discovery Explorer"></a>
                               </div>
                               <div class="service-two-content tw-px-4 d-flex flex-column flex-grow-1">
                                    <span class="service-two-location tw-mb-3 d-block"><i class="ph ph-map-pin"></i> Sri Lanka</span>
-                                   <h4 class="tw-text-6 fw-normal text-capitalize tw-mb-4 tw-mt-2"><a class="hover-text-secondary" href="ceylon-discovery-explorer.html">CEYLON DISCOVERY EXPLORER</a></h4>
+                                   <h4 class="tw-text-6 fw-normal text-capitalize tw-mb-4 tw-mt-2"><a class="hover-text-secondary" href="ceylon-discovery-explorer.php">CEYLON DISCOVERY EXPLORER</a></h4>
                                    <p class="service-two-paragraph tw-mb-6 tw-leading-relaxed">14 Days/13 Nights comprehensive journey through Buddhist temples, ancient cities, safari adventures, mountain railways, and colonial heritage.</p>
                                    <div class="flex-grow-1"></div>
                                    <div class="service-two-wrap tw-rounded-xl tw-py-5 tw-px-6">
@@ -387,7 +338,7 @@ $packageRatings = getAllPackageRatings();
                                                   <p>/ For Rates</p>
                                              </div>
                                              <div>
-                                                  <a class="font-heading tw-text-sm text-uppercase text-main-600 fw-bold hover-text-secondary" href="ceylon-discovery-explorer.html">EXPLORE MORE <i class="tw-text-base ph ph-arrow-up-right"></i></a>
+                                                  <a class="font-heading tw-text-sm text-uppercase text-main-600 fw-bold hover-text-secondary" href="ceylon-discovery-explorer.php">EXPLORE MORE <i class="tw-text-base ph ph-arrow-up-right"></i></a>
                                              </div>
                                         </div>
                                    </div>
@@ -399,11 +350,11 @@ $packageRatings = getAllPackageRatings();
                     <div class="col-xl-4 col-lg-6 col-md-6 d-flex package-card" data-duration="7" data-type="coastal" data-name="PARADISE COASTAL ADVENTURE">
                          <div class="service-two-wrapper bg-white tw-p-6 tw-rounded-xl d-flex flex-column h-100 w-100">
                               <div class="service-two-thumb tw-mb-5">
-                                   <a href="paradise-coastal-adventure.html"><img class="tw-rounded-xl w-100" src="assets/images/service/service-two-thumb3.jpg" alt="thumb"></a>
+                                   <a href="paradise-coastal-adventure.php"><img class="tw-rounded-xl w-100" src="MissingIMG/img/Galle Fort/gl1.jpg" alt="Paradise Coastal Adventure"></a>
                               </div>
                               <div class="service-two-content tw-px-4 d-flex flex-column flex-grow-1">
                                    <span class="service-two-location tw-mb-3 d-block"><i class="ph ph-map-pin"></i> Sri Lanka</span>
-                                   <h4 class="tw-text-6 fw-normal text-capitalize tw-mb-4 tw-mt-2"><a class="hover-text-secondary" href="paradise-coastal-adventure.html">PARADISE COASTAL ADVENTURE</a></h4>
+                                   <h4 class="tw-text-6 fw-normal text-capitalize tw-mb-4 tw-mt-2"><a class="hover-text-secondary" href="paradise-coastal-adventure.php">PARADISE COASTAL ADVENTURE</a></h4>
                                    <p class="service-two-paragraph tw-mb-6 tw-leading-relaxed">7 Days/6 Nights coastal discovery featuring whale watching, beach relaxation, historic Galle Fort, and vibrant marine ecosystems.</p>
                                    <div class="flex-grow-1"></div>
                                    <div class="service-two-wrap tw-rounded-xl tw-py-5 tw-px-6">
@@ -421,7 +372,7 @@ $packageRatings = getAllPackageRatings();
                                                   <p>/ For Rates</p>
                                              </div>
                                              <div>
-                                                  <a class="font-heading tw-text-sm text-uppercase text-main-600 fw-bold hover-text-secondary" href="paradise-coastal-adventure.html">EXPLORE MORE <i class="tw-text-base ph ph-arrow-up-right"></i></a>
+                                                  <a class="font-heading tw-text-sm text-uppercase text-main-600 fw-bold hover-text-secondary" href="paradise-coastal-adventure.php">EXPLORE MORE <i class="tw-text-base ph ph-arrow-up-right"></i></a>
                                              </div>
                                         </div>
                                    </div>
@@ -433,11 +384,11 @@ $packageRatings = getAllPackageRatings();
                     <div class="col-xl-4 col-lg-6 col-md-6 d-flex package-card" data-duration="7" data-type="wellness" data-name="SACRED CEYLON WELLNESS RETREAT">
                          <div class="service-two-wrapper bg-white tw-p-6 tw-rounded-xl d-flex flex-column h-100 w-100">
                               <div class="service-two-thumb tw-mb-5">
-                                   <a href="sacred-ceylon-wellness-retreat.html"><img class="tw-rounded-xl w-100" src="assets/images/service/service-two-thumb1.jpg" alt="thumb"></a>
+                                   <a href="sacred-ceylon-wellness-retreat.php"><img class="tw-rounded-xl w-100" src="MissingIMG/img/Peradeniya Botanical Gardens/pb2.jpg" alt="Sacred Ceylon Wellness Retreat"></a>
                               </div>
                               <div class="service-two-content tw-px-4 d-flex flex-column flex-grow-1">
                                    <span class="service-two-location tw-mb-3 d-block"><i class="ph ph-map-pin"></i> Sri Lanka</span>
-                                   <h4 class="tw-text-6 fw-normal text-capitalize tw-mb-4 tw-mt-2"><a class="hover-text-secondary" href="sacred-ceylon-wellness-retreat.html">SACRED CEYLON WELLNESS RETREAT</a></h4>
+                                   <h4 class="tw-text-6 fw-normal text-capitalize tw-mb-4 tw-mt-2"><a class="hover-text-secondary" href="sacred-ceylon-wellness-retreat.php">SACRED CEYLON WELLNESS RETREAT</a></h4>
                                    <p class="service-two-paragraph tw-mb-6 tw-leading-relaxed">7 Days/6 Nights spiritual journey combining Ayurvedic wellness, meditation practices, temple visits, and traditional healing therapies.</p>
                                    <div class="flex-grow-1"></div>
                                    <div class="service-two-wrap tw-rounded-xl tw-py-5 tw-px-6">
@@ -455,7 +406,7 @@ $packageRatings = getAllPackageRatings();
                                                   <p>/ For Rates</p>
                                              </div>
                                              <div>
-                                                  <a class="font-heading tw-text-sm text-uppercase text-main-600 fw-bold hover-text-secondary" href="sacred-ceylon-wellness-retreat.html">EXPLORE MORE <i class="tw-text-base ph ph-arrow-up-right"></i></a>
+                                                  <a class="font-heading tw-text-sm text-uppercase text-main-600 fw-bold hover-text-secondary" href="sacred-ceylon-wellness-retreat.php">EXPLORE MORE <i class="tw-text-base ph ph-arrow-up-right"></i></a>
                                              </div>
                                         </div>
                                    </div>
@@ -467,11 +418,11 @@ $packageRatings = getAllPackageRatings();
                     <div class="col-xl-4 col-lg-6 col-md-6 d-flex package-card" data-duration="7" data-type="cultural" data-name="Buddhist Cultural Visit">
                          <div class="service-two-wrapper bg-white tw-p-6 tw-rounded-xl d-flex flex-column h-100 w-100">
                               <div class="service-two-thumb tw-mb-5">
-                                   <a href="buddhist-cultural-visit.html"><img class="tw-rounded-xl w-100" src="assets/images/service/service-two-thumb2.jpg" alt="thumb"></a>
+                                   <a href="buddhist-cultural-visit.php"><img class="tw-rounded-xl w-100" src="MissingIMG/img/Kandy/knd3.jpg" alt="Buddhist Cultural Visit"></a>
                               </div>
                               <div class="service-two-content tw-px-4 d-flex flex-column flex-grow-1">
                                    <span class="service-two-location tw-mb-3 d-block"><i class="ph ph-map-pin"></i> Ancient Sites & Buddhist Heritage, Sri Lanka</span>
-                                   <h4 class="tw-text-6 fw-normal text-capitalize tw-mb-4 tw-mt-2"><a class="hover-text-secondary" href="buddhist-cultural-visit.html">Buddhist Cultural Visit</a></h4>
+                                   <h4 class="tw-text-6 fw-normal text-capitalize tw-mb-4 tw-mt-2"><a class="hover-text-secondary" href="buddhist-cultural-visit.php">Buddhist Cultural Visit</a></h4>
                                    <p class="service-two-paragraph tw-mb-6 tw-leading-relaxed">7 Days/6 Nights Buddhist pilgrimage visiting Anuradhapura, Sigiriya, Kandy Temple of Tooth, and historic Colombo with spiritual experiences.</p>
                                    <div class="flex-grow-1"></div>
                                    <div class="service-two-wrap tw-rounded-xl tw-py-5 tw-px-6">
@@ -489,7 +440,7 @@ $packageRatings = getAllPackageRatings();
                                                   <p>/ For Rates</p>
                                              </div>
                                              <div>
-                                                  <a class="font-heading tw-text-sm text-uppercase text-main-600 fw-bold hover-text-secondary" href="buddhist-cultural-visit.html">EXPLORE MORE <i class="tw-text-base ph ph-arrow-up-right"></i></a>
+                                                  <a class="font-heading tw-text-sm text-uppercase text-main-600 fw-bold hover-text-secondary" href="buddhist-cultural-visit.php">EXPLORE MORE <i class="tw-text-base ph ph-arrow-up-right"></i></a>
                                              </div>
                                         </div>
                                    </div>
@@ -501,11 +452,11 @@ $packageRatings = getAllPackageRatings();
                     <div class="col-xl-4 col-lg-6 col-md-6 d-flex package-card" data-duration="7" data-type="adventure" data-name="Cool Relaxing Visit">
                          <div class="service-two-wrapper bg-white tw-p-6 tw-rounded-xl d-flex flex-column h-100 w-100">
                               <div class="service-two-thumb tw-mb-5">
-                                   <a href="cool-relaxing-visit.html"><img class="tw-rounded-xl w-100" src="assets/images/service/service-two-thumb3.jpg" alt="thumb"></a>
+                                   <a href="cool-relaxing-visit.php"><img class="tw-rounded-xl w-100" src="MissingIMG/img/Ella/ninearch.jpg" alt="Cool Relaxing Visit"></a>
                               </div>
                               <div class="service-two-content tw-px-4 d-flex flex-column flex-grow-1">
                                    <span class="service-two-location tw-mb-3 d-block"><i class="ph ph-map-pin"></i> Hill Country & Coastal, Sri Lanka</span>
-                                   <h4 class="tw-text-6 fw-normal text-capitalize tw-mb-4 tw-mt-2"><a class="hover-text-secondary" href="cool-relaxing-visit.html">Cool Relaxing Visit</a></h4>
+                                   <h4 class="tw-text-6 fw-normal text-capitalize tw-mb-4 tw-mt-2"><a class="hover-text-secondary" href="cool-relaxing-visit.php">Cool Relaxing Visit</a></h4>
                                    <p class="service-two-paragraph tw-mb-6 tw-leading-relaxed">7 Days relaxing journey through Kandy Temple, cool Nuwara Eliya hill station, Nine Arch Bridge Ella, and historic Galle Fort.</p>
                                    <div class="flex-grow-1"></div>
                                    <div class="service-two-wrap tw-rounded-xl tw-py-5 tw-px-6">
@@ -523,7 +474,7 @@ $packageRatings = getAllPackageRatings();
                                                   <p>/ For Rates</p>
                                              </div>
                                              <div>
-                                                  <a class="font-heading tw-text-sm text-uppercase text-main-600 fw-bold hover-text-secondary" href="cool-relaxing-visit.html">EXPLORE MORE <i class="tw-text-base ph ph-arrow-up-right"></i></a>
+                                                  <a class="font-heading tw-text-sm text-uppercase text-main-600 fw-bold hover-text-secondary" href="cool-relaxing-visit.php">EXPLORE MORE <i class="tw-text-base ph ph-arrow-up-right"></i></a>
                                              </div>
                                         </div>
                                    </div>
@@ -554,79 +505,6 @@ $packageRatings = getAllPackageRatings();
      </div>
      <div class="cta-bg-shape position-absolute start-0 z-n1">
           <img src="assets/images/cta/cta-bg-shape.png" alt="shape">
-     </div>
-</section>
-     <section class="instagram-area">
-     <div class="container">
-          <div class="row">
-               <div class="col-xl-12">
-                    <div class="text-center tw-mb-6">
-                         <h6 class="instagram-title tw-text-2xl fw-normal text-capitalize">...want to become a dontation partner & contribution...</h6>
-                    </div>
-               </div>
-          </div>
-          <div class="row row-cols-xl-6 row-cols-md-3 row-cols-sm-3 row-cols-1">
-               <div class="col">
-                    <div class="instagram-wrapper" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                         <div class="instagram-thumb position-relative z-1 overflow-hidden">
-                              <img class="tw-rounded-lg" src="assets/images/instagram/instagram-thumb1.jpg" alt="thumb">
-                              <div class="instagram-btn position-absolute z-1">
-                                   <a href="#"><span><img src="assets/images/icon/instagram.svg" alt="instagram"></span></a>
-                              </div>
-                         </div>
-                    </div>
-               </div>
-               <div class="col">
-                    <div class="instagram-wrapper" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-                         <div class="instagram-thumb position-relative z-1 overflow-hidden">
-                              <img class="tw-rounded-lg" src="assets/images/instagram/instagram-thumb2.jpg" alt="thumb">
-                              <div class="instagram-btn position-absolute z-1">
-                                   <a href="#"><span><img src="assets/images/icon/instagram.svg" alt="instagram"></span></a>
-                              </div>
-                         </div>
-                    </div>
-               </div>
-               <div class="col">
-                    <div class="instagram-wrapper" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-                         <div class="instagram-thumb position-relative z-1 overflow-hidden">
-                              <img class="tw-rounded-lg" src="assets/images/instagram/instagram-thumb3.jpg" alt="thumb">
-                              <div class="instagram-btn position-absolute z-1">
-                                   <a href="#"><span><img src="assets/images/icon/instagram.svg" alt="instagram"></span></a>
-                              </div>
-                         </div>
-                    </div>
-               </div>
-               <div class="col">
-                    <div class="instagram-wrapper" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
-                         <div class="instagram-thumb position-relative z-1 overflow-hidden">
-                              <img class="tw-rounded-lg" src="assets/images/instagram/instagram-thumb4.jpg" alt="thumb">
-                              <div class="instagram-btn position-absolute z-1">
-                                   <a href="#"><span><img src="assets/images/icon/instagram.svg" alt="instagram"></span></a>
-                              </div>
-                         </div>
-                    </div>
-               </div>
-               <div class="col">
-                    <div class="instagram-wrapper" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
-                         <div class="instagram-thumb position-relative z-1 overflow-hidden">
-                              <img class="tw-rounded-lg" src="assets/images/instagram/instagram-thumb5.jpg" alt="thumb">
-                              <div class="instagram-btn position-absolute z-1">
-                                   <a href="#"><span><img src="assets/images/icon/instagram.svg" alt="instagram"></span></a>
-                              </div>
-                         </div>
-                    </div>
-               </div>
-               <div class="col">
-                    <div class="instagram-wrapper">
-                         <div class="instagram-thumb position-relative z-1 overflow-hidden" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="700">
-                              <img class="tw-rounded-lg" src="assets/images/instagram/instagram-thumb6.jpg" alt="thumb">
-                              <div class="instagram-btn position-absolute z-1">
-                                   <a href="#"><span><img src="assets/images/icon/instagram.svg" alt="instagram"></span></a>
-                              </div>
-                         </div>
-                    </div>
-               </div>
-          </div>
      </div>
 </section>
 
@@ -946,119 +824,7 @@ $packageRatings = getAllPackageRatings();
     </script>
 
     <style>
-        /* New Mobile Sidebar Styles */
-        .mobile-sidebar {
-            position: fixed;
-            top: 0;
-            left: -320px;
-            width: 320px;
-            height: 100vh;
-            background: #ffffff;
-            box-shadow: 2px 0 20px rgba(0, 0, 0, 0.1);
-            z-index: 9999;
-            transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            overflow-y: auto;
-        }
-
-        .mobile-sidebar.active {
-            left: 0;
-        }
-
-        .mobile-sidebar-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px;
-            border-bottom: 1px solid #e2e8f0;
-        }
-
-        .mobile-logo {
-            color: #2c5aa0;
-            font-weight: 700;
-            font-size: 1.25rem;
-            margin: 0;
-            font-family: 'Philosopher', serif;
-        }
-
-        .mobile-close-btn {
-            background: #f1f5f9;
-            border: none;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #64748b;
-            font-size: 18px;
-            cursor: pointer;
-            transition: all 0.2s ease;
-        }
-
-        .mobile-close-btn:hover {
-            background: #e2e8f0;
-            color: #334155;
-        }
-
-        .mobile-nav {
-            padding: 20px 0;
-        }
-
-        .mobile-nav-list {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        .mobile-nav-item {
-            margin: 0;
-        }
-
-        .mobile-nav-link {
-            display: block;
-            padding: 15px 20px;
-            color: #334155;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 16px;
-            transition: all 0.2s ease;
-            border-left: 3px solid transparent;
-        }
-
-        .mobile-nav-link:hover,
-        .mobile-nav-link.active {
-            background: #f8faff;
-            color: #2c5aa0;
-            border-left-color: #2c5aa0;
-        }
-
-        .mobile-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100vh;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 9998;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.4s ease;
-        }
-
-        .mobile-overlay.active {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        /* Hide on desktop */
-        @media (min-width: 992px) {
-            .mobile-sidebar,
-            .mobile-overlay {
-                display: none;
-            }
-        }
-
-        /* Hero Section - Desktop stays unchanged */
+        /* Page-specific styling - keeping only necessary styles */
         .breadcrumb-title {
             text-align: center !important;
             max-width: 100% !important;
@@ -1206,83 +972,6 @@ $packageRatings = getAllPackageRatings();
             }
         }
     </style>
-
-    <script>
-        // New Mobile Menu Implementation
-        document.addEventListener('DOMContentLoaded', function() {
-            const menuToggle = document.getElementById('mobile-menu-toggle');
-            const sidebar = document.getElementById('mobile-sidebar');
-            const overlay = document.getElementById('mobile-overlay');
-            const closeBtn = document.getElementById('mobile-close-btn');
-
-            console.log('New mobile menu elements:', {
-                toggle: !!menuToggle,
-                sidebar: !!sidebar,
-                overlay: !!overlay,
-                closeBtn: !!closeBtn
-            });
-
-            function openMenu() {
-                console.log('Opening mobile menu');
-                sidebar.classList.add('active');
-                overlay.classList.add('active');
-                document.body.style.overflow = 'hidden';
-            }
-
-            function closeMenu() {
-                console.log('Closing mobile menu');
-                sidebar.classList.remove('active');
-                overlay.classList.remove('active');
-                document.body.style.overflow = '';
-            }
-
-            // Toggle button click
-            if (menuToggle) {
-                menuToggle.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    console.log('Menu toggle clicked');
-                    openMenu();
-                });
-            }
-
-            // Close button click
-            if (closeBtn) {
-                closeBtn.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    console.log('Close button clicked');
-                    closeMenu();
-                });
-            }
-
-            // Overlay click to close
-            if (overlay) {
-                overlay.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    console.log('Overlay clicked');
-                    closeMenu();
-                });
-            }
-
-            // ESC key to close
-            document.addEventListener('keydown', function(e) {
-                if (e.key === 'Escape' && sidebar.classList.contains('active')) {
-                    console.log('ESC key pressed');
-                    closeMenu();
-                }
-            });
-
-            // Close menu when clicking on menu links
-            const menuLinks = document.querySelectorAll('.mobile-nav-link');
-            menuLinks.forEach(link => {
-                link.addEventListener('click', function() {
-                    console.log('Menu link clicked');
-                    setTimeout(() => closeMenu(), 100);
-                });
-            });
-        });
-    </script>
 
 </body>
 

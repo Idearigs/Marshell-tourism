@@ -6,14 +6,18 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Buddhist Cultural Visit - 7 Days 6 Nights exploring Sri Lanka's ancient Buddhist heritage and cultural sites">
-    <meta name="keywords" content="Buddhist Cultural Visit, Sri Lanka Buddhist Tour, Anuradhapura, Sigiriya, Kandy Temple">
+    <meta name="description" content="Marshell Holidays HTML Template">
+    <meta name="keywords" content="Marshell Holidays HTML Template">
     <meta name="robots" content="INDEX,FOLLOW">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Title -->
-    <title>Buddhist Cultural Visit - 7 Days 6 Nights | Marshell Holidays</title>
+    <title> Marshell Holidays - Tours & Travels Multipurpose HTML Template </title>
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/images/logo/favicon.png">
+    <!-- Google Fonts - Philosopher -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&display=swap" rel="stylesheet">
     <!-- Aos -->
     <link rel="stylesheet" href="assets/css/swiper-bundle.css">
     <!-- Aos -->
@@ -27,9 +31,33 @@
     <link rel="stylesheet" href="assets/css/rent-car-custom.css">
     <!-- Review System CSS -->
     <link rel="stylesheet" href="assets/css/reviews.css">
+
+    <!-- Tour Package Gallery Fix -->
+    <style>
+    .package-details-swiper-wrapper .swiper-slide {
+        height: 400px !important; /* Fixed height for all slides */
+    }
+
+    .package-details-swiper-wrapper .swiper-slide div {
+        height: 100% !important;
+        width: 100% !important;
+        overflow: hidden !important;
+    }
+
+    .package-details-swiper-wrapper .swiper-slide img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important; /* Maintain aspect ratio while filling container */
+        border-radius: 12px !important;
+    }
+
+    .package-details-active {
+        height: 400px !important;
+    }
+    </style>
 </head>
 
-<body class="bg-neutral-50" data-package-slug="buddhist-cultural-visit">
+<body class="bg-neutral-50" data-package-slug="paradise-coastal-adventure">
 
 
 
@@ -133,116 +161,15 @@
     <span class="dot"></span>
     <!-- Custom Cursor End -->
 
-    <!-- ==================== New Mobile Menu Start Here ==================== -->
-<div id="mobile-sidebar" class="mobile-sidebar">
-    <div class="mobile-sidebar-header">
-        <h4 class="mobile-logo">Marshell Holidays</h4>
-        <button id="mobile-close-btn" class="mobile-close-btn">
-            <i class="ph ph-x"></i>
-        </button>
-    </div>
-    <nav class="mobile-nav">
-        <ul class="mobile-nav-list">
-            <li class="mobile-nav-item">
-                <a href="index.php" class="mobile-nav-link">Home</a>
-            </li>
-            <li class="mobile-nav-item">
-                <a href="sri-lanka-tour-packages.php" class="mobile-nav-link">Tour Packages</a>
-            </li>
-            <li class="mobile-nav-item">
-                <a href="customize-your-trip.html" class="mobile-nav-link">Customize Your Trip</a>
-            </li>
-            <li class="mobile-nav-item">
-                <a href="rent-a-car.html" class="mobile-nav-link">Rent a Car</a>
-            </li>
-            <li class="mobile-nav-item">
-                <a href="about.html" class="mobile-nav-link">About</a>
-            </li>
-            <li class="mobile-nav-item">
-                <a href="contact.html" class="mobile-nav-link">Contact</a>
-            </li>
-        </ul>
-    </nav>
-</div>
-<div id="mobile-overlay" class="mobile-overlay"></div>
-<!-- ==================== New Mobile Menu End Here ==================== -->
-<!-- ==================== Header Start Here ==================== -->
-<header class="header header-two transition-all">
-    <div class="container-fluid">
-        <nav class="d-flex align-items-center justify-content-between">
-            <!-- Logo Start -->
-            <div class="logo">
-                <a href="index.html" class="link">
-                    <img src="assets/images/logo/logo.png" alt="Logo" class="max-w-200-px">
-                </a>
-            </div>
-            <!-- Logo End  -->
-
-            <!-- Menu Start  -->
-            <div class="header-menu header-two-menu d-lg-block d-none">
-                <!-- Nav menu Start -->
-<ul class="nav-menu d-lg-flex align-items-center tw-gap-6">
-    <li class="nav-menu__item">
-        <a href="index.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Home</a>
-    </li>
-    <li class="nav-menu__item">
-        <a href="sri-lanka-tour-packages.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Tour Packages</a>
-    </li>
-    <li class="nav-menu__item">
-        <a href="customize-your-trip.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Customize Your Trip</a>
-    </li>
-    <li class="nav-menu__item">
-        <a href="rent-a-car.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Rent a car</a>
-    </li>
-    <li class="nav-menu__item">
-        <a href="about.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">About</a>
-    </li>
-    <li class="nav-menu__item">
-        <a href="contact.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Contact</a>
-    </li>
-</ul>
-<!-- Nav menu End  -->
-            </div>
-            <!-- Menu End  -->
-
-            <!-- Header Right start -->
-            <div class="">
-                <div class="d-flex align-items-center tw-gap-29">
-                    <div class="header-btn-wrap d-flex align-items-center tw-gap-5">
-                        <div>
-                            <button class="open-search" aria-label="search products" title="open search box">
-                                <span><img src="assets/images/icon/search.svg" alt="search"></span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="header-button">
-                        <a class="primary-btn bg-white text-main-600 tw-py-5 tw-px-10 fs-15 text-uppercase fw-bold font-heading tw-gap-2 d-inline-flex align-items-center tw-rounded-4xl" href="contact.html">Contact us <i class="ph ph-arrow-up-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            <button type="button" id="mobile-menu-toggle" class="d-lg-none ms-3 text-neutral-800" style="font-size: 24px; background: none; border: none;">
-                <i class="ph ph-list"></i>
-            </button>
-            <!-- Header Right End  -->
-        </nav>
-    </div>
-</header>
-<!-- ==================== Header End Here ==================== -->
+    <?php include 'includes/tour-navbar.php'; ?>
 <div id="scrollSmoother-container">
-     <!-- ==================== Breadcrumb Start Here ==================== -->
-<section class="breadcrumb-area background-img" data-background-image="MissingIMG/img/Sigiriya Rock Fortress/sigmain.jpg">
-    <div class="container-fluid">
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div>
-                    <h2 class="breadcrumb-title text-center tw-mb-6 char-animation" style="font-size: 2.5rem;">Buddhist Cultural Visit</h2>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- ==================== Breadcrumb End Here ==================== -->
-     <section class="page pt-140">
+<?php
+$hero_image = 'MissingIMG/img/Galle Fort/glwide.jpg';
+$hero_title = 'Paradise Coastal Adventure';
+$hero_subtitle = '7 Days 6 Nights Marine Wildlife & Beach Discovery';
+include 'includes/tour-hero.php';
+?>
+     <section class="page pt-140" id="package-details">
           <div class="container">
                <div class="row">
                     <div class="col-xl-12">
@@ -250,20 +177,20 @@
                               <div data-aos-duration="1000" data-aos-delay="200">
                                    <div class="d-flex align-items-center tw-gap-5 tw-mb-5">
                                         <div>
-                                             <span class="bg-main-two-600 fw-medium tw-pt-1 tw-pb-2 tw-px-5 tw-rounded-3xl text-white">Buddhist Heritage</span>
+                                             <span class="bg-main-two-600 fw-medium tw-pt-1 tw-pb-2 tw-px-5 tw-rounded-3xl">Featured</span>
                                         </div>
                                         <div>
-                                             <p><span class="text-main-two-600"><i class="ph ph-eye"></i></span> 2,847 people viewed this package</p>
+                                             <p><span class="text-main-two-600"><i class="ph ph-eye"></i></span> 5,673 people viewed this package</p>
                                         </div>
                                    </div>
                                    <div class="tw-mb-3">
-                                        <h2 class="tw-text-13 char-animation" style="font-size: 2rem;">Buddhist Cultural Visit</h2>
+                                        <h2 class="tw-text-13 char-animation" style="font-size: 2rem;">Paradise Coastal Adventure</h2>
                                    </div>
                                    <div>
                                         <ul class="d-flex tw-gap-6 flex-wrap row-gap-3">
                                              <li class="d-flex align-items-center tw-gap-2"><span><img src="assets/images/icon/package-details-top-icon1.svg" alt="clock"></span> 7 Days 6 Nights</li>
-                                             <li class="d-flex align-items-center tw-gap-2"><span><img src="assets/images/icon/package-details-top-icon2.svg" alt="people"></span> Buddhist Heritage Seekers</li>
-                                             <li class="d-flex align-items-center tw-gap-2"><span><img src="assets/images/icon/package-details-top-icon3.svg" alt="location"></span> Ancient Buddhist Sites, Sri Lanka</li>
+                                             <li class="d-flex align-items-center tw-gap-2"><span><img src="assets/images/icon/package-details-top-icon2.svg" alt="people"></span> Adventure Seekers & Marine Life Enthusiasts</li>
+                                             <li class="d-flex align-items-center tw-gap-2"><span><img src="assets/images/icon/package-details-top-icon3.svg" alt="location"></span> Coastal Treasures & Marine Wildlife</li>
                                         </ul>
                                    </div>
                               </div>
@@ -281,7 +208,8 @@
                                         </div>
                                    </div>
                                    <div class="d-flex align-items-center tw-gap-7">
-                                        <h4 class="tw-text-808">Contact for Best Rates</h4>
+                                        <h4 class="tw-text-808 text-main-600">Contact us for Best rates</h4>
+                                        <p class="tw-text-sm text-neutral-600">Customized pricing available</p>
                                    </div>
                               </div>
                          </div>
@@ -299,45 +227,45 @@
                                 <div class="package-details-swiper-wrapper swiper-wrapper">
 
 
-                                    <!-- slide 1 - Anuradhapura Sacred City Main -->
+                                    <!-- slide 1 - Mirissa Beach (Whale Watching) -->
                                     <div class="position-relative z-index-1 swiper-slide">
                                         <div>
-                                             <img class="tw-rounded-lg" src="MissingIMG/img/Sigiriya Rock Fortress/sig1.jpg" alt="Sigiriya Rock Fortress">
+                                             <img class="tw-rounded-lg" src="MissingIMG/img/Galle Fort/gl1.jpg" alt="Galle Fort">
                                         </div>
                                     </div>
 
-                                    <!-- slide 2 - Mihintale -->
+                                    <!-- slide 2 - Arugambay Beach (Surfing) -->
                                     <div class="position-relative z-index-1 swiper-slide">
                                         <div>
-                                             <img class="tw-rounded-lg" src="MissingIMG/img/Kandy/knd2.jpg" alt="Kandy Temple">
+                                             <img class="tw-rounded-lg" src="MissingIMG/img/Kosgoda Turtle Hatchery/kt1.jpg" alt="Kosgoda Turtle Hatchery">
                                         </div>
                                     </div>
 
-                                    <!-- slide 3 - Temple of Sacred Tooth Relic -->
+                                    <!-- slide 3 - Kalpitiya Beach (Kitesurfing) -->
                                     <div class="position-relative z-index-1 swiper-slide">
                                         <div>
-                                             <img class="tw-rounded-lg" src="MissingIMG/img/Kandy/knd3.jpg" alt="Temple of Sacred Tooth Relic">
+                                             <img class="tw-rounded-lg" src="MissingIMG/img/Negombo/ngm2.jpg" alt="Negombo Beach">
                                         </div>
                                     </div>
 
-                                    <!-- slide 4 - Seruwawila -->
+                                    <!-- slide 4 - Nilaveli Beach (Snorkeling) -->
                                     <div class="position-relative z-index-1 swiper-slide">
                                         <div>
-                                             <img class="tw-rounded-lg" src="MissingIMG/img/Colombo/cmb1.jpg" alt="Historic Colombo">
+                                             <img class="tw-rounded-lg" src="MissingIMG/img/Beruwela/b1.jpg" alt="Beruwela Beach">
                                         </div>
                                     </div>
 
-                                    <!-- slide 5 - Anuradhapura Sacred City 2 -->
+                                    <!-- slide 5 - Pasikudah Bay -->
                                     <div class="position-relative z-index-1 swiper-slide">
                                         <div>
-                                             <img class="tw-rounded-lg" src="MissingIMG/img/Sigiriya Rock Fortress/sig2.jpg" alt="Sigiriya Rock Fortress">
+                                             <img class="tw-rounded-lg" src="MissingIMG/img/Galle Fort/gl2.jpg" alt="Galle Fort Historic">
                                         </div>
                                     </div>
 
-                                    <!-- slide 6 - Mihintale 2 -->
+                                    <!-- slide 6 - Mirissa Beach 2 -->
                                     <div class="position-relative z-index-1 swiper-slide">
                                         <div>
-                                             <img class="tw-rounded-lg" src="MissingIMG/img/Kandy/knd4.jpg" alt="Kandy City">
+                                             <img class="tw-rounded-lg" src="MissingIMG/img/Kosgoda Turtle Hatchery/kt2.jpg" alt="Turtle Conservation">
                                         </div>
                                     </div>
 
@@ -365,7 +293,7 @@
                               <div class="tw-mb-7">
                                    <div class="tw-mb-14" data-aos-duration="1000" data-aos-delay="200">
                                         <h2 class="tw-text-10 tw-mb-4">Description:</h2>
-                                        <p class="tw-text-lg tw-w-845-px">Journey through 2,500 years of Buddhist heritage on this profound 7-day cultural exploration through Sri Lanka's most sacred sites. Discover ancient stupas and monasteries in Anuradhapura, marvel at the rock fortress of Sigiriya, participate in morning prayers at the Temple of the Tooth in Kandy, and explore Dambulla's magnificent cave temples. This spiritual odyssey includes guided meditation sessions, interactions with Buddhist monks, and visits to UNESCO World Heritage sites that preserve the essence of Buddhism.</p>
+                                        <p class="tw-text-lg tw-w-845-px">Dive into an exhilarating 7-day Paradise Coastal Adventure that showcases Sri Lanka's stunning coastline and marine wonders. This action-packed journey combines whale watching in Mirissa, snorkeling in coral reefs, surfing lessons, ancient temple explorations, and wildlife encounters in coastal national parks. Perfect for adventure seekers and water sports enthusiasts looking to experience Sri Lanka's diverse coastal ecosystems with thrilling activities and cultural discoveries.</p>
                                    </div>
                                    <div class="tw-mb-14" data-aos-duration="1000" data-aos-delay="300">
                                         <h2 class="tw-text-10 tw-mb-4">Advance Facilities</h2>
@@ -413,8 +341,8 @@
                                                   <span class="tw-w-25 tw-h-24 lh-1 d-inline-flex align-items-center justify-content-center bg-main-600 tw-rounded-lg text-white tw-text-6 fw-bold">01</span>
                                              </div>
                                              <div>
-                                                  <h6 class="tw-text-505 tw-mb-4">Day 01: Arrival at Katunayaka Airport</h6>
-                                                  <p class="tw-mb-20">Welcome to Sri Lanka! Upon arrival at Bandaranaike International Airport, transfer to Negombo for relaxation after your journey. Evening at leisure to prepare for the cultural adventure ahead.</p>
+                                                  <h6 class="tw-text-505 tw-mb-4">Days 1-2: Arrival and Southern Coast Discovery</h6>
+                                                  <p class="tw-mb-20">Begin your coastal adventure with arrival in Colombo, then journey to the southern coast where pristine beaches and vibrant marine life await. Explore Galle Fort, witness traditional stilt fishing, and enjoy sunset boat excursions along Sri Lanka's most scenic coastline.</p>
                                              </div>
                                         </div>
                                         <div class="package-details-rules d-flex tw-gap-12 position-relative z-1">
@@ -422,14 +350,14 @@
                                                   <span class="tw-w-25 tw-h-24 lh-1 d-inline-flex align-items-center justify-content-center bg-main-600 tw-rounded-lg text-white tw-text-6 fw-bold">02</span>
                                              </div>
                                              <div class="tw-mb-10">
-                                                  <h6 class="tw-text-505 tw-mb-4">Day 02: Travel to Anuradhapura</h6>
-                                                  <p class="tw-mb-9">Journey to the ancient capital of Anuradhapura. Visit the sacred Ruwanveliseya Dagoba and explore Jayasri Bo (Bodhi Tree). Experience the spiritual atmosphere of this UNESCO World Heritage site.</p>
+                                                  <h6 class="tw-text-505 tw-mb-4">Days 3-4: Marine Wildlife and Coastal Adventures</h6>
+                                                  <p class="tw-mb-9">Experience thrilling whale and dolphin watching excursions from Mirissa, visit turtle conservation projects in Kosgoda, and discover the underwater coral gardens through snorkeling and diving activities. Perfect for marine wildlife enthusiasts seeking close encounters with nature.</p>
                                                   <div class="destination-details-list package-details-list tw-mb-10">
                                                        <ul>
-                                                            <li class="font-heading fw-bold text-main-600 text-capitalize tw-text-lg tw-mb-5 tw-ps-2 tw-ms-5">Sacred Ruwanveliseya Dagoba</li>
-                                                            <li class="font-heading fw-bold text-main-600 text-capitalize tw-text-lg tw-mb-5 tw-ps-2 tw-ms-5">Jayasri Bo Bodhi Tree</li>
-                                                            <li class="font-heading fw-bold text-main-600 text-capitalize tw-text-lg tw-mb-5 tw-ps-2 tw-ms-5">Ancient Buddhist Temples</li>
-                                                            <li class="font-heading fw-bold text-main-600 text-capitalize tw-text-lg tw-mb-5 tw-ps-2 tw-ms-5">Archaeological Museum</li>
+                                                            <li class="font-heading fw-bold text-main-600 text-capitalize tw-text-lg tw-mb-5 tw-ps-2 tw-ms-5">Whale watching in Mirissa</li>
+                                                            <li class="font-heading fw-bold text-main-600 text-capitalize tw-text-lg tw-mb-5 tw-ps-2 tw-ms-5">Turtle conservation experience</li>
+                                                            <li class="font-heading fw-bold text-main-600 text-capitalize tw-text-lg tw-mb-5 tw-ps-2 tw-ms-5">Snorkeling at coral reefs</li>
+                                                            <li class="font-heading fw-bold text-main-600 text-capitalize tw-text-lg tw-mb-5 tw-ps-2 tw-ms-5">Sunset catamaran cruise</li>
                                                        </ul>
                                                   </div>
                                              </div>
@@ -439,13 +367,13 @@
                                                   <span class="tw-w-25 tw-h-24 lh-1 d-inline-flex align-items-center justify-content-center bg-main-600 tw-rounded-lg text-white tw-text-6 fw-bold">03</span>
                                              </div>
                                              <div class="tw-mb-20">
-                                                  <h6 class="tw-text-505 tw-mb-4">Day 03: Visit Thuparamaya and Mihintale</h6>
-                                                  <p class="tw-mb-10">Explore Thuparamaya, the first Buddhist stupa in Sri Lanka, and visit the sacred Mihintale mountain where Buddhism was first introduced to the island. Climb the ancient stone steps and experience the birthplace of Buddhism in Sri Lanka.</p>
+                                                  <h6 class="tw-text-505 tw-mb-4">Days 5-6: Coastal Cultural Immersion</h6>
+                                                  <p class="tw-mb-10">Immerse yourself in coastal culture with visits to traditional fishing villages, spice gardens, and local markets. Experience authentic Sri Lankan coastal cuisine, traditional boat building techniques, and participate in beach conservation activities while staying in charming seaside accommodations.</p>
                                                   <div>
                                                        <ul class="d-flex flex-column">
-                                                            <li class="float-start tw-text-base fw-medium tw-mb-6 d-inline-flex align-items-center tw-gap-3"><span><img src="assets/images/icon/package-details-engelberg-check.svg" alt=""></span> Praesent vulputate at enim sit amet mattis lobortis ante pulvinar at diam</li>  
-                                                            <li class="float-start tw-text-base fw-medium tw-mb-6 d-inline-flex align-items-center tw-gap-3"><span><img src="assets/images/icon/package-details-engelberg-check.svg" alt=""></span> Donec ut lobortis ante, non lobortis ante imperdiet est volutpat in diam erat</li>  
-                                                            <li class="float-start tw-text-base fw-medium tw-mb-6 d-inline-flex align-items-center tw-gap-3"><span><img src="assets/images/icon/package-details-engelberg-check.svg" alt=""></span> Donec ut lobortis ante, non lobortis ante imperdiet est volutpat in diam erat</li>   
+                                                            <li class="float-start tw-text-base fw-medium tw-mb-6 d-inline-flex align-items-center tw-gap-3"><span><img src="assets/images/icon/package-details-amenities.svg" alt=""></span> Traditional fishing village exploration</li>
+                                                            <li class="float-start tw-text-base fw-medium tw-mb-6 d-inline-flex align-items-center tw-gap-3"><span><img src="assets/images/icon/package-details-amenities.svg" alt=""></span> Authentic coastal cuisine cooking class</li>
+                                                            <li class="float-start tw-text-base fw-medium tw-mb-6 d-inline-flex align-items-center tw-gap-3"><span><img src="assets/images/icon/package-details-amenities.svg" alt=""></span> Mangrove ecosystem boat tour</li>   
                                                        </ul>
                                                   </div>
 
@@ -456,22 +384,16 @@
                                                   <span class="tw-w-25 tw-h-24 lh-1 d-inline-flex align-items-center justify-content-center bg-main-600 tw-rounded-lg text-white tw-text-6 fw-bold">04</span>
                                              </div>
                                              <div>
-                                                  <h6 class="tw-text-505 tw-mb-4">Day 04-07: Sigiriya Heritage & Temple of Tooth, Kandy</h6>
-                                                  <p class="tw-mb-10">Journey to Seruwawila and visit Sigiriya Rock Fortress. Explore the ancient citadel and frescoes. Continue to Kandy to visit the sacred Temple of the Tooth Relic, Peradeniya Botanical Gardens, and experience cultural performances. Final day departure via Colombo.</p>
+                                                  <h6 class="tw-text-505 tw-mb-4">Days 7-8: Adventure Sports and Departure</h6>
+                                                  <p class="tw-mb-10">Conclude your coastal adventure with exciting water sports including surfing lessons, jet skiing, and deep-sea fishing excursions. Visit local handicraft centers, enjoy final beachside relaxation, and transfer to airport with unforgettable memories of Sri Lanka's coastal paradise.</p>
                                                   <div>
                                                        <ul class="d-flex flex-column">
-                                                            <li class="float-start tw-text-base fw-medium tw-mb-6 d-inline-flex align-items-center tw-gap-3"><span><img src="assets/images/icon/package-details-switzerland-check.svg" alt=""></span> Praesent vulputate at enim sit amet mattis lobortis ante pulvinar at diam</li>  
-                                                            <li class="float-start tw-text-base fw-medium tw-mb-6 d-inline-flex align-items-center tw-gap-3"><span><img src="assets/images/icon/package-details-switzerland-check.svg" alt=""></span> Donec ut lobortis ante, non lobortis ante imperdiet est volutpat in diam erat</li>  
-                                                            <li class="float-start tw-text-base fw-medium tw-mb-6 d-inline-flex align-items-center tw-gap-3"><span><img src="assets/images/icon/package-details-switzerland-check.svg" alt=""></span> Donec ut lobortis ante, non lobortis ante imperdiet est volutpat in diam erat</li>   
+                                                            <li class="float-start tw-text-base fw-medium tw-mb-6 d-inline-flex align-items-center tw-gap-3"><span><img src="assets/images/icon/package-details-amenities.svg" alt=""></span> Professional surfing lessons with certified instructors</li>
+                                                            <li class="float-start tw-text-base fw-medium tw-mb-6 d-inline-flex align-items-center tw-gap-3"><span><img src="assets/images/icon/package-details-amenities.svg" alt=""></span> Deep-sea fishing expedition with local guides</li>
+                                                            <li class="float-start tw-text-base fw-medium tw-mb-6 d-inline-flex align-items-center tw-gap-3"><span><img src="assets/images/icon/package-details-amenities.svg" alt=""></span> Beach cleanup and conservation awareness program</li>   
                                                        </ul>
                                                   </div>
                                              </div>
-                                        </div>
-                                   </div>
-                                   <div class="tw-mb-18" data-aos-duration="1000" data-aos-delay="300">
-                                       <h2 class="tw-text-10 tw-mb-8">Tour Maps :</h2>
-                                        <div class="package-details-maps">
-                                             <iframe class="w-100" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d105538.35226816959!2d-73.97327229909878!3d40.71038412736898!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1734585996419!5m2!1sen!2sbd" width="600" height="620" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                                         </div>
                                    </div>
                                    <div class="package-details-faq tw-mb-26" data-aos-duration="1000" data-aos-delay="300">

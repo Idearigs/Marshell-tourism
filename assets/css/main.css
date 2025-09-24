@@ -5922,6 +5922,35 @@ input:focus, input:focus-visible {
 }
 
 /* Hide Scroll bar Css For Custom Modal End */
+
+/* Destination Background Images */
+[data-destination="temple-tooth"] {
+    background-image: url('../../../MissingIMG/img/Temple of the Sacred Tooth Relic/tooth1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+[data-destination="anuradhapura"] {
+    background-image: url('../../../MissingIMG/img/Anuradhapura/anu1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+[data-destination="dambulla"] {
+    background-image: url('../../../MissingIMG/img/Dambulla Cave Temple/dam1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+[data-destination="mirissa"] {
+    background-image: url('../../../MissingIMG/img/Mirissa Beach/mir1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 .scroll-sm::-webkit-scrollbar {
     width: 6px;
 }
@@ -7997,10 +8026,31 @@ input:focus, input:focus-visible {
 
 .col-custom.active {
     flex: 7;
-    background-image: url(../images/service/service-thumb.jpg);
+    background-image: url(../../../MissingIMG/img/Kandy/knd2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+}
+
+/* Specific destination backgrounds when active */
+.col-custom.active[data-destination="kandy"] {
+    background-image: url(../../../MissingIMG/img/Kandy/knd2.jpg);
+}
+
+.col-custom.active[data-destination="sigiriya"] {
+    background-image: url(../../../MissingIMG/img/Sigiriya Rock Fortress/sig2.jpg);
+}
+
+.col-custom.active[data-destination="ella"] {
+    background-image: url(../../../MissingIMG/img/Ella/el2.jpg);
+}
+
+.col-custom.active[data-destination="mirissa"] {
+    background-image: url(../../../MissingIMG/img/Mirissa Beach/miri2.jpg);
+}
+
+.col-custom.active[data-destination="anuradhapura"] {
+    background-image: url(../../../MissingIMG/img/Anuradhapura/anu2.jpg);
 }
 
 @media screen and (max-width: 1399px) {
@@ -8333,6 +8383,10 @@ input:focus, input:focus-visible {
 
 .advance-thumb img {
     border-radius: 17px;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
 }
 
 .advance-btn {
@@ -10994,6 +11048,33 @@ input:focus, input:focus-visible {
         font-size: 15px !important;
         min-width: 160px !important;
     }
+}
+
+/* Tour Package Card Height Alignment Fix */
+.service-two-active .swiper-slide {
+    height: auto !important;
+    display: flex !important;
+}
+
+.service-two-wrapper {
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important;
+}
+
+.service-two-content {
+    display: flex !important;
+    flex-direction: column !important;
+    flex-grow: 1 !important;
+    height: 100% !important;
+}
+
+.service-two-content .flex-grow-1 {
+    flex-grow: 1 !important;
+}
+
+.service-two-wrap {
+    margin-top: auto !important;
 }
 
 /*# sourceMappingURL=main.css.map */

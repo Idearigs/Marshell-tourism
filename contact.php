@@ -136,165 +136,19 @@
     <span class="dot"></span>
     <!-- Custom Cursor End -->
 
-    <!-- ==================== Mobile Menu Start Here ==================== -->
-<div class="mobile-menu d-lg-none d-block scroll-sm position-fixed bg-white tw-w-300-px tw-h-screen overflow-y-auto tw-p-6 tw-z-999 tw--translate-x-full tw-pb-68 ">
-
-    <button type="button" class="close-button position-absolute tw-end-0 top-0 tw-me-2 tw-mt-2 tw-w-605 tw-h-605 rounded-circle d-flex justify-content-center align-items-center text-neutral-900 bg-neutral-200 hover-bg-neutral-900 hover-text-white"> 
-        <i class="ph ph-x"></i>
-    </button>
-
-    <div class="mobile-menu__inner">
-        <a href="index.html" class="mobile-menu__logo">
-            <h4 class="mb-0 text-main-600 fw-bold font-heading">Marshell Holidays</h4>
-        </a>
-        <div class="mobile-menu__menu">
-            <!-- Nav menu Start -->
-<ul class="nav-menu d-lg-flex align-items-center nav-menu--mobile d-block tw-mt-8 bg-white tw-px-12 tw-rounded-4xl">
-    <li class="nav-menu__item has-submenu position-relative activePage">
-        <a href="javascript:void(0)" class="nav-menu__link tw-pe-5 text-main-600 tw-py-3 fw-medium w-100 font-dmsans fw-medium">Home</a>
-        <ul class="nav-submenu scroll-sm position-absolute start-0 top-100 tw-w-max bg-white overflow-hidden tw-p-2 tw-mt-1 tw-duration-200 tw-z-99">
-            <li class="nav-menu__item activePage">
-                <a href="index.html" class="nav-submenu__link text-main-600 fw-medium w-100 d-block tw-py-2 tw-px-305 tw-rounded font-dmsans fw-medium"> Home One</a>
-            </li>
-            <li class="nav-submenu__item d-block tw-rounded tw-duration-200 position-relative">
-                <a href="index-2.html" class="nav-submenu__link text-main-600 fw-medium w-100 d-block tw-py-2 tw-px-305 tw-rounded font-dmsans fw-medium"> Home Two</a>
-            </li>
-            <li class="nav-submenu__item d-block tw-rounded tw-duration-200 position-relative">
-                <a href="index-3.html" class="nav-submenu__link text-main-600 fw-medium w-100 d-block tw-py-2 tw-px-305 tw-rounded font-dmsans fw-medium"> Home Three</a>
-            </li>
-        </ul>
-    </li>
-    <li class="nav-menu__item has-submenu position-relative">
-        <a href="javascript:void(0)" class="nav-menu__link tw-pe-5 text-main-600 tw-py-3 fw-medium w-100 font-dmsans fw-medium">Pages</a>
-        <ul class="nav-submenu scroll-sm position-absolute start-0 top-100 tw-w-max bg-white overflow-hidden tw-p-2 tw-mt-1 tw-duration-200 tw-z-99">
-            <li class="nav-submenu__item d-block tw-rounded tw-duration-200 position-relative">
-                <a href="about.html" class="nav-submenu__link text-main-600 fw-medium w-100 d-block tw-py-2 tw-px-305 tw-rounded font-dmsans fw-medium"> About Us</a>
-            </li>
-            <li class="nav-submenu__item d-block tw-rounded tw-duration-200 position-relative">
-                <a href="team.html" class="nav-submenu__link text-main-600 fw-medium w-100 d-block tw-py-2 tw-px-305 tw-rounded font-dmsans fw-medium"> Team </a>
-            </li>
-            <li class="nav-submenu__item d-block tw-rounded tw-duration-200 position-relative">
-                <a href="team-details.html" class="nav-submenu__link text-main-600 fw-medium w-100 d-block tw-py-2 tw-px-305 tw-rounded font-dmsans fw-medium"> Team Details </a>
-            </li>
-            <li class="nav-submenu__item d-block tw-rounded tw-duration-200 position-relative">
-                <a href="gallary.html" class="nav-submenu__link text-main-600 fw-medium w-100 d-block tw-py-2 tw-px-305 tw-rounded font-dmsans fw-medium"> Gallary </a>
-            </li>
-            <li class="nav-submenu__item d-block tw-rounded tw-duration-200 position-relative">
-                <a href="faq.html" class="nav-submenu__link text-main-600 fw-medium w-100 d-block tw-py-2 tw-px-305 tw-rounded font-dmsans fw-medium"> FAQ </a>
-            </li>
-        </ul>
-    </li>
-    <li class="nav-menu__item has-submenu position-relative">
-        <a href="javascript:void(0)" class="nav-menu__link tw-pe-5 text-main-600 tw-py-3 fw-medium w-100 font-dmsans fw-medium"> Tours </a>
-        <ul class="nav-submenu scroll-sm position-absolute start-0 top-100 tw-w-max bg-white overflow-hidden tw-p-2 tw-mt-1 tw-duration-200 tw-z-99">
-            <li class="nav-submenu__item d-block tw-rounded tw-duration-200 position-relative">
-                <a href="sri-lanka-tour-packages.php" class="nav-submenu__link text-main-600 fw-medium w-100 d-block tw-py-2 tw-px-305 tw-rounded font-dmsans fw-medium"> Tour Package </a>
-            </li>
-            <li class="nav-submenu__item d-block tw-rounded tw-duration-200 position-relative">
-                <a href="package-v2.html" class="nav-submenu__link text-main-600 fw-medium w-100 d-block tw-py-2 tw-px-305 tw-rounded font-dmsans fw-medium"> Tour Package V2 </a>
-            </li>
-            <li class="nav-submenu__item d-block tw-rounded tw-duration-200 position-relative">
-                <a href="package-details.html" class="nav-submenu__link text-main-600 fw-medium w-100 d-block tw-py-2 tw-px-305 tw-rounded font-dmsans fw-medium"> Tour Package Details</a>
-            </li>
-        </ul>
-    </li>
-    <li class="nav-menu__item has-submenu position-relative">
-        <a href="javascript:void(0)" class="nav-menu__link tw-pe-5 text-main-600 tw-py-3 fw-medium w-100 font-dmsans fw-medium"> Destination </a>
-        <ul class="nav-submenu scroll-sm position-absolute start-0 top-100 tw-w-max bg-white overflow-hidden tw-p-2 tw-mt-1 tw-duration-200 tw-z-99">
-            <li class="nav-submenu__item d-block tw-rounded tw-duration-200 position-relative">
-                <a href="customize-your-trip.html" class="nav-submenu__link text-main-600 fw-medium w-100 d-block tw-py-2 tw-px-305 tw-rounded font-dmsans fw-medium"> Destination </a>
-            </li>
-            <li class="nav-submenu__item d-block tw-rounded tw-duration-200 position-relative">
-                <a href="destination-details.html" class="nav-submenu__link text-main-600 fw-medium w-100 d-block tw-py-2 tw-px-305 tw-rounded font-dmsans fw-medium">Destination Details</a>
-            </li>
-        </ul>
-    </li>
-    <li class="nav-menu__item">
-        <a href="rent-a-car.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Rent a Car</a>
-    </li>
-    <li class="nav-menu__item has-submenu position-relative">
-        <a href="javascript:void(0)" class="nav-menu__link tw-pe-5 text-main-600 tw-py-3 fw-medium w-100 font-dmsans fw-medium">Blog</a>
-        <ul class="nav-submenu scroll-sm position-absolute start-0 top-100 tw-w-max bg-white overflow-hidden tw-p-2 tw-mt-1 tw-duration-200 tw-z-99">
-            <li class="nav-submenu__item d-block tw-rounded tw-duration-200 position-relative">
-                <a href="blog.html" class="nav-submenu__link text-main-600 fw-medium w-100 d-block tw-py-2 tw-px-305 tw-rounded font-dmsans fw-medium"> Blog</a>
-            </li>
-            <li class="nav-submenu__item d-block tw-rounded tw-duration-200 position-relative">
-                <a href="blog-details.html" class="nav-submenu__link text-main-600 fw-medium w-100 d-block tw-py-2 tw-px-305 tw-rounded font-dmsans fw-medium"> Blog Details</a>
-            </li>
-        </ul>
-    </li>
-    <li class="nav-menu__item">
-        <a href="contact.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Contact</a>
-    </li>
-</ul>
-<!-- Nav menu End  -->
-        </div>
-    </div>
-</div>
-<!-- ==================== Mobile Menu End Here ==================== -->
-<!-- ==================== Header Start Here ==================== -->
-<header class="header header-two transition-all">
-    <div class="container-fluid">
-        <nav class="d-flex align-items-center justify-content-between">
-            <!-- Logo Start -->
-            <div class="logo">
-                <a href="index.html" class="link">
-                    <h3 class="mb-0 text-main-600 fw-bold font-heading">Marshell Holidays</h3>
-                </a>
-            </div>
-            <!-- Logo End  -->
-
-            <!-- Menu Start  -->
-            <div class="header-menu header-two-menu d-lg-block d-none">
-                <!-- Nav menu Start -->
-<ul class="nav-menu d-lg-flex align-items-center tw-gap-6">
-    <li class="nav-menu__item">
-        <a href="index.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Home</a>
-    </li>
-    <li class="nav-menu__item">
-        <a href="sri-lanka-tour-packages.php" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Tour Packages</a>
-    </li>
-    <li class="nav-menu__item">
-        <a href="customize-your-trip.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Customize Your Trip</a>
-    </li>
-    <li class="nav-menu__item">
-        <a href="rent-a-car.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Rent a car</a>
-    </li>
-    <li class="nav-menu__item">
-        <a href="about.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">About</a>
-    </li>
-    <li class="nav-menu__item">
-        <a href="contact.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Contact</a>
-    </li>
-</ul>
-<!-- Nav menu End  -->
-            </div>
-            <!-- Menu End  -->
-
-            <!-- Header Right start -->
-            <div class="">
-                <div class="d-flex align-items-center tw-gap-29">
-                    <div class="header-button">
-                        <a class="primary-btn bg-white text-main-600 tw-py-5 tw-px-10 fs-15 text-uppercase fw-bold font-heading tw-gap-2 d-inline-flex align-items-center tw-rounded-4xl" href="contact.html">Contact Us <i class="ph ph-arrow-up-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            <button type="button" class="toggle-mobileMenu leading-none d-lg-none ms-3 text-neutral-800 tw-text-9">
-                <i class="ph ph-list"></i>
-            </button>
-            <!-- Header Right End  -->
-        </nav>
-    </div>
-</header>
-<!-- ==================== Header End Here ==================== -->
+    <?php include 'includes/tour-navbar.php'; ?>
 <div id="scrollSmoother-container">
     <!-- ==================== Breadcrumb Start Here ==================== -->
-<section class="breadcrumb-area background-img" data-background-image="Mainimg/img/Unawatuna Beach/una1.jpg">
+<section class="breadcrumb-area background-img" data-background-image="MissingIMG/img/Galle Fort/gl1.jpg" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('MissingIMG/img/Galle Fort/gl1.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; min-height: 250px; display: flex; align-items: center;">
     <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-lg-8">
                 <div>
-                    <h2 class="breadcrumb-title text-center tw-mb-6 char-animation"> CONTACT</h2>
+                    <h2 class="breadcrumb-title text-center tw-mb-6 char-animation" style="font-size: 2.5rem; color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); font-weight: 600;">
+                        <span class="title-line-1">Get in Touch</span>
+                        <br>
+                        <span class="title-line-2">Contact Marshell Holidays</span>
+                    </h2>
                 </div>
             </div>
         </div>
@@ -419,7 +273,7 @@
                     <div class="section-wrapper text-center position-relative z-1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                          <h2 class="section-title fw-normal tw-mb-7 char-animation text-white char-animation"> <span class="text-main-600">Let’sCapture</span> BeautyoftheWorld</h2>
                          <div class="gallery-button d-flex justify-content-center">
-                              <a class="primary-btn bg-main-two-600 text-main-600 tw-py-4 tw-px-8 fs-15 text-capitalize fw-bold font-heading tw-gap-2 d-inline-flex align-items-center tw-rounded-4xl" href="contact.html">Booking Today <i class="ph ph-arrow-up-right"></i></a> 
+                              <a class="primary-btn bg-main-two-600 text-main-600 tw-py-4 tw-px-8 fs-15 text-capitalize fw-bold font-heading tw-gap-2 d-inline-flex align-items-center tw-rounded-4xl" href="contact.php">Booking Today <i class="ph ph-arrow-up-right"></i></a> 
                          </div>
                          <div class="gallery-shape">
                               <img class="gallery-shape-1 position-absolute start-0 z-n1" src="assets/images/gallery/gallery-shape1.png" alt="shape">
@@ -431,79 +285,6 @@
      </div>
      <div class="cta-bg-shape position-absolute start-0 z-n1">
           <img src="assets/images/cta/cta-bg-shape.png" alt="shape">
-     </div>
-</section>
-    <section class="instagram-area">
-     <div class="container">
-          <div class="row">
-               <div class="col-xl-12">
-                    <div class="text-center tw-mb-6">
-                         <h6 class="instagram-title tw-text-2xl fw-normal text-capitalize">...want to become a dontation partner & contribution...</h6>
-                    </div>
-               </div>
-          </div>
-          <div class="row row-cols-xl-6 row-cols-md-3 row-cols-sm-3 row-cols-1">
-               <div class="col">
-                    <div class="instagram-wrapper" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                         <div class="instagram-thumb position-relative z-1 overflow-hidden">
-                              <img class="tw-rounded-lg" src="assets/images/instagram/instagram-thumb1.jpg" alt="thumb">
-                              <div class="instagram-btn position-absolute z-1">
-                                   <a href="#"><span><img src="assets/images/icon/instagram.svg" alt="instagram"></span></a>
-                              </div>
-                         </div>
-                    </div>
-               </div>
-               <div class="col">
-                    <div class="instagram-wrapper" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-                         <div class="instagram-thumb position-relative z-1 overflow-hidden">
-                              <img class="tw-rounded-lg" src="assets/images/instagram/instagram-thumb2.jpg" alt="thumb">
-                              <div class="instagram-btn position-absolute z-1">
-                                   <a href="#"><span><img src="assets/images/icon/instagram.svg" alt="instagram"></span></a>
-                              </div>
-                         </div>
-                    </div>
-               </div>
-               <div class="col">
-                    <div class="instagram-wrapper" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-                         <div class="instagram-thumb position-relative z-1 overflow-hidden">
-                              <img class="tw-rounded-lg" src="assets/images/instagram/instagram-thumb3.jpg" alt="thumb">
-                              <div class="instagram-btn position-absolute z-1">
-                                   <a href="#"><span><img src="assets/images/icon/instagram.svg" alt="instagram"></span></a>
-                              </div>
-                         </div>
-                    </div>
-               </div>
-               <div class="col">
-                    <div class="instagram-wrapper" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
-                         <div class="instagram-thumb position-relative z-1 overflow-hidden">
-                              <img class="tw-rounded-lg" src="assets/images/instagram/instagram-thumb4.jpg" alt="thumb">
-                              <div class="instagram-btn position-absolute z-1">
-                                   <a href="#"><span><img src="assets/images/icon/instagram.svg" alt="instagram"></span></a>
-                              </div>
-                         </div>
-                    </div>
-               </div>
-               <div class="col">
-                    <div class="instagram-wrapper" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
-                         <div class="instagram-thumb position-relative z-1 overflow-hidden">
-                              <img class="tw-rounded-lg" src="assets/images/instagram/instagram-thumb5.jpg" alt="thumb">
-                              <div class="instagram-btn position-absolute z-1">
-                                   <a href="#"><span><img src="assets/images/icon/instagram.svg" alt="instagram"></span></a>
-                              </div>
-                         </div>
-                    </div>
-               </div>
-               <div class="col">
-                    <div class="instagram-wrapper">
-                         <div class="instagram-thumb position-relative z-1 overflow-hidden" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="700">
-                              <img class="tw-rounded-lg" src="assets/images/instagram/instagram-thumb6.jpg" alt="thumb">
-                              <div class="instagram-btn position-absolute z-1">
-                                   <a href="#"><span><img src="assets/images/icon/instagram.svg" alt="instagram"></span></a>
-                              </div>
-                         </div>
-                    </div>
-               </div>
-          </div>
      </div>
 </section>
 
@@ -530,7 +311,7 @@
                     <a href="about.html" class="rent-car-footer-link">About Us</a>
                     <a href="sri-lanka-tour-packages.php" class="rent-car-footer-link">Tour Packages</a>
                     <a href="rent-a-car.html" class="rent-car-footer-link">Rent a Car</a>
-                    <a href="contact.html" class="rent-car-footer-link">Contact</a>
+                    <a href="contact.php" class="rent-car-footer-link">Contact</a>
                 </div>
 
                 <!-- Services -->

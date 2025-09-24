@@ -9,12 +9,12 @@ $testimonials = getActiveTestimonials(6); // Get up to 6 active testimonials
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Marshel Tourism - Premium relaxation and meditation travel experiences for mature travelers seeking tranquil destinations and rejuvenating adventures">
-    <meta name="keywords" content="Marshel Tourism, mature travel, relaxation tours, meditation retreats, senior travel, wellness tourism">
+    <meta name="description" content="Marshell Holidays - Premium relaxation and meditation travel experiences for mature travelers seeking tranquil destinations and rejuvenating adventures">
+    <meta name="keywords" content="Marshell Holidays, mature travel, relaxation tours, meditation retreats, senior travel, wellness tourism">
     <meta name="robots" content="INDEX,FOLLOW">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Title -->
-    <title> Marshel Tourism - Relaxation & Meditation Travel Experiences for Mature Travelers </title>
+    <title> Marshell Holidays - Relaxation & Meditation Travel Experiences for Mature Travelers </title>
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/images/logo/favicon.png">
     <!-- Google Fonts - Philosopher -->
@@ -42,6 +42,18 @@ $testimonials = getActiveTestimonials(6); // Get up to 6 active testimonials
             height: 100% !important;
             display: flex !important;
             flex-direction: column !important;
+            min-height: 600px !important; /* Ensure minimum height */
+        }
+
+        .service-two-thumb {
+            height: 200px !important; /* Fixed image height */
+            overflow: hidden !important;
+        }
+
+        .service-two-thumb img {
+            height: 100% !important;
+            width: 100% !important;
+            object-fit: cover !important; /* Maintain aspect ratio */
         }
 
         .service-two-content {
@@ -56,10 +68,16 @@ $testimonials = getActiveTestimonials(6); // Get up to 6 active testimonials
             display: -webkit-box !important;
             -webkit-line-clamp: 3 !important;
             -webkit-box-orient: vertical !important;
+            min-height: 72px !important; /* Ensure consistent text area */
         }
 
         .service-two-wrap {
             margin-top: auto !important;
+        }
+
+        /* Ensure all slide cards have same height */
+        .service-two-active .swiper-slide {
+            height: auto !important;
         }
     </style>
 </head>
@@ -80,7 +98,7 @@ $testimonials = getActiveTestimonials(6); // Get up to 6 active testimonials
                     <div class="search_wrapper">
                         <div class="search_top d-flex justify-content-between align-items-center">
                             <div class="search_logo">
-                                <a href="index.html">
+                                <a href="index.php">
                                     <img src="assets/images/logo/logo.png" alt="Logo">
                                 </a>
                             </div>
@@ -180,8 +198,8 @@ $testimonials = getActiveTestimonials(6); // Get up to 6 active testimonials
     </button>
 
     <div class="mobile-menu__inner">
-        <a href="index.html" class="mobile-menu__logo">
-            <h4 class="mb-0 text-main-600 fw-bold font-heading">Marshel Tourism</h4>
+        <a href="index.php" class="mobile-menu__logo">
+            <h4 class="mb-0 text-main-600 fw-bold font-heading">Marshell Holidays</h4>
         </a>
         <div class="mobile-menu__menu">
             <!-- Nav menu Start -->
@@ -218,7 +236,7 @@ $testimonials = getActiveTestimonials(6); // Get up to 6 active testimonials
             <!-- Logo Start -->
             <div class="logo">
                 <a href="index.php" class="link">
-                    <h3 class="mb-0 text-main-600 fw-bold font-heading">Marshel Tourism</h3>
+                    <h3 class="mb-0 text-main-600 fw-bold font-heading">Marshell Holidays</h3>
                 </a>
             </div>
             <!-- Logo End  -->
@@ -269,7 +287,7 @@ $testimonials = getActiveTestimonials(6); // Get up to 6 active testimonials
 <div id="scrollSmoother-container">
     <section class="banner-two-area tw-pt-29">
      <!-- Multiple background images for slideshow -->
-     <div class="hero-slide active" data-background-image="https://travelrebels.com/wp-content/uploads/2018/06/anuradhapura-sunset.jpg"></div>
+     <div class="hero-slide active" data-background-image="Mainimg/img/Anuradhapura Sacred City/apur1.jpg"></div>
      <!-- <div class="hero-slide" data-background-image="https://www.holidify.com/images/compressed/dest_pics/dir_1/tripoto/mobileappimage/1491383977_sigiriya.jpg"></div>
      <div class="hero-slide" data-background-image="https://www.holidify.com/images/cmsuploads/compressed/Kandy_20190109174515.jpg"></div>
      <div class="hero-slide" data-background-image="https://www.walkerstours.com/wp-content/uploads/2015/04/Hill-Country-Tours-4.jpg"></div> -->
@@ -386,7 +404,7 @@ $testimonials = getActiveTestimonials(6); // Get up to 6 active testimonials
     </div>
 
     <!-- Gallery Section -->
-    <section class="gallery-section py-5" style="padding-top: 30px; padding-bottom: 30px;">
+    <section class="gallery-section py-5 d-none d-md-block" style="padding-top: 30px; padding-bottom: 30px;">
         <div class="container">
             <div class="row justify-content-center mb-5">
                 <div class="col-lg-8 text-center">
@@ -398,7 +416,7 @@ $testimonials = getActiveTestimonials(6); // Get up to 6 active testimonials
                 <div class="col-lg-4 col-md-6">
                     <div class="gallery-item">
                         <div class="gallery-image">
-                            <img src="assets/images/advance/advance-two-thumb1.jpg" alt="Ancient Temple Meditation" class="img-fluid">
+                            <img src="MissingIMG/img/Kandy/knd2.jpg" alt="Ancient Temple Meditation" class="img-fluid">
                             <div class="gallery-overlay">
                                 <h5>Sacred Temples</h5>
                                 <p>Ancient meditation spaces for spiritual reflection</p>
@@ -409,7 +427,7 @@ $testimonials = getActiveTestimonials(6); // Get up to 6 active testimonials
                 <div class="col-lg-4 col-md-6">
                     <div class="gallery-item">
                         <div class="gallery-image">
-                            <img src="assets/images/advance/advance-two-thumb2.jpg" alt="Cultural Wellness Retreat" class="img-fluid">
+                            <img src="MissingIMG/img/Peradeniya Botanical Gardens/pb2.jpg" alt="Cultural Wellness Retreat" class="img-fluid">
                             <div class="gallery-overlay">
                                 <h5>Wellness Retreats</h5>
                                 <p>Traditional healing and peaceful sanctuaries</p>
@@ -420,7 +438,7 @@ $testimonials = getActiveTestimonials(6); // Get up to 6 active testimonials
                 <div class="col-lg-4 col-md-6">
                     <div class="gallery-item">
                         <div class="gallery-image">
-                            <img src="assets/images/advance/advance-two-thumb3.jpg" alt="Tranquil Coastal Walk" class="img-fluid">
+                            <img src="MissingIMG/img/Galle Fort/gl1.jpg" alt="Tranquil Coastal Walk" class="img-fluid">
                             <div class="gallery-overlay">
                                 <h5>Peaceful Coastlines</h5>
                                 <p>Gentle walks along serene shores</p>
@@ -431,7 +449,7 @@ $testimonials = getActiveTestimonials(6); // Get up to 6 active testimonials
                 <div class="col-lg-6 col-md-6">
                     <div class="gallery-item">
                         <div class="gallery-image">
-                            <img src="assets/images/advance/advance-two-thumb4.jpg" alt="Relaxing Beach Paradise" class="img-fluid">
+                            <img src="MissingIMG/img/Negombo/ngm2.jpg" alt="Relaxing Beach Paradise" class="img-fluid">
                             <div class="gallery-overlay">
                                 <h5>Relaxation Beaches</h5>
                                 <p>Quiet tropical havens for ultimate tranquility</p>
@@ -442,7 +460,7 @@ $testimonials = getActiveTestimonials(6); // Get up to 6 active testimonials
                 <div class="col-lg-6 col-md-6">
                     <div class="gallery-item">
                         <div class="gallery-image">
-                            <img src="assets/images/advance/advance-two-thumb5.jpg" alt="Spiritual Architecture" class="img-fluid">
+                            <img src="MissingIMG/img/Sigiriya Rock Fortress/sig1.jpg" alt="Spiritual Architecture" class="img-fluid">
                             <div class="gallery-overlay">
                                 <h5>Spiritual Architecture</h5>
                                 <p>Inspiring monuments for contemplation and peace</p>
@@ -458,7 +476,7 @@ $testimonials = getActiveTestimonials(6); // Get up to 6 active testimonials
           <div class="row justify-content-center">
                <div class="col-xl-10">
                     <div class="text-center">
-                         <h2 class="travelor-title fw-normal tw-mb-5">Marshel Tourism</h2>
+                         <h2 class="travelor-title fw-normal tw-mb-5">Marshell Holidays</h2>
                          <div class="travelor-content tp-cursor-point-area">
                               <h6 class="travelor-text fw-normal">we <span class="fw-bold">believe</span> that a clean space is happy space. Founded in <span class="fw-bold">1998</span>, our mission is to make homes & businesses sparkle while...</h6>
                          </div>
@@ -498,7 +516,7 @@ $testimonials = getActiveTestimonials(6); // Get up to 6 active testimonials
                                    <!-- slide 1: JEWELS OF CEYLON GRAND TOUR -->
                                    <div class="service-two-wrapper bg-white tw-p-6 tw-rounded-xl tw-mb-8 swiper-slide d-flex flex-column h-100" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                                         <div class="service-two-thumb tw-mb-5">
-                                             <a href="jewels-of-ceylon-grand-tour.html"><img class="tw-rounded-xl w-100" src="assets/images/service/service-two-thumb1.jpg" alt="JEWELS OF CEYLON GRAND TOUR"></a>
+                                             <a href="jewels-of-ceylon-grand-tour.html"><img class="tw-rounded-xl w-100" src="MissingIMG/img/Sigiriya Rock Fortress/sigmain.jpg" alt="JEWELS OF CEYLON GRAND TOUR"></a>
                                         </div>
                                         <div class="service-two-content tw-px-4 d-flex flex-column flex-grow-1">
                                              <span class="service-two-location tw-mb-3 d-block"><i class="ph ph-map-pin"></i> Complete Sri Lanka Experience</span>
@@ -526,7 +544,7 @@ $testimonials = getActiveTestimonials(6); // Get up to 6 active testimonials
                                    <!-- slide 2: CEYLON DISCOVERY EXPLORER -->
                                    <div class="service-two-wrapper bg-white tw-p-6 tw-rounded-xl tw-mb-8 swiper-slide d-flex flex-column h-100" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
                                         <div class="service-two-thumb tw-mb-5">
-                                             <a href="ceylon-discovery-explorer.html"><img class="tw-rounded-xl w-100" src="assets/images/service/service-two-thumb2.jpg" alt="CEYLON DISCOVERY EXPLORER"></a>
+                                             <a href="ceylon-discovery-explorer.html"><img class="tw-rounded-xl w-100" src="MissingIMG/img/Kandy/knd2.jpg" alt="CEYLON DISCOVERY EXPLORER"></a>
                                         </div>
                                         <div class="service-two-content tw-px-4 d-flex flex-column flex-grow-1">
                                              <span class="service-two-location tw-mb-3 d-block"><i class="ph ph-map-pin"></i> Buddhist Heritage & Adventure, Sri Lanka</span>
@@ -554,7 +572,7 @@ $testimonials = getActiveTestimonials(6); // Get up to 6 active testimonials
                                    <!-- slide 3: PARADISE COASTAL ADVENTURE -->
                                    <div class="service-two-wrapper bg-white tw-p-6 tw-rounded-xl tw-mb-8 swiper-slide d-flex flex-column h-100" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
                                         <div class="service-two-thumb tw-mb-5">
-                                             <a href="paradise-coastal-adventure.html"><img class="tw-rounded-xl w-100" src="assets/images/service/service-two-thumb3.jpg" alt="PARADISE COASTAL ADVENTURE"></a>
+                                             <a href="paradise-coastal-adventure.html"><img class="tw-rounded-xl w-100" src="MissingIMG/img/Galle Fort/gl1.jpg" alt="PARADISE COASTAL ADVENTURE"></a>
                                         </div>
                                         <div class="service-two-content tw-px-4 d-flex flex-column flex-grow-1">
                                              <span class="service-two-location tw-mb-3 d-block"><i class="ph ph-map-pin"></i> Coastal Paradise, Sri Lanka</span>
@@ -582,7 +600,7 @@ $testimonials = getActiveTestimonials(6); // Get up to 6 active testimonials
                                    <!-- slide 4: SACRED CEYLON WELLNESS RETREAT -->
                                    <div class="service-two-wrapper bg-white tw-p-6 tw-rounded-xl tw-mb-8 swiper-slide d-flex flex-column h-100" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
                                         <div class="service-two-thumb tw-mb-5">
-                                             <a href="sacred-ceylon-wellness-retreat.html"><img class="tw-rounded-xl w-100" src="assets/images/service/service-two-thumb1.jpg" alt="SACRED CEYLON WELLNESS RETREAT"></a>
+                                             <a href="sacred-ceylon-wellness-retreat.html"><img class="tw-rounded-xl w-100" src="MissingIMG/img/Peradeniya Botanical Gardens/pb2.jpg" alt="SACRED CEYLON WELLNESS RETREAT"></a>
                                         </div>
                                         <div class="service-two-content tw-px-4 d-flex flex-column flex-grow-1">
                                              <span class="service-two-location tw-mb-3 d-block"><i class="ph ph-map-pin"></i> Wellness & Spirituality, Sri Lanka</span>
@@ -610,7 +628,7 @@ $testimonials = getActiveTestimonials(6); // Get up to 6 active testimonials
                                    <!-- slide 5: Buddhist Cultural Visit (7 Days) -->
                                    <div class="service-two-wrapper bg-white tw-p-6 tw-rounded-xl tw-mb-8 swiper-slide d-flex flex-column h-100" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
                                         <div class="service-two-thumb tw-mb-5">
-                                             <a href="buddhist-cultural-visit-7day.html"><img class="tw-rounded-xl w-100" src="assets/images/service/service-two-thumb2.jpg" alt="Buddhist Cultural Visit"></a>
+                                             <a href="buddhist-cultural-visit.html"><img class="tw-rounded-xl w-100" src="MissingIMG/img/Kandy/knd3.jpg" alt="Buddhist Cultural Visit"></a>
                                         </div>
                                         <div class="service-two-content tw-px-4 d-flex flex-column flex-grow-1">
                                              <span class="service-two-location tw-mb-3 d-block"><i class="ph ph-map-pin"></i> Ancient Sites & Buddhist Heritage, Sri Lanka</span>
@@ -638,7 +656,7 @@ $testimonials = getActiveTestimonials(6); // Get up to 6 active testimonials
                                    <!-- slide 6: Cool Relaxing Visit (7 Days) -->
                                    <div class="service-two-wrapper bg-white tw-p-6 tw-rounded-xl tw-mb-8 swiper-slide d-flex flex-column h-100" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="700">
                                         <div class="service-two-thumb tw-mb-5">
-                                             <a href="cool-relaxing-visit-7day.html"><img class="tw-rounded-xl w-100" src="assets/images/service/service-two-thumb3.jpg" alt="Cool Relaxing Visit"></a>
+                                             <a href="cool-relaxing-visit.html"><img class="tw-rounded-xl w-100" src="MissingIMG/img/Ella/ninearch.jpg" alt="Cool Relaxing Visit"></a>
                                         </div>
                                         <div class="service-two-content tw-px-4 d-flex flex-column flex-grow-1">
                                              <span class="service-two-location tw-mb-3 d-block"><i class="ph ph-map-pin"></i> Hill Country & Coastal, Sri Lanka</span>
@@ -688,103 +706,104 @@ $testimonials = getActiveTestimonials(6); // Get up to 6 active testimonials
           </div>
         <div class="row align-items-end">
             <div class="col-xl-12">
-                <div class="row-custom-wrapper" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                <!-- Desktop Layout -->
+                <div class="row-custom-wrapper d-none d-md-block" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
                     <div class="row-custom d-flex">
-                       <div class="col-custom active">
+                       <div class="col-custom active" data-destination="temple-tooth" style="background-image: url('MissingIMG/img/Kandy/knd2.jpg'); background-size: cover; background-position: center;">
                           <div class="service-item">
                              <div class="service-content text-center">
-                                <h4 class="service-title text-white child-one">Kandy</h4>
+                                <h4 class="service-title text-white child-one">Temple of Sacred Tooth Relic</h4>
                              </div>
                           </div>
                           <div class="service-item-2 h-100">
                              <div class="service-content-2 d-flex justify-content-between flex-column h-100">
                                    <div class="d-flex justify-content-between align-items-center position-relative z-1">
                                         <div class="service-button">
-                                             <a class="service-btn" href="kandy-destination.html"><span><img src="assets/images/icon/service-arrow.svg" alt="arrow"></span></a>
+                                             <a class="service-btn" href="temple-tooth-relic-destination.html"><span><img src="assets/images/icon/service-arrow.svg" alt="arrow"></span></a>
                                         </div>
                                    </div>
                                    <div>
-                                        <h4 class="service-title-2 text-white hover-text-secondary">Kandy</h4>
+                                        <h4 class="service-title-2 text-white hover-text-secondary">Temple of Sacred Tooth Relic</h4>
                                         <p class=" text-white">Sacred city home to the Temple of the Tooth Relic, surrounded by lush hills and perfect for spiritual meditation</p>
                                    </div>
                              </div>
                           </div>
                        </div>
-                       <div class="col-custom">
+                       <div class="col-custom" data-destination="anuradhapura" style="background-image: url('MissingIMG/img/Sigiriya Rock Fortress/sig1.jpg'); background-size: cover; background-position: center;">
                           <div class="service-item">
                              <div class="service-content text-center">
-                                <h4 class="service-title text-white child-three">Sigiriya</h4>
+                                <h4 class="service-title text-white child-three">Anuradhapura Sacred City</h4>
                              </div>
                           </div>
                           <div class="service-item-2 h-100">
                              <div class="service-content-2 d-flex justify-content-between flex-column h-100">
                                    <div class="d-flex justify-content-between align-items-center position-relative z-1">
                                         <div class="service-button">
-                                             <a class="service-btn" href="sigiriya-destination.html"><span><img src="assets/images/icon/service-arrow.svg" alt="arrow"></span></a>
+                                             <a class="service-btn" href="anuradhapura-sacred-city-destination.html"><span><img src="assets/images/icon/service-arrow.svg" alt="arrow"></span></a>
                                         </div>
                                    </div>
                                    <div>
-                                        <h4 class="service-title-2 text-white hover-text-secondary">Sigiriya</h4>
+                                        <h4 class="service-title-2 text-white hover-text-secondary">Anuradhapura Sacred City</h4>
                                         <p class=" text-white">Ancient rock fortress rising 200 meters high, offering breathtaking views and rich cultural heritage</p>
                                    </div>
                              </div>
                           </div>
                        </div>
-                       <div class="col-custom">
+                       <div class="col-custom" data-destination="dambulla" style="background-image: url('MissingIMG/img/Sigiriya Rock Fortress/sig2.jpg'); background-size: cover; background-position: center;">
                           <div class="service-item">
                              <div class="service-content text-center">
-                                <h4 class="service-title text-white child-three">Ella</h4>
+                                <h4 class="service-title text-white child-three">Dambulla Cave Temple</h4>
                              </div>
                           </div>
                           <div class="service-item-2 h-100">
                              <div class="service-content-2 d-flex justify-content-between flex-column h-100">
                               <div class="d-flex justify-content-between align-items-center position-relative z-1">
                                    <div class="service-button">
-                                        <a class="service-btn" href="ella-destination.html"><span><img src="assets/images/icon/service-arrow.svg" alt="arrow"></span></a>
+                                        <a class="service-btn" href="dambulla-cave-temple-destination.html"><span><img src="assets/images/icon/service-arrow.svg" alt="arrow"></span></a>
                                    </div>
                               </div>
                               <div>
-                                   <h4 class="service-title-2 text-white hover-text-secondary">Ella</h4>
+                                   <h4 class="service-title-2 text-white hover-text-secondary">Dambulla Cave Temple</h4>
                                    <p class=" text-white">Charming hill station with cool climate, tea plantations, and peaceful monasteries perfect for meditation</p>
                               </div>
                              </div>
                           </div>
                        </div>
-                       <div class="col-custom">
+                       <div class="col-custom" data-destination="mirissa" style="background-image: url('MissingIMG/img/Galle Fort/gl1.jpg'); background-size: cover; background-position: center;">
                           <div class="service-item">
                              <div class="service-content text-center">
-                                <h4 class="service-title text-white child-three">Mirissa</h4>
+                                <h4 class="service-title text-white child-three">Mirissa Beach</h4>
                              </div>
                           </div>
                           <div class="service-item-2 h-100">
                              <div class="service-content-2 d-flex justify-content-between flex-column h-100">
                                    <div class="d-flex justify-content-between align-items-center position-relative z-1">
                                         <div class="service-button">
-                                             <a class="service-btn" href="mirissa-destination.html"><span><img src="assets/images/icon/service-arrow.svg" alt="arrow"></span></a>
+                                             <a class="service-btn" href="mirissa-beach-destination.html"><span><img src="assets/images/icon/service-arrow.svg" alt="arrow"></span></a>
                                         </div>
                                    </div>
                                    <div>
-                                        <h4 class="service-title-2 text-white hover-text-secondary">Mirissa</h4>
+                                        <h4 class="service-title-2 text-white hover-text-secondary">Mirissa Beach</h4>
                                         <p class=" text-white">Pristine beach town perfect for whale watching, surfing, and peaceful relaxation by the ocean</p>
                                    </div>
                              </div>
                           </div>
                        </div>
-                       <div class="col-custom">
+                       <div class="col-custom" data-destination="tangalle" style="background-image: url('MissingIMG/img/Negombo/ngm1.jpg'); background-size: cover; background-position: center;">
                           <div class="service-item">
                              <div class="service-content text-center">
-                                <h4 class="service-title text-white child-three">Anuradhapura</h4>
+                                <h4 class="service-title text-white child-three">Tangalle Beach</h4>
                              </div>
                           </div>
                           <div class="service-item-2 h-100">
                              <div class="service-content-2 d-flex justify-content-between flex-column h-100">
                                    <div class="d-flex justify-content-between align-items-center position-relative z-1">
                                         <div class="service-button">
-                                             <a class="service-btn" href="anuradhapura-destination.html"><span><img src="assets/images/icon/service-arrow.svg" alt="arrow"></span></a>
+                                             <a class="service-btn" href="tangalle-beach-destination.html"><span><img src="assets/images/icon/service-arrow.svg" alt="arrow"></span></a>
                                         </div>
                                    </div>
                                    <div>
-                                        <h4 class="service-title-2 text-white hover-text-secondary">Anuradhapura</h4>
+                                        <h4 class="service-title-2 text-white hover-text-secondary">Tangalle Beach</h4>
                                         <p class=" text-white">Ancient Buddhist capital with sacred Bodhi Tree and historic temples, perfect for spiritual pilgrimage</p>
                                    </div>
                              </div>
@@ -792,15 +811,96 @@ $testimonials = getActiveTestimonials(6); // Get up to 6 active testimonials
                        </div>
                      </div>
                  </div>
+
+                 <!-- Mobile Carousel Layout -->
+                 <div class="destinations-mobile-carousel d-md-none" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                     <div class="mobile-carousel-container">
+                         <div class="mobile-carousel-track" id="destinationCarouselTrack">
+                             <!-- Card 1: Temple of Sacred Tooth Relic -->
+                             <div class="mobile-destination-card" style="background-image: url('MissingIMG/img/Kandy/knd2.jpg');">
+                                 <div class="mobile-card-overlay"></div>
+                                 <div class="mobile-card-content">
+                                     <h4 class="mobile-card-title">Temple of Sacred Tooth Relic</h4>
+                                     <p class="mobile-card-description">Sacred city home to the Temple of the Tooth Relic, surrounded by lush hills and perfect for spiritual meditation</p>
+                                     <a class="mobile-card-btn" href="temple-tooth-relic-destination.html">
+                                         <span>Explore</span>
+                                         <i class="ph ph-arrow-up-right"></i>
+                                     </a>
+                                 </div>
+                             </div>
+
+                             <!-- Card 2: Anuradhapura Sacred City -->
+                             <div class="mobile-destination-card" style="background-image: url('MissingIMG/img/Sigiriya Rock Fortress/sig1.jpg');">
+                                 <div class="mobile-card-overlay"></div>
+                                 <div class="mobile-card-content">
+                                     <h4 class="mobile-card-title">Anuradhapura Sacred City</h4>
+                                     <p class="mobile-card-description">Ancient rock fortress rising 200 meters high, offering breathtaking views and rich cultural heritage</p>
+                                     <a class="mobile-card-btn" href="anuradhapura-sacred-city-destination.html">
+                                         <span>Explore</span>
+                                         <i class="ph ph-arrow-up-right"></i>
+                                     </a>
+                                 </div>
+                             </div>
+
+                             <!-- Card 3: Dambulla Cave Temple -->
+                             <div class="mobile-destination-card" style="background-image: url('MissingIMG/img/Sigiriya Rock Fortress/sig2.jpg');">
+                                 <div class="mobile-card-overlay"></div>
+                                 <div class="mobile-card-content">
+                                     <h4 class="mobile-card-title">Dambulla Cave Temple</h4>
+                                     <p class="mobile-card-description">Charming hill station with cool climate, tea plantations, and peaceful monasteries perfect for meditation</p>
+                                     <a class="mobile-card-btn" href="dambulla-cave-temple-destination.html">
+                                         <span>Explore</span>
+                                         <i class="ph ph-arrow-up-right"></i>
+                                     </a>
+                                 </div>
+                             </div>
+
+                             <!-- Card 4: Mirissa Beach -->
+                             <div class="mobile-destination-card" style="background-image: url('MissingIMG/img/Galle Fort/gl1.jpg');">
+                                 <div class="mobile-card-overlay"></div>
+                                 <div class="mobile-card-content">
+                                     <h4 class="mobile-card-title">Mirissa Beach</h4>
+                                     <p class="mobile-card-description">Pristine beach town perfect for whale watching, surfing, and peaceful relaxation by the ocean</p>
+                                     <a class="mobile-card-btn" href="mirissa-beach-destination.html">
+                                         <span>Explore</span>
+                                         <i class="ph ph-arrow-up-right"></i>
+                                     </a>
+                                 </div>
+                             </div>
+
+                             <!-- Card 5: Tangalle Beach -->
+                             <div class="mobile-destination-card" style="background-image: url('MissingIMG/img/Negombo/ngm1.jpg');">
+                                 <div class="mobile-card-overlay"></div>
+                                 <div class="mobile-card-content">
+                                     <h4 class="mobile-card-title">Tangalle Beach</h4>
+                                     <p class="mobile-card-description">Ancient Buddhist capital with sacred Bodhi Tree and historic temples, perfect for spiritual pilgrimage</p>
+                                     <a class="mobile-card-btn" href="tangalle-beach-destination.html">
+                                         <span>Explore</span>
+                                         <i class="ph ph-arrow-up-right"></i>
+                                     </a>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+
+                     <!-- Navigation Dots -->
+                     <div class="mobile-carousel-dots">
+                         <span class="dot active" data-slide="0"></span>
+                         <span class="dot" data-slide="1"></span>
+                         <span class="dot" data-slide="2"></span>
+                         <span class="dot" data-slide="3"></span>
+                         <span class="dot" data-slide="4"></span>
+                     </div>
+                 </div>
             </div>
         </div>
-        
+
         <!-- See More Destinations Button -->
         <div class="row justify-content-center tw-mt-16">
             <div class="col-xl-6 col-lg-8 text-center">
                 <div class="destinations-button" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-                    <a class="primary-btn bg-white text-main-600 tw-py-5 tw-px-12 fs-15 text-uppercase fw-bold font-heading tw-gap-2 d-inline-flex align-items-center tw-rounded-4xl hover:bg-main-600 hover:text-white transition-all" href="srilanka-destinations.html">
-                        Explore More Destinations <i class="ph ph-arrow-up-right"></i>
+                    <a class="primary-btn bg-white text-main-600 tw-py-5 tw-px-12 fs-15 text-uppercase fw-bold font-heading tw-gap-2 d-inline-flex align-items-center tw-rounded-4xl hover:bg-main-600 hover:text-white transition-all" href="sri-lanka-tour-packages.php">
+                        See More Destinations <i class="ph ph-arrow-up-right"></i>
                     </a>
                 </div>
             </div>
@@ -829,7 +929,7 @@ $testimonials = getActiveTestimonials(6); // Get up to 6 active testimonials
                  <!-- item 1 -->
                  <div class="advance-item">
                    <div class="advance-thumb">
-                      <img src="assets/images/advance/advance-thumb1.jpg" alt="thumb">
+                      <img src="MissingIMG/img/Peradeniya Botanical Gardens/pb4.jpg" alt="thumb">
                    </div>
                    <div class="advance-content d-flex align-items-center justify-content-between flex-wrap tw-px-4 tw-py-4">
                       <h6 class="tw-text-2xl fw-normal mb-0">Wellness</h6>
@@ -840,7 +940,7 @@ $testimonials = getActiveTestimonials(6); // Get up to 6 active testimonials
                  <!-- item 2 -->
                  <div class="advance-item">
                    <div class="advance-thumb">
-                      <img src="assets/images/advance/advance-thumb2.jpg" alt="thumb">
+                      <img src="MissingIMG/img/Kandy/knd4.jpg" alt="thumb">
                    </div>
                    <div class="advance-content d-flex align-items-center justify-content-between flex-wrap tw-px-4 tw-py-4">
                       <h6 class="tw-text-2xl fw-normal mb-0">Temples</h6>
@@ -851,7 +951,7 @@ $testimonials = getActiveTestimonials(6); // Get up to 6 active testimonials
                  <!-- item 3 -->
                  <div class="advance-item">
                    <div class="advance-thumb">
-                      <img src="assets/images/advance/advance-thumb3.jpg" alt="thumb">
+                      <img src="MissingIMG/img/Traditional Villages/tv3.jpg" alt="thumb">
                    </div>
                    <div class="advance-content d-flex align-items-center justify-content-between flex-wrap tw-px-4 tw-py-4">
                       <h6 class="tw-text-2xl fw-normal mb-0">Retreats</h6>
@@ -862,7 +962,7 @@ $testimonials = getActiveTestimonials(6); // Get up to 6 active testimonials
                  <!-- item 4 -->
                  <div class="advance-item">
                    <div class="advance-thumb">
-                      <img src="assets/images/advance/advance-thumb4.jpg" alt="thumb">
+                      <img src="MissingIMG/img/Sigiriya Rock Fortress/sig2.jpg" alt="thumb">
                    </div>
                    <div class="advance-content d-flex align-items-center justify-content-between flex-wrap tw-px-4 tw-py-4">
                       <h6 class="tw-text-2xl fw-normal mb-0">Culture</h6>
@@ -873,7 +973,7 @@ $testimonials = getActiveTestimonials(6); // Get up to 6 active testimonials
                  <!-- item 5 -->
                  <div class="advance-item">
                    <div class="advance-thumb">
-                      <img src="assets/images/advance/advance-thumb5.jpg" alt="thumb">
+                      <img src="MissingIMG/img/Galle Fort/gl3.jpg" alt="thumb">
                    </div>
                    <div class="advance-content d-flex align-items-center justify-content-between flex-wrap tw-px-4 tw-py-4">
                       <h6 class="tw-text-2xl fw-normal mb-0">Coastal</h6>
@@ -912,31 +1012,81 @@ $testimonials = getActiveTestimonials(6); // Get up to 6 active testimonials
                      <div class="testimonial-two-active swiper-container">
                          <div class="swiper-wrapper">
 
-                              <?php if (empty($testimonials)): ?>
-                                   <!-- Default slide if no testimonials -->
-                                   <div class="testimonial-two-wrapper tw-rounded-xl d-flex justify-content-between position-relative z-1 background-img overflow-hidden swiper-slide" data-background-image="assets/images/testimonial/testimonial-two-bg.png" style="min-height: 400px; height: 400px;">
-                                        <div class="testimonial-two-left bg-main-two-600 tw-rounded-xl tw-pt-15 tw-pb-9 tw-ps-9 tw-pe-7 d-flex flex-column justify-content-between" style="width: 80%; min-height: 360px;">
-                                             <p class="testimonial-two-paragraph fw-medium text-main-600 tw-mb-6 flex-grow-1 d-flex align-items-center" style="line-height: 1.6; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 6; -webkit-box-orient: vertical;">"From luxury hotels to private transfers and curated experiences, everything was flawless. This is what five-star travel should feel like."</p>
-                                             <div class="mt-auto">
-                                                  <h6 class="tw-text-xl text-capitalize tw-mb-2" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Sample Guest</h6>
-                                                  <p class="text-main-600 fw-medium mb-0" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Travel Enthusiast</p>
-                                             </div>
-                                        </div>
-                                        <div class="testimonial-two-right d-flex justify-content-between flex-column tw-pt-16 tw-pb-12 tw-pe-15" style="width: 20%; min-height: 360px;">
-                                             <div class="icon" style="font-size: 3rem; color: #2c5aa0;">
-                                                  <i class="ph ph-quotes"></i>
-                                             </div>
+                              <!-- slide 1 -->
+                              <div class="testimonial-two-wrapper tw-rounded-xl d-flex justify-content-between position-relative z-1 background-img overflow-hidden swiper-slide" data-background-image="assets/images/testimonial/testimonial-two-bg.png">
+                                   <div class="testimonial-two-left bg-main-two-600 tw-rounded-xl tw-pt-15 tw-pb-9 tw-ps-9 tw-pe-7">
+                                        <p class="testimonial-two-paragraph fw-medium text-main-600 tw-pb-9 tw-mb-6">From luxury hotels to private transfers 
+                                             and curated experiences, everything 
+                                             was flawless. This is what five-star travel 
+                                             should feel like.” how affordable the..</p>
+                                        <div>
+                                             <h6 class="tw-text-xl text-capitalize tw-mb-2">william camel</h6>
+                                             <p class="text-main-600 fw-medium">Head of Design at Zazoo</p>
                                         </div>
                                    </div>
-                              <?php else: ?>
-                                   <?php
-                                   $slideClasses = ['bg-main-two-600', 'bg-main-600', 'bg-main-two-600'];
-                                   foreach ($testimonials as $index => $testimonial):
-                                        $slideClass = $slideClasses[$index % 3];
-                                   ?>
-                                        <?php echo renderTestimonialSlide($testimonial, $slideClass); ?>
-                                   <?php endforeach; ?>
-                              <?php endif; ?>
+                                   <div class="testimonial-two-right d-flex justify-content-between flex-column tw-pt-16 tw-pb-12 tw-pe-15">
+                                        <div class="icon">
+                                             <span><img src="assets/images/icon/testimonial-two-quote1.svg" alt="quote"></span>
+                                        </div>
+                                        <div>
+                                             <div class="tw-mb-4">
+                                                  <img src="assets/images/testimonial/testimonial-two-logo.png" alt="logo">
+                                             </div>
+                                             <h6 class="tw-text-xl">great experience</h6>
+                                        </div>
+                                   </div>
+                              </div>
+
+                              <!-- slide 2 -->
+                              <div class="testimonial-two-wrapper tw-rounded-xl d-flex justify-content-between position-relative z-1 background-img overflow-hidden swiper-slide" data-background-image="assets/images/testimonial/testimonial-two-bg.png">
+                                   <div class="testimonial-two-left bg-main-600 tw-rounded-xl tw-pt-15 tw-pb-9 tw-ps-9 tw-pe-7">
+                                        <p class="testimonial-two-paragraph two fw-medium text-white tw-pb-9 tw-mb-6">From luxury hotels to private transfers 
+                                             and curated experiences, everything 
+                                             was flawless. This is what five-star travel 
+                                             should feel like.” how affordable the..</p>
+                                        <div>
+                                             <h6 class="tw-text-xl text-capitalize tw-mb-2 text-white">william camel</h6>
+                                             <p class="text-main-600 fw-medium text-white">Head of Design at Zazoo</p>
+                                        </div>
+                                   </div>
+                                   <div class="testimonial-two-right d-flex justify-content-between flex-column tw-pt-16 tw-pb-12 tw-pe-15">
+                                        <div class="icon">
+                                             <span><img src="assets/images/icon/testimonial-two-quote1.svg" alt="quote"></span>
+                                        </div>
+                                        <div>
+                                             <div class="tw-mb-4">
+                                                  <img src="assets/images/testimonial/testimonial-two-logo.png" alt="logo">
+                                             </div>
+                                             <h6 class="tw-text-xl">great experience</h6>
+                                        </div>
+                                   </div>
+                              </div>
+
+                              
+                              <!-- slide 3 -->
+                              <div class="testimonial-two-wrapper tw-rounded-xl d-flex justify-content-between position-relative z-1 background-img overflow-hidden swiper-slide" data-background-image="assets/images/testimonial/testimonial-two-bg.png">
+                                   <div class="testimonial-two-left bg-main-two-600 tw-rounded-xl tw-pt-15 tw-pb-9 tw-ps-9 tw-pe-7">
+                                        <p class="testimonial-two-paragraph fw-medium text-main-600 tw-pb-9 tw-mb-6">From luxury hotels to private transfers 
+                                             and curated experiences, everything 
+                                             was flawless. This is what five-star travel 
+                                             should feel like.” how affordable the..</p>
+                                        <div>
+                                             <h6 class="tw-text-xl text-capitalize tw-mb-2">william camel</h6>
+                                             <p class="text-main-600 fw-medium">Head of Design at Zazoo</p>
+                                        </div>
+                                   </div>
+                                   <div class="testimonial-two-right d-flex justify-content-between flex-column tw-pt-16 tw-pb-12 tw-pe-15">
+                                        <div class="icon">
+                                             <span><img src="assets/images/icon/testimonial-two-quote1.svg" alt="quote"></span>
+                                        </div>
+                                        <div>
+                                             <div class="tw-mb-4">
+                                                  <img src="assets/images/testimonial/testimonial-two-logo.png" alt="logo">
+                                             </div>
+                                             <h6 class="tw-text-xl">great experience</h6>
+                                        </div>
+                                   </div>
+                              </div>
 
                          </div>
                      </div>
@@ -1052,12 +1202,12 @@ $testimonials = getActiveTestimonials(6); // Get up to 6 active testimonials
  
 
 
-<section class="cta-area py-140 background-img position-relative z-1" data-background-image="assets/images/cta/cta-bg.jpg">
+<section class="cta-area py-140 background-img position-relative z-1 mb-5" data-background-image="assets/images/cta/cta-bg.jpg">
      <div class="container">
           <div class="row justify-content-center tw-pb-20">
                <div class="col-xl-10">
                     <div class="section-wrapper text-center position-relative z-1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                         <h2 class="section-title fw-normal tw-mb-7 char-animation text-white char-animation"> <span class="text-main-600">Let’sCapture</span> BeautyoftheWorld</h2>
+                         <h2 class="section-title fw-normal tw-mb-7 char-animation text-white char-animation" style="font-size: 2.8rem;"> <span class="text-main-600">Let'sCapture</span> BeautyoftheWorld</h2>
                          <div class="gallery-button d-flex justify-content-center">
                               <a class="primary-btn bg-main-two-600 text-main-600 tw-py-4 tw-px-8 fs-15 text-capitalize fw-bold font-heading tw-gap-2 d-inline-flex align-items-center tw-rounded-4xl" href="contact.html">Booking Today <i class="ph ph-arrow-up-right"></i></a> 
                          </div>
@@ -1075,79 +1225,6 @@ $testimonials = getActiveTestimonials(6); // Get up to 6 active testimonials
 </section>
 
 
-<section class="instagram-area">
-     <div class="container">
-          <div class="row">
-               <div class="col-xl-12">
-                    <div class="text-center tw-mb-6">
-                         <h6 class="instagram-title tw-text-2xl fw-normal text-capitalize">...want to become a dontation partner & contribution...</h6>
-                    </div>
-               </div>
-          </div>
-          <div class="row row-cols-xl-6 row-cols-md-3 row-cols-sm-3 row-cols-1">
-               <div class="col">
-                    <div class="instagram-wrapper" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                         <div class="instagram-thumb position-relative z-1 overflow-hidden">
-                              <img class="tw-rounded-lg" src="assets/images/instagram/instagram-thumb1.jpg" alt="thumb">
-                              <div class="instagram-btn position-absolute z-1">
-                                   <a href="#"><span><img src="assets/images/icon/instagram.svg" alt="instagram"></span></a>
-                              </div>
-                         </div>
-                    </div>
-               </div>
-               <div class="col">
-                    <div class="instagram-wrapper" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-                         <div class="instagram-thumb position-relative z-1 overflow-hidden">
-                              <img class="tw-rounded-lg" src="assets/images/instagram/instagram-thumb2.jpg" alt="thumb">
-                              <div class="instagram-btn position-absolute z-1">
-                                   <a href="#"><span><img src="assets/images/icon/instagram.svg" alt="instagram"></span></a>
-                              </div>
-                         </div>
-                    </div>
-               </div>
-               <div class="col">
-                    <div class="instagram-wrapper" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-                         <div class="instagram-thumb position-relative z-1 overflow-hidden">
-                              <img class="tw-rounded-lg" src="assets/images/instagram/instagram-thumb3.jpg" alt="thumb">
-                              <div class="instagram-btn position-absolute z-1">
-                                   <a href="#"><span><img src="assets/images/icon/instagram.svg" alt="instagram"></span></a>
-                              </div>
-                         </div>
-                    </div>
-               </div>
-               <div class="col">
-                    <div class="instagram-wrapper" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
-                         <div class="instagram-thumb position-relative z-1 overflow-hidden">
-                              <img class="tw-rounded-lg" src="assets/images/instagram/instagram-thumb4.jpg" alt="thumb">
-                              <div class="instagram-btn position-absolute z-1">
-                                   <a href="#"><span><img src="assets/images/icon/instagram.svg" alt="instagram"></span></a>
-                              </div>
-                         </div>
-                    </div>
-               </div>
-               <div class="col">
-                    <div class="instagram-wrapper" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
-                         <div class="instagram-thumb position-relative z-1 overflow-hidden">
-                              <img class="tw-rounded-lg" src="assets/images/instagram/instagram-thumb5.jpg" alt="thumb">
-                              <div class="instagram-btn position-absolute z-1">
-                                   <a href="#"><span><img src="assets/images/icon/instagram.svg" alt="instagram"></span></a>
-                              </div>
-                         </div>
-                    </div>
-               </div>
-               <div class="col">
-                    <div class="instagram-wrapper">
-                         <div class="instagram-thumb position-relative z-1 overflow-hidden" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="700">
-                              <img class="tw-rounded-lg" src="assets/images/instagram/instagram-thumb6.jpg" alt="thumb">
-                              <div class="instagram-btn position-absolute z-1">
-                                   <a href="#"><span><img src="assets/images/icon/instagram.svg" alt="instagram"></span></a>
-                              </div>
-                         </div>
-                    </div>
-               </div>
-          </div>
-     </div>
-</section>
 
 
     <!-- ==================== Custom Footer Start ==================== -->
@@ -1156,7 +1233,7 @@ $testimonials = getActiveTestimonials(6); // Get up to 6 active testimonials
             <div class="row">
                 <!-- Brand Section -->
                 <div class="col-lg-4 col-md-6 mb-4">
-                    <h3 class="rent-car-footer-brand">Marshel Tourism</h3>
+                    <h3 class="rent-car-footer-brand">Marshell Holidays</h3>
                     <p class="rent-car-footer-text">Your trusted partner for authentic Sri Lankan experiences. We specialize in personalized car rentals, cultural tours, and spiritual journeys.</p>
                     <div class="d-flex flex-wrap">
                         <a href="#" class="rent-car-social-icon"><i class="ph-bold ph-facebook-logo"></i></a>
@@ -1169,7 +1246,7 @@ $testimonials = getActiveTestimonials(6); // Get up to 6 active testimonials
                 <!-- Quick Links -->
                 <div class="col-lg-2 col-md-6 mb-4">
                     <h5 class="rent-car-footer-title">Quick Links</h5>
-                    <a href="index.html" class="rent-car-footer-link">Home</a>
+                    <a href="index.php" class="rent-car-footer-link">Home</a>
                     <a href="about.html" class="rent-car-footer-link">About Us</a>
                     <a href="sri-lanka-tour-packages.php" class="rent-car-footer-link">Tour Packages</a>
                     <a href="rent-a-car.html" class="rent-car-footer-link">Rent a Car</a>
@@ -1208,7 +1285,7 @@ $testimonials = getActiveTestimonials(6); // Get up to 6 active testimonials
             <div class="rent-car-footer-bottom">
                 <div class="row align-items-center">
                     <div class="col-md-6">
-                        <p class="rent-car-footer-bottom-text mb-0">&copy; 2024 Marshel Tourism Pvt Ltd. All rights reserved.</p>
+                        <p class="rent-car-footer-bottom-text mb-0">&copy; 2024 Marshell Holidays Pvt Ltd. All rights reserved.</p>
                     </div>
                     <div class="col-md-6 text-md-end">
                         <a href="#" class="rent-car-footer-link d-inline me-4">Privacy Policy</a>
@@ -1268,56 +1345,265 @@ $testimonials = getActiveTestimonials(6); // Get up to 6 active testimonials
         // Initialize single background image
         const heroSlide = document.querySelector('.hero-slide');
         if (heroSlide) {
-            heroSlide.style.backgroundImage = `url('https://travelrebels.com/wp-content/uploads/2018/06/anuradhapura-sunset.jpg')`;
+            heroSlide.style.backgroundImage = `url('Mainimg/img/Anuradhapura Sacred City/apur1.jpg')`;
         }
     });
     </script>
     
-    <!-- FAQ Accordion Fix Script -->
+    <!-- Simple FAQ Accordion Fix -->
     <script>
-    // Fix FAQ accordion jumping to top issue
     document.addEventListener('DOMContentLoaded', function() {
-        // Override any smooth scroll behavior for FAQ accordion
-        const faqButtons = document.querySelectorAll('.faq-accordion-button');
-        
-        faqButtons.forEach(function(button) {
-            button.addEventListener('click', function(e) {
-                // Store current scroll position
-                const currentScrollY = window.scrollY;
-                const currentScrollX = window.scrollX;
-                
-                // Set a very short timeout to reset scroll position after Bootstrap processes the click
-                setTimeout(function() {
-                    window.scrollTo(currentScrollX, currentScrollY);
-                }, 1);
-                
-                // Also prevent any hash changes that might trigger scrolling
-                if (window.location.hash) {
-                    history.replaceState('', document.title, window.location.pathname + window.location.search);
-                }
+        // Simple fix without performance overhead
+        const style = document.createElement('style');
+        style.textContent = `
+            html { scroll-behavior: auto !important; }
+            .faq-wrapper .collapse { transition: none !important; }
+        `;
+        document.head.appendChild(style);
+
+        // Clean up any hash that might cause scrolling
+        if (window.location.hash) {
+            history.replaceState('', document.title, window.location.pathname + window.location.search);
+        }
+    });
+    </script>
+
+    <!-- Mobile Destination Carousel Styles -->
+    <style>
+    /* Mobile Destination Carousel */
+    .destinations-mobile-carousel {
+        width: 100%;
+        padding: 0 20px;
+        margin-top: 2rem;
+    }
+
+    .mobile-carousel-container {
+        overflow: hidden;
+        border-radius: 20px;
+        position: relative;
+    }
+
+    .mobile-carousel-track {
+        display: flex;
+        transition: transform 0.3s ease-in-out;
+        width: 500%; /* 5 cards */
+    }
+
+    .mobile-destination-card {
+        width: 20%; /* 100% / 5 cards */
+        height: 480px;
+        position: relative;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 20px;
+        overflow: hidden;
+        flex-shrink: 0;
+    }
+
+    .mobile-card-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3));
+        z-index: 1;
+    }
+
+    .mobile-card-content {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 30px 25px;
+        color: white;
+        z-index: 2;
+    }
+
+    .mobile-card-title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+        font-family: 'Philosopher', serif;
+        line-height: 1.3;
+        color: #ffffff;
+    }
+
+    .mobile-card-description {
+        font-size: 0.9rem;
+        line-height: 1.4;
+        margin-bottom: 20px;
+        opacity: 0.9;
+    }
+
+    .mobile-card-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        color: white;
+        padding: 10px 20px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.9rem;
+        transition: all 0.3s ease;
+    }
+
+    .mobile-card-btn:hover {
+        background: rgba(255, 255, 255, 0.3);
+        color: white;
+        transform: translateY(-2px);
+    }
+
+    .mobile-carousel-dots {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.3);
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .dot.active {
+        background: white;
+        transform: scale(1.2);
+    }
+
+    /* Touch indicator */
+    .destinations-mobile-carousel::after {
+        content: 'Swipe to explore →';
+        display: block;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 0.8rem;
+        margin-top: 10px;
+        animation: fadeInOut 3s ease-in-out infinite;
+    }
+
+    @keyframes fadeInOut {
+        0%, 50%, 100% { opacity: 0.6; }
+        25%, 75% { opacity: 0.3; }
+    }
+    </style>
+
+    <!-- Mobile Destination Carousel JavaScript -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const track = document.getElementById('destinationCarouselTrack');
+        const dots = document.querySelectorAll('.dot');
+        const carousel = document.querySelector('.destinations-mobile-carousel');
+
+        if (!track || !carousel) return;
+
+        let currentSlide = 0;
+        let startX = 0;
+        let isDragging = false;
+        let startTranslate = 0;
+        let currentTranslate = 0;
+
+        // Update slide position
+        function updateSlide(slideIndex) {
+            currentSlide = slideIndex;
+            const translateX = -slideIndex * 20; // 20% per slide
+            track.style.transform = `translateX(${translateX}%)`;
+
+            // Update dots
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === slideIndex);
             });
+        }
+
+        // Touch/mouse events
+        function getPositionX(event) {
+            return event.type.includes('mouse') ? event.clientX : event.touches[0].clientX;
+        }
+
+        function touchStart(event) {
+            startX = getPositionX(event);
+            isDragging = true;
+            startTranslate = currentTranslate;
+            track.style.transition = 'none';
+        }
+
+        function touchMove(event) {
+            if (!isDragging) return;
+
+            const currentX = getPositionX(event);
+            const diff = currentX - startX;
+            currentTranslate = startTranslate + (diff / carousel.offsetWidth) * 100;
+
+            // Limit dragging
+            const maxTranslate = 0;
+            const minTranslate = -80; // -20% * 4 slides
+            currentTranslate = Math.max(minTranslate, Math.min(maxTranslate, currentTranslate));
+
+            track.style.transform = `translateX(${currentTranslate}%)`;
+        }
+
+        function touchEnd() {
+            if (!isDragging) return;
+            isDragging = false;
+
+            track.style.transition = 'transform 0.3s ease-in-out';
+
+            // Determine which slide to snap to
+            const slideIndex = Math.round(-currentTranslate / 20);
+            updateSlide(Math.max(0, Math.min(4, slideIndex)));
+        }
+
+        // Add event listeners with passive options
+        carousel.addEventListener('touchstart', touchStart, { passive: true });
+        carousel.addEventListener('touchmove', touchMove, { passive: true });
+        carousel.addEventListener('touchend', touchEnd, { passive: true });
+
+        carousel.addEventListener('mousedown', touchStart, { passive: true });
+        carousel.addEventListener('mousemove', touchMove, { passive: true });
+        carousel.addEventListener('mouseup', touchEnd, { passive: true });
+        carousel.addEventListener('mouseleave', touchEnd, { passive: true });
+
+        // Dot navigation
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => updateSlide(index));
         });
-        
-        // Prevent scroll on accordion events
-        document.addEventListener('show.bs.collapse', function(e) {
-            if (e.target.closest('.faq-wrapper')) {
-                const currentScrollY = window.scrollY;
-                const currentScrollX = window.scrollX;
-                setTimeout(function() {
-                    window.scrollTo(currentScrollX, currentScrollY);
-                }, 1);
-            }
-        });
-        
-        document.addEventListener('shown.bs.collapse', function(e) {
-            if (e.target.closest('.faq-wrapper')) {
-                const currentScrollY = window.scrollY;
-                const currentScrollX = window.scrollX;
-                setTimeout(function() {
-                    window.scrollTo(currentScrollX, currentScrollY);
-                }, 1);
-            }
-        });
+
+        // Optimized auto-slide with pause/resume
+        let autoSlideInterval;
+        let isInteracting = false;
+
+        function startAutoSlide() {
+            if (autoSlideInterval) clearInterval(autoSlideInterval);
+            autoSlideInterval = setInterval(() => {
+                if (!isInteracting) {
+                    const nextSlide = (currentSlide + 1) % 5;
+                    updateSlide(nextSlide);
+                }
+            }, 5000);
+        }
+
+        function pauseAutoSlide() {
+            isInteracting = true;
+            setTimeout(() => {
+                isInteracting = false;
+            }, 3000); // Resume after 3 seconds of inactivity
+        }
+
+        // Start auto-slide
+        startAutoSlide();
+
+        // Pause on interaction (simplified)
+        carousel.addEventListener('touchstart', pauseAutoSlide, { passive: true });
+        carousel.addEventListener('mousedown', pauseAutoSlide, { passive: true });
     });
     </script>
 

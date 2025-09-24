@@ -223,10 +223,10 @@
                 <a href="sri-lanka-tour-packages.php" class="mh-tour-mobile-link">Tour Packages</a>
             </li>
             <li class="mh-tour-mobile-item">
-                <a href="customize-your-trip.html" class="mh-tour-mobile-link">Customize Your Trip</a>
+                <a href="customize-your-trip.php" class="mh-tour-mobile-link">Customize Your Trip</a>
             </li>
             <li class="mh-tour-mobile-item">
-                <a href="rent-a-car.html" class="mh-tour-mobile-link">Rent a Car</a>
+                <a href="rent-a-car.php" class="mh-tour-mobile-link">Rent a Car</a>
             </li>
             <li class="mh-tour-mobile-item">
                 <a href="about.php" class="mh-tour-mobile-link">About</a>
@@ -259,10 +259,10 @@
                     <a href="sri-lanka-tour-packages.php" class="mh-tour-menu-link">Tour Packages</a>
                 </li>
                 <li class="mh-tour-menu-item">
-                    <a href="customize-your-trip.html" class="mh-tour-menu-link">Customize Your Trip</a>
+                    <a href="customize-your-trip.php" class="mh-tour-menu-link">Customize Your Trip</a>
                 </li>
                 <li class="mh-tour-menu-item">
-                    <a href="rent-a-car.html" class="mh-tour-menu-link">Rent a Car</a>
+                    <a href="rent-a-car.php" class="mh-tour-menu-link">Rent a Car</a>
                 </li>
                 <li class="mh-tour-menu-item">
                     <a href="about.php" class="mh-tour-menu-link">About</a>

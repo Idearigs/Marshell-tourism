@@ -6,12 +6,12 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Jewels of Ceylon Grand Tour - 14 Days 13 Nights complete cultural and natural heritage experience in Sri Lanka">
-    <meta name="keywords" content="Jewels of Ceylon, Sri Lanka Grand Tour, Cultural Heritage, Nature Tour, 14 Days Tour">
+    <meta name="description" content="Marshell Holidays HTML Template">
+    <meta name="keywords" content="Marshell Holidays HTML Template">
     <meta name="robots" content="INDEX,FOLLOW">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Title -->
-    <title>Jewels of Ceylon Grand Tour - 14 Days 13 Nights | Marshell Holidays</title>
+    <title> Marshell Holidays - Tours & Travels Multipurpose HTML Template </title>
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/images/logo/favicon.png">
     <!-- Google Fonts - Philosopher -->
@@ -31,12 +31,35 @@
     <link rel="stylesheet" href="assets/css/rent-car-custom.css">
     <!-- Review System CSS -->
     <link rel="stylesheet" href="assets/css/reviews.css">
+
+    <!-- Tour Package Gallery Fix -->
+    <style>
+    .package-details-swiper-wrapper .swiper-slide {
+        height: 400px !important; /* Fixed height for all slides */
+    }
+
+    .package-details-swiper-wrapper .swiper-slide div {
+        height: 100% !important;
+        width: 100% !important;
+        overflow: hidden !important;
+    }
+
+    .package-details-swiper-wrapper .swiper-slide img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important; /* Maintain aspect ratio while filling container */
+        border-radius: 12px !important;
+    }
+
+    .package-details-active {
+        height: 400px !important;
+    }
+    </style>
 </head>
 
-<body class="bg-neutral-50" data-package-slug="jewels-of-ceylon-grand-tour">
+<body class="bg-neutral-50" data-package-slug="sacred-ceylon-wellness-retreat">
 
 
-    
 
 
     <!-- Search Popup Start -->
@@ -138,116 +161,15 @@
     <span class="dot"></span>
     <!-- Custom Cursor End -->
 
-    <!-- ==================== New Mobile Menu Start Here ==================== -->
-<div id="mobile-sidebar" class="mobile-sidebar">
-    <div class="mobile-sidebar-header">
-        <h4 class="mobile-logo">Marshell Holidays</h4>
-        <button id="mobile-close-btn" class="mobile-close-btn">
-            <i class="ph ph-x"></i>
-        </button>
-    </div>
-    <nav class="mobile-nav">
-        <ul class="mobile-nav-list">
-            <li class="mobile-nav-item">
-                <a href="index.php" class="mobile-nav-link">Home</a>
-            </li>
-            <li class="mobile-nav-item">
-                <a href="sri-lanka-tour-packages.php" class="mobile-nav-link">Tour Packages</a>
-            </li>
-            <li class="mobile-nav-item">
-                <a href="customize-your-trip.html" class="mobile-nav-link">Customize Your Trip</a>
-            </li>
-            <li class="mobile-nav-item">
-                <a href="rent-a-car.html" class="mobile-nav-link">Rent a Car</a>
-            </li>
-            <li class="mobile-nav-item">
-                <a href="about.html" class="mobile-nav-link">About</a>
-            </li>
-            <li class="mobile-nav-item">
-                <a href="contact.html" class="mobile-nav-link">Contact</a>
-            </li>
-        </ul>
-    </nav>
-</div>
-<div id="mobile-overlay" class="mobile-overlay"></div>
-<!-- ==================== New Mobile Menu End Here ==================== -->
-<!-- ==================== Header Start Here ==================== -->
-<header class="header header-two transition-all">
-    <div class="container-fluid">
-        <nav class="d-flex align-items-center justify-content-between">
-            <!-- Logo Start -->
-            <div class="logo">
-                <a href="index.html" class="link">
-                    <img src="assets/images/logo/logo.png" alt="Logo" class="max-w-200-px">
-                </a>
-            </div>
-            <!-- Logo End  -->
-
-            <!-- Menu Start  -->
-            <div class="header-menu header-two-menu d-lg-block d-none">
-                <!-- Nav menu Start -->
-<ul class="nav-menu d-lg-flex align-items-center tw-gap-6">
-    <li class="nav-menu__item">
-        <a href="index.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Home</a>
-    </li>
-    <li class="nav-menu__item">
-        <a href="sri-lanka-tour-packages.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Tour Packages</a>
-    </li>
-    <li class="nav-menu__item">
-        <a href="customize-your-trip.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Customize Your Trip</a>
-    </li>
-    <li class="nav-menu__item">
-        <a href="rent-a-car.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Rent a car</a>
-    </li>
-    <li class="nav-menu__item">
-        <a href="about.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">About</a>
-    </li>
-    <li class="nav-menu__item">
-        <a href="contact.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Contact</a>
-    </li>
-</ul>
-<!-- Nav menu End  -->
-            </div>
-            <!-- Menu End  -->
-
-            <!-- Header Right start -->
-            <div class="">
-                <div class="d-flex align-items-center tw-gap-29">
-                    <div class="header-btn-wrap d-flex align-items-center tw-gap-5">
-                        <div>
-                            <button class="open-search" aria-label="search products" title="open search box">
-                                <span><img src="assets/images/icon/search.svg" alt="search"></span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="header-button">
-                        <a class="primary-btn bg-white text-main-600 tw-py-5 tw-px-10 fs-15 text-uppercase fw-bold font-heading tw-gap-2 d-inline-flex align-items-center tw-rounded-4xl" href="contact.html">Contact us <i class="ph ph-arrow-up-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            <button type="button" id="mobile-menu-toggle" class="d-lg-none ms-3 text-neutral-800" style="font-size: 24px; background: none; border: none;">
-                <i class="ph ph-list"></i>
-            </button>
-            <!-- Header Right End  -->
-        </nav>
-    </div>
-</header>
-<!-- ==================== Header End Here ==================== -->
+    <?php include 'includes/tour-navbar.php'; ?>
 <div id="scrollSmoother-container">
-     <!-- ==================== Breadcrumb Start Here ==================== -->
-<section class="breadcrumb-area background-img" data-background-image="MissingIMG/img/Sigiriya Rock Fortress/sigwide.jpg">
-    <div class="container-fluid">
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div>
-                    <h2 class="breadcrumb-title text-center tw-mb-6 char-animation" style="font-size: 2.5rem;">Jewels of Ceylon Grand Tour</h2>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- ==================== Breadcrumb End Here ==================== -->
-     <section class="page pt-140">
+<?php
+$hero_image = 'MissingIMG/img/Peradeniya Botanical Gardens/pbwide.jpg';
+$hero_title = 'Sacred Ceylon Wellness Retreat';
+$hero_subtitle = '7 Days 6 Nights Mindfulness & Spiritual Journey';
+include 'includes/tour-hero.php';
+?>
+     <section class="page pt-140" id="package-details">
           <div class="container">
                <div class="row">
                     <div class="col-xl-12">
@@ -255,20 +177,20 @@
                               <div data-aos-duration="1000" data-aos-delay="200">
                                    <div class="d-flex align-items-center tw-gap-5 tw-mb-5">
                                         <div>
-                                             <span class="bg-main-two-600 fw-medium tw-pt-1 tw-pb-2 tw-px-5 tw-rounded-3xl text-white">Cultural & Nature Heritage</span>
+                                             <span class="bg-main-two-600 fw-medium tw-pt-1 tw-pb-2 tw-px-5 tw-rounded-3xl">Wellness & Mindfulness</span>
                                         </div>
                                         <div>
-                                             <p><span class="text-main-two-600"><i class="ph ph-eye"></i></span> 2,156 people viewed this package</p>
+                                             <p><span class="text-main-two-600"><i class="ph ph-eye"></i></span> 3,421 people viewed this package</p>
                                         </div>
                                    </div>
                                    <div class="tw-mb-3">
-                                        <h2 class="tw-text-13 char-animation" style="font-size: 2rem;">Jewels of Ceylon Grand Tour</h2>
+                                        <h2 class="tw-text-13 char-animation" style="font-size: 2rem;">Sacred Ceylon Wellness Retreat</h2>
                                    </div>
                                    <div>
                                         <ul class="d-flex tw-gap-6 flex-wrap row-gap-3">
-                                             <li class="d-flex align-items-center tw-gap-2"><span><img src="assets/images/icon/package-details-top-icon1.svg" alt="clock"></span> 14 Days 13 Nights</li>
-                                             <li class="d-flex align-items-center tw-gap-2"><span><img src="assets/images/icon/package-details-top-icon2.svg" alt="people"></span> Cultural Enthusiasts & Nature Lovers</li>
-                                             <li class="d-flex align-items-center tw-gap-2"><span><img src="assets/images/icon/package-details-top-icon3.svg" alt="location"></span> Complete Sri Lanka Experience</li>
+                                             <li class="d-flex align-items-center tw-gap-2"><span><img src="assets/images/icon/package-details-top-icon1.svg" alt="clock"></span> 7 Days 6 Nights</li>
+                                             <li class="d-flex align-items-center tw-gap-2"><span><img src="assets/images/icon/package-details-top-icon2.svg" alt="people"></span> Seniors & Wellness Seekers</li>
+                                             <li class="d-flex align-items-center tw-gap-2"><span><img src="assets/images/icon/package-details-top-icon3.svg" alt="location"></span> Buddhist Heritage & Mindfulness Journey</li>
                                         </ul>
                                    </div>
                               </div>
@@ -281,13 +203,12 @@
                                              <i class="text-main-two-600 ph ph-star"></i>
                                              <i class="text-main-two-600 ph ph-star"></i>
                                         </div>
-                                        <div class="package-rating">
-                                             <p class="mb-0">Loading reviews...</p>
+                                        <div>
+                                             <p class="mb-0">(1 Review)</p>
                                         </div>
                                    </div>
                                    <div class="d-flex align-items-center tw-gap-7">
-                                        <h4 class="tw-text-808 text-main-600">Contact us for Best rates</h4>
-                                        <p class="tw-text-sm text-neutral-600">Customized pricing available</p>
+                                        <h4 class="tw-text-808">Contact for Personalized Pricing</h4>
                                    </div>
                               </div>
                          </div>
@@ -305,45 +226,45 @@
                                 <div class="package-details-swiper-wrapper swiper-wrapper">
 
 
-                                    <!-- slide 1 - Anuradhapura Sacred City -->
+                                    <!-- slide 1 - Temple of Sacred Tooth Relic -->
                                     <div class="position-relative z-index-1 swiper-slide">
                                         <div>
-                                             <img class="tw-rounded-lg" src="MissingIMG/img/Negombo/ngm1.jpg" alt="Negombo Beach">
+                                             <img class="tw-rounded-lg" src="MissingIMG/img/Kandy/knd2.jpg" alt="Kandy Sacred Temple">
                                         </div>
                                     </div>
 
                                     <!-- slide 2 - Dambulla Cave Temple -->
                                     <div class="position-relative z-index-1 swiper-slide">
                                         <div>
-                                             <img class="tw-rounded-lg" src="MissingIMG/img/Sigiriya Rock Fortress/sig1.jpg" alt="Sigiriya Rock Fortress">
+                                             <img class="tw-rounded-lg" src="MissingIMG/img/Traditional Villages/tv1.jpg" alt="Traditional Villages">
                                         </div>
                                     </div>
 
-                                    <!-- slide 3 - Polonnaruwa Gal Vihara -->
+                                    <!-- slide 3 - Buduruwagala Temple -->
                                     <div class="position-relative z-index-1 swiper-slide">
                                         <div>
-                                             <img class="tw-rounded-lg" src="MissingIMG/img/Kandy/knd2.jpg" alt="Kandy City">
+                                             <img class="tw-rounded-lg" src="MissingIMG/img/Sri Lankan Waterfalls/sw1.jpg" alt="Sri Lankan Waterfalls">
                                         </div>
                                     </div>
 
-                                    <!-- slide 4 - Temple of Sacred Tooth Relic -->
+                                    <!-- slide 4 - Temple of Sacred Tooth Relic Detail -->
                                     <div class="position-relative z-index-1 swiper-slide">
                                         <div>
-                                             <img class="tw-rounded-lg" src="MissingIMG/img/Ella/ninearch.jpg" alt="Nine Arch Bridge Ella">
+                                             <img class="tw-rounded-lg" src="MissingIMG/img/Peradeniya Botanical Gardens/pb2.jpg" alt="Peradeniya Botanical Gardens">
                                         </div>
                                     </div>
 
-                                    <!-- slide 5 - Tangalle Beach -->
+                                    <!-- slide 5 - Dambulla Cave Temple 2 -->
                                     <div class="position-relative z-index-1 swiper-slide">
                                         <div>
-                                             <img class="tw-rounded-lg" src="MissingIMG/img/Yala National Park/yl1.jpg" alt="Yala National Park">
+                                             <img class="tw-rounded-lg" src="MissingIMG/img/Traditional Villages/tv2.jpg" alt="Traditional Village Life">
                                         </div>
                                     </div>
 
-                                    <!-- slide 6 - Anuradhapura Sacred City 2 -->
+                                    <!-- slide 6 - Buduruwagala Temple 2 -->
                                     <div class="position-relative z-index-1 swiper-slide">
                                         <div>
-                                             <img class="tw-rounded-lg" src="MissingIMG/img/Beruwela/b1.jpg" alt="Beruwela Beach">
+                                             <img class="tw-rounded-lg" src="MissingIMG/img/Sri Lankan Waterfalls/sw2.jpg" alt="Sacred Waterfalls">
                                         </div>
                                     </div>
 
@@ -371,20 +292,12 @@
                               <div class="tw-mb-7">
                                    <div class="tw-mb-14" data-aos-duration="1000" data-aos-delay="200">
                                         <h2 class="tw-text-10 tw-mb-4">Description:</h2>
-                                        <p class="tw-text-lg tw-w-845-px">Experience Sri Lanka's complete cultural and natural heritage on this comprehensive 14-day journey through the island's most treasured destinations. This grand tour combines ancient civilizations, diverse wildlife, scenic hill country, and pristine beaches, offering travelers the ultimate in-depth exploration of Sri Lanka's rich heritage with Marshell Holidays's expert guidance and authentic local experiences.</p>
+                                        <p class="tw-text-lg tw-w-845-px">Embark on a transformative wellness journey through Sri Lanka's sacred healing traditions with our exclusive 10-day Sacred Ceylon Wellness Retreat. This meticulously designed program combines authentic Ayurvedic treatments, meditation practices, and yoga sessions in serene locations including Sigiriya, Kandy, and Bentota. Experience holistic rejuvenation with traditional herbal therapies, spiritual temple visits, and wellness cuisine while discovering inner peace in the island's most tranquil sanctuaries.</p>
                                    </div>
                                    <div class="tw-mb-14" data-aos-duration="1000" data-aos-delay="300">
                                         <h2 class="tw-text-10 tw-mb-4">Advance Facilities</h2>
                                         <p class="tw-text-lg tw-w-845-px">Leave your guidebooks at home and dive into the local cultures that make each destination so special. We’ll 
                                              connect you with our exclusive experiences. Each trip is carefully crafted to let enjoy your vacation.</p>
-                                   </div>
-                                   <div class="destination-details-list package-details-list tw-mb-10" data-aos-duration="1000" data-aos-delay="300">
-                                        <ul>
-                                             <li class="font-heading fw-bold text-main-600 text-capitalize tw-text-lg tw-mb-5 tw-ps-2 tw-ms-5">View the City Walls</li>
-                                             <li class="font-heading fw-bold text-main-600 text-capitalize tw-text-lg tw-mb-5 tw-ps-2 tw-ms-5">Hiking in the forest</li>
-                                             <li class="font-heading fw-bold text-main-600 text-capitalize tw-text-lg tw-mb-5 tw-ps-2 tw-ms-5">Discover the famous view point “The Lark”</li>
-                                             <li class="font-heading fw-bold text-main-600 text-capitalize tw-text-lg tw-mb-5 tw-ps-2 tw-ms-5">Sunset on the cruise</li>
-                                        </ul>
                                    </div>
                                    <!-- <div class="package-details-included" data-aos-duration="1000" data-aos-delay="300">
                                         <h2 class="tw-text-10 tw-mb-8">Included/Exclude</h2>
@@ -427,8 +340,8 @@
                                                   <span class="tw-w-25 tw-h-24 lh-1 d-inline-flex align-items-center justify-content-center bg-main-600 tw-rounded-lg text-white tw-text-6 fw-bold">01</span>
                                              </div>
                                              <div>
-                                                  <h6 class="tw-text-505 tw-mb-4">Day 01: Arrival in Negombo</h6>
-                                                  <p class="tw-mb-20">Welcome to Sri Lanka! Transfer to coastal Negombo for relaxation after your journey.<br>• Accommodation: Premium lakeside resort<br>• Meals: Dinner</p>
+                                                  <h6 class="tw-text-505 tw-mb-4">Days 1-2: Arrival and Mindfulness Introduction</h6>
+                                                  <p class="tw-mb-20">Begin your wellness journey with a peaceful arrival in Colombo, followed by transfer to a serene retreat center. Participate in welcome meditation sessions, orientation to Buddhist principles, gentle yoga practices, and enjoy healthy traditional Sri Lankan vegetarian cuisine designed for wellness.</p>
                                              </div>
                                         </div>
                                         <div class="package-details-rules d-flex tw-gap-12 position-relative z-1">
@@ -436,14 +349,14 @@
                                                   <span class="tw-w-25 tw-h-24 lh-1 d-inline-flex align-items-center justify-content-center bg-main-600 tw-rounded-lg text-white tw-text-6 fw-bold">02</span>
                                              </div>
                                              <div class="tw-mb-10">
-                                                  <h6 class="tw-text-505 tw-mb-4">Day 02: Negombo to Anuradhapura (170km)</h6>
-                                                  <p class="tw-mb-9">Journey to the ancient capital and explore 2,300-year-old Buddhist heritage sites.<br>• Accommodation: Heritage hotel near archaeological zone<br>• Meals: Breakfast, Dinner</p>
+                                                  <h6 class="tw-text-505 tw-mb-4">Days 3-4: Sacred Temple Exploration</h6>
+                                                  <p class="tw-mb-9">Visit sacred Buddhist temples including the Temple of the Tooth in Kandy and ancient cave temples of Dambulla. Participate in morning chanting ceremonies, learn about Buddhist philosophy with monks, and enjoy guided meditation sessions in these spiritually significant locations.</p>
                                                   <div class="destination-details-list package-details-list tw-mb-10">
                                                        <ul>
-                                                            <li class="font-heading fw-bold text-main-600 text-capitalize tw-text-lg tw-mb-5 tw-ps-2 tw-ms-5">Explore Sacred Bodhi Tree</li>
-                                                            <li class="font-heading fw-bold text-main-600 text-capitalize tw-text-lg tw-mb-5 tw-ps-2 tw-ms-5">Visit Ruwanveliseya Dagoba</li>
-                                                            <li class="font-heading fw-bold text-main-600 text-capitalize tw-text-lg tw-mb-5 tw-ps-2 tw-ms-5">Ancient Buddhist Temples</li>
-                                                            <li class="font-heading fw-bold text-main-600 text-capitalize tw-text-lg tw-mb-5 tw-ps-2 tw-ms-5">Archaeological Museum</li>
+                                                            <li class="font-heading fw-bold text-main-600 text-capitalize tw-text-lg tw-mb-5 tw-ps-2 tw-ms-5">Temple of the Tooth morning prayers</li>
+                                                            <li class="font-heading fw-bold text-main-600 text-capitalize tw-text-lg tw-mb-5 tw-ps-2 tw-ms-5">Dambulla cave temple meditation</li>
+                                                            <li class="font-heading fw-bold text-main-600 text-capitalize tw-text-lg tw-mb-5 tw-ps-2 tw-ms-5">Buddhist philosophy discussions</li>
+                                                            <li class="font-heading fw-bold text-main-600 text-capitalize tw-text-lg tw-mb-5 tw-ps-2 tw-ms-5">Sunrise meditation sessions</li>
                                                        </ul>
                                                   </div>
                                              </div>
@@ -453,13 +366,13 @@
                                                   <span class="tw-w-25 tw-h-24 lh-1 d-inline-flex align-items-center justify-content-center bg-main-600 tw-rounded-lg text-white tw-text-6 fw-bold">03</span>
                                              </div>
                                              <div class="tw-mb-20">
-                                                  <h6 class="tw-text-505 tw-mb-4">Day 03: Anuradhapura to Habarana via Sigiriya (60km)</h6>
-                                                  <p class="tw-mb-10">Climb the iconic Sigiriya Rock Fortress and enjoy evening elephant safari.<br>• Accommodation: Cultural triangle resort<br>• Meals: Breakfast, Dinner</p>
+                                                  <h6 class="tw-text-505 tw-mb-4">Days 5-6: Meditation Retreats and Healing</h6>
+                                                  <p class="tw-mb-10">Deep immersion in meditation practices with extended silent sessions, introduction to vipassana meditation techniques, traditional Ayurvedic healing consultations, herbal spa treatments, and practice of mindful walking in peaceful temple gardens and nature reserves.</p>
                                                   <div>
                                                        <ul class="d-flex flex-column">
-                                                            <li class="float-start tw-text-base fw-medium tw-mb-6 d-inline-flex align-items-center tw-gap-3"><span><img src="assets/images/icon/package-details-engelberg-check.svg" alt=""></span> Sigiriya Rock Fortress Climb</li>  
-                                                            <li class="float-start tw-text-base fw-medium tw-mb-6 d-inline-flex align-items-center tw-gap-3"><span><img src="assets/images/icon/package-details-engelberg-check.svg" alt=""></span> Ancient Frescoes & Mirror Wall</li>  
-                                                            <li class="float-start tw-text-base fw-medium tw-mb-6 d-inline-flex align-items-center tw-gap-3"><span><img src="assets/images/icon/package-details-engelberg-check.svg" alt=""></span> Evening Elephant Safari</li>   
+                                                            <li class="float-start tw-text-base fw-medium tw-mb-6 d-inline-flex align-items-center tw-gap-3"><span><img src="assets/images/icon/package-details-amenities.svg" alt=""></span> Silent meditation retreat with experienced guide</li>
+                                                            <li class="float-start tw-text-base fw-medium tw-mb-6 d-inline-flex align-items-center tw-gap-3"><span><img src="assets/images/icon/package-details-amenities.svg" alt=""></span> Traditional Ayurvedic consultation and treatments</li>
+                                                            <li class="float-start tw-text-base fw-medium tw-mb-6 d-inline-flex align-items-center tw-gap-3"><span><img src="assets/images/icon/package-details-amenities.svg" alt=""></span> Mindful walking in sacred temple gardens</li>   
                                                        </ul>
                                                   </div>
 
@@ -470,127 +383,20 @@
                                                   <span class="tw-w-25 tw-h-24 lh-1 d-inline-flex align-items-center justify-content-center bg-main-600 tw-rounded-lg text-white tw-text-6 fw-bold">04</span>
                                              </div>
                                              <div>
-                                                  <h6 class="tw-text-505 tw-mb-4">Day 04: Habarana Cultural Exploration</h6>
-                                                  <p class="tw-mb-10">Visit Dambulla Cave Temples and ancient Polonnaruwa ruins with traditional village experience.<br>• Accommodation: Cultural triangle resort<br>• Meals: Breakfast, Dinner</p>
+                                                  <h6 class="tw-text-505 tw-mb-4">Days 7-8: Spiritual Healing and Departure</h6>
+                                                  <p class="tw-mb-10">Complete your wellness journey with spiritual healing ceremonies, yoga and pranayama sessions, reflection and journaling workshops, and personalized wellness plan development for continuing practices at home. Peaceful departure with renewed spiritual energy and mindfulness techniques.</p>
                                                   <div>
                                                        <ul class="d-flex flex-column">
-                                                            <li class="float-start tw-text-base fw-medium tw-mb-6 d-inline-flex align-items-center tw-gap-3"><span><img src="assets/images/icon/package-details-switzerland-check.svg" alt=""></span> Dambulla Cave Temple Complex</li>  
-                                                            <li class="float-start tw-text-base fw-medium tw-mb-6 d-inline-flex align-items-center tw-gap-3"><span><img src="assets/images/icon/package-details-switzerland-check.svg" alt=""></span> Polonnaruwa Ancient Ruins</li>  
-                                                            <li class="float-start tw-text-base fw-medium tw-mb-6 d-inline-flex align-items-center tw-gap-3"><span><img src="assets/images/icon/package-details-switzerland-check.svg" alt=""></span> Traditional Village Experience</li>   
+                                                            <li class="float-start tw-text-base fw-medium tw-mb-6 d-inline-flex align-items-center tw-gap-3"><span><img src="assets/images/icon/package-details-amenities.svg" alt=""></span> Spiritual healing ceremony with Buddhist monks</li>
+                                                            <li class="float-start tw-text-base fw-medium tw-mb-6 d-inline-flex align-items-center tw-gap-3"><span><img src="assets/images/icon/package-details-amenities.svg" alt=""></span> Advanced yoga and pranayama breathing techniques</li>
+                                                            <li class="float-start tw-text-base fw-medium tw-mb-6 d-inline-flex align-items-center tw-gap-3"><span><img src="assets/images/icon/package-details-amenities.svg" alt=""></span> Personalized wellness plan for home practice</li>   
                                                        </ul>
                                                   </div>
                                              </div>
                                         </div>
-                                        
-                                        <!-- Additional Days 5-14 Summary -->
-                                        <div class="package-details-rules d-flex tw-gap-12 position-relative z-1">
-                                             <div>
-                                                  <span class="tw-w-25 tw-h-24 lh-1 d-inline-flex align-items-center justify-content-center bg-main-600 tw-rounded-lg text-white tw-text-6 fw-bold">05</span>
-                                             </div>
-                                             <div>
-                                                  <h6 class="tw-text-505 tw-mb-4">Day 05: Habarana to Kandy (95km)</h6>
-                                                  <p class="tw-mb-10">Travel through spice gardens to the last royal capital of Sri Lanka.<br>• Accommodation: Hill country hotel overlooking Kandy Lake<br>• Meals: Breakfast, Dinner</p>
-                                             </div>
-                                        </div>
-                                        
-                                        <div class="package-details-rules d-flex tw-gap-12 position-relative z-1">
-                                             <div>
-                                                  <span class="tw-w-25 tw-h-24 lh-1 d-inline-flex align-items-center justify-content-center bg-main-600 tw-rounded-lg text-white tw-text-6 fw-bold">06</span>
-                                             </div>
-                                             <div>
-                                                  <h6 class="tw-text-505 tw-mb-4">Day 06: Kandy Discovery</h6>
-                                                  <p class="tw-mb-10">Temple of the Sacred Tooth Relic, Royal Botanical Gardens, and cultural performances.<br>• Accommodation: Hill country hotel<br>• Meals: Breakfast, Dinner</p>
-                                             </div>
-                                        </div>
-
-                                        <div class="package-details-rules d-flex tw-gap-12 position-relative z-1">
-                                             <div>
-                                                  <span class="tw-w-25 tw-h-24 lh-1 d-inline-flex align-items-center justify-content-center bg-main-600 tw-rounded-lg text-white tw-text-6 fw-bold">07</span>
-                                             </div>
-                                             <div>
-                                                  <h6 class="tw-text-505 tw-mb-4">Day 07: Kandy to Ella (155km)</h6>
-                                                  <p class="tw-mb-10">Scenic journey through tea plantation country with factory visits.<br>• Accommodation: Boutique mountain hotel<br>• Meals: Breakfast, Dinner</p>
-                                             </div>
-                                        </div>
-
-                                        <div class="package-details-rules d-flex tw-gap-12 position-relative z-1">
-                                             <div>
-                                                  <span class="tw-w-25 tw-h-24 lh-1 d-inline-flex align-items-center justify-content-center bg-main-600 tw-rounded-lg text-white tw-text-6 fw-bold">08</span>
-                                             </div>
-                                             <div>
-                                                  <h6 class="tw-text-505 tw-mb-4">Day 08: Ella Hill Country</h6>
-                                                  <p class="tw-mb-10">Mini Adam's Peak hiking and Nine Arch Bridge exploration.<br>• Accommodation: Boutique mountain hotel<br>• Meals: Breakfast, Dinner</p>
-                                             </div>
-                                        </div>
-
-                                        <div class="package-details-rules d-flex tw-gap-12 position-relative z-1">
-                                             <div>
-                                                  <span class="tw-w-25 tw-h-24 lh-1 d-inline-flex align-items-center justify-content-center bg-main-600 tw-rounded-lg text-white tw-text-6 fw-bold">09</span>
-                                             </div>
-                                             <div>
-                                                  <h6 class="tw-text-505 tw-mb-4">Day 09: Ella to Yala (110km)</h6>
-                                                  <p class="tw-mb-10">Travel to premier wildlife destination for afternoon safari.<br>• Accommodation: Wildlife lodge<br>• Meals: Breakfast, Dinner</p>
-                                             </div>
-                                        </div>
-
-                                        <div class="package-details-rules d-flex tw-gap-12 position-relative z-1">
-                                             <div>
-                                                  <span class="tw-w-25 tw-h-24 lh-1 d-inline-flex align-items-center justify-content-center bg-main-600 tw-rounded-lg text-white tw-text-6 fw-bold">10</span>
-                                             </div>
-                                             <div>
-                                                  <h6 class="tw-text-505 tw-mb-4">Day 10: Yala Wildlife Safari</h6>
-                                                  <p class="tw-mb-10">Full day wildlife viewing with opportunities to spot leopards and elephants.<br>• Accommodation: Wildlife lodge<br>• Meals: Breakfast, Lunch, Dinner</p>
-                                             </div>
-                                        </div>
-                                        
-                                        <div class="package-details-rules d-flex tw-gap-12 position-relative z-1">
-                                             <div>
-                                                  <span class="tw-w-25 tw-h-24 lh-1 d-inline-flex align-items-center justify-content-center bg-main-600 tw-rounded-lg text-white tw-text-6 fw-bold">11</span>
-                                             </div>
-                                             <div>
-                                                  <h6 class="tw-text-505 tw-mb-4">Day 11: Yala to Beruwela (215km)</h6>
-                                                  <p class="tw-mb-10">Journey to southwest coast for beach relaxation.<br>• Accommodation: Beach resort<br>• Meals: Breakfast, Dinner</p>
-                                             </div>
-                                        </div>
-
-                                        <div class="package-details-rules d-flex tw-gap-12 position-relative z-1">
-                                             <div>
-                                                  <span class="tw-w-25 tw-h-24 lh-1 d-inline-flex align-items-center justify-content-center bg-main-600 tw-rounded-lg text-white tw-text-6 fw-bold">12</span>
-                                             </div>
-                                             <div>
-                                                  <h6 class="tw-text-505 tw-mb-4">Day 12: Beruwela Beach</h6>
-                                                  <p class="tw-mb-10">Full day leisure with optional excursions to turtle hatcheries or Galle Fort.<br>• Accommodation: Beach resort<br>• Meals: Breakfast, Dinner</p>
-                                             </div>
-                                        </div>
-
-                                        <div class="package-details-rules d-flex tw-gap-12 position-relative z-1">
-                                             <div>
-                                                  <span class="tw-w-25 tw-h-24 lh-1 d-inline-flex align-items-center justify-content-center bg-main-600 tw-rounded-lg text-white tw-text-6 fw-bold">13</span>
-                                             </div>
-                                             <div>
-                                                  <h6 class="tw-text-505 tw-mb-4">Day 13: Beruwela to Colombo (60km)</h6>
-                                                  <p class="tw-mb-10">City tour of commercial capital with shopping and cultural sites.<br>• Accommodation: City hotel<br>• Meals: Breakfast, Dinner</p>
-                                             </div>
-                                        </div>
-
-                                        <div class="package-details-rules d-flex tw-gap-12 position-relative z-1">
-                                             <div>
-                                                  <span class="tw-w-25 tw-h-24 lh-1 d-inline-flex align-items-center justify-content-center bg-main-600 tw-rounded-lg text-white tw-text-6 fw-bold">14</span>
-                                             </div>
-                                             <div>
-                                                  <h6 class="tw-text-505 tw-mb-4">Day 14: Departure</h6>
-                                                  <p class="tw-mb-20">Airport transfer for international departure.<br>• Meals: Breakfast</p>
-                                             </div>
-                                        </div>
-                                   </div>
-                                   <div class="tw-mb-18" data-aos-duration="1000" data-aos-delay="300">
-                                       <h2 class="tw-text-10 tw-mb-8">Tour Maps :</h2>
-                                        <div class="package-details-maps">
-                                             <iframe class="w-100" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d105538.35226816959!2d-73.97327229909878!3d40.71038412736898!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1734585996419!5m2!1sen!2sbd" width="600" height="620" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                                        </div>
                                    </div>
                                    <div class="package-details-faq tw-mb-26" data-aos-duration="1000" data-aos-delay="300">
-                                       <h2 class="tw-text-10 tw-mb-8">Frequently ask Question:</h2>
+                                       <h2 class="tw-text-10 tw-mb-8">Frequently Asked Questions:</h2>
                                         <div class="faq-wrapper">
                                              <div class="accordion" id="general_faqaccordion">
                                                   <div class="accordion-item faq-accordion-item">
@@ -771,35 +577,35 @@
                                    <div class="bg-white tw-text-xl tw-pt-10 tw-pb-10 tw-px-10 tw-mb-7" data-aos-duration="1000" data-aos-delay="300">
                                         <h4 class="tw-text-xl tw-mb-4">Book This Tour</h4>
                                         <form action="#" method="post">
-                                             <div class="package-details-siteber-item tw-mb-4">
-                                                  <input type="text" class="w-100 tw-p-3 border tw-rounded" placeholder="Full Name*" required>
-                                             </div>
-                                             <div class="package-details-siteber-item tw-mb-4">
-                                                  <input type="email" class="w-100 tw-p-3 border tw-rounded" placeholder="Email Address*" required>
-                                             </div>
-                                             <div class="package-details-siteber-item tw-mb-4">
-                                                  <input type="tel" class="w-100 tw-p-3 border tw-rounded" placeholder="Phone Number*" required>
-                                             </div>
-                                             <div class="package-details-siteber-item tw-mb-8">
-                                                  <select class="w-100 tw-p-3 border tw-rounded">
-                                                       <option>Number of Passengers</option>
-                                                       <option>1 Person</option>
-                                                       <option>2 People</option>
-                                                       <option>3-5 People</option>
-                                                       <option>6+ People</option>
-                                                  </select>
-                                             </div>
-                                             <div class="package-details-siteber-item tw-mb-4">
-                                                  <label class="tw-text-sm fw-medium text-main-600 tw-mb-2 d-block">Check-in Date*</label>
-                                                  <input type="date" class="w-100 tw-p-3 border tw-rounded" required>
-                                             </div>
-                                             <div class="package-details-siteber-item tw-mb-4">
-                                                  <label class="tw-text-sm fw-medium text-main-600 tw-mb-2 d-block">Check-out Date*</label>
-                                                  <input type="date" class="w-100 tw-p-3 border tw-rounded" required>
-                                             </div>
-                                             <div class="package-details-siteber-btn">
-                                                  <button type="submit" class="bg-main-two-600 text-white w-100 tw-py-5 tw-px-18 fs-15 text-uppercase fw-bold font-heading tw-gap-2 d-inline-flex align-items-center justify-content-center tw-rounded-4xl">Book Now <i class="ph ph-arrow-up-right"></i></button>
-                                             </div>
+                                            <div class="package-details-siteber-item tw-mb-4">
+                                                <input type="text" class="w-100 tw-p-3 border tw-rounded" placeholder="Full Name*" required>
+                                            </div>
+                                            <div class="package-details-siteber-item tw-mb-4">
+                                                <input type="email" class="w-100 tw-p-3 border tw-rounded" placeholder="Email Address*" required>
+                                            </div>
+                                            <div class="package-details-siteber-item tw-mb-4">
+                                                <input type="tel" class="w-100 tw-p-3 border tw-rounded" placeholder="Phone Number*" required>
+                                            </div>
+                                            <div class="package-details-siteber-item tw-mb-8">
+                                                <select class="w-100 tw-p-3 border tw-rounded">
+                                                    <option>Number of Passengers</option>
+                                                    <option>1 Person</option>
+                                                    <option>2 People</option>
+                                                    <option>3-5 People</option>
+                                                    <option>6+ People</option>
+                                                </select>
+                                            </div>
+                                            <div class="package-details-siteber-item tw-mb-4">
+                                                <label class="tw-text-sm fw-medium text-main-600 tw-mb-2 d-block">Check-in Date*</label>
+                                                <input type="date" class="w-100 tw-p-3 border tw-rounded" required>
+                                            </div>
+                                            <div class="package-details-siteber-item tw-mb-4">
+                                                <label class="tw-text-sm fw-medium text-main-600 tw-mb-2 d-block">Check-out Date*</label>
+                                                <input type="date" class="w-100 tw-p-3 border tw-rounded" required>
+                                            </div>
+                                            <div class="package-details-siteber-btn">
+                                                <button type="submit" class="bg-main-two-600 text-main-600 w-100 tw-py-5 tw-px-18 fs-15 text-uppercase fw-bold font-heading tw-gap-2 d-inline-flex align-items-center justify-content-center tw-rounded-4xl">BOOK NOW <i class="ph ph-arrow-up-right"></i></button>
+                                            </div>
                                         </form>
                                    </div>
                                    <div class=" tw-rounded-xl bg-white tw-px-12 tw-pt-14 tw-pb-12 tw-mb-7" data-aos-duration="1000" data-aos-delay="300">
@@ -1033,74 +839,6 @@
     <script src="assets/js/reviews.js"></script>
 
     <style>
-        /* Clean Package Details Section */
-        .package-details-top {
-            background: #f8faff;
-            padding: 30px;
-            border-radius: 16px;
-            margin-bottom: 40px;
-            box-shadow: 0 4px 20px rgba(44, 90, 160, 0.08);
-        }
-
-        @media (max-width: 768px) {
-            .package-details-top {
-                padding: 20px;
-                margin-bottom: 30px;
-            }
-
-            .package-details-top .d-flex.justify-content-between {
-                flex-direction: column !important;
-                gap: 20px !important;
-            }
-
-            .package-details-top .d-flex.align-items-center.tw-gap-5 {
-                flex-direction: column !important;
-                align-items: flex-start !important;
-                gap: 15px !important;
-            }
-
-            .package-details-top ul.d-flex {
-                flex-direction: column !important;
-                gap: 10px !important;
-            }
-
-            .package-details-top h2 {
-                font-size: 1.5rem !important;
-                line-height: 1.3 !important;
-                margin-bottom: 20px !important;
-            }
-        }
-
-        /* Improve badge styling */
-        .bg-main-two-600 {
-            font-size: 14px !important;
-            padding: 8px 16px !important;
-            border-radius: 25px !important;
-        }
-
-        /* Better spacing for package info */
-        .package-details-top ul li {
-            background: white;
-            padding: 8px 12px;
-            border-radius: 8px;
-            border: 1px solid #e2e8f0;
-            font-size: 14px;
-        }
-
-        /* Improve pricing section */
-        .package-details-top h4 {
-            font-size: 1.5rem !important;
-            margin-bottom: 5px !important;
-        }
-
-        /* Rating section improvements */
-        .package-rating {
-            background: white;
-            padding: 8px 12px;
-            border-radius: 8px;
-            border: 1px solid #e2e8f0;
-        }
-
         /* Hero Section Mobile Responsive */
         .breadcrumb-title, .hero-title {
             text-align: center !important;
