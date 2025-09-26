@@ -5,10 +5,10 @@
  */
 
 // Database configuration
-define('DB_HOST', 'localhost');
-define('DB_NAME', 'marshel_tourism');
-define('DB_USER', 'root');
-define('DB_PASS', '');
+define('DB_HOST', 'server196.web-hosting.com');
+define('DB_NAME', 'marsdzdm_marshel_tourism');
+define('DB_USER', 'mroot');
+define('DB_PASS', '#Marshall#2025');
 
 // Create database connection
 function getDBConnection() {
