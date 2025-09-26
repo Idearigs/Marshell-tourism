@@ -11,7 +11,7 @@
     <meta name="robots" content="INDEX,FOLLOW">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Title -->
-    <title>Jewels of Ceylon Grand Tour - 14 Days 13 Nights | Marshell Holidays</title>
+    <title>Jewels of Ceylon Grand Tour - 14 Days 13 Nights | Marshall Holidays</title>
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/images/logo/favicon.png">
     <!-- Google Fonts - Philosopher -->
@@ -53,6 +53,68 @@
 
     .package-details-active {
         height: 400px !important;
+    }
+
+    /* Mobile Layout Fix for Package Details */
+    @media (max-width: 767px) {
+        .package-details-top {
+            flex-direction: column !important;
+            align-items: flex-start !important;
+            gap: 1.5rem !important;
+            padding-bottom: 2rem !important;
+        }
+
+        .package-details-top > div:first-child {
+            width: 100% !important;
+        }
+
+        .package-details-top > div:last-child {
+            width: 100% !important;
+            margin-top: 1rem !important;
+        }
+
+        /* Better spacing for mobile */
+        .package-details-top .tw-gap-5 {
+            flex-direction: column !important;
+            align-items: flex-start !important;
+            gap: 1rem !important;
+        }
+
+        .package-details-top .tw-gap-6 {
+            flex-direction: column !important;
+            gap: 0.75rem !important;
+            margin-top: 1rem !important;
+        }
+
+        .package-details-top h2 {
+            font-size: 1.5rem !important;
+            line-height: 1.3 !important;
+            margin-bottom: 1rem !important;
+        }
+
+        /* Rating section mobile layout */
+        .package-details-top .d-flex.align-items-center.tw-gap-4 {
+            flex-direction: column !important;
+            align-items: flex-start !important;
+            gap: 0.5rem !important;
+        }
+
+        /* Price section mobile */
+        .package-details-top .tw-text-808 {
+            font-size: 1.25rem !important;
+            text-align: center !important;
+            width: 100% !important;
+            background: #f8faff !important;
+            padding: 1rem !important;
+            border-radius: 8px !important;
+            border: 2px solid #2c5aa0 !important;
+        }
+
+        /* Badge styling */
+        .bg-main-two-600.tw-rounded-3xl {
+            font-size: 0.875rem !important;
+            padding: 0.5rem 1rem !important;
+        }
     }
     </style>
 </head>
@@ -286,6 +348,37 @@ include 'includes/tour-hero.php';
           </div>
      </div>
 
+     <!-- Tour Package Gallery JavaScript -->
+     <script>
+     document.addEventListener('DOMContentLoaded', function() {
+         const packageSwiper = new Swiper('.package-details-active', {
+             slidesPerView: 1,
+             spaceBetween: 30,
+             loop: true,
+             centeredSlides: true,
+             autoplay: {
+                 delay: 5000,
+                 disableOnInteraction: false,
+             },
+             navigation: {
+                 nextEl: '.slider-next',
+                 prevEl: '.slider-prev',
+             },
+             breakpoints: {
+                 640: {
+                     slidesPerView: 1,
+                 },
+                 768: {
+                     slidesPerView: 2,
+                 },
+                 1024: {
+                     slidesPerView: 3,
+                 },
+             }
+         });
+     });
+     </script>
+
      <section>
           <div class="container">
                <div class="row">
@@ -294,7 +387,7 @@ include 'includes/tour-hero.php';
                               <div class="tw-mb-7">
                                    <div class="tw-mb-14" data-aos-duration="1000" data-aos-delay="200">
                                         <h2 class="tw-text-10 tw-mb-4">Description:</h2>
-                                        <p class="tw-text-lg tw-w-845-px">Experience Sri Lanka's complete cultural and natural heritage on this comprehensive 14-day journey through the island's most treasured destinations. This grand tour combines ancient civilizations, diverse wildlife, scenic hill country, and pristine beaches, offering travelers the ultimate in-depth exploration of Sri Lanka's rich heritage with Marshell Holidays's expert guidance and authentic local experiences.</p>
+                                        <p class="tw-text-lg tw-w-845-px">Experience Sri Lanka's complete cultural and natural heritage on this comprehensive 14-day journey through the island's most treasured destinations. This grand tour combines ancient civilizations, diverse wildlife, scenic hill country, and pristine beaches, offering travelers the ultimate in-depth exploration of Sri Lanka's rich heritage with Marshall Holidays's expert guidance and authentic local experiences.</p>
                                    </div>
                                    <div class="tw-mb-14" data-aos-duration="1000" data-aos-delay="300">
                                         <h2 class="tw-text-10 tw-mb-4">Advance Facilities</h2>
@@ -839,7 +932,7 @@ include 'includes/tour-hero.php';
             <div class="row">
                 <!-- Brand Section -->
                 <div class="col-lg-4 col-md-6 mb-4">
-                    <h3 class="rent-car-footer-brand">Marshell Holidays</h3>
+                    <h3 class="rent-car-footer-brand">Marshall Holidays</h3>
                     <p class="rent-car-footer-text">Your trusted partner for authentic Sri Lankan experiences. We specialize in personalized car rentals, cultural tours, and spiritual journeys.</p>
                     <div class="d-flex flex-wrap">
                         <a href="#" class="rent-car-social-icon"><i class="ph-bold ph-facebook-logo"></i></a>
@@ -891,7 +984,7 @@ include 'includes/tour-hero.php';
             <div class="rent-car-footer-bottom">
                 <div class="row align-items-center">
                     <div class="col-md-6">
-                        <p class="rent-car-footer-bottom-text mb-0">&copy; 2024 Marshell Holidays Pvt Ltd. All rights reserved.</p>
+                        <p class="rent-car-footer-bottom-text mb-0">&copy; 2024 Marshall Holidays Pvt Ltd. All rights reserved.</p>
                     </div>
                     <div class="col-md-6 text-md-end">
                         <a href="#" class="rent-car-footer-link d-inline me-4">Privacy Policy</a>

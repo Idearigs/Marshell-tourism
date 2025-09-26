@@ -9,12 +9,12 @@ $testimonials = getActiveTestimonials(6); // Get up to 6 active testimonials
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Marshell Holidays - Premium relaxation and meditation travel experiences for mature travelers seeking tranquil destinations and rejuvenating adventures">
-    <meta name="keywords" content="Marshell Holidays, mature travel, relaxation tours, meditation retreats, senior travel, wellness tourism">
+    <meta name="description" content="Marshall Holidays - Premium Sri Lankan travel experiences connecting travelers with the island's rich culture, stunning landscapes, and authentic adventures">
+    <meta name="keywords" content="Marshall Holidays, Sri Lanka travel, cultural tours, beach holidays, temple visits, authentic experiences, personalized travel">
     <meta name="robots" content="INDEX,FOLLOW">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Title -->
-    <title> Marshell Holidays - Relaxation & Meditation Travel Experiences for Mature Travelers </title>
+    <title> Marshall Holidays - Authentic Sri Lankan Travel Experiences & Cultural Adventures </title>
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/images/logo/favicon.png">
     <!-- Google Fonts - Philosopher -->
@@ -78,6 +78,76 @@ $testimonials = getActiveTestimonials(6); // Get up to 6 active testimonials
         /* Ensure all slide cards have same height */
         .service-two-active .swiper-slide {
             height: auto !important;
+        }
+
+        /* Fix dropdown z-index issue */
+        .nice-select {
+            z-index: 999 !important;
+            position: relative !important;
+        }
+
+        .nice-select.open .list {
+            display: block !important;
+            z-index: 9999 !important;
+            position: absolute !important;
+            top: -5px !important; /* Position slightly above the input */
+            transform: translateY(-100%) !important; /* Move it fully above */
+            left: 0 !important;
+            right: 0 !important;
+            background: white !important;
+            border: 1px solid #e5e7eb !important;
+            border-radius: 6px !important;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+            max-height: 200px !important;
+            overflow-y: auto !important;
+        }
+
+        .nice-select .list {
+            display: none !important;
+        }
+
+        /* Ensure the form container has proper z-index and overflow visible */
+        .checkout-bg {
+            z-index: 10 !important;
+            position: relative !important;
+            overflow: visible !important;
+        }
+
+        /* Make sure parent containers don't clip the dropdown */
+        .checkout-wrapper {
+            overflow: visible !important;
+            position: relative !important;
+        }
+
+        /* Add dark overlay to destination cards for better text visibility */
+        @media (min-width: 768px) {
+            .col-custom {
+                position: relative !important;
+            }
+
+            .col-custom::before {
+                content: '' !important;
+                position: absolute !important;
+                top: 0 !important;
+                left: 0 !important;
+                right: 0 !important;
+                bottom: 0 !important;
+                background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)) !important;
+                z-index: 1 !important;
+                border-radius: inherit !important;
+            }
+
+            .col-custom .service-item,
+            .col-custom .service-item-2 {
+                position: relative !important;
+                z-index: 2 !important;
+            }
+
+            .col-custom .service-content,
+            .col-custom .service-content-2 {
+                position: relative !important;
+                z-index: 2 !important;
+            }
         }
     </style>
 </head>
@@ -190,100 +260,7 @@ $testimonials = getActiveTestimonials(6); // Get up to 6 active testimonials
     <!-- Custom Cursor End -->
 
 
-    <!-- ==================== Mobile Menu Start Here ==================== -->
-<div class="mobile-menu d-lg-none d-block scroll-sm position-fixed bg-white tw-w-300-px tw-h-screen overflow-y-auto tw-p-6 tw-z-999 tw--translate-x-full tw-pb-68 ">
-
-    <button type="button" class="close-button position-absolute tw-end-0 top-0 tw-me-2 tw-mt-2 tw-w-605 tw-h-605 rounded-circle d-flex justify-content-center align-items-center text-neutral-900 bg-neutral-200 hover-bg-neutral-900 hover-text-white"> 
-        <i class="ph ph-x"></i>
-    </button>
-
-    <div class="mobile-menu__inner">
-        <a href="index.php" class="mobile-menu__logo">
-            <h4 class="mb-0 text-main-600 fw-bold font-heading">Marshell Holidays</h4>
-        </a>
-        <div class="mobile-menu__menu">
-            <!-- Nav menu Start -->
-<ul class="nav-menu d-lg-flex align-items-center nav-menu--mobile d-block tw-mt-8 bg-white tw-px-12 tw-rounded-4xl">
-    <li class="nav-menu__item">
-        <a href="index.php" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Home</a>
-    </li>
-    <li class="nav-menu__item">
-        <a href="sri-lanka-tour-packages.php" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Tour Packages</a>
-    </li>
-    <li class="nav-menu__item">
-        <a href="customize-your-trip.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Customize Your Trip</a>
-    </li>
-    <li class="nav-menu__item">
-        <a href="rent-a-car.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Rent a car</a>
-    </li>
-    <li class="nav-menu__item">
-        <a href="about.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">About</a>
-    </li>
-    <li class="nav-menu__item">
-        <a href="contact.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Contact</a>
-    </li>
-</ul>
-<!-- Nav menu End  -->
-        </div>
-    </div>
-</div>
-<!-- ==================== Mobile Menu End Here ==================== -->
-
-<!-- ==================== Header Start Here ==================== -->
-<header class="header header-two transition-all">
-    <div class="container-fluid">
-        <nav class="d-flex align-items-center justify-content-between">
-            <!-- Logo Start -->
-            <div class="logo">
-                <a href="index.php" class="link">
-                    <h3 class="mb-0 text-main-600 fw-bold font-heading">Marshell Holidays</h3>
-                </a>
-            </div>
-            <!-- Logo End  -->
-
-            <!-- Menu Start  -->
-            <div class="header-menu header-two-menu d-lg-block d-none">
-                <!-- Nav menu Start -->
-<ul class="nav-menu d-lg-flex align-items-center tw-gap-6">
-    <li class="nav-menu__item">
-        <a href="index.php" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Home</a>
-    </li>
-    <li class="nav-menu__item">
-        <a href="sri-lanka-tour-packages.php" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Tour Packages</a>
-    </li>
-    <li class="nav-menu__item">
-        <a href="customize-your-trip.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Customize Your Trip</a>
-    </li>
-    <li class="nav-menu__item">
-        <a href="rent-a-car.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Rent a car</a>
-    </li>
-    <li class="nav-menu__item">
-        <a href="about.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">About</a>
-    </li>
-    <li class="nav-menu__item">
-        <a href="contact.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Contact</a>
-    </li>
-</ul>
-<!-- Nav menu End  -->
-            </div>
-            <!-- Menu End  -->
-
-            <!-- Header Right start -->
-            <div class="">
-                <div class="d-flex align-items-center tw-gap-29">
-                    <div class="header-button">
-                        <a class="primary-btn bg-white text-main-600 tw-py-5 tw-px-10 fs-15 text-uppercase fw-bold font-heading tw-gap-2 d-inline-flex align-items-center tw-rounded-4xl" href="contact.html">Contact Us <i class="ph ph-arrow-up-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            <button type="button" class="toggle-mobileMenu leading-none d-lg-none ms-3 text-neutral-800 tw-text-9">
-                <i class="ph ph-list"></i>
-            </button>
-            <!-- Header Right End  -->
-        </nav>
-    </div>
-</header>
-<!-- ==================== Header End Here ==================== -->
+<?php include 'includes/tour-navbar.php'; ?>
 <div id="scrollSmoother-container">
     <section class="banner-two-area tw-pt-29">
      <!-- Multiple background images for slideshow -->
@@ -298,7 +275,7 @@ $testimonials = getActiveTestimonials(6); // Get up to 6 active testimonials
                     <div class="text-center">
                          <h1 class="banner-two-title text-uppercase tw-mb-19 char-animation" id="hero-title">Explore <span class="fw-normal fst-italic" id="hero-subtitle">Sri Lanka</span></h1>
                          <div class="banner-two-button">
-                              <a class="primary-btn bg-main-600 text-white tw-py-5 tw-px-18 fs-15 text-capitalize fw-bold font-heading tw-gap-2 d-inline-flex align-items-center tw-rounded-4xl" href="contact.html">See all Locations <i class="ph ph-arrow-up-right"></i></a>
+                              <a class="primary-btn bg-main-600 text-white tw-py-5 tw-px-18 fs-15 text-capitalize fw-bold font-heading tw-gap-2 d-inline-flex align-items-center tw-rounded-4xl" href="srilanka-destinations.php">See all Locations <i class="ph ph-arrow-up-right"></i></a>
                          </div>
                     </div>
                </div>
@@ -476,9 +453,9 @@ $testimonials = getActiveTestimonials(6); // Get up to 6 active testimonials
           <div class="row justify-content-center">
                <div class="col-xl-10">
                     <div class="text-center">
-                         <h2 class="travelor-title fw-normal tw-mb-5">Marshell Holidays</h2>
+                         <h2 class="travelor-title fw-normal tw-mb-5">Marshall Holidays</h2>
                          <div class="travelor-content tp-cursor-point-area">
-                              <h6 class="travelor-text fw-normal">we <span class="fw-bold">believe</span> that a clean space is happy space. Founded in <span class="fw-bold">1998</span>, our mission is to make homes & businesses sparkle while...</h6>
+                              <h6 class="travelor-text fw-normal">We <span class="fw-bold">believe</span> in the beauty of slow travel. Our mission is to create <span class="fw-bold">peaceful</span> journeys through Sri Lanka's sacred temples, serene beaches, and welcoming communities - where comfort meets spiritual discovery.</h6>
                          </div>
                     </div>
                </div>
@@ -899,7 +876,7 @@ $testimonials = getActiveTestimonials(6); // Get up to 6 active testimonials
         <div class="row justify-content-center tw-mt-16">
             <div class="col-xl-6 col-lg-8 text-center">
                 <div class="destinations-button" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-                    <a class="primary-btn bg-white text-main-600 tw-py-5 tw-px-12 fs-15 text-uppercase fw-bold font-heading tw-gap-2 d-inline-flex align-items-center tw-rounded-4xl hover:bg-main-600 hover:text-white transition-all" href="sri-lanka-tour-packages.php">
+                    <a class="primary-btn bg-white text-main-600 tw-py-5 tw-px-12 fs-15 text-uppercase fw-bold font-heading tw-gap-2 d-inline-flex align-items-center tw-rounded-4xl hover:bg-main-600 hover:text-white transition-all" href="srilanka-destinations.php">
                         See More Destinations <i class="ph ph-arrow-up-right"></i>
                     </a>
                 </div>
@@ -933,7 +910,7 @@ $testimonials = getActiveTestimonials(6); // Get up to 6 active testimonials
                    </div>
                    <div class="advance-content d-flex align-items-center justify-content-between flex-wrap tw-px-4 tw-py-4">
                       <h6 class="tw-text-2xl fw-normal mb-0">Wellness</h6>
-                      <a class="advance-btn" href="sacred-ceylon-wellness-retreat.html"><span><img src="assets/images/icon/advance-arrow.svg" alt="arrow"></span></a>
+                      <a class="advance-btn" href="sacred-ceylon-wellness-retreat.php"><span><img src="assets/images/icon/advance-arrow.svg" alt="arrow"></span></a>
                    </div>
                  </div>
                  
@@ -944,7 +921,7 @@ $testimonials = getActiveTestimonials(6); // Get up to 6 active testimonials
                    </div>
                    <div class="advance-content d-flex align-items-center justify-content-between flex-wrap tw-px-4 tw-py-4">
                       <h6 class="tw-text-2xl fw-normal mb-0">Temples</h6>
-                      <a class="advance-btn" href="buddhist-cultural-visit.html"><span><img src="assets/images/icon/advance-arrow.svg" alt="arrow"></span></a>
+                      <a class="advance-btn" href="buddhist-cultural-visit.php"><span><img src="assets/images/icon/advance-arrow.svg" alt="arrow"></span></a>
                    </div>
                  </div>
  
@@ -955,7 +932,7 @@ $testimonials = getActiveTestimonials(6); // Get up to 6 active testimonials
                    </div>
                    <div class="advance-content d-flex align-items-center justify-content-between flex-wrap tw-px-4 tw-py-4">
                       <h6 class="tw-text-2xl fw-normal mb-0">Retreats</h6>
-                      <a class="advance-btn" href="cool-relaxing-visit.html"><span><img src="assets/images/icon/advance-arrow.svg" alt="arrow"></span></a>
+                      <a class="advance-btn" href="cool-relaxing-visit.php"><span><img src="assets/images/icon/advance-arrow.svg" alt="arrow"></span></a>
                    </div>
                  </div>
  
@@ -966,7 +943,7 @@ $testimonials = getActiveTestimonials(6); // Get up to 6 active testimonials
                    </div>
                    <div class="advance-content d-flex align-items-center justify-content-between flex-wrap tw-px-4 tw-py-4">
                       <h6 class="tw-text-2xl fw-normal mb-0">Culture</h6>
-                      <a class="advance-btn" href="jewels-of-ceylon-grand-tour.html"><span><img src="assets/images/icon/advance-arrow.svg" alt="arrow"></span></a>
+                      <a class="advance-btn" href="jewels-of-ceylon-grand-tour.php"><span><img src="assets/images/icon/advance-arrow.svg" alt="arrow"></span></a>
                    </div>
                  </div>
  
@@ -977,7 +954,7 @@ $testimonials = getActiveTestimonials(6); // Get up to 6 active testimonials
                    </div>
                    <div class="advance-content d-flex align-items-center justify-content-between flex-wrap tw-px-4 tw-py-4">
                       <h6 class="tw-text-2xl fw-normal mb-0">Coastal</h6>
-                      <a class="advance-btn" href="paradise-coastal-adventure.html"><span><img src="assets/images/icon/advance-arrow.svg" alt="arrow"></span></a>
+                      <a class="advance-btn" href="paradise-coastal-adventure.php"><span><img src="assets/images/icon/advance-arrow.svg" alt="arrow"></span></a>
                    </div>
                  </div>
  
@@ -1202,27 +1179,6 @@ $testimonials = getActiveTestimonials(6); // Get up to 6 active testimonials
  
 
 
-<section class="cta-area py-140 background-img position-relative z-1 mb-5" data-background-image="assets/images/cta/cta-bg.jpg">
-     <div class="container">
-          <div class="row justify-content-center tw-pb-20">
-               <div class="col-xl-10">
-                    <div class="section-wrapper text-center position-relative z-1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                         <h2 class="section-title fw-normal tw-mb-7 char-animation text-white char-animation" style="font-size: 2.8rem;"> <span class="text-main-600">Let'sCapture</span> BeautyoftheWorld</h2>
-                         <div class="gallery-button d-flex justify-content-center">
-                              <a class="primary-btn bg-main-two-600 text-main-600 tw-py-4 tw-px-8 fs-15 text-capitalize fw-bold font-heading tw-gap-2 d-inline-flex align-items-center tw-rounded-4xl" href="contact.html">Booking Today <i class="ph ph-arrow-up-right"></i></a> 
-                         </div>
-                         <div class="gallery-shape">
-                              <img class="gallery-shape-1 position-absolute start-0 z-n1" src="assets/images/gallery/gallery-shape1.png" alt="shape">
-                              <img class="gallery-shape-2 position-absolute end-0 z-n1" src="assets/images/gallery/gallery-shape2.png" alt="shape">
-                         </div>
-                    </div>
-               </div>
-          </div>
-     </div>
-     <div class="cta-bg-shape position-absolute start-0 z-n1">
-          <img src="assets/images/cta/cta-bg-shape.png" alt="shape">
-     </div>
-</section>
 
 
 
@@ -1233,7 +1189,7 @@ $testimonials = getActiveTestimonials(6); // Get up to 6 active testimonials
             <div class="row">
                 <!-- Brand Section -->
                 <div class="col-lg-4 col-md-6 mb-4">
-                    <h3 class="rent-car-footer-brand">Marshell Holidays</h3>
+                    <h3 class="rent-car-footer-brand">Marshall Holidays</h3>
                     <p class="rent-car-footer-text">Your trusted partner for authentic Sri Lankan experiences. We specialize in personalized car rentals, cultural tours, and spiritual journeys.</p>
                     <div class="d-flex flex-wrap">
                         <a href="#" class="rent-car-social-icon"><i class="ph-bold ph-facebook-logo"></i></a>
@@ -1285,7 +1241,7 @@ $testimonials = getActiveTestimonials(6); // Get up to 6 active testimonials
             <div class="rent-car-footer-bottom">
                 <div class="row align-items-center">
                     <div class="col-md-6">
-                        <p class="rent-car-footer-bottom-text mb-0">&copy; 2024 Marshell Holidays Pvt Ltd. All rights reserved.</p>
+                        <p class="rent-car-footer-bottom-text mb-0">&copy; 2024 Marshall Holidays Pvt Ltd. All rights reserved.</p>
                     </div>
                     <div class="col-md-6 text-md-end">
                         <a href="#" class="rent-car-footer-link d-inline me-4">Privacy Policy</a>

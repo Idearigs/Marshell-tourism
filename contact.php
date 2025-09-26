@@ -5,12 +5,12 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Contact Marshell Holidays - Get in touch with our wellness travel experts to plan your perfect relaxation retreat and meditation journey">
-    <meta name="keywords" content="Contact Marshell Holidays, travel consultation, wellness travel planning, meditation retreat booking, senior travel experts">
+    <meta name="description" content="Contact Marshall Holidays - Get in touch with our wellness travel experts to plan your perfect relaxation retreat and meditation journey">
+    <meta name="keywords" content="Contact Marshall Holidays, travel consultation, wellness travel planning, meditation retreat booking, senior travel experts">
     <meta name="robots" content="INDEX,FOLLOW">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Title -->
-    <title> Contact Marshell Holidays - Plan Your Perfect Wellness Journey </title>
+    <title> Contact Marshall Holidays - Plan Your Perfect Wellness Journey </title>
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/images/logo/favicon.png">
     <!-- Google Fonts - Philosopher -->
@@ -29,6 +29,51 @@
     <link rel="stylesheet" href="assets/css/main.css">
     <!-- Custom Rent Car CSS for Footer -->
     <link rel="stylesheet" href="assets/css/rent-car-custom.css">
+
+    <!-- Custom Contact Page Styles -->
+    <style>
+        /* Fix contact info boxes height consistency */
+        .contact-ip-wrapper {
+            min-height: 200px !important;
+            display: flex !important;
+            flex-direction: column !important;
+            justify-content: center !important;
+            padding: 2rem 1.5rem !important; /* Reduced padding for better proportions */
+        }
+
+        .contact-ip-wrapper .contact-ip-icon {
+            margin-bottom: 1rem !important;
+        }
+
+        .contact-ip-wrapper h4 {
+            margin-bottom: 1rem !important;
+        }
+
+        /* Ensure email links are properly spaced */
+        .contact-ip-wrapper a {
+            line-height: 1.4 !important;
+            word-break: break-all !important; /* Prevent long emails from breaking layout */
+        }
+
+        /* Fix contact page content visibility */
+        #scrollSmoother-container {
+            min-height: 100vh !important;
+            overflow: visible !important;
+        }
+
+        .contact-ip-area {
+            min-height: auto !important;
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+        }
+
+        /* Ensure all sections are visible */
+        section {
+            visibility: visible !important;
+            opacity: 1 !important;
+        }
+    </style>
 </head>
 
 <body class="bg-neutral-50">
@@ -139,7 +184,7 @@
     <?php include 'includes/tour-navbar.php'; ?>
 <div id="scrollSmoother-container">
     <!-- ==================== Breadcrumb Start Here ==================== -->
-<section class="breadcrumb-area background-img" data-background-image="MissingIMG/img/Galle Fort/gl1.jpg" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('MissingIMG/img/Galle Fort/gl1.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; min-height: 250px; display: flex; align-items: center;">
+<section class="breadcrumb-area background-img" data-background-image="MissingIMG/img/Sigiriya Rock Fortress/sigwide.jpg" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('MissingIMG/img/Sigiriya Rock Fortress/sigwide.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; min-height: 250px; display: flex; align-items: center;">
     <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-lg-8">
@@ -147,7 +192,7 @@
                     <h2 class="breadcrumb-title text-center tw-mb-6 char-animation" style="font-size: 2.5rem; color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); font-weight: 600;">
                         <span class="title-line-1">Get in Touch</span>
                         <br>
-                        <span class="title-line-2">Contact Marshell Holidays</span>
+                        <span class="title-line-2">Contact Marshall Holidays</span>
                     </h2>
                 </div>
             </div>
@@ -157,7 +202,7 @@
 <!-- ==================== Breadcrumb End Here ==================== -->
 
 
-     <section class="contact-ip-area pt-140">
+     <section class="contact-ip-area pt-140 mb-5">
           <div class="container">
                <div class="row tw-mb-20">
                     <div class="col-xl-4 col-lg-6">
@@ -178,8 +223,8 @@
                               </div>
                               <div>
                                    <h4 class="tw-text-2xl fw-semibold tw-mb-4">Phone Number</h4>
-                                   <a class="text-body fw-medium tw-text-lg tw-mb-2 d-block" href="tel:+94252223456">+94 25 222 3456</a>
-                                   <a class="text-body fw-medium tw-text-lg" href="tel:+94771234567">+94 77 123 4567</a>
+                                   <a class="text-body fw-medium tw-text-lg tw-mb-2 d-block" href="tel:+94772585242">+94 772585242</a>
+                                   <a class="text-body fw-medium tw-text-lg" href="tel:+94711165242">+94 711165242</a>
                               </div>
                          </div>
                     </div>
@@ -201,17 +246,16 @@
                          <div class="contact-ip-left" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                               <div class="section-wrapper tw-mb-10" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                                    <h2 class="section-title fw-normal tw-mb-7 char-animation">Get in touch</h2>
-                                   <p class="section-paragraph tw-text-lg fw-normal">Lorem ipsum dolor sit amet consectetur adipiscing elit mattis <br>
-                                        faucibus odio feugiat arc dolor.</p>
+                                   <p class="section-paragraph tw-text-lg fw-normal">Discover the peaceful beauty of Sri Lanka at your own pace. Our experienced travel specialists understand the desires of mature travelers seeking tranquil moments, spiritual enrichment, and cultural immersion. Let us help you plan a relaxing journey filled with sacred temples, serene landscapes, and meaningful experiences.</p>
                               </div>
                               <div class="contact-ip-map">
-                                   <iframe class="w-100" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d105538.35226816959!2d-73.97327229909878!3d40.71038412736898!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1734585996419!5m2!1sen!2sbd" width="600" height="620" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                   <iframe class="w-100" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4694.819458305748!2d80.39676851406567!3d8.317020436768974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3afcf5001720a3d3%3A0xa998e987bea21af!2sMy%20Doctor%20Medical%20Center!5e0!3m2!1sen!2slk!4v1758779182822!5m2!1sen!2slk" width="600" height="620" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                               </div>
                          </div>
                     </div>
                     <div class="col-xl-6">
                          <div class="package-details-contact bg-white tw-py-14 tw-px-12 tw-rounded-2xl" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-                              <h2 class="tw-text-10 tw-mb-4">Fill Up The Form</h2>
+                              <h2 class="tw-text-10 tw-mb-4">Contact Us</h2>
                               <p class="tw-mb-10">Your email address will not be published. Required fields are <br>
                                     marked *</p>
                               <form action="#" class="tw-mt-70-px d-flex flex-column tw-gap-64-px">
@@ -252,7 +296,7 @@
                                              <div class="">
                                                   <button type="submit" class="bg-main-600 text-white text-uppercase fw-bold w-100 tw-py-5" data-block="button">
                                                        <span class="button__flair"></span>
-                                                       <span class="button__label">Post Comment</span>
+                                                       <span class="button__label">Submit</span>
                                                   </button>
                                              </div>
                                         </div>
@@ -266,27 +310,6 @@
 
 
 
-    <section class="cta-area py-140 background-img position-relative z-1" data-background-image="Mainimg/img/Kalpitiya Beach/kal1.jpg">
-     <div class="container">
-          <div class="row justify-content-center tw-pb-20">
-               <div class="col-xl-10">
-                    <div class="section-wrapper text-center position-relative z-1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                         <h2 class="section-title fw-normal tw-mb-7 char-animation text-white char-animation"> <span class="text-main-600">Let’sCapture</span> BeautyoftheWorld</h2>
-                         <div class="gallery-button d-flex justify-content-center">
-                              <a class="primary-btn bg-main-two-600 text-main-600 tw-py-4 tw-px-8 fs-15 text-capitalize fw-bold font-heading tw-gap-2 d-inline-flex align-items-center tw-rounded-4xl" href="contact.php">Booking Today <i class="ph ph-arrow-up-right"></i></a> 
-                         </div>
-                         <div class="gallery-shape">
-                              <img class="gallery-shape-1 position-absolute start-0 z-n1" src="assets/images/gallery/gallery-shape1.png" alt="shape">
-                              <img class="gallery-shape-2 position-absolute end-0 z-n1" src="assets/images/gallery/gallery-shape2.png" alt="shape">
-                         </div>
-                    </div>
-               </div>
-          </div>
-     </div>
-     <div class="cta-bg-shape position-absolute start-0 z-n1">
-          <img src="assets/images/cta/cta-bg-shape.png" alt="shape">
-     </div>
-</section>
 
     <!-- ==================== Custom Footer Start ==================== -->
     <footer class="rent-car-custom-footer">
@@ -294,7 +317,7 @@
             <div class="row">
                 <!-- Brand Section -->
                 <div class="col-lg-4 col-md-6 mb-4">
-                    <h3 class="rent-car-footer-brand">Marshell Holidays</h3>
+                    <h3 class="rent-car-footer-brand">Marshall Holidays</h3>
                     <p class="rent-car-footer-text">Your trusted partner for authentic Sri Lankan experiences. We specialize in personalized car rentals, cultural tours, and spiritual journeys.</p>
                     <div class="d-flex flex-wrap">
                         <a href="#" class="rent-car-social-icon"><i class="ph-bold ph-facebook-logo"></i></a>
@@ -346,7 +369,7 @@
             <div class="rent-car-footer-bottom">
                 <div class="row align-items-center">
                     <div class="col-md-6">
-                        <p class="rent-car-footer-bottom-text mb-0">&copy; 2024 Marshell Holidays Pvt Ltd. All rights reserved.</p>
+                        <p class="rent-car-footer-bottom-text mb-0">&copy; 2024 Marshall Holidays Pvt Ltd. All rights reserved.</p>
                     </div>
                     <div class="col-md-6 text-md-end">
                         <a href="#" class="rent-car-footer-link d-inline me-4">Privacy Policy</a>

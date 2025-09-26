@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="About Marshell Holidays Pvt Ltd - Premier Sri Lankan Buddhist cultural tours provider based in Anuradhapura, specializing in meditation and spiritual wellness experiences">
-    <meta name="keywords" content="Marshell Holidays, Sri Lanka Buddhist tours, meditation retreats, Anuradhapura tours, spiritual wellness travel">
+    <meta name="description" content="About Marshall Holidays Pvt Ltd - Premier Sri Lankan Buddhist cultural tours provider based in Anuradhapura, specializing in meditation and spiritual wellness experiences">
+    <meta name="keywords" content="Marshall Holidays, Sri Lanka Buddhist tours, meditation retreats, Anuradhapura tours, spiritual wellness travel">
     <meta name="robots" content="INDEX,FOLLOW">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Title -->
-    <title>About Marshell Holidays - Buddhist Cultural & Meditation Tours Sri Lanka</title>
+    <title>About Marshall Holidays - Buddhist Cultural & Meditation Tours Sri Lanka</title>
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/images/logo/favicon.png">
     <!-- Google Fonts - Philosopher -->
@@ -67,7 +67,7 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-8 col-md-10 col-sm-12">
                         <div class="text-center px-3">
-                            <h2 class="breadcrumb-title char-animation" style="font-size: 2.5rem; color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); margin-bottom: 0; line-height: 1.2; font-weight: 600;">About Marshell Holidays</h2>
+                            <h2 class="breadcrumb-title char-animation" style="font-size: 2.5rem; color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); margin-bottom: 0; line-height: 1.2; font-weight: 600;">About Marshall Holidays</h2>
                         </div>
                     </div>
                 </div>
@@ -83,7 +83,7 @@
                 <div class="row justify-content-center tw-mb-20">
                     <div class="col-xl-10">
                         <div class="text-center tw-mb-16" data-aos="fade-up" data-aos-duration="1000">
-                            <h2 class="section-title fw-bold tw-text-4xl text-main-600 tw-mb-6">Marshell Holidays Pvt Ltd</h2>
+                            <h2 class="section-title fw-bold tw-text-4xl text-main-600 tw-mb-6">Marshall Holidays Pvt Ltd</h2>
                             <div class="divider mx-auto tw-mb-8" style="width: 100px; height: 3px; background: linear-gradient(90deg, #2c5aa0 0%, #89b4e8 100%);"></div>
                             <p class="tw-text-xl text-muted tw-leading-relaxed">
                                 Your trusted partner for authentic Buddhist cultural experiences and spiritual wellness journeys in Sri Lanka
@@ -98,7 +98,7 @@
                         <div class="about-content" data-aos="fade-right" data-aos-duration="1000">
                             <h3 class="tw-text-3xl fw-bold text-main-600 tw-mb-6">Who We Are</h3>
                             <p class="tw-text-lg text-muted tw-mb-6 tw-leading-relaxed">
-                                Marshell Holidays Pvt Ltd is a well-established company based in the historical city of Anuradhapura, Sri Lanka. We specialize in providing authentic Sri Lankan Buddhist cultural and relaxing tours to travelers seeking meditation and spiritual mind relaxation.
+                                Marshall Holidays Pvt Ltd is a well-established company based in the historical city of Anuradhapura, Sri Lanka. We specialize in providing authentic Sri Lankan Buddhist cultural and relaxing tours to travelers seeking meditation and spiritual mind relaxation.
                             </p>
                             <p class="tw-text-lg text-muted tw-mb-6 tw-leading-relaxed">
                                 Our primary focus is to provide spiritual happiness and mind relaxation to our esteemed visitors by offering them a peaceful escape from their busy lives during their visit.
@@ -114,7 +114,7 @@
                                     <h4 class="tw-text-xl fw-bold text-main-600 mb-0">Verified Business</h4>
                                 </div>
                                 <p class="tw-text-base text-muted tw-mb-4">
-                                    Marshell Holidays Pvt Ltd is a legally registered and licensed tourism company in Sri Lanka. View our official business registration certificate to verify our authenticity and legitimacy.
+                                    Marshall Holidays Pvt Ltd is a legally registered and licensed tourism company in Sri Lanka. View our official business registration certificate to verify our authenticity and legitimacy.
                                 </p>
                                 <a href="assets/BR.pdf" target="_blank" class="btn btn-outline-primary d-inline-flex align-items-center" style="border-color: #2c5aa0; color: #2c5aa0; font-family: 'Satoshi', sans-serif; font-weight: 500;">
                                     <i class="ph ph-file-pdf me-2"></i>
@@ -159,7 +159,7 @@
                                         <div class="tw-mb-6">
                                             <h5 class="tw-text-xl fw-bold text-main-600 tw-mb-3">Professional Background</h5>
                                             <p class="tw-text-lg text-muted tw-leading-relaxed">
-                                                <strong>Sameera Thennakoon</strong> serves as the Managing Director of Marshell Holidays Pvt Ltd. He is a professionally qualified engineer who holds a Master's Degree in Business Management from Cardiff Metropolitan University, United Kingdom.
+                                                <strong>Sameera Thennakoon</strong> serves as the Managing Director of Marshall Holidays Pvt Ltd. He is a professionally qualified engineer who holds a Master's Degree in Business Management from Cardiff Metropolitan University, United Kingdom.
                                             </p>
                                         </div>
                                         
@@ -211,7 +211,7 @@
             <div class="row">
                 <!-- Brand Section -->
                 <div class="col-lg-4 col-md-6 mb-4">
-                    <h3 class="rent-car-footer-brand">Marshell Holidays</h3>
+                    <h3 class="rent-car-footer-brand">Marshall Holidays</h3>
                     <p class="rent-car-footer-text">Your trusted partner for authentic Sri Lankan experiences. We specialize in personalized car rentals, cultural tours, and spiritual journeys.</p>
                     <div class="d-flex flex-wrap">
                         <a href="#" class="rent-car-social-icon"><i class="ph-bold ph-facebook-logo"></i></a>
@@ -263,7 +263,7 @@
             <div class="rent-car-footer-bottom">
                 <div class="row align-items-center">
                     <div class="col-md-6">
-                        <p class="rent-car-footer-bottom-text mb-0">&copy; 2024 Marshell Holidays Pvt Ltd. All rights reserved.</p>
+                        <p class="rent-car-footer-bottom-text mb-0">&copy; 2024 Marshall Holidays Pvt Ltd. All rights reserved.</p>
                     </div>
                     <div class="col-md-6 text-md-end">
                         <a href="#" class="rent-car-footer-link d-inline me-4">Privacy Policy</a>

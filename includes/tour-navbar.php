@@ -29,7 +29,7 @@
 .mh-tour-logo h3 {
     color: white;
     font-weight: 700;
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     margin: 0;
     font-family: 'Philosopher', serif;
     letter-spacing: -0.5px;
@@ -116,12 +116,31 @@
 
 /* Mobile Styles */
 @media (max-width: 991px) {
+    .mh-tour-header {
+        background: #E9F8FF !important;
+        backdrop-filter: blur(10px) !important;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
+        margin-bottom: 20px !important;
+    }
+
+    .mh-tour-logo h3 {
+        color: #2c5aa0 !important;
+    }
+
     .mh-tour-menu {
         display: none;
     }
 
     .mh-tour-mobile-toggle {
         display: block;
+        color: #2c5aa0 !important;
+    }
+
+    .mh-tour-contact-btn {
+        background: white !important;
+        color: #2c5aa0 !important;
+        border: 1px solid #2c5aa0 !important;
     }
 }
 
@@ -209,7 +228,7 @@
 <!-- Mobile Menu -->
 <div id="mh-tour-mobile-menu" class="mh-tour-mobile-menu">
     <div class="mh-tour-mobile-header">
-        <h4 style="color: #2c5aa0; font-weight: 700; margin: 0;">Marshell Holidays</h4>
+        <h4 style="color: #2c5aa0; font-weight: 700; margin: 0;">Marshall Holidays</h4>
         <button id="mh-tour-mobile-close" class="mh-tour-mobile-close">
             <i class="ph ph-x"></i>
         </button>
@@ -232,7 +251,7 @@
                 <a href="about.php" class="mh-tour-mobile-link">About</a>
             </li>
             <li class="mh-tour-mobile-item">
-                <a href="contact.html" class="mh-tour-mobile-link">Contact</a>
+                <a href="contact.php" class="mh-tour-mobile-link">Contact</a>
             </li>
         </ul>
     </nav>
@@ -246,7 +265,7 @@
             <!-- Logo -->
             <div class="mh-tour-logo">
                 <a href="index.php" style="text-decoration: none;">
-                    <h3>Marshell Holidays</h3>
+                    <h3>Marshall Holidays</h3>
                 </a>
             </div>
 
@@ -268,13 +287,13 @@
                     <a href="about.php" class="mh-tour-menu-link">About</a>
                 </li>
                 <li class="mh-tour-menu-item">
-                    <a href="contact.html" class="mh-tour-menu-link">Contact</a>
+                    <a href="contact.php" class="mh-tour-menu-link">Contact</a>
                 </li>
             </ul>
 
             <!-- Right Side -->
             <div class="d-flex align-items-center gap-3">
-                <a href="contact.html" class="mh-tour-contact-btn d-none d-lg-flex">
+                <a href="contact.php" class="mh-tour-contact-btn d-none d-lg-flex">
                     Contact Us <i class="ph ph-arrow-up-right"></i>
                 </a>
                 <button id="mh-tour-mobile-toggle" class="mh-tour-mobile-toggle d-lg-none">
@@ -346,5 +365,5 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <!-- Add padding to body to account for fixed header -->
 <style>
-body { padding-top: 90px; }
+body { padding-top: 120px; }
 </style>

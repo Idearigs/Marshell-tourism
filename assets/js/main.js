@@ -95,54 +95,59 @@
 
 
     // **************************** Mobile Menu js Start ****************************
-    var mmm = gsap.matchMedia(); 
-    var mtl = gsap.timeline({paused: true}); 
+    var mmm = gsap.matchMedia();
+    var mtl = gsap.timeline({paused: true});
 
     const toggleMobileMenu = document.querySelector('.toggle-mobileMenu');
     const closeButton = document.querySelector('.close-button');
     const mobileSideOverlay = document.querySelector('.side-overlay');
 
-    mmm.add("(max-width: 991px)", () => {
-      
-      mtl.to('.side-overlay', {
-        opacity: 1,
-        visibility: 'visible',
-        duration: .3, 
-      });
-      
-      mtl.to('.mobile-menu', {
-        x: 0,
-      });
-      
-      mtl.from('.nav-menu__item', {
-        opacity: 0,
-        duration: .3,
-        y: -60,
-        stagger: .12,
-      });
+    // Only initialize mobile menu GSAP animations if the required elements exist
+    if (toggleMobileMenu && closeButton && mobileSideOverlay &&
+        document.querySelector('.mobile-menu') && document.querySelector('.nav-menu__item')) {
 
-      mtl.from('.close-button', {
-        opacity: 0,
-        scale: 0,
-        duration: .2,
-      });
+        mmm.add("(max-width: 991px)", () => {
 
-      toggleMobileMenu.addEventListener('click', function () {
-        mtl.play();
-        document.body.style.overflow = 'hidden'
-      });
+          mtl.to('.side-overlay', {
+            opacity: 1,
+            visibility: 'visible',
+            duration: .3,
+          });
 
-      closeButton.addEventListener('click', function () {
-        mtl.reverse();
-        document.body.style.overflow = ''
-      });
+          mtl.to('.mobile-menu', {
+            x: 0,
+          });
 
-      mobileSideOverlay.addEventListener('click', function () {
-        mtl.reverse();
-        document.body.style.overflow = ''
-      });
+          mtl.from('.nav-menu__item', {
+            opacity: 0,
+            duration: .3,
+            y: -60,
+            stagger: .12,
+          });
 
-    });
+          mtl.from('.close-button', {
+            opacity: 0,
+            scale: 0,
+            duration: .2,
+          });
+
+          toggleMobileMenu.addEventListener('click', function () {
+            mtl.play();
+            document.body.style.overflow = 'hidden'
+          });
+
+          closeButton.addEventListener('click', function () {
+            mtl.reverse();
+            document.body.style.overflow = ''
+          });
+
+          mobileSideOverlay.addEventListener('click', function () {
+            mtl.reverse();
+            document.body.style.overflow = ''
+          });
+        });
+    }
+
     // **************************** Mobile Menu js End ****************************
 
 
@@ -236,12 +241,14 @@
   // ========================= Delete Item Js start ===================
   let deleteButtons = document.querySelectorAll('.delete-button');
 
-  deleteButtons.forEach(deleteButton => {
-    deleteButton.addEventListener('click', function () {
-      this.closest('.delete-item').classList.add('d-none');
-      toastMessage("danger", "Deleted", "You deleted successfully!", 'ph-bold ph-trash');
+  if (deleteButtons.length > 0) {
+    deleteButtons.forEach(deleteButton => {
+      deleteButton.addEventListener('click', function () {
+        this.closest('.delete-item').classList.add('d-none');
+        toastMessage("danger", "Deleted", "You deleted successfully!", 'ph-bold ph-trash');
+      });
     });
-  });
+  }
   // ========================= Delete Item Js End ===================
 
   // ========================= Form Submit Js Start ===================

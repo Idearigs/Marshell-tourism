@@ -205,13 +205,11 @@ if (!isset($hero_subtitle)) $hero_subtitle = '';
     }
 
     .mh-tour-hero-actions {
-        flex-direction: column;
-        align-items: center;
+        display: none !important;
     }
 
-    .mh-tour-hero-btn {
-        width: 100%;
-        max-width: 250px;
+    .mh-tour-hero-content {
+        transform: translateY(30px);
     }
 }
 

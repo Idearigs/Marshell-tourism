@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Rent a car in Sri Lanka with personalized trip planning. Select destinations, choose vehicles, and book your perfect Sri Lankan adventure with Marshell Holidays">
-    <meta name="keywords" content="Sri Lanka car rental, trip planning, vehicle rental Ceylon, Marshell Holidays car hire, Sri Lankan road trip">
+    <meta name="description" content="Rent a car in Sri Lanka with personalized trip planning. Select destinations, choose vehicles, and book your perfect Sri Lankan adventure with Marshall Holidays">
+    <meta name="keywords" content="Sri Lanka car rental, trip planning, vehicle rental Ceylon, Marshall Holidays car hire, Sri Lankan road trip">
     <meta name="robots" content="INDEX,FOLLOW">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rent a Car & Plan Your Trip | Marshell Holidays Sri Lanka</title>
+    <title>Rent a Car & Plan Your Trip | Marshall Holidays Sri Lanka</title>
     
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/images/logo/favicon.png">
@@ -27,27 +27,63 @@
     <link rel="stylesheet" href="assets/css/main.css">
     <!-- Custom Rent Car CSS -->
     <link rel="stylesheet" href="assets/css/rent-car-custom.css">
+
+    <!-- Fix conflicting navbar -->
+    <style>
+        /* Ensure tour navbar is properly positioned */
+        .mh-tour-header {
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            right: 0 !important;
+            width: 100% !important;
+            z-index: 9999 !important;
+            background: transparent !important;
+            transition: all 0.3s ease !important;
+        }
+
+        /* Navbar background when scrolled */
+        .mh-tour-header.scrolled {
+            background: #E9F8FF !important;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1) !important;
+        }
+
+        /* Mobile navbar background */
+        @media (max-width: 991px) {
+            .mh-tour-header {
+                background: #E9F8FF !important;
+            }
+        }
+
+        /* Body padding for fixed navbar */
+        body {
+            padding-top: 80px !important;
+        }
+
+        /* Hide any conflicting elements */
+        .header:not(.mh-tour-header),
+        .navbar:not(.mh-tour-navbar),
+        .navigation:not(.mh-tour-navigation) {
+            display: none !important;
+        }
+
+        /* Page background */
+        body {
+            background: #f8f9fa !important;
+        }
+
+        /* Hero section adjustments for navbar */
+        .hero-section {
+            margin-top: -80px !important;
+            padding-top: 80px !important;
+        }
+    </style>
 </head>
 
 <body>
     
     <!--========= Start Prealoader =============-->
-    <div class="preloader">
-        <div class="loader_34">
-            <div class="ytp-spinner">
-                <div class="ytp-spinner-container">
-                    <div class="ytp-spinner-rotator">
-                        <div class="ytp-spinner-left">
-                            <div class="ytp-spinner-circle"></div>
-                        </div>
-                        <div class="ytp-spinner-right">
-                            <div class="ytp-spinner-circle"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
     <!--========= End Prealoader ==============-->
 
     <!-- Custom Cursor Start -->
@@ -59,19 +95,68 @@
 
     <div id="scrollSmoother-container">
 
-        <!-- ==================== Breadcrumb Start Here ==================== -->
-        <section class="breadcrumb-area background-img" data-background-image="Mainimg/img/Tangalle Beach/tanmain.jpg" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('Mainimg/img/Tangalle Beach/tanmain.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; min-height: 250px; display: flex; align-items: center;">
-            <div class="container-fluid">
+        <!-- ==================== Hero Section Start Here ==================== -->
+        <section class="hero-section" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('Mainimg/img/Tangalle Beach/tanmain.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; min-height: 45vh; display: flex; align-items: center; position: relative;">
+            <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-lg-8 col-md-10 col-sm-12">
-                        <div class="text-center px-3">
-                            <h2 class="breadcrumb-title char-animation" style="font-size: 2.5rem; color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); margin-bottom: 0; line-height: 1.2; font-weight: 600;">Rent a Car & Plan Your Trip</h2>
+                    <div class="col-lg-10 col-md-12">
+                        <div class="hero-content text-center text-white">
+                            <h1 class="hero-title" style="font-size: 2.8rem; font-weight: 700; margin-bottom: 1.5rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); line-height: 1.2; color: white;">
+                                Rent a Car & Plan Your Perfect Sri Lankan Adventure
+                            </h1>
+                            <p class="hero-subtitle" style="font-size: 1.1rem; margin-bottom: 2rem; max-width: 700px; margin-left: auto; margin-right: auto; text-shadow: 1px 1px 2px rgba(0,0,0,0.8);">
+                                Choose from our premium fleet of vehicles and create unforgettable memories exploring the pearl of the Indian Ocean
+                            </p>
+                            <div class="hero-buttons">
+                                <button class="btn btn-primary btn-lg me-3" onclick="scrollToSection('vehicleSection')" style="background: #2c5aa0; border: none; padding: 15px 30px; font-size: 1.1rem; font-weight: 600; border-radius: 50px; transition: all 0.3s;">
+                                    Choose Your Vehicle <i class="ph ph-arrow-down ms-2"></i>
+                                </button>
+                                <a href="contact.html" class="btn btn-outline-light btn-lg" style="padding: 15px 30px; font-size: 1.1rem; font-weight: 600; border-radius: 50px; transition: all 0.3s;">
+                                    Contact Us <i class="ph ph-phone ms-2"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <!-- Scroll indicator -->
+            <div class="scroll-indicator" style="position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); color: white; animation: bounce 2s infinite;">
+                <i class="ph ph-arrow-down" style="font-size: 2rem;"></i>
+            </div>
+
+            <style>
+                @keyframes bounce {
+                    0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+                    40% { transform: translateX(-50%) translateY(-10px); }
+                    60% { transform: translateX(-50%) translateY(-5px); }
+                }
+
+                .hero-section .btn:hover {
+                    transform: translateY(-2px);
+                    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+                }
+
+                @media (max-width: 768px) {
+                    .hero-title {
+                        font-size: 2.5rem !important;
+                    }
+
+                    .hero-subtitle {
+                        font-size: 1.1rem !important;
+                        margin-bottom: 2rem !important;
+                    }
+
+                    .hero-buttons .btn {
+                        display: block;
+                        width: 100%;
+                        margin-bottom: 1rem;
+                        margin-right: 0 !important;
+                    }
+                }
+            </style>
         </section>
-        <!-- ==================== Breadcrumb End Here ==================== -->
+        <!-- ==================== Hero Section End Here ==================== -->
 
         <!-- ==================== Vehicle Selection Section Start ==================== -->
         <section class="rent-car-vehicle-section" id="vehicleSection">
@@ -94,26 +179,26 @@
                 </div>
 
                 <div class="row" id="vehicleCardsContainer">
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="rent-car-vehicle-card" data-vehicle="economy">
-                            <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=300&h=200&fit=crop" alt="Economy Car" class="img-fluid" style="height: 200px; width: 100%; object-fit: cover;">
-                            <h4>Economy Car</h4>
-                            <p>Perfect for city tours and short trips</p>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="rent-car-vehicle-card" data-vehicle="corolla">
+                            <img src="Mainimg/vehivle images/Toyota corolla.jpg" alt="Toyota Corolla" class="img-fluid" style="height: 200px; width: 100%; object-fit: cover;">
+                            <h4>Toyota Corolla</h4>
+                            <p>Perfect for city tours and comfortable rides</p>
                             <ul class="list-unstyled">
                                 <li><i class="ph ph-check text-success me-2"></i>5 Seats</li>
-                                <li><i class="ph ph-check text-success me-2"></i>Manual/Auto</li>
+                                <li><i class="ph ph-check text-success me-2"></i>Automatic</li>
                                 <li><i class="ph ph-check text-success me-2"></i>Air Conditioning</li>
                                 <li><i class="ph ph-check text-success me-2"></i>Fuel Efficient</li>
                             </ul>
                             <p class="text-primary fw-bold">Request Quote</p>
                         </div>
                     </div>
-                    
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="rent-car-vehicle-card" data-vehicle="suv">
-                            <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=300&h=200&fit=crop" alt="SUV" class="img-fluid" style="height: 200px; width: 100%; object-fit: cover;">
-                            <h4>SUV</h4>
-                            <p>Ideal for families and mountain areas</p>
+
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="rent-car-vehicle-card" data-vehicle="prado">
+                            <img src="Mainimg/vehivle images/prado.jpg" alt="Toyota Prado" class="img-fluid" style="height: 200px; width: 100%; object-fit: cover;">
+                            <h4>Toyota Prado</h4>
+                            <p>Ideal for families and mountain adventures</p>
                             <ul class="list-unstyled">
                                 <li><i class="ph ph-check text-success me-2"></i>7 Seats</li>
                                 <li><i class="ph ph-check text-success me-2"></i>4WD Available</li>
@@ -123,17 +208,32 @@
                             <p class="text-primary fw-bold">Request Quote</p>
                         </div>
                     </div>
-                    
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="rent-car-vehicle-card" data-vehicle="van">
-                            <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=300&h=200&fit=crop" alt="Van" class="img-fluid" style="height: 200px; width: 100%; object-fit: cover;">
-                            <h4>Van</h4>
-                            <p>Perfect for large groups and tours</p>
+
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="rent-car-vehicle-card" data-vehicle="kdh">
+                            <img src="Mainimg/vehivle images/KDH High roof.jpg" alt="KDH High Roof Van" class="img-fluid" style="height: 200px; width: 100%; object-fit: cover;">
+                            <h4>KDH High Roof</h4>
+                            <p>Perfect for group tours and long journeys</p>
                             <ul class="list-unstyled">
                                 <li><i class="ph ph-check text-success me-2"></i>12 Seats</li>
+                                <li><i class="ph ph-check text-success me-2"></i>High Roof Comfort</li>
+                                <li><i class="ph ph-check text-success me-2"></i>Professional Driver</li>
+                                <li><i class="ph ph-check text-success me-2"></i>Tour Guide Available</li>
+                            </ul>
+                            <p class="text-primary fw-bold">Request Quote</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="rent-car-vehicle-card" data-vehicle="bus">
+                            <img src="Mainimg/vehivle images/Ac Bus.jpg" alt="AC Bus" class="img-fluid" style="height: 200px; width: 100%; object-fit: cover;">
+                            <h4>AC Bus</h4>
+                            <p>Ideal for large groups and extended tours</p>
+                            <ul class="list-unstyled">
+                                <li><i class="ph ph-check text-success me-2"></i>25+ Seats</li>
+                                <li><i class="ph ph-check text-success me-2"></i>Air Conditioning</li>
                                 <li><i class="ph ph-check text-success me-2"></i>Professional Driver</li>
                                 <li><i class="ph ph-check text-success me-2"></i>Maximum Comfort</li>
-                                <li><i class="ph ph-check text-success me-2"></i>Tour Guide Available</li>
                             </ul>
                             <p class="text-primary fw-bold">Request Quote</p>
                         </div>
@@ -254,7 +354,7 @@
             <div class="row">
                 <!-- Brand Section -->
                 <div class="col-lg-4 col-md-6 mb-4">
-                    <h3 class="rent-car-footer-brand">Marshell Holidays</h3>
+                    <h3 class="rent-car-footer-brand">Marshall Holidays</h3>
                     <p class="rent-car-footer-text">Your trusted partner for authentic Sri Lankan experiences. We specialize in personalized car rentals, cultural tours, and spiritual journeys.</p>
                     <div class="d-flex flex-wrap">
                         <a href="#" class="rent-car-social-icon"><i class="ph-bold ph-facebook-logo"></i></a>
@@ -306,7 +406,7 @@
             <div class="rent-car-footer-bottom">
                 <div class="row align-items-center">
                     <div class="col-md-6">
-                        <p class="rent-car-footer-bottom-text mb-0">&copy; 2024 Marshell Holidays Pvt Ltd. All rights reserved.</p>
+                        <p class="rent-car-footer-bottom-text mb-0">&copy; 2024 Marshall Holidays Pvt Ltd. All rights reserved.</p>
                     </div>
                     <div class="col-md-6 text-md-end">
                         <a href="#" class="rent-car-footer-link d-inline me-4">Privacy Policy</a>

@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Customize Your Perfect Trip with Marshell Holidays - Design your ideal wellness and relaxation journey tailored for mature travelers seeking tranquility and rejuvenation">
+    <meta name="description" content="Customize Your Perfect Trip with Marshall Holidays - Design your ideal wellness and relaxation journey tailored for mature travelers seeking tranquility and rejuvenation">
     <meta name="keywords" content="customize trip, mature travel, wellness travel planning, meditation retreat, relaxation tours, senior travel customization">
     <meta name="robots" content="INDEX,FOLLOW">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Title -->
-    <title>Customize Your Perfect Trip - Marshell Holidays</title>
+    <title>Customize Your Perfect Trip - Marshall Holidays</title>
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/images/logo/favicon.png">
     <!-- Google Fonts - Philosopher -->
@@ -28,6 +28,8 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!-- Main css -->
     <link rel="stylesheet" href="assets/css/main.css">
+    <!-- NiceSelect CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css">
     <!-- Custom Rent Car CSS for Footer -->
     <link rel="stylesheet" href="assets/css/rent-car-custom.css">
 
@@ -45,7 +47,7 @@
 </head>
 
 <body class="bg-neutral-50">
-
+<?php include 'includes/tour-navbar.php'; ?>
 
     <!-- Search Popup End-->
 
@@ -100,25 +102,58 @@
     <span class="dot"></span>
     <!-- Custom Cursor End -->
 
-<?php include 'includes/tour-navbar.php'; ?>
-<div id="scrollSmoother-container">
-     <!-- ==================== Breadcrumb Start Here ==================== -->
-<section class="breadcrumb-area background-img" data-background-image="MissingIMG/img/Sigiriya Rock Fortress/sig1.jpg" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('MissingIMG/img/Sigiriya Rock Fortress/sig1.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; min-height: 250px; display: flex; align-items: center;">
-    <div class="container-fluid">
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div>
-                    <h2 class="breadcrumb-title text-center tw-mb-6 char-animation" style="font-size: 2.5rem; color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); margin-bottom: 0; line-height: 1.2; font-weight: 600;">
-                        <span class="title-line-1">Create Your</span>
-                        <br>
-                        <span class="title-line-2">Perfect Journey</span>
-                    </h2>
+    
+
+    <!-- ==================== Hero Section Start ==================== -->
+    <section class="hero-section" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('MissingIMG/img/Sigiriya Rock Fortress/sig1.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; min-height: 50vh; display: flex; align-items: center; position: relative;">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 col-md-12">
+                    <div class="hero-content text-center text-white">
+                        <h1 class="hero-title" style="font-size: 3.2rem; font-weight: 700; margin-bottom: 1.5rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); line-height: 1.2; color: white !important;">
+                            Create Your Perfect Journey
+                        </h1>
+                        <p class="hero-subtitle" style="font-size: 1.2rem; margin-bottom: 2.5rem; max-width: 700px; margin-left: auto; margin-right: auto; text-shadow: 1px 1px 2px rgba(0,0,0,0.8); color: white !important;">
+                            Plan your personalized Sri Lankan adventure with our expert guidance and discover the island's hidden gems
+                        </p>
+                        <div class="hero-buttons d-none d-md-block">
+                            <button class="btn btn-primary btn-lg me-3" onclick="scrollToSection('destination-selection')" style="background: #2c5aa0; border: none; padding: 15px 30px; font-size: 1.1rem; font-weight: 600; border-radius: 50px; transition: all 0.3s;">
+                                Start Planning <i class="ph ph-arrow-down ms-2"></i>
+                            </button>
+                            <a href="contact.html" class="btn btn-outline-light btn-lg" style="padding: 15px 30px; font-size: 1.1rem; font-weight: 600; border-radius: 50px; transition: all 0.3s;">
+                                Contact Us <i class="ph ph-phone ms-2"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-<!-- ==================== Breadcrumb End Here ==================== -->
+
+        <style>
+            .hero-section .btn:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+            }
+
+            @media (max-width: 768px) {
+                .hero-title {
+                    font-size: 2.2rem !important;
+                }
+
+                .hero-subtitle {
+                    font-size: 1rem !important;
+                    margin-bottom: 2rem !important;
+                }
+
+                .hero-buttons {
+                    display: none !important;
+                }
+            }
+        </style>
+    </section>
+    <!-- ==================== Hero Section End ==================== -->
+
+<div id="scrollSmoother-container">
 
     <!-- ========================= Destination Selection Area Start Here ========================= -->
     <section id="destination-selection" class="py-5" style="padding-top: 60px !important; background-color: #ffffff;">
@@ -188,14 +223,14 @@
             </div>
 
             <div class="row" id="vehicleCardsContainer">
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="rent-car-vehicle-card" data-vehicle="economy">
-                        <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=300&h=200&fit=crop" alt="Economy Car" class="img-fluid" style="height: 200px; width: 100%; object-fit: cover;">
-                        <h4>Economy Car</h4>
-                        <p>Perfect for city tours and short trips</p>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="rent-car-vehicle-card" data-vehicle="corolla">
+                        <img src="Mainimg/vehivle images/Toyota corolla.jpg" alt="Toyota Corolla" class="img-fluid" style="height: 200px; width: 100%; object-fit: cover;">
+                        <h4>Toyota Corolla</h4>
+                        <p>Perfect for city tours and comfortable rides</p>
                         <ul class="list-unstyled">
                             <li><i class="ph ph-check text-success me-2"></i>5 Seats</li>
-                            <li><i class="ph ph-check text-success me-2"></i>Manual/Auto</li>
+                            <li><i class="ph ph-check text-success me-2"></i>Automatic</li>
                             <li><i class="ph ph-check text-success me-2"></i>Air Conditioning</li>
                             <li><i class="ph ph-check text-success me-2"></i>Fuel Efficient</li>
                         </ul>
@@ -203,11 +238,11 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="rent-car-vehicle-card" data-vehicle="suv">
-                        <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=300&h=200&fit=crop" alt="SUV" class="img-fluid" style="height: 200px; width: 100%; object-fit: cover;">
-                        <h4>SUV</h4>
-                        <p>Ideal for families and mountain areas</p>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="rent-car-vehicle-card" data-vehicle="prado">
+                        <img src="Mainimg/vehivle images/prado.jpg" alt="Toyota Prado" class="img-fluid" style="height: 200px; width: 100%; object-fit: cover;">
+                        <h4>Toyota Prado</h4>
+                        <p>Ideal for families and mountain adventures</p>
                         <ul class="list-unstyled">
                             <li><i class="ph ph-check text-success me-2"></i>7 Seats</li>
                             <li><i class="ph ph-check text-success me-2"></i>4WD Available</li>
@@ -218,16 +253,31 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="rent-car-vehicle-card" data-vehicle="van">
-                        <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=300&h=200&fit=crop" alt="Van" class="img-fluid" style="height: 200px; width: 100%; object-fit: cover;">
-                        <h4>Van</h4>
-                        <p>Perfect for large groups and tours</p>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="rent-car-vehicle-card" data-vehicle="kdh">
+                        <img src="Mainimg/vehivle images/KDH High roof.jpg" alt="KDH High Roof Van" class="img-fluid" style="height: 200px; width: 100%; object-fit: cover;">
+                        <h4>KDH High Roof</h4>
+                        <p>Perfect for group tours and long journeys</p>
                         <ul class="list-unstyled">
                             <li><i class="ph ph-check text-success me-2"></i>12 Seats</li>
+                            <li><i class="ph ph-check text-success me-2"></i>High Roof Comfort</li>
+                            <li><i class="ph ph-check text-success me-2"></i>Professional Driver</li>
+                            <li><i class="ph ph-check text-success me-2"></i>Tour Guide Available</li>
+                        </ul>
+                        <p class="text-primary fw-bold">Request Quote</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="rent-car-vehicle-card" data-vehicle="bus">
+                        <img src="Mainimg/vehivle images/Ac Bus.jpg" alt="AC Bus" class="img-fluid" style="height: 200px; width: 100%; object-fit: cover;">
+                        <h4>AC Bus</h4>
+                        <p>Ideal for large groups and extended tours</p>
+                        <ul class="list-unstyled">
+                            <li><i class="ph ph-check text-success me-2"></i>25+ Seats</li>
+                            <li><i class="ph ph-check text-success me-2"></i>Air Conditioning</li>
                             <li><i class="ph ph-check text-success me-2"></i>Professional Driver</li>
                             <li><i class="ph ph-check text-success me-2"></i>Maximum Comfort</li>
-                            <li><i class="ph ph-check text-success me-2"></i>Tour Guide Available</li>
                         </ul>
                         <p class="text-primary fw-bold">Request Quote</p>
                     </div>
@@ -546,7 +596,7 @@
             <div class="row">
                 <div class="col-lg-4 col-md-6">
                     <div class="rent-car-footer-content">
-                        <h3 class="rent-car-footer-brand">Marshell Holidays</h3>
+                        <h3 class="rent-car-footer-brand">Marshall Holidays</h3>
                         <p class="rent-car-footer-text">Discover tranquil destinations and rejuvenating experiences designed for mature travelers seeking peace, wellness, and meaningful connections.</p>
                         <div class="rent-car-social-links">
                             <a href="#" class="rent-car-social-icon"><i class="fab fa-facebook-f"></i></a>
@@ -595,7 +645,7 @@
             <div class="rent-car-footer-bottom">
                 <div class="row align-items-center">
                     <div class="col-md-6">
-                        <p class="rent-car-footer-bottom-text mb-0">© 2024 Marshell Holidays. All rights reserved.</p>
+                        <p class="rent-car-footer-bottom-text mb-0">© 2024 Marshall Holidays. All rights reserved.</p>
                     </div>
                     <div class="col-md-6 text-md-end">
                         <p class="rent-car-footer-bottom-text mb-0">Privacy Policy | Terms & Conditions</p>
@@ -613,6 +663,8 @@
     <script src="assets/js/popper.min.js"></script>
     <!-- Bootstrap -->
     <script src="assets/js/bootstrap.min.js"></script>
+    <!-- NiceSelect Plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
     <!-- Aos -->
     <script src="assets/js/aos.js"></script>
     <!-- Swiper -->
@@ -744,36 +796,6 @@
         });
     </script>
 
-    <!-- jquery js -->
-    <script src="assets/js/jquery-3.6.0.min.js"></script>
-    <!-- bootstrap -->
-    <script src="assets/js/boostrap.bundle.min.js"></script>
-    <!-- Slick js -->
-    <script src="assets/js/slick.min.js"></script>
-    <!-- aos js -->
-    <script src="assets/js/aos.js"></script>
-    <!-- modal video js -->
-    <script src="assets/js/jquery-modal-video.min.js"></script>
-    <!-- counterup -->
-    <script src="assets/js/jquery.counterup.min.js"></script>
-    <!-- waypoint js -->
-    <script src="assets/js/waypoint.js"></script>
-    <!-- isotope js  -->
-    <script src="assets/js/isotope.pkgd.min.js"></script>
-    <!-- Magnific popup -->
-    <script src="assets/js/jquery.magnific-popup.js"></script>
-    <!-- Gsap -->
-    <script src="assets/js/gsap.min.js"></script>
-    <!-- SplitText -->
-    <script src="assets/js/SplitText.min.js"></script>
-    <!-- Scroll Trigger -->
-    <script src="assets/js/ScrollTrigger.min.js"></script>
-    <!-- ScrollSmoother -->
-    <script src="assets/js/ScrollSmoother.min.js"></script>
-    <!-- custom GSAP -->
-    <script src="assets/js/custom-gsap.js"></script>
-    <!-- main js -->
-    <script src="assets/js/main.js"></script>
 
     <style>
         /* Map and Vehicle Selection Styles */

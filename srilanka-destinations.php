@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Discover Sri Lanka's Most Beautiful Destinations - Explore ancient cities, pristine beaches, lush tea plantations, and sacred temples with Marshell Holidays">
+    <meta name="description" content="Discover Sri Lanka's Most Beautiful Destinations - Explore ancient cities, pristine beaches, lush tea plantations, and sacred temples with Marshall Holidays">
     <meta name="keywords" content="Sri Lanka destinations, tourism Sri Lanka, travel destinations, beaches, temples, cultural sites, tea plantations">
     <meta name="robots" content="INDEX,FOLLOW">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Title -->
-    <title>Sri Lanka Destinations - Marshell Holidays</title>
+    <title>Sri Lanka Destinations - Marshall Holidays</title>
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/images/logo/favicon.png">
     <!-- Google Fonts - Philosopher -->
@@ -27,47 +27,38 @@
     <!-- Destinations Custom CSS -->
     <style>
         /* Destinations Page Styles */
-        .destinations-hero {
-            background: transparent;
-            padding: 120px 0 80px 0;
-            color: white;
-            position: relative;
-            overflow: hidden;
+        /* Ensure tour navbar is properly positioned */
+        .mh-tour-header {
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            right: 0 !important;
+            width: 100% !important;
+            z-index: 9999 !important;
+            background: transparent !important;
+            backdrop-filter: none !important;
+            border-bottom: none !important;
+            box-shadow: none !important;
+            transition: all 0.3s ease !important;
         }
 
-        .destinations-hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('MissingIMG/img/Sigiriya Rock Fortress/sigwide.jpg') center/cover;
-            opacity: 1;
-            z-index: 1;
+        /* Scrolled state - blue background */
+        .mh-tour-header.scrolled {
+            background: #E9F8FF !important;
+            backdrop-filter: blur(10px) !important;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
         }
 
-        .destinations-hero .container {
-            position: relative;
-            z-index: 2;
+        /* Body padding for fixed navbar */
+        body {
+            padding-top: 0px !important;
         }
 
-        .destinations-hero-title {
-            font-size: 4rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .destinations-hero-subtitle {
-            font-size: 1.25rem;
-            opacity: 0.9;
-            max-width: 600px;
-            margin: 0 auto;
-            line-height: 1.6;
+        /* Hero section adjustments for navbar */
+        .hero-section {
+            margin-top: 0px !important;
+            padding-top: 0px !important;
         }
 
         .destinations-section {
@@ -205,9 +196,6 @@
         }
 
         @media (max-width: 768px) {
-            .destinations-hero-title {
-                font-size: 2.5rem;
-            }
             .destinations-title {
                 font-size: 2rem;
             }
@@ -224,118 +212,60 @@
 
 <body class="bg-neutral-50">
 
-    <!-- ==================== Mobile Menu Start Here ==================== -->
-<div class="mobile-menu d-lg-none d-block scroll-sm position-fixed bg-white tw-w-300-px tw-h-screen overflow-y-auto tw-p-6 tw-z-999 tw--translate-x-full tw-pb-68 ">
 
-    <button type="button" class="close-button position-absolute tw-end-0 top-0 tw-me-2 tw-mt-2 tw-w-605 tw-h-605 rounded-circle d-flex justify-content-center align-items-center text-neutral-900 bg-neutral-200 hover-bg-neutral-900 hover-text-white">
-        <i class="ph ph-x"></i>
-    </button>
-
-    <div class="mobile-menu__inner">
-        <a href="index.php" class="mobile-menu__logo">
-            <h4 class="mb-0 text-main-600 fw-bold font-heading">Marshell Holidays</h4>
-        </a>
-        <div class="mobile-menu__menu">
-            <!-- Nav menu Start -->
-<ul class="nav-menu d-lg-flex align-items-center nav-menu--mobile d-block tw-mt-8 bg-white tw-px-12 tw-rounded-4xl">
-    <li class="nav-menu__item">
-        <a href="index.php" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Home</a>
-    </li>
-    <li class="nav-menu__item">
-        <a href="sri-lanka-tour-packages.php" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Tour Packages</a>
-    </li>
-    <li class="nav-menu__item">
-        <a href="customize-your-trip.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Customize Your Trip</a>
-    </li>
-    <li class="nav-menu__item">
-        <a href="rent-a-car.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Rent a car</a>
-    </li>
-    <li class="nav-menu__item">
-        <a href="about.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">About</a>
-    </li>
-    <li class="nav-menu__item">
-        <a href="contact.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Contact</a>
-    </li>
-</ul>
-<!-- Nav menu End  -->
-        </div>
-    </div>
-</div>
-<!-- Mobile Menu Overlay -->
-<div class="mobile-menu-overlay"></div>
-<!-- ==================== Mobile Menu End Here ==================== -->
-
-    <!-- ==================== Header Start Here ==================== -->
-    <header class="header header-two transition-all">
-        <div class="container-fluid">
-            <nav class="d-flex align-items-center justify-content-between">
-                <!-- Logo Start -->
-                <div class="logo">
-                    <a href="index.php" class="link">
-                        <h3 class="mb-0 text-main-600 fw-bold font-heading">Marshell Holidays</h3>
-                    </a>
-                </div>
-                <!-- Logo End  -->
-                <!-- Menu Start  -->
-                <div class="header-menu header-two-menu d-lg-block d-none">
-                    <!-- Nav menu Start -->
-                    <ul class="nav-menu d-lg-flex align-items-center tw-gap-6">
-                        <li class="nav-menu__item">
-                            <a href="index.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Home</a>
-                        </li>
-                        <li class="nav-menu__item">
-                            <a href="sri-lanka-tour-packages.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Tour Packages</a>
-                        </li>
-                        <li class="nav-menu__item">
-                            <a href="customize-your-trip.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Customize Your Trip</a>
-                        </li>
-                        <li class="nav-menu__item">
-                            <a href="rent-a-car.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Rent a car</a>
-                        </li>
-                        <li class="nav-menu__item">
-                            <a href="about.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">About</a>
-                        </li>
-                        <li class="nav-menu__item">
-                            <a href="contact.html" class="nav-menu__link text-main-600 tw-py-3 fw-medium w-100 font-dmsans">Contact</a>
-                        </li>
-                    </ul>
-                    <!-- Nav menu End  -->
-                </div>
-                <!-- Menu End  -->
-                <!-- Header Right start -->
-                <div class="">
-                    <div class="d-flex align-items-center tw-gap-29">
-                        <div class="header-button">
-                            <a class="primary-btn bg-white text-main-600 tw-py-5 tw-px-10 fs-15 text-uppercase fw-bold font-heading tw-gap-2 d-inline-flex align-items-center tw-rounded-4xl" href="contact.html">Contact Us <i class="ph ph-arrow-up-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <button type="button" class="toggle-mobileMenu leading-none d-lg-none ms-3 text-neutral-800 tw-text-9">
-                    <i class="ph ph-list"></i>
-                </button>
-                <!-- Header Right End  -->
-            </nav>
-        </div>
-    </header>
-    <!-- ==================== Header End Here ==================== -->
+<?php include 'includes/tour-navbar.php'; ?>
 
     <!-- ==================== Hero Section Start ==================== -->
-    <section class="destinations-hero">
+    <section class="hero-section" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('MissingIMG/img/Sigiriya Rock Fortress/sigwide.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; min-height: 50vh; display: flex; align-items: center; position: relative;">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <div class="text-center">
-                        <h1 class="destinations-hero-title">Discover Sri Lanka's Hidden Gems</h1>
-                        <p class="destinations-hero-subtitle">From ancient kingdoms to pristine beaches, explore the Pearl of the Indian Ocean through carefully curated destinations that showcase the island's rich culture, stunning landscapes, and warm hospitality.</p>
+                <div class="col-lg-10 col-md-12">
+                    <div class="hero-content text-center text-white">
+                        <h1 class="hero-title" style="font-size: 3.2rem; font-weight: 700; margin-bottom: 1.5rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); line-height: 1.2; color: white;">
+                            Discover Sri Lanka's Hidden Gems
+                        </h1>
+                        <p class="hero-subtitle" style="font-size: 1.2rem; margin-bottom: 2.5rem; max-width: 700px; margin-left: auto; margin-right: auto; text-shadow: 1px 1px 2px rgba(0,0,0,0.8);">
+                            From ancient kingdoms to pristine beaches, explore the Pearl of the Indian Ocean through carefully curated destinations that showcase the island's rich culture, stunning landscapes, and warm hospitality.
+                        </p>
+                        <div class="hero-buttons">
+                            <button class="btn btn-primary btn-lg me-3" onclick="scrollToSection('destinationsSection')" style="background: #2c5aa0; border: none; padding: 15px 30px; font-size: 1.1rem; font-weight: 600; border-radius: 50px; transition: all 0.3s;">
+                                Explore Destinations <i class="ph ph-arrow-down ms-2"></i>
+                            </button>
+                            <a href="contact.html" class="btn btn-outline-light btn-lg" style="padding: 15px 30px; font-size: 1.1rem; font-weight: 600; border-radius: 50px; transition: all 0.3s;">
+                                Plan Your Trip <i class="ph ph-map-pin ms-2"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <style>
+            .hero-section .btn:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+            }
+
+            @media (max-width: 768px) {
+                .hero-title {
+                    font-size: 2.2rem !important;
+                }
+
+                .hero-subtitle {
+                    font-size: 1rem !important;
+                    margin-bottom: 2rem !important;
+                }
+
+                .hero-buttons {
+                    display: none !important;
+                }
+            }
+        </style>
     </section>
     <!-- ==================== Hero Section End ==================== -->
 
     <!-- ==================== Destinations Section Start ==================== -->
-    <section class="destinations-section">
+    <section class="destinations-section" id="destinationsSection">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -681,7 +611,7 @@
             <div class="row">
                 <!-- Brand Section -->
                 <div class="col-lg-4 col-md-6 mb-4">
-                    <h3 class="rent-car-footer-brand">Marshell Holidays</h3>
+                    <h3 class="rent-car-footer-brand">Marshall Holidays</h3>
                     <p class="rent-car-footer-text">Your trusted partner for authentic Sri Lankan experiences. We specialize in personalized car rentals, cultural tours, and spiritual journeys.</p>
                     <div class="d-flex flex-wrap">
                         <a href="#" class="rent-car-social-icon"><i class="ph-bold ph-facebook-logo"></i></a>
@@ -733,7 +663,7 @@
             <div class="rent-car-footer-bottom">
                 <div class="row align-items-center">
                     <div class="col-md-6">
-                        <p class="rent-car-footer-bottom-text mb-0">&copy; 2024 Marshell Holidays Pvt Ltd. All rights reserved.</p>
+                        <p class="rent-car-footer-bottom-text mb-0">&copy; 2024 Marshall Holidays Pvt Ltd. All rights reserved.</p>
                     </div>
                     <div class="col-md-6 text-md-end">
                         <a href="#" class="rent-car-footer-link d-inline me-4">Privacy Policy</a>
@@ -748,63 +678,26 @@
     <!-- Include necessary JS files -->
     <script src="assets/js/jquery-3.7.1.min.js"></script>
     <script src="assets/js/boostrap.bundle.min.js"></script>
+    <!-- GSAP for animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <!-- Swiper JS -->
     <script src="assets/js/swiper-bundle.js"></script>
+    <!-- Images Loaded -->
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+    <!-- jQuery UI for slider functionality -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
     <script src="assets/js/main.js"></script>
 
+    <!-- Scroll function for hero button -->
     <script>
-        // Mobile menu functionality with animation
-        document.addEventListener('DOMContentLoaded', function() {
-            const mobileMenuToggle = document.querySelector('.toggle-mobileMenu');
-            const mobileMenu = document.querySelector('.mobile-menu');
-            const mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
-            const closeButton = document.querySelector('.mobile-menu .close-button');
-
-            function openMobileMenu() {
-                if (mobileMenu && mobileMenuOverlay) {
-                    mobileMenu.classList.remove('tw--translate-x-full');
-                    mobileMenu.classList.add('show');
-                    mobileMenuOverlay.classList.add('show');
-                    document.body.style.overflow = 'hidden'; // Prevent scrolling
-                }
-            }
-
-            function closeMobileMenu() {
-                if (mobileMenu && mobileMenuOverlay) {
-                    mobileMenu.classList.remove('show');
-                    mobileMenuOverlay.classList.remove('show');
-                    document.body.style.overflow = ''; // Restore scrolling
-                    setTimeout(() => {
-                        mobileMenu.classList.add('tw--translate-x-full');
-                    }, 300); // Wait for animation to complete
-                }
-            }
-
-            if (mobileMenuToggle) {
-                mobileMenuToggle.addEventListener('click', function(event) {
-                    event.stopPropagation();
-                    if (mobileMenu.classList.contains('show')) {
-                        closeMobileMenu();
-                    } else {
-                        openMobileMenu();
-                    }
-                });
-            }
-
-            if (closeButton) {
-                closeButton.addEventListener('click', function() {
-                    closeMobileMenu();
-                });
-            }
-
-            // Close menu when clicking overlay
-            if (mobileMenuOverlay) {
-                mobileMenuOverlay.addEventListener('click', function() {
-                    closeMobileMenu();
-                });
-            }
+    function scrollToSection(sectionId) {
+        document.getElementById(sectionId).scrollIntoView({
+            behavior: 'smooth'
         });
+    }
     </script>
+
+
 
 </body>
 </html>

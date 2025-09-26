@@ -14,7 +14,7 @@ $packageRatings = getAllPackageRatings();
     <meta name="robots" content="INDEX,FOLLOW">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Title -->
-    <title>Sri Lanka Tour Packages - Meditation & Cultural Experiences | Marshell Holidays</title>
+    <title>Sri Lanka Tour Packages - Meditation & Cultural Experiences | Marshall Holidays</title>
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/images/logo/favicon.png">
     <!-- Aos -->
@@ -221,7 +221,7 @@ $packageRatings = getAllPackageRatings();
             <div class="col-lg-8">
                 <div>
                     <h2 class="breadcrumb-title text-center tw-mb-6 char-animation" style="font-size: 2.5rem; color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); font-weight: 600;">
-                        <span class="title-line-1">Marshell Holidays</span>
+                        <span class="title-line-1">Marshall Holidays</span>
                         <br>
                         <span class="title-line-2">Tour Packages</span>
                     </h2>
