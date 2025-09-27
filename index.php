@@ -497,7 +497,7 @@ $testimonials = getActiveTestimonials(6); // Get up to 6 active testimonials
                                         </div>
                                         <div class="service-two-content tw-px-4 d-flex flex-column flex-grow-1">
                                              <span class="service-two-location tw-mb-3 d-block"><i class="ph ph-map-pin"></i> Complete Sri Lanka Experience</span>
-                                             <h4 class="tw-text-6 fw-normal text-capitalize tw-mb-4 tw-mt-2"><a class="hover-text-secondary" href="jewels-of-ceylon-grand-tour.html">JEWELS OF CEYLON GRAND TOUR</a></h4>
+                                             <h4 class="tw-text-6 fw-normal text-capitalize tw-mb-4 tw-mt-2"><a class="hover-text-secondary" href="jewels-of-ceylon-grand-tour.php">JEWELS OF CEYLON GRAND TOUR</a></h4>
                                              <p class="service-two-paragraph tw-mb-6 tw-leading-relaxed">14 Days/13 Nights cultural odyssey exploring ancient kingdoms, UNESCO sites, wildlife sanctuaries, hill country tea estates, and pristine beaches.</p>
                                              <div class="flex-grow-1"></div>
                                              <div class="service-two-wrap tw-rounded-xl tw-py-5 tw-px-6">
@@ -507,11 +507,11 @@ $testimonials = getActiveTestimonials(6); // Get up to 6 active testimonials
                                                   </div>
                                                   <div class="d-flex align-items-center justify-content-between flex-wrap row-gap-3">
                                                        <div class="service-two-price">
-                                                            <h6>USD $1,775</h6>
-                                                            <p>/ Per Person</p>
+                                                            <h6>Contact Us</h6>
+                                                            <p>/ For Rates</p>
                                                        </div>
                                                        <div>
-                                                            <a class="font-heading tw-text-sm text-uppercase text-main-600 fw-bold hover-text-secondary" href="jewels-of-ceylon-grand-tour.html">EXPLORE MORE <i class="tw-text-base ph ph-arrow-up-right"></i></a>
+                                                            <a class="font-heading tw-text-sm text-uppercase text-main-600 fw-bold hover-text-secondary" href="jewels-of-ceylon-grand-tour.php">EXPLORE MORE <i class="tw-text-base ph ph-arrow-up-right"></i></a>
                                                        </div>
                                                   </div>
                                              </div>
@@ -539,7 +539,7 @@ $testimonials = getActiveTestimonials(6); // Get up to 6 active testimonials
                                                             <p>/ For Rates</p>
                                                        </div>
                                                        <div>
-                                                            <a class="font-heading tw-text-sm text-uppercase text-main-600 fw-bold hover-text-secondary" href="ceylon-discovery-explorer.html">EXPLORE MORE <i class="tw-text-base ph ph-arrow-up-right"></i></a>
+                                                            <a class="font-heading tw-text-sm text-uppercase text-main-600 fw-bold hover-text-secondary" href="ceylon-discovery-explorer.php">EXPLORE MORE <i class="tw-text-base ph ph-arrow-up-right"></i></a>
                                                        </div>
                                                   </div>
                                              </div>
@@ -553,7 +553,7 @@ $testimonials = getActiveTestimonials(6); // Get up to 6 active testimonials
                                         </div>
                                         <div class="service-two-content tw-px-4 d-flex flex-column flex-grow-1">
                                              <span class="service-two-location tw-mb-3 d-block"><i class="ph ph-map-pin"></i> Coastal Paradise, Sri Lanka</span>
-                                             <h4 class="tw-text-6 fw-normal text-capitalize tw-mb-4 tw-mt-2"><a class="hover-text-secondary" href="paradise-coastal-adventure.html">PARADISE COASTAL ADVENTURE</a></h4>
+                                             <h4 class="tw-text-6 fw-normal text-capitalize tw-mb-4 tw-mt-2"><a class="hover-text-secondary" href="paradise-coastal-adventure.php">PARADISE COASTAL ADVENTURE</a></h4>
                                              <p class="service-two-paragraph tw-mb-6 tw-leading-relaxed">7 Days/6 Nights coastal discovery featuring whale watching, beach relaxation, historic Galle Fort, and vibrant marine ecosystems.</p>
                                              <div class="flex-grow-1"></div>
                                              <div class="service-two-wrap tw-rounded-xl tw-py-5 tw-px-6">
@@ -567,7 +567,7 @@ $testimonials = getActiveTestimonials(6); // Get up to 6 active testimonials
                                                             <p>/ For Rates</p>
                                                        </div>
                                                        <div>
-                                                            <a class="font-heading tw-text-sm text-uppercase text-main-600 fw-bold hover-text-secondary" href="paradise-coastal-adventure.html">EXPLORE MORE <i class="tw-text-base ph ph-arrow-up-right"></i></a>
+                                                            <a class="font-heading tw-text-sm text-uppercase text-main-600 fw-bold hover-text-secondary" href="paradise-coastal-adventure.php">EXPLORE MORE <i class="tw-text-base ph ph-arrow-up-right"></i></a>
                                                        </div>
                                                   </div>
                                              </div>
@@ -581,7 +581,7 @@ $testimonials = getActiveTestimonials(6); // Get up to 6 active testimonials
                                         </div>
                                         <div class="service-two-content tw-px-4 d-flex flex-column flex-grow-1">
                                              <span class="service-two-location tw-mb-3 d-block"><i class="ph ph-map-pin"></i> Wellness & Spirituality, Sri Lanka</span>
-                                             <h4 class="tw-text-6 fw-normal text-capitalize tw-mb-4 tw-mt-2"><a class="hover-text-secondary" href="sacred-ceylon-wellness-retreat.html">SACRED CEYLON WELLNESS RETREAT</a></h4>
+                                             <h4 class="tw-text-6 fw-normal text-capitalize tw-mb-4 tw-mt-2"><a class="hover-text-secondary" href="sacred-ceylon-wellness-retreat.php">SACRED CEYLON WELLNESS RETREAT</a></h4>
                                              <p class="service-two-paragraph tw-mb-6 tw-leading-relaxed">7 Days/6 Nights spiritual journey combining Ayurvedic wellness, meditation practices, and temple visits.</p>
                                              <div class="flex-grow-1"></div>
                                              <div class="service-two-wrap tw-rounded-xl tw-py-5 tw-px-6">
@@ -595,7 +595,7 @@ $testimonials = getActiveTestimonials(6); // Get up to 6 active testimonials
                                                             <p>/ For Rates</p>
                                                        </div>
                                                        <div>
-                                                            <a class="font-heading tw-text-sm text-uppercase text-main-600 fw-bold hover-text-secondary" href="sacred-ceylon-wellness-retreat.html">EXPLORE MORE <i class="tw-text-base ph ph-arrow-up-right"></i></a>
+                                                            <a class="font-heading tw-text-sm text-uppercase text-main-600 fw-bold hover-text-secondary" href="sacred-ceylon-wellness-retreat.php">EXPLORE MORE <i class="tw-text-base ph ph-arrow-up-right"></i></a>
                                                        </div>
                                                   </div>
                                              </div>
@@ -609,7 +609,7 @@ $testimonials = getActiveTestimonials(6); // Get up to 6 active testimonials
                                         </div>
                                         <div class="service-two-content tw-px-4 d-flex flex-column flex-grow-1">
                                              <span class="service-two-location tw-mb-3 d-block"><i class="ph ph-map-pin"></i> Ancient Sites & Buddhist Heritage, Sri Lanka</span>
-                                             <h4 class="tw-text-6 fw-normal text-capitalize tw-mb-4 tw-mt-2"><a class="hover-text-secondary" href="buddhist-cultural-visit-7day.html">Buddhist Cultural Visit</a></h4>
+                                             <h4 class="tw-text-6 fw-normal text-capitalize tw-mb-4 tw-mt-2"><a class="hover-text-secondary" href="buddhist-cultural-visit-7day.php">Buddhist Cultural Visit</a></h4>
                                              <p class="service-two-paragraph tw-mb-6 tw-leading-relaxed">7 Days/6 Nights Buddhist pilgrimage visiting Anuradhapura, Sigiriya, Kandy Temple of Tooth, and historic Colombo with spiritual experiences.</p>
                                              <div class="flex-grow-1"></div>
                                              <div class="service-two-wrap tw-rounded-xl tw-py-5 tw-px-6">
@@ -623,7 +623,7 @@ $testimonials = getActiveTestimonials(6); // Get up to 6 active testimonials
                                                             <p>/ For Rates</p>
                                                        </div>
                                                        <div>
-                                                            <a class="font-heading tw-text-sm text-uppercase text-main-600 fw-bold hover-text-secondary" href="buddhist-cultural-visit-7day.html">EXPLORE MORE <i class="tw-text-base ph ph-arrow-up-right"></i></a>
+                                                            <a class="font-heading tw-text-sm text-uppercase text-main-600 fw-bold hover-text-secondary" href="buddhist-cultural-visit-7day.php">EXPLORE MORE <i class="tw-text-base ph ph-arrow-up-right"></i></a>
                                                        </div>
                                                   </div>
                                              </div>
@@ -637,7 +637,7 @@ $testimonials = getActiveTestimonials(6); // Get up to 6 active testimonials
                                         </div>
                                         <div class="service-two-content tw-px-4 d-flex flex-column flex-grow-1">
                                              <span class="service-two-location tw-mb-3 d-block"><i class="ph ph-map-pin"></i> Hill Country & Coastal, Sri Lanka</span>
-                                             <h4 class="tw-text-6 fw-normal text-capitalize tw-mb-4 tw-mt-2"><a class="hover-text-secondary" href="cool-relaxing-visit-7day.html">Cool Relaxing Visit</a></h4>
+                                             <h4 class="tw-text-6 fw-normal text-capitalize tw-mb-4 tw-mt-2"><a class="hover-text-secondary" href="cool-relaxing-visit-7day.php">Cool Relaxing Visit</a></h4>
                                              <p class="service-two-paragraph tw-mb-6 tw-leading-relaxed">7 Days relaxing journey through Kandy Temple, cool Nuwara Eliya hill station, Nine Arch Bridge Ella, and historic Galle Fort.</p>
                                              <div class="flex-grow-1"></div>
                                              <div class="service-two-wrap tw-rounded-xl tw-py-5 tw-px-6">
@@ -651,7 +651,7 @@ $testimonials = getActiveTestimonials(6); // Get up to 6 active testimonials
                                                             <p>/ For Rates</p>
                                                        </div>
                                                        <div>
-                                                            <a class="font-heading tw-text-sm text-uppercase text-main-600 fw-bold hover-text-secondary" href="cool-relaxing-visit-7day.html">EXPLORE MORE <i class="tw-text-base ph ph-arrow-up-right"></i></a>
+                                                            <a class="font-heading tw-text-sm text-uppercase text-main-600 fw-bold hover-text-secondary" href="cool-relaxing-visit-7day.php">EXPLORE MORE <i class="tw-text-base ph ph-arrow-up-right"></i></a>
                                                        </div>
                                                   </div>
                                              </div>
