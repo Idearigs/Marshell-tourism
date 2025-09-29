@@ -35,6 +35,9 @@ $testimonials = getActiveTestimonials(6); // Get up to 6 active testimonials
     <link rel="stylesheet" href="assets/css/main.css">
     <!-- Custom Rent Car CSS for Footer -->
     <link rel="stylesheet" href="assets/css/rent-car-custom.css">
+    <!-- Elfsight WhatsApp Chat | Untitled WhatsApp Chat -->
+<script src="https://elfsightcdn.com/platform.js" async></script>
+<div class="elfsight-app-2c3aaac6-0b9c-4362-9a19-38c17f636211" data-elfsight-app-lazy></div>
 
     <!-- Custom CSS for Equal Card Heights -->
     <style>
@@ -288,40 +291,44 @@ $testimonials = getActiveTestimonials(6); // Get up to 6 active testimonials
                          <div class="row">
                               <div class="col-xl-12">
                                    <h3 class="form-heading text-center mb-4">Plan Your Journey</h3>
-                         <div class="checkout-main-wrapper">
+                         <form action="https://api.web3forms.com/submit" method="POST" id="heroQuickForm" class="checkout-main-wrapper">
+                              <!-- Web3Forms Hidden Fields -->
+                              <input type="hidden" name="access_key" value="17f8248d-f761-4fdd-9239-dc733c75b854">
+                              <input type="hidden" name="from_name" value="QUICK BOOKING">
+                              <input type="hidden" name="subject" value="QUICK BOOKING FROM Marshallholidays.com">
+                              <input type="hidden" name="redirect" value="https://web3forms.com/success">
+
                               <div class="checkout-wrapper d-flex flex-column">
                                    <label class="tw-text-sm fw-normal font-body d-flex align-content-center tw-gap-4 tw-mb-2"><span><i class="fas fa-user" style="color: #1e3a8a; font-size: 16px;"></i></span> Name</label>
-                                   <input type="text" class="form-control tw-py-3 tw-px-4 tw-rounded-md border border-gray-300 focus:border-main-600" placeholder="Enter your full name" required>
+                                   <input type="text" name="name" class="form-control tw-py-3 tw-px-4 tw-rounded-md border border-gray-300 focus:border-main-600" placeholder="Enter your full name" required>
                               </div>
                               <div class="checkout-wrapper d-flex flex-column">
                                    <label class="tw-text-sm fw-normal font-body d-flex align-content-center tw-gap-4 tw-mb-2"><span><i class="fas fa-envelope" style="color: #1e3a8a; font-size: 16px;"></i></span> Email</label>
-                                   <input type="email" class="form-control tw-py-3 tw-px-4 tw-rounded-md border border-gray-300 focus:border-main-600" placeholder="Enter your email address" required>
+                                   <input type="email" name="email" class="form-control tw-py-3 tw-px-4 tw-rounded-md border border-gray-300 focus:border-main-600" placeholder="Enter your email address" required>
                               </div>
                               <div class="checkout-wrapper d-flex flex-column">
                                    <label class="tw-text-sm fw-normal font-body d-flex align-content-center tw-gap-4 tw-mb-2"><span><i class="fas fa-phone" style="color: #1e3a8a; font-size: 16px;"></i></span> Phone</label>
-                                   <input type="tel" class="form-control tw-py-3 tw-px-4 tw-rounded-md border border-gray-300 focus:border-main-600" placeholder="Enter your phone number" required>
+                                   <input type="tel" name="phone" class="form-control tw-py-3 tw-px-4 tw-rounded-md border border-gray-300 focus:border-main-600" placeholder="Enter your phone number" required>
                               </div>
                               <div class="checkout-wrapper d-flex flex-column">
                                    <label class="tw-text-sm fw-normal font-body d-flex align-content-center tw-gap-4 tw-mb-2"><span><i class="fas fa-hiking" style="color: #1e3a8a; font-size: 16px;"></i></span> Activity</label>
-                                   <div class="nice-select"><span class="current">Choose Activity</span>
-                                       <ul class="list">
-                                           <li class="option">Choose Activity</li>
-                                           <li class="option">Cultural Tours</li>
-                                           <li class="option">Adventure Tours</li>
-                                           <li class="option">Wildlife Safari</li>
-                                           <li class="option">Beach Tours</li>
-                                           <li class="option">Hill Country Tours</li>
-                                           <li class="option">Photography Tours</li>
-                                           <li class="option">Customized Tours</li>
-                                       </ul>
-                                   </div>
+                                   <select name="activity" class="form-control tw-py-3 tw-px-4 tw-rounded-md border border-gray-300 focus:border-main-600" required>
+                                       <option value="">Choose Activity</option>
+                                       <option value="Cultural Tours">Cultural Tours</option>
+                                       <option value="Adventure Tours">Adventure Tours</option>
+                                       <option value="Wildlife Safari">Wildlife Safari</option>
+                                       <option value="Beach Tours">Beach Tours</option>
+                                       <option value="Hill Country Tours">Hill Country Tours</option>
+                                       <option value="Photography Tours">Photography Tours</option>
+                                       <option value="Customized Tours">Customized Tours</option>
+                                   </select>
                               </div>
                               <div class="checkout-wrapper">
                                    <div class="checkout-button common-hover-yellow">
-                                        <button class="primary-btn bg-main-600 text-white tw-py-4 tw-px-10 fs-15 text-capitalize fw-bold font-heading tw-gap-2 d-inline-flex align-items-center tw-rounded-4xl">Submit</button>
+                                        <button type="submit" class="primary-btn bg-main-600 text-white tw-py-4 tw-px-10 fs-15 text-capitalize fw-bold font-heading tw-gap-2 d-inline-flex align-items-center tw-rounded-4xl">Submit</button>
                                    </div>
                               </div>
-                              </div>
+                         </form>
                          </div>
                     </div>
                </div>
@@ -338,40 +345,44 @@ $testimonials = getActiveTestimonials(6); // Get up to 6 active testimonials
                         <div class="row">
                             <div class="col-xl-12">
                                 <h3 class="form-heading text-center mb-4">Plan Your Journey</h3>
-                                <div class="checkout-main-wrapper">
+                                <form action="https://api.web3forms.com/submit" method="POST" id="mobileQuickForm" class="checkout-main-wrapper">
+                                    <!-- Web3Forms Hidden Fields -->
+                                    <input type="hidden" name="access_key" value="17f8248d-f761-4fdd-9239-dc733c75b854">
+                                    <input type="hidden" name="from_name" value="QUICK BOOKING">
+                                    <input type="hidden" name="subject" value="QUICK BOOKING FROM Marshallholidays.com">
+                                    <input type="hidden" name="redirect" value="https://web3forms.com/success">
+
                                     <div class="checkout-wrapper d-flex flex-column">
                                         <label class="tw-text-sm fw-normal font-body d-flex align-content-center tw-gap-4 tw-mb-2"><span><i class="fas fa-user" style="color: #1e3a8a; font-size: 16px;"></i></span> Name</label>
-                                        <input type="text" class="form-control tw-py-3 tw-px-4 tw-rounded-md border border-gray-300 focus:border-main-600" placeholder="Enter your full name" required>
+                                        <input type="text" name="name" class="form-control tw-py-3 tw-px-4 tw-rounded-md border border-gray-300 focus:border-main-600" placeholder="Enter your full name" required>
                                     </div>
                                     <div class="checkout-wrapper d-flex flex-column">
                                         <label class="tw-text-sm fw-normal font-body d-flex align-content-center tw-gap-4 tw-mb-2"><span><i class="fas fa-envelope" style="color: #1e3a8a; font-size: 16px;"></i></span> Email</label>
-                                        <input type="email" class="form-control tw-py-3 tw-px-4 tw-rounded-md border border-gray-300 focus:border-main-600" placeholder="Enter your email address" required>
+                                        <input type="email" name="email" class="form-control tw-py-3 tw-px-4 tw-rounded-md border border-gray-300 focus:border-main-600" placeholder="Enter your email address" required>
                                     </div>
                                     <div class="checkout-wrapper d-flex flex-column">
                                         <label class="tw-text-sm fw-normal font-body d-flex align-content-center tw-gap-4 tw-mb-2"><span><i class="fas fa-phone" style="color: #1e3a8a; font-size: 16px;"></i></span> Phone</label>
-                                        <input type="tel" class="form-control tw-py-3 tw-px-4 tw-rounded-md border border-gray-300 focus:border-main-600" placeholder="Enter your phone number" required>
+                                        <input type="tel" name="phone" class="form-control tw-py-3 tw-px-4 tw-rounded-md border border-gray-300 focus:border-main-600" placeholder="Enter your phone number" required>
                                     </div>
                                     <div class="checkout-wrapper d-flex flex-column">
                                         <label class="tw-text-sm fw-normal font-body d-flex align-content-center tw-gap-4 tw-mb-2"><span><i class="fas fa-hiking" style="color: #1e3a8a; font-size: 16px;"></i></span> Activity</label>
-                                        <div class="nice-select"><span class="current">Choose Activity</span>
-                                            <ul class="list">
-                                                <li class="option">Choose Activity</li>
-                                                <li class="option">Cultural Tours</li>
-                                                <li class="option">Adventure Tours</li>
-                                                <li class="option">Wildlife Safari</li>
-                                                <li class="option">Beach Tours</li>
-                                                <li class="option">Hill Country Tours</li>
-                                                <li class="option">Photography Tours</li>
-                                                <li class="option">Customized Tours</li>
-                                            </ul>
-                                        </div>
+                                        <select name="activity" class="form-control tw-py-3 tw-px-4 tw-rounded-md border border-gray-300 focus:border-main-600" required>
+                                            <option value="">Choose Activity</option>
+                                            <option value="Cultural Tours">Cultural Tours</option>
+                                            <option value="Adventure Tours">Adventure Tours</option>
+                                            <option value="Wildlife Safari">Wildlife Safari</option>
+                                            <option value="Beach Tours">Beach Tours</option>
+                                            <option value="Hill Country Tours">Hill Country Tours</option>
+                                            <option value="Photography Tours">Photography Tours</option>
+                                            <option value="Customized Tours">Customized Tours</option>
+                                        </select>
                                     </div>
                                     <div class="checkout-wrapper">
                                         <div class="checkout-button common-hover-yellow">
-                                            <button class="primary-btn bg-main-600 text-white tw-py-4 tw-px-10 fs-15 text-capitalize fw-bold font-heading tw-gap-2 d-inline-flex align-items-center tw-rounded-4xl">Submit</button>
+                                            <button type="submit" class="primary-btn bg-main-600 text-white tw-py-4 tw-px-10 fs-15 text-capitalize fw-bold font-heading tw-gap-2 d-inline-flex align-items-center tw-rounded-4xl">Submit</button>
                                         </div>
                                     </div>
-                                </div>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -1304,6 +1315,224 @@ $testimonials = getActiveTestimonials(6); // Get up to 6 active testimonials
             heroSlide.style.backgroundImage = `url('Mainimg/img/Anuradhapura Sacred City/apur1.jpg')`;
         }
     });
+    </script>
+
+    <!-- Quick Form Submission Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Handle both hero and mobile forms
+            const heroForm = document.getElementById('heroQuickForm');
+            const mobileForm = document.getElementById('mobileQuickForm');
+
+            function handleFormSubmission(form, formType) {
+                if (!form) return;
+
+                form.addEventListener('submit', async function(e) {
+                    e.preventDefault();
+
+                    // Get form data
+                    const formData = new FormData(form);
+                    const submitButton = form.querySelector('button[type="submit"]');
+
+                    // Disable submit button and show loading state
+                    submitButton.disabled = true;
+                    const originalText = submitButton.textContent;
+                    submitButton.textContent = 'Sending...';
+
+                    try {
+                        // Submit form to Web3Forms
+                        const response = await fetch('https://api.web3forms.com/submit', {
+                            method: 'POST',
+                            body: formData
+                        });
+
+                        const result = await response.json();
+
+                        if (result.success) {
+                            // Show success alert
+                            showQuickAlert('Success!', 'Thank you for your booking request! We will contact you soon to confirm your adventure.', 'success');
+                            // Reset form
+                            form.reset();
+                            // Reset select elements to default
+                            const selectElements = form.querySelectorAll('select');
+                            selectElements.forEach(select => select.selectedIndex = 0);
+                        } else {
+                            // Show error alert
+                            showQuickAlert('Error!', 'There was an issue sending your booking request. Please try again.', 'error');
+                        }
+                    } catch (error) {
+                        // Show error alert for network issues
+                        showQuickAlert('Error!', 'Network error. Please check your connection and try again.', 'error');
+                        console.error(`${formType} form submission error:`, error);
+                    } finally {
+                        // Re-enable submit button
+                        submitButton.disabled = false;
+                        submitButton.textContent = originalText;
+                    }
+                });
+            }
+
+            // Initialize both forms
+            handleFormSubmission(heroForm, 'Hero');
+            handleFormSubmission(mobileForm, 'Mobile');
+        });
+
+        // Quick Alert/Notification System for Index Page
+        function showQuickAlert(title, message, type) {
+            // Remove any existing alerts
+            const existingAlerts = document.querySelectorAll('.quick-alert');
+            existingAlerts.forEach(alert => alert.remove());
+
+            // Create alert element
+            const alertElement = document.createElement('div');
+            alertElement.className = `quick-alert quick-alert-${type}`;
+            alertElement.innerHTML = `
+                <div class="quick-alert-content">
+                    <div class="quick-alert-icon">
+                        ${type === 'success' ? '✓' : '✕'}
+                    </div>
+                    <div class="quick-alert-text">
+                        <div class="quick-alert-title">${title}</div>
+                        <div class="quick-alert-message">${message}</div>
+                    </div>
+                    <button class="quick-alert-close" onclick="this.parentElement.parentElement.remove()">&times;</button>
+                </div>
+            `;
+
+            // Add alert styles
+            const alertStyles = `
+                <style>
+                .quick-alert {
+                    position: fixed;
+                    top: 20px;
+                    right: 20px;
+                    z-index: 10000;
+                    min-width: 320px;
+                    max-width: 420px;
+                    background: white;
+                    border-radius: 12px;
+                    box-shadow: 0 6px 25px rgba(0,0,0,0.15);
+                    overflow: hidden;
+                    animation: slideInRight 0.4s ease-out;
+                }
+
+                .quick-alert-success {
+                    border-left: 5px solid #10b981;
+                }
+
+                .quick-alert-error {
+                    border-left: 5px solid #ef4444;
+                }
+
+                .quick-alert-content {
+                    display: flex;
+                    align-items: flex-start;
+                    padding: 18px;
+                    gap: 14px;
+                }
+
+                .quick-alert-icon {
+                    width: 28px;
+                    height: 28px;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: white;
+                    font-weight: bold;
+                    font-size: 16px;
+                    flex-shrink: 0;
+                }
+
+                .quick-alert-success .quick-alert-icon {
+                    background: #10b981;
+                }
+
+                .quick-alert-error .quick-alert-icon {
+                    background: #ef4444;
+                }
+
+                .quick-alert-text {
+                    flex: 1;
+                }
+
+                .quick-alert-title {
+                    font-weight: 600;
+                    font-size: 17px;
+                    color: #1f2937;
+                    margin-bottom: 6px;
+                }
+
+                .quick-alert-message {
+                    font-size: 14px;
+                    color: #6b7280;
+                    line-height: 1.5;
+                }
+
+                .quick-alert-close {
+                    background: none;
+                    border: none;
+                    font-size: 22px;
+                    color: #9ca3af;
+                    cursor: pointer;
+                    padding: 0;
+                    width: 24px;
+                    height: 24px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-shrink: 0;
+                }
+
+                .quick-alert-close:hover {
+                    color: #6b7280;
+                }
+
+                @keyframes slideInRight {
+                    from {
+                        transform: translateX(100%);
+                        opacity: 0;
+                    }
+                    to {
+                        transform: translateX(0);
+                        opacity: 1;
+                    }
+                }
+
+                @media (max-width: 640px) {
+                    .quick-alert {
+                        left: 20px;
+                        right: 20px;
+                        min-width: auto;
+                        max-width: none;
+                    }
+                }
+                </style>
+            `;
+
+            // Add styles to head if not already added
+            if (!document.querySelector('#quick-alert-styles')) {
+                const styleElement = document.createElement('div');
+                styleElement.id = 'quick-alert-styles';
+                styleElement.innerHTML = alertStyles;
+                document.head.appendChild(styleElement);
+            }
+
+            // Add alert to page
+            document.body.appendChild(alertElement);
+
+            // Auto remove after 6 seconds
+            setTimeout(() => {
+                if (alertElement && alertElement.parentNode) {
+                    alertElement.style.animation = 'slideInRight 0.4s ease-out reverse';
+                    setTimeout(() => {
+                        if (alertElement && alertElement.parentNode) {
+                            alertElement.remove();
+                        }
+                    }, 400);
+                }
+            }, 6000);
+        }
     </script>
     
     <!-- Simple FAQ Accordion Fix -->

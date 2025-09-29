@@ -27,7 +27,9 @@
     <link rel="stylesheet" href="assets/css/main.css">
     <!-- Custom Rent Car CSS -->
     <link rel="stylesheet" href="assets/css/rent-car-custom.css">
-
+<!-- Elfsight WhatsApp Chat | Untitled WhatsApp Chat -->
+<script src="https://elfsightcdn.com/platform.js" async></script>
+<div class="elfsight-app-2c3aaac6-0b9c-4362-9a19-38c17f636211" data-elfsight-app-lazy></div>
     <!-- Fix conflicting navbar -->
     <style>
         /* Ensure tour navbar is properly positioned */
@@ -288,51 +290,56 @@
                         <div class="rent-car-booking-card">
                             <h4>Your Information</h4>
                             
-                            <form id="bookingForm">
+                            <form id="bookingForm" action="https://api.web3forms.com/submit" method="POST" class="car-rental-form">
+                                <!-- Web3Forms Hidden Fields -->
+                                <input type="hidden" name="access_key" value="17f8248d-f761-4fdd-9239-dc733c75b854">
+                                <input type="hidden" name="from_name" value="CAR RENTAL BOOKING">
+                                <input type="hidden" name="subject" value="CAR RENTAL BOOKING FROM Marshallholidays.com">
+                                <input type="hidden" name="redirect" value="https://web3forms.com/success">
                                 <div class="row">
                                     <div class="col-md-6 mb-3">
                                         <label class="rent-car-form-label">First Name</label>
-                                        <input type="text" class="rent-car-form-control" required>
+                                        <input type="text" name="first_name" class="rent-car-form-control" required>
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label class="rent-car-form-label">Last Name</label>
-                                        <input type="text" class="rent-car-form-control" required>
+                                        <input type="text" name="last_name" class="rent-car-form-control" required>
                                     </div>
                                 </div>
                                 
                                 <div class="row">
                                     <div class="col-md-6 mb-3">
                                         <label class="rent-car-form-label">Email</label>
-                                        <input type="email" class="rent-car-form-control" required>
+                                        <input type="email" name="email" class="rent-car-form-control" required>
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label class="rent-car-form-label">Phone</label>
-                                        <input type="tel" class="rent-car-form-control" required>
+                                        <input type="tel" name="phone" class="rent-car-form-control" required>
                                     </div>
                                 </div>
                                 
                                 <div class="row">
                                     <div class="col-md-6 mb-3">
                                         <label class="rent-car-form-label">Start Date</label>
-                                        <input type="date" class="rent-car-form-control" required>
+                                        <input type="date" name="start_date" class="rent-car-form-control" required>
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label class="rent-car-form-label">Duration (days)</label>
-                                        <select class="rent-car-form-control" required>
+                                        <select name="duration" class="rent-car-form-control" required>
                                             <option value="">Select duration</option>
-                                            <option value="1">1 Day</option>
-                                            <option value="2">2 Days</option>
-                                            <option value="3">3 Days</option>
-                                            <option value="5">5 Days</option>
-                                            <option value="7">1 Week</option>
-                                            <option value="14">2 Weeks</option>
+                                            <option value="1 Day">1 Day</option>
+                                            <option value="2 Days">2 Days</option>
+                                            <option value="3 Days">3 Days</option>
+                                            <option value="5 Days">5 Days</option>
+                                            <option value="1 Week">1 Week</option>
+                                            <option value="2 Weeks">2 Weeks</option>
                                         </select>
                                     </div>
                                 </div>
                                 
                                 <div class="mb-4">
                                     <label class="rent-car-form-label">Special Requirements</label>
-                                    <textarea class="rent-car-form-control" rows="3" placeholder="Any special requests or requirements..."></textarea>
+                                    <textarea name="special_requirements" class="rent-car-form-control" rows="3" placeholder="Any special requests or requirements..."></textarea>
                                 </div>
                                 
                                 <button type="submit" class="rent-car-submit-btn">
@@ -469,6 +476,214 @@
     <script src="assets/js/phosphor-icon.js"></script>
     <script src="assets/js/boostrap.bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
+
+    <!-- Car Rental Form Submission Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const carRentalForm = document.querySelector('.car-rental-form');
+
+            if (carRentalForm) {
+                carRentalForm.addEventListener('submit', async function(e) {
+                    e.preventDefault();
+
+                    // Get form data
+                    const formData = new FormData(carRentalForm);
+                    const submitButton = carRentalForm.querySelector('button[type="submit"]');
+
+                    // Disable submit button and show loading state
+                    submitButton.disabled = true;
+                    const originalHTML = submitButton.innerHTML;
+                    submitButton.innerHTML = 'Booking... <i class="ph ph-spinner ph-spin ms-2"></i>';
+
+                    try {
+                        // Submit form to Web3Forms
+                        const response = await fetch('https://api.web3forms.com/submit', {
+                            method: 'POST',
+                            body: formData
+                        });
+
+                        const result = await response.json();
+
+                        if (result.success) {
+                            // Show success alert
+                            showCarRentalAlert('Booking Confirmed!', `Thank you for your car rental booking! We will contact you shortly to confirm your reservation and provide pickup details for your ${formData.get('duration')} rental.`, 'success');
+                            // Reset form
+                            carRentalForm.reset();
+                        } else {
+                            // Show error alert
+                            showCarRentalAlert('Booking Failed!', 'There was an issue processing your car rental booking. Please try again or contact us directly.', 'error');
+                        }
+                    } catch (error) {
+                        // Show error alert for network issues
+                        showCarRentalAlert('Connection Error!', 'Network error. Please check your connection and try again.', 'error');
+                        console.error('Car rental form submission error:', error);
+                    } finally {
+                        // Re-enable submit button
+                        submitButton.disabled = false;
+                        submitButton.innerHTML = originalHTML;
+                    }
+                });
+            }
+        });
+
+        // Car Rental Alert System
+        function showCarRentalAlert(title, message, type) {
+            // Remove any existing alerts
+            const existingAlerts = document.querySelectorAll('.car-rental-alert');
+            existingAlerts.forEach(alert => alert.remove());
+
+            // Create alert element
+            const alertElement = document.createElement('div');
+            alertElement.className = `car-rental-alert car-rental-alert-${type}`;
+            alertElement.innerHTML = `
+                <div class="car-rental-alert-content">
+                    <div class="car-rental-alert-icon">
+                        ${type === 'success' ? '✓' : '✕'}
+                    </div>
+                    <div class="car-rental-alert-text">
+                        <div class="car-rental-alert-title">${title}</div>
+                        <div class="car-rental-alert-message">${message}</div>
+                    </div>
+                    <button class="car-rental-alert-close" onclick="this.parentElement.parentElement.remove()">&times;</button>
+                </div>
+            `;
+
+            // Add alert styles if not already added
+            if (!document.querySelector('#car-rental-alert-styles')) {
+                const styleElement = document.createElement('style');
+                styleElement.id = 'car-rental-alert-styles';
+                styleElement.textContent = `
+                .car-rental-alert {
+                    position: fixed;
+                    top: 20px;
+                    right: 20px;
+                    z-index: 10000;
+                    min-width: 360px;
+                    max-width: 460px;
+                    background: white;
+                    border-radius: 16px;
+                    box-shadow: 0 10px 35px rgba(0,0,0,0.15);
+                    overflow: hidden;
+                    animation: slideInRight 0.5s ease-out;
+                    border: 1px solid #e5e7eb;
+                }
+
+                .car-rental-alert-success {
+                    border-left: 6px solid #10b981;
+                }
+
+                .car-rental-alert-error {
+                    border-left: 6px solid #ef4444;
+                }
+
+                .car-rental-alert-content {
+                    display: flex;
+                    align-items: flex-start;
+                    padding: 22px;
+                    gap: 18px;
+                }
+
+                .car-rental-alert-icon {
+                    width: 36px;
+                    height: 36px;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: white;
+                    font-weight: bold;
+                    font-size: 20px;
+                    flex-shrink: 0;
+                }
+
+                .car-rental-alert-success .car-rental-alert-icon {
+                    background: #10b981;
+                }
+
+                .car-rental-alert-error .car-rental-alert-icon {
+                    background: #ef4444;
+                }
+
+                .car-rental-alert-text {
+                    flex: 1;
+                }
+
+                .car-rental-alert-title {
+                    font-weight: 700;
+                    font-size: 19px;
+                    color: #1f2937;
+                    margin-bottom: 10px;
+                    line-height: 1.2;
+                }
+
+                .car-rental-alert-message {
+                    font-size: 15px;
+                    color: #6b7280;
+                    line-height: 1.6;
+                }
+
+                .car-rental-alert-close {
+                    background: none;
+                    border: none;
+                    font-size: 26px;
+                    color: #9ca3af;
+                    cursor: pointer;
+                    padding: 0;
+                    width: 32px;
+                    height: 32px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-shrink: 0;
+                    border-radius: 50%;
+                    transition: all 0.3s ease;
+                }
+
+                .car-rental-alert-close:hover {
+                    color: #6b7280;
+                    background: #f3f4f6;
+                    transform: scale(1.1);
+                }
+
+                @keyframes slideInRight {
+                    from {
+                        transform: translateX(100%);
+                        opacity: 0;
+                    }
+                    to {
+                        transform: translateX(0);
+                        opacity: 1;
+                    }
+                }
+
+                @media (max-width: 640px) {
+                    .car-rental-alert {
+                        left: 20px;
+                        right: 20px;
+                        min-width: auto;
+                        max-width: none;
+                    }
+                }
+                `;
+                document.head.appendChild(styleElement);
+            }
+
+            // Add alert to page
+            document.body.appendChild(alertElement);
+
+            // Auto remove after 8 seconds
+            setTimeout(() => {
+                if (alertElement && alertElement.parentNode) {
+                    alertElement.style.animation = 'slideInRight 0.5s ease-out reverse';
+                    setTimeout(() => {
+                        if (alertElement && alertElement.parentNode) {
+                            alertElement.remove();
+                        }
+                    }, 500);
+                }
+            }, 8000);
+        }
+    </script>
 
     <!-- Vehicle Cards Navigation Script -->
     <script>

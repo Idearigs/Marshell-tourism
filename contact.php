@@ -29,6 +29,9 @@
     <link rel="stylesheet" href="assets/css/main.css">
     <!-- Custom Rent Car CSS for Footer -->
     <link rel="stylesheet" href="assets/css/rent-car-custom.css">
+    <!-- Elfsight WhatsApp Chat | Untitled WhatsApp Chat -->
+<script src="https://elfsightcdn.com/platform.js" async></script>
+<div class="elfsight-app-2c3aaac6-0b9c-4362-9a19-38c17f636211" data-elfsight-app-lazy></div>
 
     <!-- Custom Contact Page Styles -->
     <style>
@@ -258,11 +261,17 @@
                               <h2 class="tw-text-10 tw-mb-4">Contact Us</h2>
                               <p class="tw-mb-10">Your email address will not be published. Required fields are <br>
                                     marked *</p>
-                              <form action="#" class="tw-mt-70-px d-flex flex-column tw-gap-64-px">
+                              <form action="https://api.web3forms.com/submit" method="POST" class="tw-mt-70-px d-flex flex-column tw-gap-64-px" id="contactForm">
+                                   <!-- Web3Forms Hidden Fields -->
+                                   <input type="hidden" name="access_key" value="17f8248d-f761-4fdd-9239-dc733c75b854">
+                                   <input type="hidden" name="from_name" value="NEW CONTACT">
+                                   <input type="hidden" name="subject" value="NEW CONTACT FROM Marshallholidays.com">
+                                   <input type="hidden" name="redirect" value="https://web3forms.com/success">
+
                                    <div class="row">
                                         <div class="col-xl-12">
                                              <div class="position-relative tw-mb-10">
-                                                  <input type="text" class="cursor-small focus-outline-0 bg-transparent tw-py-3 tw-ps-9 w-100 border border-neutral-200 focus-border-main-600" placeholder="Your Name*" required >
+                                                  <input type="text" name="name" class="cursor-small focus-outline-0 bg-transparent tw-py-3 tw-ps-9 w-100 border border-neutral-200 focus-border-main-600" placeholder="Your Name*" required >
                                                   <span class="tw-text-xl d-flex text-main-600 position-absolute top-50 translate-middle-y tw-start-4">
                                                        <i class="ph-bold ph-user"></i>
                                                   </span>
@@ -270,7 +279,7 @@
                                         </div>
                                         <div class="col-xl-12">
                                              <div class="position-relative tw-mb-10">
-                                                  <input type="email" class="cursor-small focus-outline-0 bg-transparent tw-py-3 tw-ps-9 w-100 border border-neutral-200 focus-border-main-600" placeholder="Email Address*" required >
+                                                  <input type="email" name="email" class="cursor-small focus-outline-0 bg-transparent tw-py-3 tw-ps-9 w-100 border border-neutral-200 focus-border-main-600" placeholder="Email Address*" required >
                                                   <span class="tw-text-xl d-flex text-main-600 position-absolute top-50 translate-middle-y tw-start-4">
                                                        <i class="ph-bold ph-envelope"></i>
                                                   </span>
@@ -278,7 +287,7 @@
                                         </div>
                                         <div class="col-xl-12">
                                              <div class="position-relative tw-mb-3">
-                                                  <textarea class="cursor-small focus-outline-0 bg-transparent tw-py-3 tw-px-13 w-100 border border-neutral-200 focus-border-main-600 tw-h-224-px" placeholder="Enter Your Message here"></textarea>
+                                                  <textarea name="message" class="cursor-small focus-outline-0 bg-transparent tw-py-3 tw-px-13 w-100 border border-neutral-200 focus-border-main-600 tw-h-224-px" placeholder="Enter Your Message here"></textarea>
                                                   <span class="textarea-icon tw-text-xl d-flex text-main-600 position-absolute top-0">
                                                        <i class="ph-bold ph-note-pencil"></i>
                                                   </span>
@@ -289,7 +298,7 @@
                                                   <div class="package-details-contact-checkbox tw-mb-10">
                                                        <div class="custom-control custom-checkbox d-flex align-items-center tw-gap-3">
                                                             <input type="checkbox" class="custom-control-input" id="customCheck1" >
-                                                            <label class="custom-control-label fw-medium text-main-600" for="customCheck1">I agree to Terms & Conditions, Refund Policy and Privacy Policy of Fabrilife.</label>
+                                                            <label class="custom-control-label fw-medium text-main-600" for="customCheck1">I agree to Terms & Conditions, Refund Policy and Privacy Policy of Marshall Holidays.</label>
                                                        </div>
                                                   </div>
                                              </div>
@@ -423,6 +432,212 @@
     <script src="assets/js/custom-gsap.js"></script>
     <!-- main js -->
     <script src="assets/js/main.js"></script>
+
+    <!-- Contact Form Submission Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.getElementById('contactForm');
+
+            if (contactForm) {
+                contactForm.addEventListener('submit', async function(e) {
+                    e.preventDefault();
+
+                    // Get form data
+                    const formData = new FormData(contactForm);
+                    const submitButton = contactForm.querySelector('button[type="submit"]');
+                    const buttonLabel = submitButton.querySelector('.button__label');
+
+                    // Disable submit button and show loading state
+                    submitButton.disabled = true;
+                    buttonLabel.textContent = 'Sending...';
+
+                    try {
+                        // Submit form to Web3Forms
+                        const response = await fetch('https://api.web3forms.com/submit', {
+                            method: 'POST',
+                            body: formData
+                        });
+
+                        const result = await response.json();
+
+                        if (result.success) {
+                            // Show success alert
+                            showAlert('Success!', 'Thank you for contacting us! We will get back to you soon.', 'success');
+                            // Reset form
+                            contactForm.reset();
+                        } else {
+                            // Show error alert
+                            showAlert('Error!', 'There was an issue sending your message. Please try again.', 'error');
+                        }
+                    } catch (error) {
+                        // Show error alert for network issues
+                        showAlert('Error!', 'Network error. Please check your connection and try again.', 'error');
+                        console.error('Form submission error:', error);
+                    } finally {
+                        // Re-enable submit button
+                        submitButton.disabled = false;
+                        buttonLabel.textContent = 'Submit';
+                    }
+                });
+            }
+        });
+
+        // Alert/Notification System
+        function showAlert(title, message, type) {
+            // Remove any existing alerts
+            const existingAlerts = document.querySelectorAll('.custom-alert');
+            existingAlerts.forEach(alert => alert.remove());
+
+            // Create alert element
+            const alertElement = document.createElement('div');
+            alertElement.className = `custom-alert custom-alert-${type}`;
+            alertElement.innerHTML = `
+                <div class="alert-content">
+                    <div class="alert-icon">
+                        ${type === 'success' ? '✓' : '✕'}
+                    </div>
+                    <div class="alert-text">
+                        <div class="alert-title">${title}</div>
+                        <div class="alert-message">${message}</div>
+                    </div>
+                    <button class="alert-close" onclick="this.parentElement.parentElement.remove()">&times;</button>
+                </div>
+            `;
+
+            // Add alert styles
+            const alertStyles = `
+                <style>
+                .custom-alert {
+                    position: fixed;
+                    top: 20px;
+                    right: 20px;
+                    z-index: 10000;
+                    min-width: 300px;
+                    max-width: 400px;
+                    background: white;
+                    border-radius: 8px;
+                    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+                    overflow: hidden;
+                    animation: slideInRight 0.3s ease-out;
+                }
+
+                .custom-alert-success {
+                    border-left: 4px solid #10b981;
+                }
+
+                .custom-alert-error {
+                    border-left: 4px solid #ef4444;
+                }
+
+                .alert-content {
+                    display: flex;
+                    align-items: flex-start;
+                    padding: 16px;
+                    gap: 12px;
+                }
+
+                .alert-icon {
+                    width: 24px;
+                    height: 24px;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: white;
+                    font-weight: bold;
+                    font-size: 14px;
+                    flex-shrink: 0;
+                }
+
+                .custom-alert-success .alert-icon {
+                    background: #10b981;
+                }
+
+                .custom-alert-error .alert-icon {
+                    background: #ef4444;
+                }
+
+                .alert-text {
+                    flex: 1;
+                }
+
+                .alert-title {
+                    font-weight: 600;
+                    font-size: 16px;
+                    color: #1f2937;
+                    margin-bottom: 4px;
+                }
+
+                .alert-message {
+                    font-size: 14px;
+                    color: #6b7280;
+                    line-height: 1.4;
+                }
+
+                .alert-close {
+                    background: none;
+                    border: none;
+                    font-size: 20px;
+                    color: #9ca3af;
+                    cursor: pointer;
+                    padding: 0;
+                    width: 20px;
+                    height: 20px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-shrink: 0;
+                }
+
+                .alert-close:hover {
+                    color: #6b7280;
+                }
+
+                @keyframes slideInRight {
+                    from {
+                        transform: translateX(100%);
+                        opacity: 0;
+                    }
+                    to {
+                        transform: translateX(0);
+                        opacity: 1;
+                    }
+                }
+
+                @media (max-width: 640px) {
+                    .custom-alert {
+                        left: 20px;
+                        right: 20px;
+                        min-width: auto;
+                    }
+                }
+                </style>
+            `;
+
+            // Add styles to head if not already added
+            if (!document.querySelector('#alert-styles')) {
+                const styleElement = document.createElement('div');
+                styleElement.id = 'alert-styles';
+                styleElement.innerHTML = alertStyles;
+                document.head.appendChild(styleElement);
+            }
+
+            // Add alert to page
+            document.body.appendChild(alertElement);
+
+            // Auto remove after 5 seconds
+            setTimeout(() => {
+                if (alertElement && alertElement.parentNode) {
+                    alertElement.style.animation = 'slideInRight 0.3s ease-out reverse';
+                    setTimeout(() => {
+                        if (alertElement && alertElement.parentNode) {
+                            alertElement.remove();
+                        }
+                    }, 300);
+                }
+            }, 5000);
+        }
+    </script>
 
 </body>
 

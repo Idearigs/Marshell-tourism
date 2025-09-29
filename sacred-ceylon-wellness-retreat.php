@@ -33,6 +33,9 @@
     <link rel="stylesheet" href="assets/css/reviews.css">
 
     <!-- Tour Package Gallery Fix -->
+     <!-- Elfsight WhatsApp Chat | Untitled WhatsApp Chat -->
+<script src="https://elfsightcdn.com/platform.js" async></script>
+<div class="elfsight-app-2c3aaac6-0b9c-4362-9a19-38c17f636211" data-elfsight-app-lazy></div>
     <style>
     .package-details-swiper-wrapper .swiper-slide {
         height: 400px !important; /* Fixed height for all slides */
@@ -638,32 +641,38 @@ include 'includes/tour-hero.php';
                               <div class="package-details-siteber">
                                    <div class="bg-white tw-text-xl tw-pt-10 tw-pb-10 tw-px-10 tw-mb-7" data-aos-duration="1000" data-aos-delay="300">
                                         <h4 class="tw-text-xl tw-mb-4">Book This Tour</h4>
-                                        <form action="#" method="post">
+                                        <form action="https://api.web3forms.com/submit" method="POST" id="tourBookingForm4" class="tour-booking-form">
+                                            <!-- Web3Forms Hidden Fields -->
+                                            <input type="hidden" name="access_key" value="17f8248d-f761-4fdd-9239-dc733c75b854">
+                                            <input type="hidden" name="from_name" value="TOUR BOOKING">
+                                            <input type="hidden" name="subject" value="TOUR BOOKING - Sacred Ceylon Wellness Retreat FROM Marshallholidays.com">
+                                            <input type="hidden" name="tour_package" value="Sacred Ceylon Wellness Retreat">
+                                            <input type="hidden" name="redirect" value="https://web3forms.com/success">
                                             <div class="package-details-siteber-item tw-mb-4">
-                                                <input type="text" class="w-100 tw-p-3 border tw-rounded" placeholder="Full Name*" required>
+                                                <input type="text" name="name" class="w-100 tw-p-3 border tw-rounded" placeholder="Full Name*" required>
                                             </div>
                                             <div class="package-details-siteber-item tw-mb-4">
-                                                <input type="email" class="w-100 tw-p-3 border tw-rounded" placeholder="Email Address*" required>
+                                                <input type="email" name="email" class="w-100 tw-p-3 border tw-rounded" placeholder="Email Address*" required>
                                             </div>
                                             <div class="package-details-siteber-item tw-mb-4">
-                                                <input type="tel" class="w-100 tw-p-3 border tw-rounded" placeholder="Phone Number*" required>
+                                                <input type="tel" name="phone" class="w-100 tw-p-3 border tw-rounded" placeholder="Phone Number*" required>
                                             </div>
                                             <div class="package-details-siteber-item tw-mb-8">
-                                                <select class="w-100 tw-p-3 border tw-rounded">
-                                                    <option>Number of Passengers</option>
-                                                    <option>1 Person</option>
-                                                    <option>2 People</option>
-                                                    <option>3-5 People</option>
-                                                    <option>6+ People</option>
+                                                <select name="passengers" class="w-100 tw-p-3 border tw-rounded" required>
+                                                    <option value="">Number of Passengers</option>
+                                                    <option value="1 Person">1 Person</option>
+                                                    <option value="2 People">2 People</option>
+                                                    <option value="3-5 People">3-5 People</option>
+                                                    <option value="6+ People">6+ People</option>
                                                 </select>
                                             </div>
                                             <div class="package-details-siteber-item tw-mb-4">
                                                 <label class="tw-text-sm fw-medium text-main-600 tw-mb-2 d-block">Check-in Date*</label>
-                                                <input type="date" class="w-100 tw-p-3 border tw-rounded" required>
+                                                <input type="date" name="checkin_date" class="w-100 tw-p-3 border tw-rounded" required>
                                             </div>
                                             <div class="package-details-siteber-item tw-mb-4">
                                                 <label class="tw-text-sm fw-medium text-main-600 tw-mb-2 d-block">Check-out Date*</label>
-                                                <input type="date" class="w-100 tw-p-3 border tw-rounded" required>
+                                                <input type="date" name="checkout_date" class="w-100 tw-p-3 border tw-rounded" required>
                                             </div>
                                             <div class="package-details-siteber-btn">
                                                 <button type="submit" class="bg-main-two-600 text-main-600 w-100 tw-py-5 tw-px-18 fs-15 text-uppercase fw-bold font-heading tw-gap-2 d-inline-flex align-items-center justify-content-center tw-rounded-4xl">BOOK NOW <i class="ph ph-arrow-up-right"></i></button>
@@ -899,6 +908,55 @@ include 'includes/tour-hero.php';
     <script src="assets/js/custom-stars.js"></script>
     <!-- Review System JS -->
     <script src="assets/js/reviews.js"></script>
+
+    <!-- Tour Booking Form Submission Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const tourBookingForm = document.querySelector('.tour-booking-form');
+            if (tourBookingForm) {
+                tourBookingForm.addEventListener('submit', async function(e) {
+                    e.preventDefault();
+                    const formData = new FormData(tourBookingForm);
+                    const submitButton = tourBookingForm.querySelector('button[type="submit"]');
+                    submitButton.disabled = true;
+                    const originalHTML = submitButton.innerHTML;
+                    submitButton.innerHTML = 'BOOKING... <i class="ph ph-spinner ph-spin"></i>';
+                    try {
+                        const response = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: formData });
+                        const result = await response.json();
+                        if (result.success) {
+                            showTourBookingAlert('Booking Confirmed!', `Thank you for booking ${formData.get('tour_package')}! We will contact you shortly to confirm your reservation and provide detailed itinerary.`, 'success');
+                            tourBookingForm.reset();
+                        } else {
+                            showTourBookingAlert('Booking Failed!', 'There was an issue processing your booking. Please try again or contact us directly.', 'error');
+                        }
+                    } catch (error) {
+                        showTourBookingAlert('Connection Error!', 'Network error. Please check your connection and try again.', 'error');
+                        console.error('Tour booking form submission error:', error);
+                    } finally {
+                        submitButton.disabled = false;
+                        submitButton.innerHTML = originalHTML;
+                    }
+                });
+            }
+        });
+
+        function showTourBookingAlert(title, message, type) {
+            const existingAlerts = document.querySelectorAll('.tour-booking-alert');
+            existingAlerts.forEach(alert => alert.remove());
+            const alertElement = document.createElement('div');
+            alertElement.className = `tour-booking-alert tour-booking-alert-${type}`;
+            alertElement.innerHTML = `<div class="tour-booking-alert-content"><div class="tour-booking-alert-icon">${type === 'success' ? '✓' : '✕'}</div><div class="tour-booking-alert-text"><div class="tour-booking-alert-title">${title}</div><div class="tour-booking-alert-message">${message}</div></div><button class="tour-booking-alert-close" onclick="this.parentElement.parentElement.remove()">&times;</button></div>`;
+            if (!document.querySelector('#tour-booking-alert-styles')) {
+                const styleElement = document.createElement('style');
+                styleElement.id = 'tour-booking-alert-styles';
+                styleElement.textContent = `.tour-booking-alert{position:fixed;top:20px;right:20px;z-index:10000;min-width:350px;max-width:450px;background:white;border-radius:15px;box-shadow:0 8px 30px rgba(0,0,0,0.15);overflow:hidden;animation:slideInRight 0.4s ease-out;border:1px solid #e5e7eb}.tour-booking-alert-success{border-left:6px solid #059669}.tour-booking-alert-error{border-left:6px solid #dc2626}.tour-booking-alert-content{display:flex;align-items:flex-start;padding:20px;gap:16px}.tour-booking-alert-icon{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-weight:bold;font-size:18px;flex-shrink:0}.tour-booking-alert-success .tour-booking-alert-icon{background:#059669}.tour-booking-alert-error .tour-booking-alert-icon{background:#dc2626}.tour-booking-alert-text{flex:1}.tour-booking-alert-title{font-weight:700;font-size:18px;color:#1f2937;margin-bottom:8px;line-height:1.2}.tour-booking-alert-message{font-size:14px;color:#6b7280;line-height:1.5}.tour-booking-alert-close{background:none;border:none;font-size:24px;color:#9ca3af;cursor:pointer;padding:0;width:28px;height:28px;display:flex;align-items:center;justify-content:center;flex-shrink:0;border-radius:50%;transition:all 0.2s ease}.tour-booking-alert-close:hover{color:#6b7280;background:#f3f4f6}@keyframes slideInRight{from{transform:translateX(100%);opacity:0}to{transform:translateX(0);opacity:1}}@media (max-width:640px){.tour-booking-alert{left:20px;right:20px;min-width:auto;max-width:none}}`;
+                document.head.appendChild(styleElement);
+            }
+            document.body.appendChild(alertElement);
+            setTimeout(() => { if (alertElement && alertElement.parentNode) { alertElement.style.animation = 'slideInRight 0.4s ease-out reverse'; setTimeout(() => { if (alertElement && alertElement.parentNode) { alertElement.remove(); } }, 400); } }, 7000);
+        }
+    </script>
 
     <style>
         /* Hero Section Mobile Responsive */
