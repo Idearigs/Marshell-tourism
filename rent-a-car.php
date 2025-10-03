@@ -103,17 +103,11 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-10 col-md-12">
                         <div class="hero-content text-center text-white">
-                            <h1 class="hero-title" style="font-size: 2.8rem; font-weight: 700; margin-bottom: 1.5rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); line-height: 1.2; color: white;">
-                                Rent a Car & Plan Your Perfect Sri Lankan Adventure
+                            <h1 class="hero-title" style="font-size: 2.8rem; font-weight: 700; margin-bottom: 2.5rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); line-height: 1.2; color: white;">
+                                Rent a Car & Plan Your<br>Perfect Sri Lankan Adventure
                             </h1>
-                            <p class="hero-subtitle" style="font-size: 1.1rem; margin-bottom: 2rem; max-width: 700px; margin-left: auto; margin-right: auto; text-shadow: 1px 1px 2px rgba(0,0,0,0.8);">
-                                Choose from our premium fleet of vehicles and create unforgettable memories exploring the pearl of the Indian Ocean
-                            </p>
                             <div class="hero-buttons">
-                                <button class="btn btn-primary btn-lg me-3" onclick="scrollToSection('vehicleSection')" style="background: #2c5aa0; border: none; padding: 15px 30px; font-size: 1.1rem; font-weight: 600; border-radius: 50px; transition: all 0.3s;">
-                                    Choose Your Vehicle <i class="ph ph-arrow-down ms-2"></i>
-                                </button>
-                                <a href="contact.html" class="btn btn-outline-light btn-lg" style="padding: 15px 30px; font-size: 1.1rem; font-weight: 600; border-radius: 50px; transition: all 0.3s;">
+                                <a href="contact.html" class="btn btn-outline-light btn-lg" style="padding: 15px 35px; font-size: 1.1rem; font-weight: 600; border-radius: 50px; transition: all 0.3s;">
                                     Contact Us <i class="ph ph-phone ms-2"></i>
                                 </a>
                             </div>
@@ -141,12 +135,7 @@
 
                 @media (max-width: 768px) {
                     .hero-title {
-                        font-size: 2.5rem !important;
-                    }
-
-                    .hero-subtitle {
-                        font-size: 1.1rem !important;
-                        margin-bottom: 2rem !important;
+                        font-size: 2.2rem !important;
                     }
 
                     .hero-buttons .btn {
@@ -160,98 +149,397 @@
         </section>
         <!-- ==================== Hero Section End Here ==================== -->
 
-        <!-- ==================== Vehicle Selection Section Start ==================== -->
-        <section class="rent-car-vehicle-section" id="vehicleSection">
-            <div class="container">
-                <div class="row align-items-center mb-5">
-                    <div class="col-12">
-                        <h2 class="rent-car-vehicle-title">Choose Your Perfect Vehicle</h2>
-                        <p class="rent-car-vehicle-subtitle">Select the ideal car for your Sri Lankan adventure</p>
-                    </div>
+        <!-- ==================== New Vehicle Gallery Section Start ==================== -->
+        <section class="vehicle-gallery-wrapper" id="vehicleSection">
+            <div class="vehicle-gallery-container">
+                <div class="vehicle-gallery-header">
+                    <h2 class="vehicle-gallery-title">Choose Your Perfect Vehicle</h2>
+                    <p class="vehicle-gallery-subtitle">Select the ideal car for your Sri Lankan adventure</p>
                 </div>
 
-                <!-- Navigation Arrows for Mobile -->
-                <div class="vehicle-nav-arrows d-lg-none">
-                    <button class="vehicle-nav-arrow" id="vehiclePrevBtn" onclick="scrollVehicles('left')">
+                <div class="vehicle-gallery-with-arrows">
+                    <!-- Left Arrow -->
+                    <button class="scroll-arrow-btn scroll-prev" id="vehiclePrevBtn" onclick="scrollVehicles('left')">
                         <i class="ph ph-arrow-left"></i>
                     </button>
-                    <button class="vehicle-nav-arrow" id="vehicleNextBtn" onclick="scrollVehicles('right')">
+
+                    <div class="vehicle-gallery-grid" id="vehicleCardsContainer">
+                    <!-- Vehicle Card 1 -->
+                    <div class="vehicle-card-wrapper">
+                        <div class="vehicle-card-inner" data-vehicle="smallcar">
+                            <div class="vehicle-card-image">
+                                <img src="assets/images/suzuki.jpg" alt="Small Car">
+                            </div>
+                            <div class="vehicle-card-content">
+                                <h4 class="vehicle-card-name">Small Car</h4>
+                                <p class="vehicle-card-desc">Perfect for couples and solo travelers</p>
+                                <ul class="vehicle-features-list">
+                                    <li><i class="ph ph-check"></i>Comfortable AC Seats</li>
+                                    <li><i class="ph ph-check"></i>Up to 3 Passengers</li>
+                                    <li><i class="ph ph-check"></i>Professional Driver Included</li>
+                                    <li><i class="ph ph-check"></i>Ideal for City Tours</li>
+                                </ul>
+                                <button class="vehicle-quote-btn">Request Quote</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Vehicle Card 2 -->
+                    <div class="vehicle-card-wrapper">
+                        <div class="vehicle-card-inner" data-vehicle="sedan">
+                            <div class="vehicle-card-image">
+                                <img src="Mainimg/vehivle images/Toyota corolla.jpg" alt="Large Car Sedan">
+                            </div>
+                            <div class="vehicle-card-content">
+                                <h4 class="vehicle-card-name">Large Car Sedan</h4>
+                                <p class="vehicle-card-desc">Spacious comfort for small families</p>
+                                <ul class="vehicle-features-list">
+                                    <li><i class="ph ph-check"></i>Comfortable AC Seats</li>
+                                    <li><i class="ph ph-check"></i>Up to 4 Passengers</li>
+                                    <li><i class="ph ph-check"></i>Professional Driver Included</li>
+                                    <li><i class="ph ph-check"></i>Extra Luggage Space</li>
+                                </ul>
+                                <button class="vehicle-quote-btn">Request Quote</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Vehicle Card 3 -->
+                    <div class="vehicle-card-wrapper">
+                        <div class="vehicle-card-inner" data-vehicle="suv">
+                            <div class="vehicle-card-image">
+                                <img src="Mainimg/vehivle images/prado.jpg" alt="SUV">
+                            </div>
+                            <div class="vehicle-card-content">
+                                <h4 class="vehicle-card-name">SUV</h4>
+                                <p class="vehicle-card-desc">Premium comfort for families</p>
+                                <ul class="vehicle-features-list">
+                                    <li><i class="ph ph-check"></i>Luxurious AC Seats</li>
+                                    <li><i class="ph ph-check"></i>Up to 6 Passengers</li>
+                                    <li><i class="ph ph-check"></i>Professional Driver Included</li>
+                                    <li><i class="ph ph-check"></i>Spacious Luggage Area</li>
+                                </ul>
+                                <button class="vehicle-quote-btn">Request Quote</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Vehicle Card 4 -->
+                    <div class="vehicle-card-wrapper">
+                        <div class="vehicle-card-inner" data-vehicle="van">
+                            <div class="vehicle-card-image">
+                                <img src="Mainimg/vehivle images/KDH High roof.jpg" alt="Van">
+                            </div>
+                            <div class="vehicle-card-content">
+                                <h4 class="vehicle-card-name">Van</h4>
+                                <p class="vehicle-card-desc">Ideal for group tours</p>
+                                <ul class="vehicle-features-list">
+                                    <li><i class="ph ph-check"></i>Comfortable AC Seats</li>
+                                    <li><i class="ph ph-check"></i>Up to 10 Passengers</li>
+                                    <li><i class="ph ph-check"></i>Driver & Guide Included</li>
+                                    <li><i class="ph ph-check"></i>Ample Storage Space</li>
+                                </ul>
+                                <button class="vehicle-quote-btn">Request Quote</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Vehicle Card 5 -->
+                    <div class="vehicle-card-wrapper">
+                        <div class="vehicle-card-inner" data-vehicle="bus">
+                            <div class="vehicle-card-image">
+                                <img src="Mainimg/vehivle images/Ac Bus.jpg" alt="Bus">
+                            </div>
+                            <div class="vehicle-card-content">
+                                <h4 class="vehicle-card-name">Bus</h4>
+                                <p class="vehicle-card-desc">Perfect for large groups</p>
+                                <ul class="vehicle-features-list">
+                                    <li><i class="ph ph-check"></i>Comfortable AC Seats</li>
+                                    <li><i class="ph ph-check"></i>Up to 25+ Passengers</li>
+                                    <li><i class="ph ph-check"></i>Driver & Guide Included</li>
+                                    <li><i class="ph ph-check"></i>Maximum Comfort</li>
+                                </ul>
+                                <button class="vehicle-quote-btn">Request Quote</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Arrow -->
+                    <button class="scroll-arrow-btn scroll-next" id="vehicleNextBtn" onclick="scrollVehicles('right')">
                         <i class="ph ph-arrow-right"></i>
                     </button>
                 </div>
 
-                <div class="row" id="vehicleCardsContainer">
-                    <div class="col-lg-3 col-md-6 mb-4">
-                        <div class="rent-car-vehicle-card" data-vehicle="corolla">
-                            <img src="Mainimg/vehivle images/Toyota corolla.jpg" alt="Toyota Corolla" class="img-fluid" style="height: 200px; width: 100%; object-fit: cover;">
-                            <h4>Toyota Corolla</h4>
-                            <p>Perfect for city tours and comfortable rides</p>
-                            <ul class="list-unstyled">
-                                <li><i class="ph ph-check text-success me-2"></i>5 Seats</li>
-                                <li><i class="ph ph-check text-success me-2"></i>Automatic</li>
-                                <li><i class="ph ph-check text-success me-2"></i>Air Conditioning</li>
-                                <li><i class="ph ph-check text-success me-2"></i>Fuel Efficient</li>
-                            </ul>
-                            <p class="text-primary fw-bold">Request Quote</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 mb-4">
-                        <div class="rent-car-vehicle-card" data-vehicle="prado">
-                            <img src="Mainimg/vehivle images/prado.jpg" alt="Toyota Prado" class="img-fluid" style="height: 200px; width: 100%; object-fit: cover;">
-                            <h4>Toyota Prado</h4>
-                            <p>Ideal for families and mountain adventures</p>
-                            <ul class="list-unstyled">
-                                <li><i class="ph ph-check text-success me-2"></i>7 Seats</li>
-                                <li><i class="ph ph-check text-success me-2"></i>4WD Available</li>
-                                <li><i class="ph ph-check text-success me-2"></i>Extra Luggage Space</li>
-                                <li><i class="ph ph-check text-success me-2"></i>High Ground Clearance</li>
-                            </ul>
-                            <p class="text-primary fw-bold">Request Quote</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 mb-4">
-                        <div class="rent-car-vehicle-card" data-vehicle="kdh">
-                            <img src="Mainimg/vehivle images/KDH High roof.jpg" alt="KDH High Roof Van" class="img-fluid" style="height: 200px; width: 100%; object-fit: cover;">
-                            <h4>KDH High Roof</h4>
-                            <p>Perfect for group tours and long journeys</p>
-                            <ul class="list-unstyled">
-                                <li><i class="ph ph-check text-success me-2"></i>12 Seats</li>
-                                <li><i class="ph ph-check text-success me-2"></i>High Roof Comfort</li>
-                                <li><i class="ph ph-check text-success me-2"></i>Professional Driver</li>
-                                <li><i class="ph ph-check text-success me-2"></i>Tour Guide Available</li>
-                            </ul>
-                            <p class="text-primary fw-bold">Request Quote</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 mb-4">
-                        <div class="rent-car-vehicle-card" data-vehicle="bus">
-                            <img src="Mainimg/vehivle images/Ac Bus.jpg" alt="AC Bus" class="img-fluid" style="height: 200px; width: 100%; object-fit: cover;">
-                            <h4>AC Bus</h4>
-                            <p>Ideal for large groups and extended tours</p>
-                            <ul class="list-unstyled">
-                                <li><i class="ph ph-check text-success me-2"></i>25+ Seats</li>
-                                <li><i class="ph ph-check text-success me-2"></i>Air Conditioning</li>
-                                <li><i class="ph ph-check text-success me-2"></i>Professional Driver</li>
-                                <li><i class="ph ph-check text-success me-2"></i>Maximum Comfort</li>
-                            </ul>
-                            <p class="text-primary fw-bold">Request Quote</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="row mt-4">
-                    <div class="col-12 text-center">
-                        <button class="rent-car-proceed-btn" onclick="scrollToSection('bookingSection')" id="proceedToBooking" disabled style="max-width: 400px;">
-                            Complete Your Booking <i class="ph ph-arrow-down ms-2"></i>
-                        </button>
-                    </div>
+                <div class="vehicle-proceed-wrapper">
+                    <button class="vehicle-proceed-button" onclick="scrollToSection('bookingSection')" id="proceedToBooking" disabled>
+                        Complete Your Booking <i class="ph ph-arrow-down"></i>
+                    </button>
                 </div>
             </div>
         </section>
-        <!-- ==================== Vehicle Selection Section End ==================== -->
+
+        <style>
+            /* Vehicle Gallery - Complete New Styles */
+            .vehicle-gallery-wrapper {
+                background: #f8f9fa;
+                padding: 80px 0;
+            }
+
+            .vehicle-gallery-container {
+                max-width: 1400px;
+                margin: 0 auto;
+                padding: 0 80px;
+                position: relative;
+            }
+
+            .vehicle-gallery-header {
+                text-align: center;
+                margin-bottom: 50px;
+            }
+
+            .vehicle-gallery-title {
+                font-size: 2.5rem;
+                font-weight: 700;
+                color: #2c5aa0;
+                margin-bottom: 10px;
+            }
+
+            .vehicle-gallery-subtitle {
+                font-size: 1.1rem;
+                color: #666;
+            }
+
+            .vehicle-gallery-with-arrows {
+                position: relative;
+                margin-bottom: 40px;
+            }
+
+            .scroll-arrow-btn {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 55px;
+                height: 55px;
+                border-radius: 50%;
+                background: #2c5aa0;
+                color: white;
+                border: none;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.4rem;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                z-index: 10;
+                box-shadow: 0 2px 8px rgba(44, 90, 160, 0.3);
+            }
+
+            .scroll-arrow-btn.scroll-prev {
+                left: -70px;
+            }
+
+            .scroll-arrow-btn.scroll-next {
+                right: -70px;
+            }
+
+            .scroll-arrow-btn:hover {
+                background: #1e4080;
+                transform: translateY(-50%) scale(1.1);
+            }
+
+            .scroll-arrow-btn:active {
+                transform: translateY(-50%) scale(0.95);
+            }
+
+            .scroll-arrow-btn:disabled {
+                background: #ccc;
+                cursor: not-allowed;
+                opacity: 0.6;
+            }
+
+            .vehicle-gallery-grid {
+                display: flex;
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                overflow-y: hidden;
+                scroll-behavior: smooth;
+                -webkit-overflow-scrolling: touch;
+                scroll-snap-type: x mandatory;
+                gap: 25px;
+                padding: 5px 0 15px 0;
+                scrollbar-width: none;
+                -ms-overflow-style: none;
+            }
+
+            .vehicle-gallery-grid::-webkit-scrollbar {
+                display: none;
+            }
+
+            .vehicle-card-wrapper {
+                background: white;
+                border-radius: 12px;
+                overflow: visible;
+                box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+                transition: all 0.3s ease;
+                flex: 0 0 280px;
+                min-width: 280px;
+                scroll-snap-align: center;
+                cursor: pointer;
+            }
+
+            .vehicle-card-wrapper:hover {
+                transform: translateY(-5px);
+            }
+
+            .vehicle-card-inner {
+                transition: all 0.3s ease;
+                border-radius: 12px;
+                height: 100%;
+                background: white;
+                overflow: hidden;
+            }
+
+            .vehicle-card-inner.selected {
+                border: 2px solid #2c5aa0;
+                box-shadow: 0 8px 25px rgba(44, 90, 160, 0.4);
+                background: #f0f5ff;
+            }
+
+            .vehicle-card-image {
+                width: 100%;
+                height: 200px;
+                overflow: hidden;
+                border-radius: 12px 12px 0 0;
+            }
+
+            .vehicle-card-image img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .vehicle-card-content {
+                padding: 20px;
+            }
+
+            .vehicle-card-name {
+                font-size: 1.3rem;
+                font-weight: 600;
+                color: #333;
+                margin-bottom: 8px;
+            }
+
+            .vehicle-card-desc {
+                color: #2c5aa0;
+                font-size: 0.95rem;
+                margin-bottom: 15px;
+            }
+
+            .vehicle-features-list {
+                list-style: none;
+                padding: 0;
+                margin: 0 0 15px 0;
+            }
+
+            .vehicle-features-list li {
+                color: #666;
+                font-size: 0.9rem;
+                margin-bottom: 6px;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+
+            .vehicle-features-list i {
+                color: #28a745;
+                font-size: 1.1rem;
+            }
+
+            .vehicle-quote-btn {
+                background: transparent;
+                color: #2c5aa0;
+                border: none;
+                font-weight: 600;
+                cursor: pointer;
+                padding: 0;
+                font-size: 1rem;
+            }
+
+            .vehicle-proceed-wrapper {
+                text-align: center;
+                margin-top: 60px;
+            }
+
+            .vehicle-proceed-button {
+                background: #2c5aa0;
+                color: white;
+                border: none;
+                padding: 15px 40px;
+                border-radius: 50px;
+                font-size: 1.1rem;
+                font-weight: 600;
+                cursor: pointer;
+                transition: all 0.3s ease;
+            }
+
+            .vehicle-proceed-button:disabled {
+                background: #ccc;
+                cursor: not-allowed;
+            }
+
+            .vehicle-proceed-button:not(:disabled):hover {
+                background: #1e4080;
+                transform: translateY(-2px);
+            }
+
+            /* Mobile/Tablet Adjustments */
+            @media (max-width: 991px) {
+                .vehicle-gallery-container {
+                    padding: 0 20px;
+                }
+
+                .vehicle-gallery-grid {
+                    gap: 15px;
+                    padding: 0 5px;
+                }
+
+                .vehicle-card-wrapper {
+                    flex: 0 0 85%;
+                    min-width: 85%;
+                }
+
+                .scroll-arrow-btn {
+                    display: none;
+                }
+
+                .vehicle-gallery-with-arrows {
+                    gap: 0;
+                }
+            }
+
+            @media (max-width: 576px) {
+                .vehicle-gallery-container {
+                    padding: 0 15px;
+                }
+
+                .vehicle-card-wrapper {
+                    flex: 0 0 90%;
+                    min-width: 90%;
+                }
+
+                .vehicle-gallery-title {
+                    font-size: 2rem;
+                }
+            }
+
+            @media (max-width: 360px) {
+                .vehicle-card-wrapper {
+                    flex: 0 0 92%;
+                    min-width: 92%;
+                }
+            }
+        </style>
+        <!-- ==================== New Vehicle Gallery Section End ==================== -->
 
         <!-- ==================== Booking Section Start ==================== -->
         <section class="rent-car-booking-section" id="bookingSection">
@@ -296,6 +584,7 @@
                                 <input type="hidden" name="from_name" value="CAR RENTAL BOOKING">
                                 <input type="hidden" name="subject" value="CAR RENTAL BOOKING FROM Marshallholidays.com">
                                 <input type="hidden" name="redirect" value="https://web3forms.com/success">
+                                <input type="hidden" name="selected_vehicle" id="selectedVehicleInput" value="">
                                 <div class="row">
                                     <div class="col-md-6 mb-3">
                                         <label class="rent-car-form-label">First Name</label>
@@ -428,21 +717,24 @@
     <!-- JavaScript for Interactive Features -->
     <script>
         const vehicles = {
-            economy: { name: "Economy Car", price: 35 },
-            suv: { name: "SUV", price: 65 },
-            van: { name: "Van", price: 85 }
+            smallcar: { name: "Small Car" },
+            sedan: { name: "Large Car Sedan" },
+            suv: { name: "SUV" },
+            van: { name: "Van" },
+            bus: { name: "Bus" }
         };
 
         let selectedVehicle = null;
 
         // Vehicle selection
-        document.querySelectorAll('.rent-car-vehicle-card').forEach(card => {
+        document.querySelectorAll('.vehicle-card-inner').forEach(card => {
             card.addEventListener('click', function() {
-                document.querySelectorAll('.rent-car-vehicle-card').forEach(c => c.classList.remove('selected'));
+                document.querySelectorAll('.vehicle-card-inner').forEach(c => c.classList.remove('selected'));
                 this.classList.add('selected');
                 selectedVehicle = this.getAttribute('data-vehicle');
                 document.getElementById('proceedToBooking').disabled = false;
                 updateBookingSummary();
+                updateVehicleInput();
             });
         });
 
@@ -454,6 +746,14 @@
                     <strong>${vehicle.name}</strong><br>
                     <span style="color: #64748b; font-size: 0.9rem;">Selected vehicle for your trip</span>
                 `;
+            }
+        }
+
+        function updateVehicleInput() {
+            // Update hidden form input with selected vehicle
+            if (selectedVehicle) {
+                const vehicle = vehicles[selectedVehicle];
+                document.getElementById('selectedVehicleInput').value = vehicle.name;
             }
         }
 

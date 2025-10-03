@@ -32,47 +32,59 @@
 
 
 
-    <!--==================== Overlay Start ====================-->
-    <div class="overlay"></div>
-    <!--==================== Overlay End ====================-->
-
-    <!--==================== Sidebar Overlay End ====================-->
-    <div class="side-overlay"></div>
-    <!--==================== Sidebar Overlay End ====================-->
-
-    <!-- Custom Toast Message start -->
-    <div id="toast-container"></div>
-    <!-- Custom Toast Message End -->
-
-    <!-- ==================== Scroll to Top End Here ==================== -->
-    <div class="progress-wrap cursor-big">
-        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
-        </svg>
-    </div>
-    <!-- ==================== Scroll to Top End Here ==================== -->
-
-    <!-- Custom Cursor Start -->
-    <div class="cursor"></div>
-    <span class="dot"></span>
-    <!-- Custom Cursor End -->
 
     <?php include 'includes/tour-navbar.php'; ?>
-
+<!-- Elfsight WhatsApp Chat | Untitled WhatsApp Chat -->
+<script src="https://elfsightcdn.com/platform.js" async></script>
+<div class="elfsight-app-2c3aaac6-0b9c-4362-9a19-38c17f636211" data-elfsight-app-lazy></div>
     <div id="scrollSmoother-container">
 
         <!-- ==================== Breadcrumb Start Here ==================== -->
-        <section class="breadcrumb-area background-img" data-background-image="Mainimg/img/Mirissa Beach/miri main.jpg" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('Mainimg/img/Mirissa Beach/miri main.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; min-height: 250px; display: flex; align-items: center;">
+        <section class="breadcrumb-area background-img" data-background-image="Mainimg/img/Mirissa Beach/miri main.jpg" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('Mainimg/img/Mirissa Beach/miri main.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; min-height: 350px; display: flex; align-items: center; justify-content: center;">
             <div class="container-fluid">
                 <div class="row justify-content-center">
                     <div class="col-lg-8 col-md-10 col-sm-12">
                         <div class="text-center px-3">
-                            <h2 class="breadcrumb-title char-animation" style="font-size: 2.5rem; color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); margin-bottom: 0; line-height: 1.2; font-weight: 600;">About Marshall Holidays</h2>
+                            <h2 class="breadcrumb-title char-animation" style="font-size: 2.5rem; color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); margin-bottom: 0; margin-top: 50px; line-height: 1.2; font-weight: 600;">About Marshall Holidays</h2>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
+        <style>
+            .breadcrumb-title {
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+                white-space: normal;
+            }
+
+            @media (max-width: 768px) {
+                .breadcrumb-area {
+                    min-height: 300px !important;
+                }
+
+                .breadcrumb-title {
+                    font-size: 2rem !important;
+                }
+            }
+
+            @media (max-width: 480px) {
+                .breadcrumb-area {
+                    min-height: 280px !important;
+                }
+
+                .breadcrumb-title {
+                    font-size: 1.8rem !important;
+                }
+            }
+
+            @media (max-width: 360px) {
+                .breadcrumb-title {
+                    font-size: 1.6rem !important;
+                }
+            }
+        </style>
         <!-- ==================== Breadcrumb End Here ==================== -->
 
         <!-- ==================== About Content Section Start ==================== -->
@@ -126,7 +138,10 @@
                     <div class="col-lg-6">
                         <div class="about-image" data-aos="fade-left" data-aos-duration="1000">
                             <div class="image-container" style="border-radius: 20px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.1);">
-                                <img class="w-100" src="https://travelrebels.com/wp-content/uploads/2018/06/anuradhapura-sunset.jpg" alt="Anuradhapura Sacred Sites" style="height: 400px; object-fit: cover;">
+                                <video class="w-100" style="height: 400px; object-fit: cover;" autoplay loop muted playsinline>
+                                    <source src="assets/videoandphotoaboutus/WhatsApp Video 2025-09-25 at 19.34.23_dc2649e3.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
                             </div>
                         </div>
                     </div>
@@ -143,8 +158,8 @@
                             
                             <div class="row align-items-center">
                                 <div class="col-lg-4 text-center tw-mb-8 tw-mb-lg-0">
-                                    <div class="director-avatar bg-main-600 tw-w-32 tw-h-32 rounded-circle mx-auto d-flex align-items-center justify-content-center tw-mb-4">
-                                        <span class="text-white fw-bold tw-text-4xl">ST</span>
+                                    <div class="director-avatar mx-auto tw-mb-4" style="width: 200px; height: 200px; border-radius: 50%; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+                                        <img src="assets/videoandphotoaboutus/sameera-thennakoon.jpg" alt="Sameera Thennakoon" class="w-100 h-100" style="object-fit: cover;">
                                     </div>
                                     <h4 class="tw-text-2xl fw-bold text-main-600 tw-mb-2">Sameera Thennakoon</h4>
                                     <p class="text-muted fw-medium">Managing Director</p>
