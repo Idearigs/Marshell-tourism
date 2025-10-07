@@ -1,20 +1,25 @@
 <?php
 /**
  * Marshel Tourism Database Configuration
- * Configure your database settings here
+ * Automatically detects environment and uses appropriate database settings
  */
 
-// Local development database configuration
-// define('DB_HOST', 'localhost');
-// define('DB_NAME', 'marshel_tourism');
-// define('DB_USER', 'root');
-// define('DB_PASS', '');
+// Auto-detect environment based on server
+$isLocalhost = in_array($_SERVER['SERVER_NAME'], ['localhost', '127.0.0.1', '::1']);
 
-// Hosted database configuration (commented out for local development)
-define('DB_HOST', 'server196.web-hosting.com');
-define('DB_NAME', 'marsdzdm_marshel_tourism');
-define('DB_USER', 'mroot');
-define('DB_PASS', '#Marshall#2025');
+if ($isLocalhost) {
+    // Local development database configuration
+    define('DB_HOST', 'localhost');
+    define('DB_NAME', 'marshel_tourism');
+    define('DB_USER', 'root');
+    define('DB_PASS', '');
+} else {
+    // Hosted database configuration
+    define('DB_HOST', 'server196.web-hosting.com');
+    define('DB_NAME', 'marsdzdm_marshel_tourism');
+    define('DB_USER', 'marsdzdm_mroot');
+    define('DB_PASS', '#Marshall#2025');
+}
 
 // Create database connection
 function getDBConnection() {

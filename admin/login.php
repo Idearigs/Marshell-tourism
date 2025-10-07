@@ -9,6 +9,7 @@ if (isset($_SESSION['admin_logged_in']) && $_SESSION['admin_logged_in'] === true
 }
 
 $error = '';
+$debug_info = [];
 
 if ($_POST) {
     $username = sanitizeInput($_POST['username']);
@@ -17,35 +18,60 @@ if ($_POST) {
     try {
         // Get database connection
         $pdo = getDBConnection();
+        $debug_info[] = "Attempting to connect to database...";
 
         if ($pdo) {
+            $debug_info[] = "Database connection successful";
+            $debug_info[] = "Searching for username: " . $username;
+
             // Query user from database
             $stmt = $pdo->prepare("SELECT * FROM users WHERE username = ? LIMIT 1");
             $stmt->execute([$username]);
             $user = $stmt->fetch();
 
-            // Verify user exists and password is correct
-            if ($user && password_verify($password, $user['password'])) {
-                // Login successful
-                $_SESSION['admin_logged_in'] = true;
-                $_SESSION['admin_username'] = $user['username'];
-                $_SESSION['admin_email'] = $user['email'];
-                $_SESSION['admin_id'] = $user['id'];
+            if ($user) {
+                $debug_info[] = "User found in database";
+                $debug_info[] = "User ID: " . $user['id'];
+                $debug_info[] = "Stored password hash: " . substr($user['password'], 0, 20) . "...";
+                $debug_info[] = "Verifying password...";
 
-                // Update last login time
-                $updateStmt = $pdo->prepare("UPDATE users SET last_login = NOW() WHERE id = ?");
-                $updateStmt->execute([$user['id']]);
+                // Verify user exists and password is correct
+                if (password_verify($password, $user['password'])) {
+                    $debug_info[] = "Password verification: SUCCESS";
 
-                header('Location: dashboard.php');
-                exit;
+                    // Login successful
+                    $_SESSION['admin_logged_in'] = true;
+                    $_SESSION['admin_username'] = $user['username'];
+                    $_SESSION['admin_email'] = $user['email'];
+                    $_SESSION['admin_id'] = $user['id'];
+
+                    // Update last login time
+                    $updateStmt = $pdo->prepare("UPDATE users SET last_login = NOW() WHERE id = ?");
+                    $updateStmt->execute([$user['id']]);
+                    $debug_info[] = "Login successful, redirecting to dashboard...";
+
+                    header('Location: dashboard.php');
+                    exit;
+                } else {
+                    $debug_info[] = "Password verification: FAILED";
+                    $error = 'Invalid username or password';
+                }
             } else {
+                $debug_info[] = "User NOT found in database";
                 $error = 'Invalid username or password';
             }
         } else {
+            $debug_info[] = "Database connection FAILED";
             $error = 'Database connection failed. Please try again later.';
         }
     } catch (PDOException $e) {
+        $debug_info[] = "PDO Exception occurred: " . $e->getMessage();
+        $debug_info[] = "Error code: " . $e->getCode();
         error_log("Login error: " . $e->getMessage());
+        $error = 'An error occurred. Please try again later.';
+    } catch (Exception $e) {
+        $debug_info[] = "General Exception: " . $e->getMessage();
+        error_log("Login exception: " . $e->getMessage());
         $error = 'An error occurred. Please try again later.';
     }
 }
@@ -154,5 +180,20 @@ if ($_POST) {
     </div>
 
     <script src="../assets/js/boostrap.bundle.min.js"></script>
+
+    <!-- Debug logging to console -->
+    <script>
+        <?php if (!empty($debug_info)): ?>
+        console.group('🔐 Login Debug Information');
+        <?php foreach ($debug_info as $info): ?>
+        console.log(<?php echo json_encode($info); ?>);
+        <?php endforeach; ?>
+        console.groupEnd();
+        <?php endif; ?>
+
+        <?php if ($error): ?>
+        console.error('Login Error: <?php echo addslashes($error); ?>');
+        <?php endif; ?>
+    </script>
 </body>
 </html>
