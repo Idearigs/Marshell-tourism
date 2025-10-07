@@ -117,7 +117,7 @@ $packageRatings = getAllPackageRatings();
 <?php include 'includes/tour-navbar.php'; ?>
 <div id="scrollSmoother-container">
      <!-- ==================== Breadcrumb Start Here ==================== -->
-        <section class="breadcrumb-area background-img" data-background-image="MissingIMG/img/Sigiriya Rock Fortress/sigwide.jpg" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('MissingIMG/img/Sigiriya Rock Fortress/sigwide.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; min-height: 350px; display: flex; align-items: center; justify-content: center; margin-top: 40px;">
+        <section class="breadcrumb-area background-img" data-background-image="MissingIMG/img/Sigiriya Rock Fortress/sigwide.jpg" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('MissingIMG/img/Sigiriya Rock Fortress/sigwide.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; min-height: 350px; display: flex; align-items: center; justify-content: center;">
             <div class="container-fluid">
                 <div class="row justify-content-center">
                     <div class="col-lg-8 col-md-10 col-sm-12">
@@ -137,22 +137,30 @@ $packageRatings = getAllPackageRatings();
             }
 
             @media (max-width: 768px) {
-                .breadcrumb-area {
+                section.breadcrumb-area.background-img {
                     min-height: 300px !important;
+                    padding-bottom: 50px !important;
+                    margin-bottom: 40px !important;
+                    padding-top: 80px !important;
                 }
 
                 .breadcrumb-title {
                     font-size: 2rem !important;
+                    margin-top: 60px !important;
                 }
             }
 
             @media (max-width: 480px) {
-                .breadcrumb-area {
+                section.breadcrumb-area.background-img {
                     min-height: 280px !important;
+                    padding-bottom: 45px !important;
+                    margin-bottom: 35px !important;
+                    padding-top: 70px !important;
                 }
 
                 .breadcrumb-title {
                     font-size: 1.8rem !important;
+                    margin-top: 50px !important;
                 }
             }
 
@@ -417,28 +425,6 @@ $packageRatings = getAllPackageRatings();
           </div>
      </section>
 
-
-     <section class="cta-area py-140 background-img position-relative z-1" data-background-image="assets/images/cta/cta-bg.jpg">
-     <div class="container">
-          <div class="row justify-content-center tw-pb-20">
-               <div class="col-xl-10">
-                    <div class="section-wrapper text-center position-relative z-1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                         <h2 class="section-title fw-normal tw-mb-7 char-animation text-white char-animation"> <span class="text-main-600">Let's Capture</span> Beauty of the World</h2>
-                         <div class="gallery-button d-flex justify-content-center">
-                              <a class="primary-btn bg-main-two-600 text-main-600 tw-py-4 tw-px-8 fs-15 text-capitalize fw-bold font-heading tw-gap-2 d-inline-flex align-items-center tw-rounded-4xl" href="contact.html">Booking Today <i class="ph ph-arrow-up-right"></i></a> 
-                         </div>
-                         <div class="gallery-shape">
-                              <img class="gallery-shape-1 position-absolute start-0 z-n1" src="assets/images/gallery/gallery-shape1.png" alt="shape">
-                              <img class="gallery-shape-2 position-absolute end-0 z-n1" src="assets/images/gallery/gallery-shape2.png" alt="shape">
-                         </div>
-                    </div>
-               </div>
-          </div>
-     </div>
-     <div class="cta-bg-shape position-absolute start-0 z-n1">
-          <img src="assets/images/cta/cta-bg-shape.png" alt="shape">
-     </div>
-</section>
 
 
      <!-- ==================== Footer Start Here ==================== -->

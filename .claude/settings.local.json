@@ -26,7 +26,9 @@
       "Bash(if [ -f \"C:\\xampp\\htdocs\\Marshel-Tourism$file\" ])",
       "Bash(then)",
       "Bash(echo \"Found: $file\")",
-      "Bash(del \"C:\\xampp\\htdocs\\Marshel-Tourism\\fix-hero-overlays.js\")"
+      "Bash(del \"C:\\xampp\\htdocs\\Marshel-Tourism\\fix-hero-overlays.js\")",
+      "Bash(git push:*)",
+      "Bash(del \"C:\\xampp\\htdocs\\Marshel-Tourism\\reset_admin.php\")"
     ],
     "deny": [],
     "ask": []

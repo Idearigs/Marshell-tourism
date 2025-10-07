@@ -1,5 +1,6 @@
 <?php
 session_start();
+require_once '../includes/config.php';
 
 // Check if already logged in
 if (isset($_SESSION['admin_logged_in']) && $_SESSION['admin_logged_in'] === true) {
@@ -10,14 +11,42 @@ if (isset($_SESSION['admin_logged_in']) && $_SESSION['admin_logged_in'] === true
 $error = '';
 
 if ($_POST) {
-    // Exact same logic as working simple-login.php
-    if ($_POST['username'] === 'admin' && $_POST['password'] === 'adimin@2027') {
-        $_SESSION['admin_logged_in'] = true;
-        $_SESSION['admin_username'] = 'admin';
-        header('Location: dashboard.php');
-        exit;
-    } else {
-        $error = 'Invalid username or password';
+    $username = sanitizeInput($_POST['username']);
+    $password = $_POST['password'];
+
+    try {
+        // Get database connection
+        $pdo = getDBConnection();
+
+        if ($pdo) {
+            // Query user from database
+            $stmt = $pdo->prepare("SELECT * FROM users WHERE username = ? LIMIT 1");
+            $stmt->execute([$username]);
+            $user = $stmt->fetch();
+
+            // Verify user exists and password is correct
+            if ($user && password_verify($password, $user['password'])) {
+                // Login successful
+                $_SESSION['admin_logged_in'] = true;
+                $_SESSION['admin_username'] = $user['username'];
+                $_SESSION['admin_email'] = $user['email'];
+                $_SESSION['admin_id'] = $user['id'];
+
+                // Update last login time
+                $updateStmt = $pdo->prepare("UPDATE users SET last_login = NOW() WHERE id = ?");
+                $updateStmt->execute([$user['id']]);
+
+                header('Location: dashboard.php');
+                exit;
+            } else {
+                $error = 'Invalid username or password';
+            }
+        } else {
+            $error = 'Database connection failed. Please try again later.';
+        }
+    } catch (PDOException $e) {
+        error_log("Login error: " . $e->getMessage());
+        $error = 'An error occurred. Please try again later.';
     }
 }
 ?>

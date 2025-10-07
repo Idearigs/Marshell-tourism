@@ -24,6 +24,9 @@
     <link rel="stylesheet" href="assets/css/main.css">
     <!-- Rent Car Custom CSS -->
     <link rel="stylesheet" href="assets/css/rent-car-custom.css">
+    <!-- Elfsight WhatsApp Chat | Untitled WhatsApp Chat -->
+<script src="https://elfsightcdn.com/platform.js" async></script>
+<div class="elfsight-app-2c3aaac6-0b9c-4362-9a19-38c17f636211" data-elfsight-app-lazy></div>
     <!-- Destinations Custom CSS -->
     <style>
         /* Destinations Page Styles */

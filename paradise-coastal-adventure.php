@@ -14,10 +14,6 @@
     <title> Marshall Holidays - Tours & Travels Multipurpose HTML Template </title>
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/images/logo/favicon.png">
-    <!-- Google Fonts - Philosopher -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&display=swap" rel="stylesheet">
     <!-- Aos -->
     <link rel="stylesheet" href="assets/css/swiper-bundle.css">
     <!-- Aos -->
@@ -26,9 +22,13 @@
     <link rel="stylesheet" href="assets/css/aos.css">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Philosopher Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&display=swap" rel="stylesheet">
     <!-- Main css -->
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/rent-car-custom.css">
+    <!-- Modern Tour Package CSS -->
+    <link rel="stylesheet" href="assets/css/modern-tour-package.css">
     <!-- Review System CSS -->
     <link rel="stylesheet" href="assets/css/reviews.css">
     <!-- Elfsight WhatsApp Chat | Untitled WhatsApp Chat -->
@@ -234,47 +234,52 @@ $hero_title = 'Paradise Coastal Adventure';
 $hero_subtitle = '7 Days 6 Nights Marine Wildlife & Beach Discovery';
 include 'includes/tour-hero.php';
 ?>
-     <section class="page pt-140" id="package-details">
+     <section class="mh-package-header" id="package-details">
           <div class="container">
-               <div class="row">
-                    <div class="col-xl-12">
-                         <div class="package-details-top d-flex justify-content-between align-items-end tw-pb-6 tw-mb-15 flex-wrap row-gap-3">
-                              <div data-aos-duration="1000" data-aos-delay="200">
-                                   <div class="d-flex align-items-center tw-gap-5 tw-mb-5">
-                                        <div>
-                                             <span class="bg-main-two-600 fw-medium tw-pt-1 tw-pb-2 tw-px-5 tw-rounded-3xl">Featured</span>
-                                        </div>
-                                        <div>
-                                             <p><span class="text-main-two-600"><i class="ph ph-eye"></i></span> 5,673 people viewed this package</p>
-                                        </div>
+               <div class="mh-package-header-card">
+                    <div class="row align-items-center">
+                         <div class="col-lg-8">
+                              <!-- Category Badge & Views -->
+                              <div class="mh-package-meta">
+                                   <span class="mh-category-badge">
+                                        <i class="ph ph-waves"></i>
+                                        Coastal Adventure
+                                   </span>
+                              </div>
+
+                              <!-- Package Title -->
+                              <h1 class="mh-package-title">Paradise Coastal Adventure</h1>
+
+                              <!-- Package Info -->
+                              <div class="mh-package-info">
+                                   <div class="mh-info-item">
+                                        <i class="ph ph-clock"></i>
+                                        <span>7 Days 6 Nights</span>
                                    </div>
-                                   <div class="tw-mb-3">
-                                        <h2 class="tw-text-13 char-animation" style="font-size: 2rem;">Paradise Coastal Adventure</h2>
+                                   <div class="mh-info-item">
+                                        <i class="ph ph-users"></i>
+                                        <span>Adventure Seekers & Marine Life Enthusiasts</span>
                                    </div>
-                                   <div>
-                                        <ul class="d-flex tw-gap-6 flex-wrap row-gap-3">
-                                             <li class="d-flex align-items-center tw-gap-2"><span><img src="assets/images/icon/package-details-top-icon1.svg" alt="clock"></span> 7 Days 6 Nights</li>
-                                             <li class="d-flex align-items-center tw-gap-2"><span><img src="assets/images/icon/package-details-top-icon2.svg" alt="people"></span> Adventure Seekers & Marine Life Enthusiasts</li>
-                                             <li class="d-flex align-items-center tw-gap-2"><span><img src="assets/images/icon/package-details-top-icon3.svg" alt="location"></span> Coastal Treasures & Marine Wildlife</li>
-                                        </ul>
+                                   <div class="mh-info-item">
+                                        <i class="ph ph-map-pin"></i>
+                                        <span>Coastal Treasures & Marine Wildlife</span>
                                    </div>
                               </div>
-                              <div data-aos-duration="1000" data-aos-delay="300">
-                                   <div class="d-flex align-items-center tw-gap-4 tw-mb-3">
-                                        <div>
-                                             <i class="text-main-two-600 ph ph-star"></i>
-                                             <i class="text-main-two-600 ph ph-star"></i>
-                                             <i class="text-main-two-600 ph ph-star"></i>
-                                             <i class="text-main-two-600 ph ph-star"></i>
-                                             <i class="text-main-two-600 ph ph-star"></i>
-                                        </div>
-                                        <div class="package-rating">
-                                             <p class="mb-0">Loading reviews...</p>
+                         </div>
+
+                         <div class="col-lg-4">
+                              <!-- Rating & Pricing -->
+                              <div class="mh-package-pricing">
+                                   <div class="mh-rating-box">
+                                        <div class="mh-rating-score package-rating">
+                                             <span class="score">5.0</span>
+                                             <span class="reviews">(0 reviews)</span>
                                         </div>
                                    </div>
-                                   <div class="d-flex align-items-center tw-gap-7">
-                                        <h4 class="tw-text-808 text-main-600">Contact us for Best rates</h4>
-                                        <p class="tw-text-sm text-neutral-600">Customized pricing available</p>
+
+                                   <div class="mh-price-section">
+                                        <h3 class="mh-price-title">Contact us for Best rates</h3>
+                                        <p class="mh-price-subtitle">Customized pricing available</p>
                                    </div>
                               </div>
                          </div>
@@ -354,7 +359,7 @@ include 'includes/tour-hero.php';
           <div class="container">
                <div class="row">
                     <div class="row">
-                         <div class="col-xl-8">
+                         <div class="col-12 col-lg-8">
                               <div class="tw-mb-7">
                                    <div class="tw-mb-14" data-aos-duration="1000" data-aos-delay="200">
                                         <h2 class="tw-text-10 tw-mb-4">Description:</h2>
@@ -400,66 +405,254 @@ include 'includes/tour-hero.php';
                                         </div>
                                    </div> -->
                                    <div class="tw-mb-16" data-aos-duration="1000" data-aos-delay="300">
-                                        <h2 class="tw-text-10 tw-mb-8">Tour Plan :</h2> 
-                                        <div class="package-details-rules d-flex tw-gap-12 position-relative z-1">
-                                             <div>
-                                                  <span class="tw-w-25 tw-h-24 lh-1 d-inline-flex align-items-center justify-content-center bg-main-600 tw-rounded-lg text-white tw-text-6 fw-bold">01</span>
-                                             </div>
-                                             <div>
-                                                  <h6 class="tw-text-505 tw-mb-4">Days 1-2: Arrival and Southern Coast Discovery</h6>
-                                                  <p class="tw-mb-20">Begin your coastal adventure with arrival in Colombo, then journey to the southern coast where pristine beaches and vibrant marine life await. Explore Galle Fort, witness traditional stilt fishing, and enjoy sunset boat excursions along Sri Lanka's most scenic coastline.</p>
-                                             </div>
-                                        </div>
-                                        <div class="package-details-rules d-flex tw-gap-12 position-relative z-1">
-                                             <div>
-                                                  <span class="tw-w-25 tw-h-24 lh-1 d-inline-flex align-items-center justify-content-center bg-main-600 tw-rounded-lg text-white tw-text-6 fw-bold">02</span>
-                                             </div>
-                                             <div class="tw-mb-10">
-                                                  <h6 class="tw-text-505 tw-mb-4">Days 3-4: Marine Wildlife and Coastal Adventures</h6>
-                                                  <p class="tw-mb-9">Experience thrilling whale and dolphin watching excursions from Mirissa, visit turtle conservation projects in Kosgoda, and discover the underwater coral gardens through snorkeling and diving activities. Perfect for marine wildlife enthusiasts seeking close encounters with nature.</p>
-                                                  <div class="destination-details-list package-details-list tw-mb-10">
-                                                       <ul>
-                                                            <li class="font-heading fw-bold text-main-600 text-capitalize tw-text-lg tw-mb-5 tw-ps-2 tw-ms-5">Whale watching in Mirissa</li>
-                                                            <li class="font-heading fw-bold text-main-600 text-capitalize tw-text-lg tw-mb-5 tw-ps-2 tw-ms-5">Turtle conservation experience</li>
-                                                            <li class="font-heading fw-bold text-main-600 text-capitalize tw-text-lg tw-mb-5 tw-ps-2 tw-ms-5">Snorkeling at coral reefs</li>
-                                                            <li class="font-heading fw-bold text-main-600 text-capitalize tw-text-lg tw-mb-5 tw-ps-2 tw-ms-5">Sunset catamaran cruise</li>
-                                                       </ul>
-                                                  </div>
-                                             </div>
-                                        </div>
-                                        <div class="package-details-rules d-flex tw-gap-12 position-relative z-1">
-                                             <div>
-                                                  <span class="tw-w-25 tw-h-24 lh-1 d-inline-flex align-items-center justify-content-center bg-main-600 tw-rounded-lg text-white tw-text-6 fw-bold">03</span>
-                                             </div>
-                                             <div class="tw-mb-20">
-                                                  <h6 class="tw-text-505 tw-mb-4">Days 5-6: Coastal Cultural Immersion</h6>
-                                                  <p class="tw-mb-10">Immerse yourself in coastal culture with visits to traditional fishing villages, spice gardens, and local markets. Experience authentic Sri Lankan coastal cuisine, traditional boat building techniques, and participate in beach conservation activities while staying in charming seaside accommodations.</p>
-                                                  <div>
-                                                       <ul class="d-flex flex-column">
-                                                            <li class="float-start tw-text-base fw-medium tw-mb-6 d-inline-flex align-items-center tw-gap-3"><span><img src="assets/images/icon/package-details-amenities.svg" alt=""></span> Traditional fishing village exploration</li>
-                                                            <li class="float-start tw-text-base fw-medium tw-mb-6 d-inline-flex align-items-center tw-gap-3"><span><img src="assets/images/icon/package-details-amenities.svg" alt=""></span> Authentic coastal cuisine cooking class</li>
-                                                            <li class="float-start tw-text-base fw-medium tw-mb-6 d-inline-flex align-items-center tw-gap-3"><span><img src="assets/images/icon/package-details-amenities.svg" alt=""></span> Mangrove ecosystem boat tour</li>   
-                                                       </ul>
-                                                  </div>
+                                        <h2 class="tw-text-10 tw-mb-8">Tour Plan</h2>
 
-                                             </div>
-                                        </div>
-                                        <div class="package-details-rules d-flex tw-gap-12 position-relative z-1">
-                                             <div>
-                                                  <span class="tw-w-25 tw-h-24 lh-1 d-inline-flex align-items-center justify-content-center bg-main-600 tw-rounded-lg text-white tw-text-6 fw-bold">04</span>
-                                             </div>
-                                             <div>
-                                                  <h6 class="tw-text-505 tw-mb-4">Days 7-8: Adventure Sports and Departure</h6>
-                                                  <p class="tw-mb-10">Conclude your coastal adventure with exciting water sports including surfing lessons, jet skiing, and deep-sea fishing excursions. Visit local handicraft centers, enjoy final beachside relaxation, and transfer to airport with unforgettable memories of Sri Lanka's coastal paradise.</p>
-                                                  <div>
-                                                       <ul class="d-flex flex-column">
-                                                            <li class="float-start tw-text-base fw-medium tw-mb-6 d-inline-flex align-items-center tw-gap-3"><span><img src="assets/images/icon/package-details-amenities.svg" alt=""></span> Professional surfing lessons with certified instructors</li>
-                                                            <li class="float-start tw-text-base fw-medium tw-mb-6 d-inline-flex align-items-center tw-gap-3"><span><img src="assets/images/icon/package-details-amenities.svg" alt=""></span> Deep-sea fishing expedition with local guides</li>
-                                                            <li class="float-start tw-text-base fw-medium tw-mb-6 d-inline-flex align-items-center tw-gap-3"><span><img src="assets/images/icon/package-details-amenities.svg" alt=""></span> Beach cleanup and conservation awareness program</li>   
-                                                       </ul>
+                                        <!-- Tour Itinerary Accordion -->
+                                        <div class="tour-itinerary-accordion">
+
+                                             <!-- Day 01 -->
+                                             <div class="itinerary-item">
+                                                  <button type="button" class="itinerary-header">
+                                                       <div class="itinerary-day-badge">
+                                                            <span class="day-number">01</span>
+                                                       </div>
+                                                       <div class="itinerary-title">
+                                                            <h6>Arrival & Southern Coast</h6>
+                                                            <p class="itinerary-subtitle">Welcome to Sri Lanka</p>
+                                                       </div>
+                                                       <div class="itinerary-toggle">
+                                                            <i class="ph ph-caret-down"></i>
+                                                       </div>
+                                                  </button>
+                                                  <div class="itinerary-content">
+                                                       <div class="itinerary-description">
+                                                            <p>Welcome to Sri Lanka! Upon arrival at Bandaranaike International Airport, you'll be greeted by our representative and transferred to the southern coast. Begin your coastal adventure with pristine beaches and vibrant marine life awaiting you.</p>
+                                                            <div class="itinerary-highlights">
+                                                                 <h6>Highlights:</h6>
+                                                                 <ul>
+                                                                      <li><i class="ph ph-check-circle"></i> Airport pickup and welcome</li>
+                                                                      <li><i class="ph ph-check-circle"></i> Scenic drive to southern coast</li>
+                                                                      <li><i class="ph ph-check-circle"></i> Check-in at beachfront resort</li>
+                                                                      <li><i class="ph ph-check-circle"></i> Evening beach relaxation</li>
+                                                                 </ul>
+                                                            </div>
+                                                       </div>
                                                   </div>
                                              </div>
+
+                                             <!-- Day 02 -->
+                                             <div class="itinerary-item">
+                                                  <button type="button" class="itinerary-header">
+                                                       <div class="itinerary-day-badge">
+                                                            <span class="day-number">02</span>
+                                                       </div>
+                                                       <div class="itinerary-title">
+                                                            <h6>Galle Fort & Coastal Exploration</h6>
+                                                            <p class="itinerary-subtitle">UNESCO Heritage & Traditions</p>
+                                                       </div>
+                                                       <div class="itinerary-toggle">
+                                                            <i class="ph ph-caret-down"></i>
+                                                       </div>
+                                                  </button>
+                                                  <div class="itinerary-content">
+                                                       <div class="itinerary-description">
+                                                            <p>Explore the historic UNESCO World Heritage Site of Galle Fort with its colonial architecture and charming streets. Witness traditional stilt fishing and enjoy a sunset boat excursion along Sri Lanka's most scenic coastline.</p>
+                                                            <div class="itinerary-highlights">
+                                                                 <h6>Highlights:</h6>
+                                                                 <ul>
+                                                                      <li><i class="ph ph-check-circle"></i> Galle Fort walking tour</li>
+                                                                      <li><i class="ph ph-check-circle"></i> Traditional stilt fishing experience</li>
+                                                                      <li><i class="ph ph-check-circle"></i> Sunset boat excursion</li>
+                                                                      <li><i class="ph ph-check-circle"></i> Coastal seafood dinner</li>
+                                                                 </ul>
+                                                            </div>
+                                                       </div>
+                                                  </div>
+                                             </div>
+
+                                             <!-- Day 03 -->
+                                             <div class="itinerary-item">
+                                                  <button type="button" class="itinerary-header">
+                                                       <div class="itinerary-day-badge">
+                                                            <span class="day-number">03</span>
+                                                       </div>
+                                                       <div class="itinerary-title">
+                                                            <h6>Whale Watching in Mirissa</h6>
+                                                            <p class="itinerary-subtitle">Marine Wildlife Encounters</p>
+                                                       </div>
+                                                       <div class="itinerary-toggle">
+                                                            <i class="ph ph-caret-down"></i>
+                                                       </div>
+                                                  </button>
+                                                  <div class="itinerary-content">
+                                                       <div class="itinerary-description">
+                                                            <p>Experience the thrill of whale and dolphin watching from Mirissa, one of the best locations in the world for marine wildlife encounters. Witness majestic blue whales, playful dolphins, and other marine species in their natural habitat.</p>
+                                                            <div class="itinerary-highlights">
+                                                                 <h6>Highlights:</h6>
+                                                                 <ul>
+                                                                      <li><i class="ph ph-check-circle"></i> Early morning whale watching expedition</li>
+                                                                      <li><i class="ph ph-check-circle"></i> Blue whale and dolphin sightings</li>
+                                                                      <li><i class="ph ph-check-circle"></i> Professional marine guide commentary</li>
+                                                                      <li><i class="ph ph-check-circle"></i> Mirissa beach relaxation</li>
+                                                                 </ul>
+                                                            </div>
+                                                       </div>
+                                                  </div>
+                                             </div>
+
+                                             <!-- Day 04 -->
+                                             <div class="itinerary-item">
+                                                  <button type="button" class="itinerary-header">
+                                                       <div class="itinerary-day-badge">
+                                                            <span class="day-number">04</span>
+                                                       </div>
+                                                       <div class="itinerary-title">
+                                                            <h6>Turtle Conservation & Snorkeling</h6>
+                                                            <p class="itinerary-subtitle">Marine Conservation & Underwater Adventure</p>
+                                                       </div>
+                                                       <div class="itinerary-toggle">
+                                                            <i class="ph ph-caret-down"></i>
+                                                       </div>
+                                                  </button>
+                                                  <div class="itinerary-content">
+                                                       <div class="itinerary-description">
+                                                            <p>Visit the Kosgoda Turtle Conservation Project and learn about sea turtle protection efforts. Discover the underwater coral gardens through snorkeling and diving activities, exploring the vibrant marine ecosystem.</p>
+                                                            <div class="itinerary-highlights">
+                                                                 <h6>Highlights:</h6>
+                                                                 <ul>
+                                                                      <li><i class="ph ph-check-circle"></i> Turtle conservation project visit</li>
+                                                                      <li><i class="ph ph-check-circle"></i> Coral reef snorkeling expedition</li>
+                                                                      <li><i class="ph ph-check-circle"></i> Marine life photography opportunities</li>
+                                                                      <li><i class="ph ph-check-circle"></i> Sunset catamaran cruise</li>
+                                                                 </ul>
+                                                            </div>
+                                                       </div>
+                                                  </div>
+                                             </div>
+
+                                             <!-- Day 05 -->
+                                             <div class="itinerary-item">
+                                                  <button type="button" class="itinerary-header">
+                                                       <div class="itinerary-day-badge">
+                                                            <span class="day-number">05</span>
+                                                       </div>
+                                                       <div class="itinerary-title">
+                                                            <h6>Coastal Village & Cultural Experience</h6>
+                                                            <p class="itinerary-subtitle">Traditional Fishing & Culinary Discovery</p>
+                                                       </div>
+                                                       <div class="itinerary-toggle">
+                                                            <i class="ph ph-caret-down"></i>
+                                                       </div>
+                                                  </button>
+                                                  <div class="itinerary-content">
+                                                       <div class="itinerary-description">
+                                                            <p>Immerse yourself in coastal culture with visits to traditional fishing villages, spice gardens, and local markets. Experience authentic Sri Lankan coastal cuisine and witness traditional boat building techniques.</p>
+                                                            <div class="itinerary-highlights">
+                                                                 <h6>Highlights:</h6>
+                                                                 <ul>
+                                                                      <li><i class="ph ph-check-circle"></i> Traditional fishing village exploration</li>
+                                                                      <li><i class="ph ph-check-circle"></i> Authentic coastal cuisine cooking class</li>
+                                                                      <li><i class="ph ph-check-circle"></i> Spice garden tour</li>
+                                                                      <li><i class="ph ph-check-circle"></i> Local market experience</li>
+                                                                 </ul>
+                                                            </div>
+                                                       </div>
+                                                  </div>
+                                             </div>
+
+                                             <!-- Day 06 -->
+                                             <div class="itinerary-item">
+                                                  <button type="button" class="itinerary-header">
+                                                       <div class="itinerary-day-badge">
+                                                            <span class="day-number">06</span>
+                                                       </div>
+                                                       <div class="itinerary-title">
+                                                            <h6>Mangrove Ecosystem & Beach Conservation</h6>
+                                                            <p class="itinerary-subtitle">Environmental Discovery & Protection</p>
+                                                       </div>
+                                                       <div class="itinerary-toggle">
+                                                            <i class="ph ph-caret-down"></i>
+                                                       </div>
+                                                  </button>
+                                                  <div class="itinerary-content">
+                                                       <div class="itinerary-description">
+                                                            <p>Explore the fascinating mangrove ecosystem on a guided boat tour and participate in beach conservation activities. Learn about coastal environmental protection while staying in charming seaside accommodations.</p>
+                                                            <div class="itinerary-highlights">
+                                                                 <h6>Highlights:</h6>
+                                                                 <ul>
+                                                                      <li><i class="ph ph-check-circle"></i> Mangrove ecosystem boat tour</li>
+                                                                      <li><i class="ph ph-check-circle"></i> Beach conservation program</li>
+                                                                      <li><i class="ph ph-check-circle"></i> Traditional boat building demonstration</li>
+                                                                      <li><i class="ph ph-check-circle"></i> Beachside relaxation</li>
+                                                                 </ul>
+                                                            </div>
+                                                       </div>
+                                                  </div>
+                                             </div>
+
+                                             <!-- Day 07 -->
+                                             <div class="itinerary-item">
+                                                  <button type="button" class="itinerary-header">
+                                                       <div class="itinerary-day-badge">
+                                                            <span class="day-number">07</span>
+                                                       </div>
+                                                       <div class="itinerary-title">
+                                                            <h6>Water Sports & Adventure Activities</h6>
+                                                            <p class="itinerary-subtitle">Ocean Thrills & Excitement</p>
+                                                       </div>
+                                                       <div class="itinerary-toggle">
+                                                            <i class="ph ph-caret-down"></i>
+                                                       </div>
+                                                  </button>
+                                                  <div class="itinerary-content">
+                                                       <div class="itinerary-description">
+                                                            <p>Conclude your coastal adventure with exciting water sports including professional surfing lessons, jet skiing, and a deep-sea fishing expedition. Experience the thrill of ocean adventures with expert guidance.</p>
+                                                            <div class="itinerary-highlights">
+                                                                 <h6>Highlights:</h6>
+                                                                 <ul>
+                                                                      <li><i class="ph ph-check-circle"></i> Professional surfing lessons</li>
+                                                                      <li><i class="ph ph-check-circle"></i> Jet skiing adventure</li>
+                                                                      <li><i class="ph ph-check-circle"></i> Deep-sea fishing expedition</li>
+                                                                      <li><i class="ph ph-check-circle"></i> Local handicraft shopping</li>
+                                                                 </ul>
+                                                            </div>
+                                                       </div>
+                                                  </div>
+                                             </div>
+
+                                             <!-- Day 08 -->
+                                             <div class="itinerary-item">
+                                                  <button type="button" class="itinerary-header">
+                                                       <div class="itinerary-day-badge">
+                                                            <span class="day-number">08</span>
+                                                       </div>
+                                                       <div class="itinerary-title">
+                                                            <h6>Departure</h6>
+                                                            <p class="itinerary-subtitle">Farewell to Paradise</p>
+                                                       </div>
+                                                       <div class="itinerary-toggle">
+                                                            <i class="ph ph-caret-down"></i>
+                                                       </div>
+                                                  </button>
+                                                  <div class="itinerary-content">
+                                                       <div class="itinerary-description">
+                                                            <p>After breakfast and final beachside relaxation, transfer to the airport for your departure flight. Leave with unforgettable memories of Sri Lanka's coastal paradise, marine wildlife encounters, and cultural experiences.</p>
+                                                            <div class="itinerary-highlights">
+                                                                 <h6>Highlights:</h6>
+                                                                 <ul>
+                                                                      <li><i class="ph ph-check-circle"></i> Leisurely breakfast</li>
+                                                                      <li><i class="ph ph-check-circle"></i> Final beach relaxation</li>
+                                                                      <li><i class="ph ph-check-circle"></i> Airport transfer</li>
+                                                                      <li><i class="ph ph-check-circle"></i> Departure with memories</li>
+                                                                 </ul>
+                                                            </div>
+                                                       </div>
+                                                  </div>
+                                             </div>
+
                                         </div>
+                                        <!-- End Modern Tour Plan Accordion -->
+
                                    </div>
                                    <div class="package-details-faq tw-mb-26" data-aos-duration="1000" data-aos-delay="300">
                                        <h2 class="tw-text-10 tw-mb-8">Frequently Asked Questions:</h2>
@@ -516,168 +709,260 @@ include 'includes/tour-hero.php';
                                              </div>
                                         </div>
                                    </div>
-                                   <!-- Package Statistics -->
-                                   <div class="package-stats" data-aos-duration="1000" data-aos-delay="300">
-                                        <h3 class="tw-text-10 tw-mb-6">Package Overview</h3>
-                                        <div class="package-rating text-center">
-                                             <div class="stars">Loading...</div>
+                                   <!-- Package Overview - Modern Design -->
+                                   <div class="mh-overview-card" data-aos-duration="1000" data-aos-delay="300">
+                                        <div class="mh-overview-header">
+                                             <h3 class="mh-overview-title">Package Overview</h3>
+                                             <p class="mh-overview-subtitle">See what travelers are saying</p>
                                         </div>
-                                        <div class="view-count"><i class="ph ph-eye"></i>Loading views...</div>
+
+                                        <!-- Overall Rating Display -->
+                                        <div class="mh-overall-rating">
+                                             <div class="package-rating">
+                                                  <div class="stars"></div>
+                                             </div>
+                                        </div>
 
                                         <!-- Detailed Ratings -->
-                                        <div class="rating-breakdown">
-                                             <h6 class="tw-mb-4">Detailed Ratings</h6>
-                                             <div class="rating-item" data-rating="comfort">
-                                                  <span class="rating-label">Comfort</span>
-                                                  <div class="progress">
-                                                       <div class="progress-bar" style="width: 0%"></div>
+                                        <div class="mh-rating-breakdown">
+                                             <h6 class="mh-section-subtitle">Detailed Ratings</h6>
+                                             <div class="mh-rating-grid">
+                                                  <div class="mh-rating-item" data-rating="comfort">
+                                                       <div class="mh-rating-header">
+                                                            <span class="rating-label">
+                                                                 <i class="ph ph-armchair"></i>
+                                                                 Comfort
+                                                            </span>
+                                                            <span class="rating-text">0.0</span>
+                                                       </div>
+                                                       <div class="mh-progress-bar">
+                                                            <div class="progress-bar" style="width: 0%"></div>
+                                                       </div>
                                                   </div>
-                                                  <span class="rating-text">0.0</span>
-                                             </div>
-                                             <div class="rating-item" data-rating="destination">
-                                                  <span class="rating-label">Destination</span>
-                                                  <div class="progress">
-                                                       <div class="progress-bar" style="width: 0%"></div>
+                                                  <div class="mh-rating-item" data-rating="destination">
+                                                       <div class="mh-rating-header">
+                                                            <span class="rating-label">
+                                                                 <i class="ph ph-map-trifold"></i>
+                                                                 Destination
+                                                            </span>
+                                                            <span class="rating-text">0.0</span>
+                                                       </div>
+                                                       <div class="mh-progress-bar">
+                                                            <div class="progress-bar" style="width: 0%"></div>
+                                                       </div>
                                                   </div>
-                                                  <span class="rating-text">0.0</span>
-                                             </div>
-                                             <div class="rating-item" data-rating="accommodation">
-                                                  <span class="rating-label">Accommodation</span>
-                                                  <div class="progress">
-                                                       <div class="progress-bar" style="width: 0%"></div>
+                                                  <div class="mh-rating-item" data-rating="accommodation">
+                                                       <div class="mh-rating-header">
+                                                            <span class="rating-label">
+                                                                 <i class="ph ph-bed"></i>
+                                                                 Accommodation
+                                                            </span>
+                                                            <span class="rating-text">0.0</span>
+                                                       </div>
+                                                       <div class="mh-progress-bar">
+                                                            <div class="progress-bar" style="width: 0%"></div>
+                                                       </div>
                                                   </div>
-                                                  <span class="rating-text">0.0</span>
-                                             </div>
-                                             <div class="rating-item" data-rating="transport">
-                                                  <span class="rating-label">Transport</span>
-                                                  <div class="progress">
-                                                       <div class="progress-bar" style="width: 0%"></div>
+                                                  <div class="mh-rating-item" data-rating="transport">
+                                                       <div class="mh-rating-header">
+                                                            <span class="rating-label">
+                                                                 <i class="ph ph-car"></i>
+                                                                 Transport
+                                                            </span>
+                                                            <span class="rating-text">0.0</span>
+                                                       </div>
+                                                       <div class="mh-progress-bar">
+                                                            <div class="progress-bar" style="width: 0%"></div>
+                                                       </div>
                                                   </div>
-                                                  <span class="rating-text">0.0</span>
                                              </div>
                                         </div>
                                    </div>
 
-                                   <!-- Reviews Section -->
-                                   <div class="review-section" data-aos-duration="1000" data-aos-delay="300">
-                                        <div class="review-header">
-                                             <h3 class="tw-text-10">Customer Reviews</h3>
+                                   <!-- Customer Reviews - Modern Design -->
+                                   <div class="mh-reviews-card" data-aos-duration="1000" data-aos-delay="300">
+                                        <div class="mh-reviews-header">
+                                             <h3 class="mh-reviews-title">Customer Reviews</h3>
+                                             <p class="mh-reviews-subtitle">Hear from our happy travelers</p>
                                         </div>
-                                        <div class="review-content">
+                                        <div class="mh-reviews-content">
                                              <div id="reviews-container">
-                                                  <div class="loading">
-                                                       <i class="ph ph-spinner"></i>
+                                                  <div class="mh-loading">
+                                                       <i class="ph ph-spinner ph-spin"></i>
                                                        <p>Loading reviews...</p>
                                                   </div>
                                              </div>
                                         </div>
                                    </div>
 
-                                   <!-- Review Form Section -->
-                                   <div class="review-form-section" data-aos-duration="1000" data-aos-delay="300">
-                                        <h4 class="tw-mb-6">Share Your Experience</h4>
+                                   <!-- Review Form - Modern Design -->
+                                   <div class="mh-review-form-card" data-aos-duration="1000" data-aos-delay="300">
+                                        <div class="mh-form-header">
+                                             <h4 class="mh-form-title">Share Your Experience</h4>
+                                             <p class="mh-form-subtitle">Help others discover this amazing tour</p>
+                                        </div>
+
                                         <div id="review-message"></div>
-                                        <form id="review-form">
+
+                                        <form id="review-form" class="mh-review-form">
                                              <div class="row">
                                                   <div class="col-md-6">
-                                                       <div class="form-group">
-                                                            <label for="reviewer_name">Your Name *</label>
-                                                            <input type="text" class="form-control" name="reviewer_name" required>
+                                                       <div class="mh-form-group">
+                                                            <label class="mh-form-label">
+                                                                 <i class="ph ph-user"></i>
+                                                                 Your Name *
+                                                            </label>
+                                                            <input type="text" class="mh-form-input" name="reviewer_name" placeholder="Enter your name" required>
                                                        </div>
                                                   </div>
                                                   <div class="col-md-6">
-                                                       <div class="form-group">
-                                                            <label for="reviewer_email">Email Address *</label>
-                                                            <input type="email" class="form-control" name="reviewer_email" required>
+                                                       <div class="mh-form-group">
+                                                            <label class="mh-form-label">
+                                                                 <i class="ph ph-envelope"></i>
+                                                                 Email Address *
+                                                            </label>
+                                                            <input type="email" class="mh-form-input" name="reviewer_email" placeholder="your.email@example.com" required>
                                                        </div>
                                                   </div>
                                              </div>
 
-                                             <div class="form-group">
-                                                  <label>Overall Rating *</label>
+                                             <div class="mh-form-group">
+                                                  <label class="mh-form-label">
+                                                       <i class="ph ph-star"></i>
+                                                       Overall Rating *
+                                                  </label>
                                                   <div data-star-rating="rating" data-value="0"></div>
                                              </div>
 
-                                             <div class="form-group">
-                                                  <label for="review_text">Your Review *</label>
-                                                  <textarea class="form-control" name="review_text" rows="4" placeholder="Share your experience with this tour package..." required></textarea>
+                                             <div class="mh-form-group">
+                                                  <label class="mh-form-label">
+                                                       <i class="ph ph-chat-text"></i>
+                                                       Your Review *
+                                                  </label>
+                                                  <textarea class="mh-form-textarea" name="review_text" rows="4" placeholder="Share your experience with this tour package..." required></textarea>
                                              </div>
 
-                                             <h6 class="tw-mb-4">Detailed Ratings</h6>
+                                             <h6 class="mh-detailed-title">Rate Specific Aspects</h6>
                                              <div class="row">
                                                   <div class="col-md-6">
-                                                       <div class="rating-input-group">
-                                                            <label>Comfort</label>
+                                                       <div class="mh-rating-input">
+                                                            <label class="mh-rating-label">
+                                                                 <i class="ph ph-armchair"></i>
+                                                                 Comfort
+                                                            </label>
                                                             <div data-star-rating="comfort_rating" data-value="5"></div>
                                                        </div>
                                                   </div>
                                                   <div class="col-md-6">
-                                                       <div class="rating-input-group">
-                                                            <label>Destination</label>
+                                                       <div class="mh-rating-input">
+                                                            <label class="mh-rating-label">
+                                                                 <i class="ph ph-map-trifold"></i>
+                                                                 Destination
+                                                            </label>
                                                             <div data-star-rating="destination_rating" data-value="5"></div>
                                                        </div>
                                                   </div>
                                                   <div class="col-md-6">
-                                                       <div class="rating-input-group">
-                                                            <label>Accommodation</label>
+                                                       <div class="mh-rating-input">
+                                                            <label class="mh-rating-label">
+                                                                 <i class="ph ph-bed"></i>
+                                                                 Accommodation
+                                                            </label>
                                                             <div data-star-rating="accommodation_rating" data-value="5"></div>
                                                        </div>
                                                   </div>
                                                   <div class="col-md-6">
-                                                       <div class="rating-input-group">
-                                                            <label>Transport</label>
+                                                       <div class="mh-rating-input">
+                                                            <label class="mh-rating-label">
+                                                                 <i class="ph ph-car"></i>
+                                                                 Transport
+                                                            </label>
                                                             <div data-star-rating="transport_rating" data-value="5"></div>
                                                        </div>
                                                   </div>
                                              </div>
 
-                                             <button type="submit" class="btn-submit-review">
-                                                  Submit Review
+                                             <button type="submit" class="mh-submit-review-btn">
+                                                  <span>Submit Review</span>
+                                                  <i class="ph ph-paper-plane-tilt"></i>
                                              </button>
                                         </form>
                                    </div>
                               </div>
                          </div>
-                         <div class="col-xl-4 col-lg-6">
+                         <div class="col-12 col-lg-4 ps-lg-4 mt-5 mt-lg-0">
                               <div class="package-details-siteber">
-                                   <div class="bg-white tw-text-xl tw-pt-10 tw-pb-10 tw-px-10 tw-mb-7" data-aos-duration="1000" data-aos-delay="300">
-                                        <h4 class="tw-text-xl tw-mb-4">Book This Tour</h4>
-                                        <form action="https://api.web3forms.com/submit" method="POST" id="tourBookingForm3" class="tour-booking-form">
-                                            <!-- Web3Forms Hidden Fields -->
-                                            <input type="hidden" name="access_key" value="17f8248d-f761-4fdd-9239-dc733c75b854">
-                                            <input type="hidden" name="from_name" value="TOUR BOOKING">
-                                            <input type="hidden" name="subject" value="TOUR BOOKING - Paradise Coastal Adventure FROM Marshallholidays.com">
-                                            <input type="hidden" name="tour_package" value="Paradise Coastal Adventure">
-                                            <input type="hidden" name="redirect" value="https://web3forms.com/success">
-                                            <div class="package-details-siteber-item tw-mb-4">
-                                                <input type="text" name="name" class="w-100 tw-p-3 border tw-rounded" placeholder="Full Name*" required>
-                                            </div>
-                                            <div class="package-details-siteber-item tw-mb-4">
-                                                <input type="email" name="email" class="w-100 tw-p-3 border tw-rounded" placeholder="Email Address*" required>
-                                            </div>
-                                            <div class="package-details-siteber-item tw-mb-4">
-                                                <input type="tel" name="phone" class="w-100 tw-p-3 border tw-rounded" placeholder="Phone Number*" required>
-                                            </div>
-                                            <div class="package-details-siteber-item tw-mb-8">
-                                                <select name="passengers" class="w-100 tw-p-3 border tw-rounded" required>
-                                                    <option value="">Number of Passengers</option>
-                                                    <option value="1 Person">1 Person</option>
-                                                    <option value="2 People">2 People</option>
-                                                    <option value="3-5 People">3-5 People</option>
-                                                    <option value="6+ People">6+ People</option>
-                                                </select>
-                                            </div>
-                                            <div class="package-details-siteber-item tw-mb-4">
-                                                <label class="tw-text-sm fw-medium text-main-600 tw-mb-2 d-block">Check-in Date*</label>
-                                                <input type="date" name="checkin_date" class="w-100 tw-p-3 border tw-rounded" required>
-                                            </div>
-                                            <div class="package-details-siteber-item tw-mb-4">
-                                                <label class="tw-text-sm fw-medium text-main-600 tw-mb-2 d-block">Check-out Date*</label>
-                                                <input type="date" name="checkout_date" class="w-100 tw-p-3 border tw-rounded" required>
-                                            </div>
-                                            <div class="package-details-siteber-btn">
-                                                <button type="submit" class="bg-main-two-600 text-main-600 w-100 tw-py-5 tw-px-18 fs-15 text-uppercase fw-bold font-heading tw-gap-2 d-inline-flex align-items-center justify-content-center tw-rounded-4xl">BOOK NOW <i class="ph ph-arrow-up-right"></i></button>
-                                            </div>
+                                   <div class="mh-booking-form-card" data-aos-duration="1000" data-aos-delay="300">
+                                        <div class="mh-booking-form-header">
+                                             <h4 class="mh-booking-form-title">Book This Tour</h4>
+                                             <p class="mh-booking-form-subtitle">Reserve your spot today</p>
+                                        </div>
+                                        <form action="https://api.web3forms.com/submit" method="POST" id="tourBookingForm" class="mh-booking-form">
+                                             <!-- Web3Forms Hidden Fields -->
+                                             <input type="hidden" name="access_key" value="17f8248d-f761-4fdd-9239-dc733c75b854">
+                                             <input type="hidden" name="from_name" value="TOUR BOOKING">
+                                             <input type="hidden" name="subject" value="TOUR BOOKING - Paradise Coastal Adventure FROM Marshallholidays.com">
+                                             <input type="hidden" name="tour_package" value="Paradise Coastal Adventure">
+                                             <input type="hidden" name="redirect" value="https://web3forms.com/success">
+
+                                             <div class="mh-form-group">
+                                                  <label class="mh-form-label">
+                                                       <i class="ph ph-user"></i>
+                                                       Full Name*
+                                                  </label>
+                                                  <input type="text" name="name" class="mh-form-input" placeholder="Enter your full name" required>
+                                             </div>
+
+                                             <div class="mh-form-group">
+                                                  <label class="mh-form-label">
+                                                       <i class="ph ph-envelope"></i>
+                                                       Email Address*
+                                                  </label>
+                                                  <input type="email" name="email" class="mh-form-input" placeholder="your.email@example.com" required>
+                                             </div>
+
+                                             <div class="mh-form-group">
+                                                  <label class="mh-form-label">
+                                                       <i class="ph ph-phone"></i>
+                                                       Phone Number*
+                                                  </label>
+                                                  <input type="tel" name="phone" class="mh-form-input" placeholder="+94 XX XXX XXXX" required>
+                                             </div>
+
+                                             <div class="mh-form-group">
+                                                  <label class="mh-form-label">
+                                                       <i class="ph ph-users"></i>
+                                                       Number of Passengers*
+                                                  </label>
+                                                  <select name="passengers" class="mh-form-select" required>
+                                                       <option value="">Select passengers</option>
+                                                       <option value="1 Person">1 Person</option>
+                                                       <option value="2 People">2 People</option>
+                                                       <option value="3-5 People">3-5 People</option>
+                                                       <option value="6+ People">6+ People</option>
+                                                  </select>
+                                             </div>
+
+                                             <div class="mh-form-group">
+                                                  <label class="mh-form-label">
+                                                       <i class="ph ph-calendar-check"></i>
+                                                       Check-in Date*
+                                                  </label>
+                                                  <input type="date" name="checkin_date" class="mh-form-input" required>
+                                             </div>
+
+                                             <div class="mh-form-group">
+                                                  <label class="mh-form-label">
+                                                       <i class="ph ph-calendar-x"></i>
+                                                       Check-out Date*
+                                                  </label>
+                                                  <input type="date" name="checkout_date" class="mh-form-input" required>
+                                             </div>
+
+                                             <button type="submit" class="mh-booking-submit-btn">
+                                                  <span>Book Now</span>
+                                                  <i class="ph ph-arrow-right"></i>
+                                             </button>
                                         </form>
                                    </div>
                                    <div class=" tw-rounded-xl bg-white tw-px-12 tw-pt-14 tw-pb-12 tw-mb-7" data-aos-duration="1000" data-aos-delay="300">
@@ -696,102 +981,6 @@ include 'includes/tour-hero.php';
           </div>
      </section>
 
-
-
-     <section class="cta-area py-140 background-img position-relative z-1" data-background-image="assets/images/cta/cta-bg.jpg">
-     <div class="container">
-          <div class="row justify-content-center tw-pb-20">
-               <div class="col-xl-10">
-                    <div class="section-wrapper text-center position-relative z-1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                         <h2 class="section-title fw-normal tw-mb-7 char-animation text-white char-animation"> <span class="text-main-600">Let's Capture</span> Beauty of the World</h2>
-                         <div class="gallery-button d-flex justify-content-center">
-                              <a class="bg-main-two-600 text-main-600 tw-py-4 tw-px-8 fs-15 text-capitalize fw-bold font-heading tw-gap-2 d-inline-flex align-items-center tw-rounded-4xl" href="contact.html">Booking Today <i class="ph ph-arrow-up-right"></i></a> 
-                         </div>
-                         <div class="gallery-shape">
-                              <img class="gallery-shape-1 position-absolute start-0 z-n1" src="assets/images/gallery/gallery-shape1.png" alt="shape">
-                              <img class="gallery-shape-2 position-absolute end-0 z-n1" src="assets/images/gallery/gallery-shape2.png" alt="shape">
-                         </div>
-                    </div>
-               </div>
-          </div>
-     </div>
-     <div class="cta-bg-shape position-absolute start-0 z-n1">
-          <img src="assets/images/cta/cta-bg-shape.png" alt="shape">
-     </div>
-</section>
-     <section class="instagram-area">
-     <div class="container">
-          <div class="row">
-               <div class="col-xl-12">
-                    <div class="text-center tw-mb-6">
-                         <h6 class="instagram-title tw-text-2xl fw-normal text-capitalize">...want to become a dontation partner & contribution...</h6>
-                    </div>
-               </div>
-          </div>
-          <div class="row row-cols-xl-6 row-cols-md-3 row-cols-sm-3 row-cols-1">
-               <div class="col">
-                    <div class="instagram-wrapper" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                         <div class="instagram-thumb position-relative z-1 overflow-hidden">
-                              <img class="tw-rounded-lg" src="assets/images/instagram/instagram-thumb1.jpg" alt="thumb">
-                              <div class="instagram-btn position-absolute z-1">
-                                   <a href="#"><span><img src="assets/images/icon/instagram.svg" alt="instagram"></span></a>
-                              </div>
-                         </div>
-                    </div>
-               </div>
-               <div class="col">
-                    <div class="instagram-wrapper" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-                         <div class="instagram-thumb position-relative z-1 overflow-hidden">
-                              <img class="tw-rounded-lg" src="assets/images/instagram/instagram-thumb2.jpg" alt="thumb">
-                              <div class="instagram-btn position-absolute z-1">
-                                   <a href="#"><span><img src="assets/images/icon/instagram.svg" alt="instagram"></span></a>
-                              </div>
-                         </div>
-                    </div>
-               </div>
-               <div class="col">
-                    <div class="instagram-wrapper" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-                         <div class="instagram-thumb position-relative z-1 overflow-hidden">
-                              <img class="tw-rounded-lg" src="assets/images/instagram/instagram-thumb3.jpg" alt="thumb">
-                              <div class="instagram-btn position-absolute z-1">
-                                   <a href="#"><span><img src="assets/images/icon/instagram.svg" alt="instagram"></span></a>
-                              </div>
-                         </div>
-                    </div>
-               </div>
-               <div class="col">
-                    <div class="instagram-wrapper" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
-                         <div class="instagram-thumb position-relative z-1 overflow-hidden">
-                              <img class="tw-rounded-lg" src="assets/images/instagram/instagram-thumb4.jpg" alt="thumb">
-                              <div class="instagram-btn position-absolute z-1">
-                                   <a href="#"><span><img src="assets/images/icon/instagram.svg" alt="instagram"></span></a>
-                              </div>
-                         </div>
-                    </div>
-               </div>
-               <div class="col">
-                    <div class="instagram-wrapper" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
-                         <div class="instagram-thumb position-relative z-1 overflow-hidden">
-                              <img class="tw-rounded-lg" src="assets/images/instagram/instagram-thumb5.jpg" alt="thumb">
-                              <div class="instagram-btn position-absolute z-1">
-                                   <a href="#"><span><img src="assets/images/icon/instagram.svg" alt="instagram"></span></a>
-                              </div>
-                         </div>
-                    </div>
-               </div>
-               <div class="col">
-                    <div class="instagram-wrapper">
-                         <div class="instagram-thumb position-relative z-1 overflow-hidden" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="700">
-                              <img class="tw-rounded-lg" src="assets/images/instagram/instagram-thumb6.jpg" alt="thumb">
-                              <div class="instagram-btn position-absolute z-1">
-                                   <a href="#"><span><img src="assets/images/icon/instagram.svg" alt="instagram"></span></a>
-                              </div>
-                         </div>
-                    </div>
-               </div>
-          </div>
-     </div>
-</section>
 
 
     <!-- ==================== Custom Footer Start ==================== -->
@@ -899,10 +1088,10 @@ include 'includes/tour-hero.php';
     <script src="assets/js/SplitText.min.js"></script>
     <!-- Scroll Trigger -->
     <script src="assets/js/ScrollTrigger.min.js"></script>
-    <!-- ScrollSmoother -->
-    <script src="assets/js/ScrollSmoother.min.js"></script>
-    <!-- custom GSAP -->
-    <script src="assets/js/custom-gsap.js"></script>
+    <!-- ScrollSmoother - Disabled to prevent accordion jumping issues -->
+    <!-- <script src="assets/js/ScrollSmoother.min.js"></script> -->
+    <!-- custom GSAP - Disabled to prevent accordion jumping issues -->
+    <!-- <script src="assets/js/custom-gsap.js"></script> -->
     <!-- main js -->
     <script src="assets/js/main.js"></script>
     <!-- Custom Star Rating System -->
@@ -910,54 +1099,6 @@ include 'includes/tour-hero.php';
     <!-- Review System JS -->
     <script src="assets/js/reviews.js"></script>
 
-    <!-- Tour Booking Form Submission Script -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const tourBookingForm = document.querySelector('.tour-booking-form');
-            if (tourBookingForm) {
-                tourBookingForm.addEventListener('submit', async function(e) {
-                    e.preventDefault();
-                    const formData = new FormData(tourBookingForm);
-                    const submitButton = tourBookingForm.querySelector('button[type="submit"]');
-                    submitButton.disabled = true;
-                    const originalHTML = submitButton.innerHTML;
-                    submitButton.innerHTML = 'BOOKING... <i class="ph ph-spinner ph-spin"></i>';
-                    try {
-                        const response = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: formData });
-                        const result = await response.json();
-                        if (result.success) {
-                            showTourBookingAlert('Booking Confirmed!', `Thank you for booking ${formData.get('tour_package')}! We will contact you shortly to confirm your reservation and provide detailed itinerary.`, 'success');
-                            tourBookingForm.reset();
-                        } else {
-                            showTourBookingAlert('Booking Failed!', 'There was an issue processing your booking. Please try again or contact us directly.', 'error');
-                        }
-                    } catch (error) {
-                        showTourBookingAlert('Connection Error!', 'Network error. Please check your connection and try again.', 'error');
-                        console.error('Tour booking form submission error:', error);
-                    } finally {
-                        submitButton.disabled = false;
-                        submitButton.innerHTML = originalHTML;
-                    }
-                });
-            }
-        });
-
-        function showTourBookingAlert(title, message, type) {
-            const existingAlerts = document.querySelectorAll('.tour-booking-alert');
-            existingAlerts.forEach(alert => alert.remove());
-            const alertElement = document.createElement('div');
-            alertElement.className = `tour-booking-alert tour-booking-alert-${type}`;
-            alertElement.innerHTML = `<div class="tour-booking-alert-content"><div class="tour-booking-alert-icon">${type === 'success' ? '✓' : '✕'}</div><div class="tour-booking-alert-text"><div class="tour-booking-alert-title">${title}</div><div class="tour-booking-alert-message">${message}</div></div><button class="tour-booking-alert-close" onclick="this.parentElement.parentElement.remove()">&times;</button></div>`;
-            if (!document.querySelector('#tour-booking-alert-styles')) {
-                const styleElement = document.createElement('style');
-                styleElement.id = 'tour-booking-alert-styles';
-                styleElement.textContent = `.tour-booking-alert{position:fixed;top:20px;right:20px;z-index:10000;min-width:350px;max-width:450px;background:white;border-radius:15px;box-shadow:0 8px 30px rgba(0,0,0,0.15);overflow:hidden;animation:slideInRight 0.4s ease-out;border:1px solid #e5e7eb}.tour-booking-alert-success{border-left:6px solid #059669}.tour-booking-alert-error{border-left:6px solid #dc2626}.tour-booking-alert-content{display:flex;align-items:flex-start;padding:20px;gap:16px}.tour-booking-alert-icon{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-weight:bold;font-size:18px;flex-shrink:0}.tour-booking-alert-success .tour-booking-alert-icon{background:#059669}.tour-booking-alert-error .tour-booking-alert-icon{background:#dc2626}.tour-booking-alert-text{flex:1}.tour-booking-alert-title{font-weight:700;font-size:18px;color:#1f2937;margin-bottom:8px;line-height:1.2}.tour-booking-alert-message{font-size:14px;color:#6b7280;line-height:1.5}.tour-booking-alert-close{background:none;border:none;font-size:24px;color:#9ca3af;cursor:pointer;padding:0;width:28px;height:28px;display:flex;align-items:center;justify-content:center;flex-shrink:0;border-radius:50%;transition:all 0.2s ease}.tour-booking-alert-close:hover{color:#6b7280;background:#f3f4f6}@keyframes slideInRight{from{transform:translateX(100%);opacity:0}to{transform:translateX(0);opacity:1}}@media (max-width:640px){.tour-booking-alert{left:20px;right:20px;min-width:auto;max-width:none}}`;
-                document.head.appendChild(styleElement);
-            }
-            document.body.appendChild(alertElement);
-            setTimeout(() => { if (alertElement && alertElement.parentNode) { alertElement.style.animation = 'slideInRight 0.4s ease-out reverse'; setTimeout(() => { if (alertElement && alertElement.parentNode) { alertElement.remove(); } }, 400); } }, 7000);
-        }
-    </script>
 
     <style>
         /* Hero Section Mobile Responsive */
@@ -1175,6 +1316,63 @@ include 'includes/tour-hero.php';
                 link.addEventListener('click', function() {
                     console.log('Menu link clicked');
                     setTimeout(() => closeMenu(), 100);
+                });
+            });
+        });
+    </script>
+
+    <!-- Date Picker JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const today = new Date().toISOString().split('T')[0];
+            const checkinDate = document.querySelector('input[name="checkin_date"]');
+            const checkoutDate = document.querySelector('input[name="checkout_date"]');
+
+            if (checkinDate) {
+                checkinDate.setAttribute('min', today);
+
+                checkinDate.addEventListener('change', function() {
+                    if (checkoutDate) {
+                        checkoutDate.setAttribute('min', this.value);
+                        if (checkoutDate.value && checkoutDate.value < this.value) {
+                            checkoutDate.value = '';
+                        }
+                    }
+                });
+            }
+
+            if (checkoutDate) {
+                checkoutDate.setAttribute('min', today);
+            }
+        });
+    </script>
+
+    <!-- Tour Itinerary Accordion JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const itineraryItems = document.querySelectorAll('.itinerary-item');
+
+            itineraryItems.forEach((item, index) => {
+                const header = item.querySelector('.itinerary-header');
+
+                // Open first item by default
+                if (index === 0) {
+                    item.classList.add('active');
+                }
+
+                // Add click handler
+                header.addEventListener('click', function(e) {
+                    e.preventDefault();
+
+                    const isActive = item.classList.contains('active');
+
+                    // Close all items
+                    itineraryItems.forEach(i => i.classList.remove('active'));
+
+                    // Toggle current item
+                    if (!isActive) {
+                        item.classList.add('active');
+                    }
                 });
             });
         });

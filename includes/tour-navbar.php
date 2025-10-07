@@ -121,7 +121,6 @@
         backdrop-filter: blur(10px) !important;
         border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
-        margin-bottom: 20px !important;
     }
 
     .mh-tour-logo h3 {
@@ -365,5 +364,5 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <!-- Add padding to body to account for fixed header -->
 <style>
-body { padding-top: 120px; }
+body { padding-top: 0; }
 </style>

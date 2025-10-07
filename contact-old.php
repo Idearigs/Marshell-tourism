@@ -87,12 +87,12 @@
 
 <div id="scrollSmoother-container">
     <!-- ==================== Breadcrumb Start Here ==================== -->
-<section class="breadcrumb-area background-img" data-background-image="MissingIMG/img/Sigiriya Rock Fortress/sigwide.jpg" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('MissingIMG/img/Sigiriya Rock Fortress/sigwide.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; min-height: 350px; display: flex; align-items: center;">
+<section class="breadcrumb-area background-img" data-background-image="MissingIMG/img/Sigiriya Rock Fortress/sigwide.jpg" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('MissingIMG/img/Sigiriya Rock Fortress/sigwide.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; min-height: 350px; display: flex; align-items: center; padding: 40px 0; margin-top: 80px;">
     <div class="container-fluid">
         <div class="row justify-content-center">
-            <div class="col-lg-8 col-md-10 col-sm-12">
-                <div class="text-center px-3">
-                    <h2 class="breadcrumb-title char-animation" style="font-size: 2.5rem; color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); margin-bottom: 0; line-height: 1.2; font-weight: 600;">
+            <div class="col-lg-8">
+                <div>
+                    <h2 class="breadcrumb-title text-center tw-mb-6 char-animation" style="font-size: 2.5rem; color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); font-weight: 600; line-height: 1.3;">
                         <span class="title-line-1">Get in Touch</span>
                         <br>
                         <span class="title-line-2">Contact Marshall Holidays</span>
@@ -166,7 +166,7 @@
                               <div>
                                    <h4 class="tw-text-2xl fw-semibold tw-mb-4">Email Address</h4>
                                    <a class="text-body fw-medium tw-text-lg tw-mb-2 d-block" href="mailto:info@marshallholidays.com">info@marshallholidays.com</a>
-                                   <a class="text-body fw-medium tw-text-lg" href="mailto:bookings@marshallholidays.com">sameera@marshallholidays.com</a>
+                                   <a class="text-body fw-medium tw-text-lg" href="mailto:bookings@marshallholidays.com">bookings@marshallholidays.com</a>
                               </div>
                          </div>
                     </div>

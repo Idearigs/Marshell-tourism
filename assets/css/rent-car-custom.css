@@ -1119,6 +1119,7 @@
         margin: 0 -10px;
     }
 
+    .rent-car-vehicle-section .container .row .col-lg-3,
     .rent-car-vehicle-section .container .row .col-lg-4,
     .rent-car-vehicle-section .container .row .col-md-6 {
         flex: 0 0 85% !important;
@@ -1127,6 +1128,7 @@
         margin-right: 15px;
     }
 
+    .rent-car-vehicle-section .container .row .col-lg-3:last-child,
     .rent-car-vehicle-section .container .row .col-lg-4:last-child,
     .rent-car-vehicle-section .container .row .col-md-6:last-child {
         margin-right: 20px;
@@ -1338,6 +1340,7 @@
     }
 
     /* Vehicle cards for very small screens */
+    .rent-car-vehicle-section .container .row .col-lg-3,
     .rent-car-vehicle-section .container .row .col-lg-4,
     .rent-car-vehicle-section .container .row .col-md-6 {
         flex: 0 0 90% !important;

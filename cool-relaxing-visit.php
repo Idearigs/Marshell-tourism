@@ -16,6 +16,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <!-- CSS Files -->
     <link rel="stylesheet" href="assets/css/swiper-bundle.css">
     <link rel="stylesheet" href="assets/css/slick.css">
@@ -23,8 +25,13 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/rent-car-custom.css">
+    <!-- Modern Tour Package CSS -->
+    <link rel="stylesheet" href="assets/css/modern-tour-package.css">
     <!-- Review System CSS -->
     <link rel="stylesheet" href="assets/css/reviews.css">
+    <!-- Elfsight WhatsApp Chat | Untitled WhatsApp Chat -->
+<script src="https://elfsightcdn.com/platform.js" async></script>
+<div class="elfsight-app-2c3aaac6-0b9c-4362-9a19-38c17f636211" data-elfsight-app-lazy></div>
 
     <!-- Tour Package Gallery Fix -->
     <style>
@@ -171,43 +178,52 @@
     ?>
     <!-- ==================== Hero Section End Here ==================== -->
     
-    <section id="package-details" class="page pt-140">
+    <section class="mh-package-header" id="package-details">
         <div class="container">
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="package-details-top d-flex justify-content-between align-items-end tw-pb-6 tw-mb-15 flex-wrap row-gap-3">
-                        <div data-aos-duration="1000" data-aos-delay="200">
-                            <div class="d-flex align-items-center tw-gap-5 tw-mb-5">
-                                <div>
-                                    <span class="bg-main-two-600 fw-medium tw-pt-1 tw-pb-2 tw-px-5 tw-rounded-3xl text-white">Relaxation & Wellness</span>
-                                </div>
-                                <div>
-                                    <p><span class="text-main-two-600"><i class="ph ph-eye"></i></span> 1,956 people viewed this package</p>
-                                </div>
+            <div class="mh-package-header-card">
+                <div class="row align-items-center">
+                    <div class="col-lg-8">
+                        <!-- Category Badge & Views -->
+                        <div class="mh-package-meta">
+                            <span class="mh-category-badge">
+                                <i class="ph ph-heart"></i>
+                                Relaxation & Wellness
+                            </span>
+                        </div>
+
+                        <!-- Package Title -->
+                        <h1 class="mh-package-title">Cool Relaxing Visit</h1>
+
+                        <!-- Package Info -->
+                        <div class="mh-package-info">
+                            <div class="mh-info-item">
+                                <i class="ph ph-clock"></i>
+                                <span>7 Days 6 Nights</span>
                             </div>
-                            <div class="tw-mb-3">
-                                <h2 class="tw-text-13 char-animation" style="font-size: 2rem;">Cool Relaxing Visit</h2>
+                            <div class="mh-info-item">
+                                <i class="ph ph-users"></i>
+                                <span>Perfect for Relaxation</span>
                             </div>
-                            <div>
-                                <ul class="d-flex tw-gap-6 flex-wrap row-gap-3">
-                                    <li class="d-flex align-items-center tw-gap-2"><span><img src="assets/images/icon/package-details-top-icon1.svg" alt="clock"></span> 7 Days 6 Nights</li>
-                                    <li class="d-flex align-items-center tw-gap-2"><span><img src="assets/images/icon/package-details-top-icon2.svg" alt="people"></span> Perfect for Relaxation</li>
-                                    <li class="d-flex align-items-center tw-gap-2"><span><img src="assets/images/icon/package-details-top-icon3.svg" alt="location"></span> Hill Country & Temples, Sri Lanka</li>
-                                </ul>
+                            <div class="mh-info-item">
+                                <i class="ph ph-map-pin"></i>
+                                <span>Hill Country & Temples, Sri Lanka</span>
                             </div>
                         </div>
-                        <div data-aos-duration="1000" data-aos-delay="300">
-                            <div class="d-flex align-items-center tw-gap-4 tw-mb-3">
-                                <div>
-                                    <i class="text-main-two-600 ph ph-star"></i>
-                                    <i class="text-main-two-600 ph ph-star"></i>
-                                    <i class="text-main-two-600 ph ph-star"></i>
-                                    <i class="text-main-two-600 ph ph-star"></i>
-                                    <i class="text-main-two-600 ph ph-star"></i>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <!-- Rating & Pricing -->
+                        <div class="mh-package-pricing">
+                            <div class="mh-rating-box">
+                                <div class="mh-rating-score package-rating">
+                                    <span class="score">5.0</span>
+                                    <span class="reviews">(0 reviews)</span>
                                 </div>
-                                <div class="package-rating">
-                                    <p class="mb-0">Loading reviews...</p>
-                                </div>
+                            </div>
+
+                            <div class="mh-price-section">
+                                <h3 class="mh-price-title">Contact us for Best rates</h3>
+                                <p class="mh-price-subtitle">Customized pricing available</p>
                             </div>
                         </div>
                     </div>
@@ -278,7 +294,7 @@
     <section>
         <div class="container">
             <div class="row">
-                <div class="col-xl-12">
+                <div class="col-12 col-lg-8">
                     <div class="tw-mb-7">
                         <div class="tw-mb-14" data-aos-duration="1000" data-aos-delay="200">
                             <h2 class="tw-text-10 tw-mb-4">Journey Overview:</h2>
@@ -286,76 +302,219 @@
                         </div>
 
                         <div class="tw-mb-16" data-aos-duration="1000" data-aos-delay="300">
-                            <h2 class="tw-text-10 tw-mb-8">Detailed Itinerary:</h2> 
-                            
-                            <div class="package-details-rules d-flex tw-gap-12 position-relative z-1">
-                                <div>
-                                    <span class="tw-w-25 tw-h-24 lh-1 d-inline-flex align-items-center justify-content-center bg-main-600 tw-rounded-lg text-white tw-text-6 fw-bold">01</span>
-                                </div>
-                                <div>
-                                    <h6 class="tw-text-505 tw-mb-4">Day 01: Arrival in Colombo</h6>
-                                    <p class="tw-mb-20">Welcome to Sri Lanka! Upon arrival at Bandaranaike International Airport, you'll be warmly welcomed and transferred to a peaceful hotel in Colombo. Spend the evening relaxing and preparing for your rejuvenating journey ahead.</p>
-                                </div>
-                            </div>
+                            <h2 class="tw-text-10 tw-mb-8">Itinerary Highlights:</h2>
 
-                            <div class="package-details-rules d-flex tw-gap-12 position-relative z-1">
-                                <div>
-                                    <span class="tw-w-25 tw-h-24 lh-1 d-inline-flex align-items-center justify-content-center bg-main-600 tw-rounded-lg text-white tw-text-6 fw-bold">02</span>
-                                </div>
-                                <div class="tw-mb-10">
-                                    <h6 class="tw-text-505 tw-mb-4">Day 02: Visit Temple of Tooth, Kandy & Peradeniya Botanical Garden</h6>
-                                    <p class="tw-mb-9">Journey to the beautiful hill city of Kandy. Visit the sacred Temple of the Tooth Relic, one of the most revered Buddhist temples. Spend a peaceful afternoon exploring the stunning Royal Botanical Gardens at Peradeniya, home to over 4,000 species of plants in a serene setting.</p>
-                                </div>
-                            </div>
+                            <!-- Tour Itinerary Accordion -->
+                            <div class="tour-itinerary-accordion">
 
-                            <div class="package-details-rules d-flex tw-gap-12 position-relative z-1">
-                                <div>
-                                    <span class="tw-w-25 tw-h-24 lh-1 d-inline-flex align-items-center justify-content-center bg-main-600 tw-rounded-lg text-white tw-text-6 fw-bold">03</span>
+                                <!-- Day 01 -->
+                                <div class="itinerary-item">
+                                    <button type="button" class="itinerary-header">
+                                        <div class="itinerary-day-badge">
+                                            <span class="day-number">01</span>
+                                        </div>
+                                        <div class="itinerary-title">
+                                            <h6>Arrival in Colombo</h6>
+                                            <p class="itinerary-subtitle">Welcome to Sri Lanka</p>
+                                        </div>
+                                        <div class="itinerary-toggle">
+                                            <i class="ph ph-caret-down"></i>
+                                        </div>
+                                    </button>
+                                    <div class="itinerary-content">
+                                        <div class="itinerary-description">
+                                            <p>Welcome to Sri Lanka! Upon arrival at Bandaranaike International Airport, you'll be warmly welcomed and transferred to a peaceful hotel in Colombo. Spend the evening relaxing and preparing for your rejuvenating journey ahead.</p>
+                                            <div class="itinerary-highlights">
+                                                <h6>Highlights:</h6>
+                                                <ul>
+                                                    <li><i class="ph ph-check-circle"></i> Airport welcome and transfer</li>
+                                                    <li><i class="ph ph-check-circle"></i> Peaceful hotel check-in</li>
+                                                    <li><i class="ph ph-check-circle"></i> Evening relaxation</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="tw-mb-20">
-                                    <h6 class="tw-text-505 tw-mb-4">Day 03: Cool Relaxing at Nuwara Eliya</h6>
-                                    <p class="tw-mb-10">Travel to Nuwara Eliya, known as "Little England" for its cool climate and colonial charm. Relax in this hill station surrounded by tea plantations, enjoy the crisp mountain air, and take leisurely walks through the beautiful landscapes and gardens.</p>
-                                </div>
-                            </div>
 
-                            <div class="package-details-rules d-flex tw-gap-12 position-relative z-1">
-                                <div>
-                                    <span class="tw-w-25 tw-h-24 lh-1 d-inline-flex align-items-center justify-content-center bg-main-600 tw-rounded-lg text-white tw-text-6 fw-bold">04</span>
+                                <!-- Day 02 -->
+                                <div class="itinerary-item">
+                                    <button type="button" class="itinerary-header">
+                                        <div class="itinerary-day-badge">
+                                            <span class="day-number">02</span>
+                                        </div>
+                                        <div class="itinerary-title">
+                                            <h6>Kandy Cultural Experience</h6>
+                                            <p class="itinerary-subtitle">Temple of Tooth & Botanical Gardens</p>
+                                        </div>
+                                        <div class="itinerary-toggle">
+                                            <i class="ph ph-caret-down"></i>
+                                        </div>
+                                    </button>
+                                    <div class="itinerary-content">
+                                        <div class="itinerary-description">
+                                            <p>Journey to the beautiful hill city of Kandy. Visit the sacred Temple of the Tooth Relic, one of the most revered Buddhist temples. Spend a peaceful afternoon exploring the stunning Royal Botanical Gardens at Peradeniya, home to over 4,000 species of plants in a serene setting.</p>
+                                            <div class="itinerary-highlights">
+                                                <h6>Highlights:</h6>
+                                                <ul>
+                                                    <li><i class="ph ph-check-circle"></i> Temple of the Tooth Relic visit</li>
+                                                    <li><i class="ph ph-check-circle"></i> Royal Botanical Gardens exploration</li>
+                                                    <li><i class="ph ph-check-circle"></i> 4,000+ plant species viewing</li>
+                                                    <li><i class="ph ph-check-circle"></i> Peaceful garden strolls</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="tw-mb-20">
-                                    <h6 class="tw-text-505 tw-mb-4">Day 04: Visit Mahamevnawa Buddhist Monastery at Ella & Nine Arch Bridge</h6>
-                                    <p class="tw-mb-10">Travel to the scenic mountain town of Ella. Visit the peaceful Mahamevnawa Buddhist Monastery for meditation and spiritual reflection. Explore the famous Nine Arch Bridge, an architectural marvel surrounded by lush greenery and tea plantations.</p>
-                                </div>
-                            </div>
 
-                            <div class="package-details-rules d-flex tw-gap-12 position-relative z-1">
-                                <div>
-                                    <span class="tw-w-25 tw-h-24 lh-1 d-inline-flex align-items-center justify-content-center bg-main-600 tw-rounded-lg text-white tw-text-6 fw-bold">05</span>
+                                <!-- Day 03 -->
+                                <div class="itinerary-item">
+                                    <button type="button" class="itinerary-header">
+                                        <div class="itinerary-day-badge">
+                                            <span class="day-number">03</span>
+                                        </div>
+                                        <div class="itinerary-title">
+                                            <h6>Nuwara Eliya Retreat</h6>
+                                            <p class="itinerary-subtitle">Cool Climate & Tea Country</p>
+                                        </div>
+                                        <div class="itinerary-toggle">
+                                            <i class="ph ph-caret-down"></i>
+                                        </div>
+                                    </button>
+                                    <div class="itinerary-content">
+                                        <div class="itinerary-description">
+                                            <p>Travel to Nuwara Eliya, known as "Little England" for its cool climate and colonial charm. Relax in this hill station surrounded by tea plantations, enjoy the crisp mountain air, and take leisurely walks through the beautiful landscapes and gardens.</p>
+                                            <div class="itinerary-highlights">
+                                                <h6>Highlights:</h6>
+                                                <ul>
+                                                    <li><i class="ph ph-check-circle"></i> Cool climate hill station</li>
+                                                    <li><i class="ph ph-check-circle"></i> Tea plantation surroundings</li>
+                                                    <li><i class="ph ph-check-circle"></i> Colonial architecture viewing</li>
+                                                    <li><i class="ph ph-check-circle"></i> Leisurely garden walks</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="tw-mb-20">
-                                    <h6 class="tw-text-505 tw-mb-4">Day 05: Travel to Galle</h6>
-                                    <p class="tw-mb-10">Journey to the historic coastal city of Galle. Explore the UNESCO World Heritage Galle Fort, with its charming colonial architecture, narrow streets, and stunning ocean views. Relax by the sea and enjoy the peaceful coastal atmosphere.</p>
-                                </div>
-                            </div>
 
-                            <div class="package-details-rules d-flex tw-gap-12 position-relative z-1">
-                                <div>
-                                    <span class="tw-w-25 tw-h-24 lh-1 d-inline-flex align-items-center justify-content-center bg-main-600 tw-rounded-lg text-white tw-text-6 fw-bold">06</span>
+                                <!-- Day 04 -->
+                                <div class="itinerary-item">
+                                    <button type="button" class="itinerary-header">
+                                        <div class="itinerary-day-badge">
+                                            <span class="day-number">04</span>
+                                        </div>
+                                        <div class="itinerary-title">
+                                            <h6>Ella Spiritual Journey</h6>
+                                            <p class="itinerary-subtitle">Monastery & Nine Arch Bridge</p>
+                                        </div>
+                                        <div class="itinerary-toggle">
+                                            <i class="ph ph-caret-down"></i>
+                                        </div>
+                                    </button>
+                                    <div class="itinerary-content">
+                                        <div class="itinerary-description">
+                                            <p>Travel to the scenic mountain town of Ella. Visit the peaceful Mahamevnawa Buddhist Monastery for meditation and spiritual reflection. Explore the famous Nine Arch Bridge, an architectural marvel surrounded by lush greenery and tea plantations.</p>
+                                            <div class="itinerary-highlights">
+                                                <h6>Highlights:</h6>
+                                                <ul>
+                                                    <li><i class="ph ph-check-circle"></i> Mahamevnawa Buddhist Monastery</li>
+                                                    <li><i class="ph ph-check-circle"></i> Meditation and spiritual reflection</li>
+                                                    <li><i class="ph ph-check-circle"></i> Nine Arch Bridge exploration</li>
+                                                    <li><i class="ph ph-check-circle"></i> Scenic mountain views</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="tw-mb-20">
-                                    <h6 class="tw-text-505 tw-mb-4">Day 06: Visit Galle & Travel to Colombo</h6>
-                                    <p class="tw-mb-10">Continue exploring Galle with visits to its historic ramparts, museums, and quaint shops. In the afternoon, travel back to Colombo for your final evening. Enjoy a relaxing dinner and reflect on your peaceful journey through Sri Lanka's most serene locations.</p>
-                                </div>
-                            </div>
 
-                            <div class="package-details-rules d-flex tw-gap-12 position-relative z-1">
-                                <div>
-                                    <span class="tw-w-25 tw-h-24 lh-1 d-inline-flex align-items-center justify-content-center bg-main-600 tw-rounded-lg text-white tw-text-6 fw-bold">07</span>
+                                <!-- Day 05 -->
+                                <div class="itinerary-item">
+                                    <button type="button" class="itinerary-header">
+                                        <div class="itinerary-day-badge">
+                                            <span class="day-number">05</span>
+                                        </div>
+                                        <div class="itinerary-title">
+                                            <h6>Galle Fort Discovery</h6>
+                                            <p class="itinerary-subtitle">Historic Coastal Heritage</p>
+                                        </div>
+                                        <div class="itinerary-toggle">
+                                            <i class="ph ph-caret-down"></i>
+                                        </div>
+                                    </button>
+                                    <div class="itinerary-content">
+                                        <div class="itinerary-description">
+                                            <p>Journey to the historic coastal city of Galle. Explore the UNESCO World Heritage Galle Fort, with its charming colonial architecture, narrow streets, and stunning ocean views. Relax by the sea and enjoy the peaceful coastal atmosphere.</p>
+                                            <div class="itinerary-highlights">
+                                                <h6>Highlights:</h6>
+                                                <ul>
+                                                    <li><i class="ph ph-check-circle"></i> UNESCO Galle Fort exploration</li>
+                                                    <li><i class="ph ph-check-circle"></i> Colonial architecture viewing</li>
+                                                    <li><i class="ph ph-check-circle"></i> Stunning ocean views</li>
+                                                    <li><i class="ph ph-check-circle"></i> Coastal relaxation</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div>
-                                    <h6 class="tw-text-505 tw-mb-4">Day 07: Departure</h6>
-                                    <p class="tw-mb-10">Your final day in Sri Lanka. After breakfast, you'll be transferred to the airport for your departure, carrying with you the peaceful memories and renewed spirit from your cool and relaxing journey through the beautiful island of Sri Lanka.</p>
+
+                                <!-- Day 06 -->
+                                <div class="itinerary-item">
+                                    <button type="button" class="itinerary-header">
+                                        <div class="itinerary-day-badge">
+                                            <span class="day-number">06</span>
+                                        </div>
+                                        <div class="itinerary-title">
+                                            <h6>Galle to Colombo</h6>
+                                            <p class="itinerary-subtitle">Final Exploration & Return</p>
+                                        </div>
+                                        <div class="itinerary-toggle">
+                                            <i class="ph ph-caret-down"></i>
+                                        </div>
+                                    </button>
+                                    <div class="itinerary-content">
+                                        <div class="itinerary-description">
+                                            <p>Continue exploring Galle with visits to its historic ramparts, museums, and quaint shops. In the afternoon, travel back to Colombo for your final evening. Enjoy a relaxing dinner and reflect on your peaceful journey through Sri Lanka's most serene locations.</p>
+                                            <div class="itinerary-highlights">
+                                                <h6>Highlights:</h6>
+                                                <ul>
+                                                    <li><i class="ph ph-check-circle"></i> Historic ramparts exploration</li>
+                                                    <li><i class="ph ph-check-circle"></i> Museum visits</li>
+                                                    <li><i class="ph ph-check-circle"></i> Quaint shops browsing</li>
+                                                    <li><i class="ph ph-check-circle"></i> Return to Colombo</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
+
+                                <!-- Day 07 -->
+                                <div class="itinerary-item">
+                                    <button type="button" class="itinerary-header">
+                                        <div class="itinerary-day-badge">
+                                            <span class="day-number">07</span>
+                                        </div>
+                                        <div class="itinerary-title">
+                                            <h6>Departure Day</h6>
+                                            <p class="itinerary-subtitle">Farewell Sri Lanka</p>
+                                        </div>
+                                        <div class="itinerary-toggle">
+                                            <i class="ph ph-caret-down"></i>
+                                        </div>
+                                    </button>
+                                    <div class="itinerary-content">
+                                        <div class="itinerary-description">
+                                            <p>Your final day in Sri Lanka. After breakfast, you'll be transferred to the airport for your departure, carrying with you the peaceful memories and renewed spirit from your cool and relaxing journey through the beautiful island of Sri Lanka.</p>
+                                            <div class="itinerary-highlights">
+                                                <h6>Highlights:</h6>
+                                                <ul>
+                                                    <li><i class="ph ph-check-circle"></i> Final breakfast</li>
+                                                    <li><i class="ph ph-check-circle"></i> Airport transfer</li>
+                                                    <li><i class="ph ph-check-circle"></i> Departure with peaceful memories</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
 
@@ -380,125 +539,256 @@
                             <p class="tw-text-lg">This tour is specially designed for travelers seeking peace, tranquility, and spiritual renewal. Ideal for those who want to experience Sri Lanka's natural beauty, cultural heritage, and peaceful environments away from the hustle and bustle of city life.</p>
                         </div>
 
-                        <!-- Package Statistics -->
-                        <div class="package-stats" data-aos-duration="1000" data-aos-delay="300">
-                            <h3 class="tw-text-10 tw-mb-6">Package Overview</h3>
-                            <div class="package-rating text-center">
-                                <div class="stars">Loading...</div>
+                        <!-- Package Overview - Modern Design -->
+                        <div class="mh-overview-card" data-aos-duration="1000" data-aos-delay="300">
+                            <div class="mh-overview-header">
+                                <h3 class="mh-overview-title">Package Overview</h3>
+                                <p class="mh-overview-subtitle">See what travelers are saying</p>
                             </div>
-                            <div class="view-count"><i class="ph ph-eye"></i>Loading views...</div>
-
-                            <!-- Detailed Ratings -->
-                            <div class="rating-breakdown">
-                                <h6 class="tw-mb-4">Detailed Ratings</h6>
-                                <div class="rating-item" data-rating="comfort">
-                                    <span class="rating-label">Comfort</span>
-                                    <div class="progress">
-                                        <div class="progress-bar" style="width: 0%"></div>
-                                    </div>
-                                    <span class="rating-text">0.0</span>
+                            <div class="mh-overall-rating">
+                                <div class="package-rating">
+                                    <div class="stars"></div>
                                 </div>
-                                <div class="rating-item" data-rating="destination">
-                                    <span class="rating-label">Destination</span>
-                                    <div class="progress">
-                                        <div class="progress-bar" style="width: 0%"></div>
+                            </div>
+                            <div class="mh-rating-breakdown">
+                                <h6 class="mh-section-subtitle">Detailed Ratings</h6>
+                                <div class="mh-rating-grid">
+                                    <div class="mh-rating-item" data-rating="comfort">
+                                        <div class="mh-rating-header">
+                                            <span class="rating-label"><i class="ph ph-armchair"></i> Comfort</span>
+                                            <span class="rating-text">0.0</span>
+                                        </div>
+                                        <div class="mh-progress-bar">
+                                            <div class="progress-bar" style="width: 0%"></div>
+                                        </div>
                                     </div>
-                                    <span class="rating-text">0.0</span>
-                                </div>
-                                <div class="rating-item" data-rating="accommodation">
-                                    <span class="rating-label">Accommodation</span>
-                                    <div class="progress">
-                                        <div class="progress-bar" style="width: 0%"></div>
+                                    <div class="mh-rating-item" data-rating="destination">
+                                        <div class="mh-rating-header">
+                                            <span class="rating-label"><i class="ph ph-map-trifold"></i> Destination</span>
+                                            <span class="rating-text">0.0</span>
+                                        </div>
+                                        <div class="mh-progress-bar">
+                                            <div class="progress-bar" style="width: 0%"></div>
+                                        </div>
                                     </div>
-                                    <span class="rating-text">0.0</span>
-                                </div>
-                                <div class="rating-item" data-rating="transport">
-                                    <span class="rating-label">Transport</span>
-                                    <div class="progress">
-                                        <div class="progress-bar" style="width: 0%"></div>
+                                    <div class="mh-rating-item" data-rating="accommodation">
+                                        <div class="mh-rating-header">
+                                            <span class="rating-label"><i class="ph ph-bed"></i> Accommodation</span>
+                                            <span class="rating-text">0.0</span>
+                                        </div>
+                                        <div class="mh-progress-bar">
+                                            <div class="progress-bar" style="width: 0%"></div>
+                                        </div>
                                     </div>
-                                    <span class="rating-text">0.0</span>
+                                    <div class="mh-rating-item" data-rating="transport">
+                                        <div class="mh-rating-header">
+                                            <span class="rating-label"><i class="ph ph-car"></i> Transport</span>
+                                            <span class="rating-text">0.0</span>
+                                        </div>
+                                        <div class="mh-progress-bar">
+                                            <div class="progress-bar" style="width: 0%"></div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Reviews Section -->
-                        <div class="review-section" data-aos-duration="1000" data-aos-delay="300">
-                            <div class="review-header">
-                                <h3 class="tw-text-10">Customer Reviews</h3>
+                        <!-- Customer Reviews - Modern Design -->
+                        <div class="mh-reviews-card" data-aos-duration="1000" data-aos-delay="300">
+                            <div class="mh-reviews-header">
+                                <h3 class="mh-reviews-title">Customer Reviews</h3>
+                                <p class="mh-reviews-subtitle">Hear from our happy travelers</p>
                             </div>
-                            <div class="review-content">
+                            <div class="mh-reviews-content">
                                 <div id="reviews-container">
-                                    <div class="loading">
-                                        <i class="ph ph-spinner"></i>
+                                    <div class="mh-loading">
+                                        <i class="ph ph-spinner ph-spin"></i>
                                         <p>Loading reviews...</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Review Form Section -->
-                        <div class="review-form-section" data-aos-duration="1000" data-aos-delay="300">
-                            <h4 class="tw-mb-6">Share Your Experience</h4>
+                        <!-- Review Form - Modern Design -->
+                        <div class="mh-review-form-card" data-aos-duration="1000" data-aos-delay="300">
+                            <div class="mh-form-header">
+                                <h4 class="mh-form-title">Share Your Experience</h4>
+                                <p class="mh-form-subtitle">Help others discover this amazing tour</p>
+                            </div>
+
                             <div id="review-message"></div>
-                            <form id="review-form">
+
+                            <form id="review-form" class="mh-review-form">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="reviewer_name">Your Name *</label>
-                                            <input type="text" class="form-control" name="reviewer_name" required>
+                                        <div class="mh-form-group">
+                                            <label class="mh-form-label">
+                                                <i class="ph ph-user"></i>
+                                                Your Name *
+                                            </label>
+                                            <input type="text" class="mh-form-input" name="reviewer_name" placeholder="Enter your name" required>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="reviewer_email">Email Address *</label>
-                                            <input type="email" class="form-control" name="reviewer_email" required>
+                                        <div class="mh-form-group">
+                                            <label class="mh-form-label">
+                                                <i class="ph ph-envelope"></i>
+                                                Email Address *
+                                            </label>
+                                            <input type="email" class="mh-form-input" name="reviewer_email" placeholder="your.email@example.com" required>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="form-group">
-                                    <label>Overall Rating *</label>
+                                <div class="mh-form-group">
+                                    <label class="mh-form-label">
+                                        <i class="ph ph-star"></i>
+                                        Overall Rating *
+                                    </label>
                                     <div data-star-rating="rating" data-value="0"></div>
                                 </div>
 
-                                <div class="form-group">
-                                    <label for="review_text">Your Review *</label>
-                                    <textarea class="form-control" name="review_text" rows="4" placeholder="Share your experience with this tour package..." required></textarea>
+                                <div class="mh-form-group">
+                                    <label class="mh-form-label">
+                                        <i class="ph ph-chat-text"></i>
+                                        Your Review *
+                                    </label>
+                                    <textarea class="mh-form-textarea" name="review_text" rows="4" placeholder="Share your experience with this tour package..." required></textarea>
                                 </div>
 
-                                <h6 class="tw-mb-4">Detailed Ratings</h6>
+                                <h6 class="mh-detailed-title">Rate Specific Aspects</h6>
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <div class="rating-input-group">
-                                            <label>Comfort</label>
+                                        <div class="mh-rating-input">
+                                            <label class="mh-rating-label">
+                                                <i class="ph ph-armchair"></i>
+                                                Comfort
+                                            </label>
                                             <div data-star-rating="comfort_rating" data-value="5"></div>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <div class="rating-input-group">
-                                            <label>Destination</label>
+                                        <div class="mh-rating-input">
+                                            <label class="mh-rating-label">
+                                                <i class="ph ph-map-trifold"></i>
+                                                Destination
+                                            </label>
                                             <div data-star-rating="destination_rating" data-value="5"></div>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <div class="rating-input-group">
-                                            <label>Accommodation</label>
+                                        <div class="mh-rating-input">
+                                            <label class="mh-rating-label">
+                                                <i class="ph ph-bed"></i>
+                                                Accommodation
+                                            </label>
                                             <div data-star-rating="accommodation_rating" data-value="5"></div>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <div class="rating-input-group">
-                                            <label>Transport</label>
+                                        <div class="mh-rating-input">
+                                            <label class="mh-rating-label">
+                                                <i class="ph ph-car"></i>
+                                                Transport
+                                            </label>
                                             <div data-star-rating="transport_rating" data-value="5"></div>
                                         </div>
                                     </div>
                                 </div>
 
-                                <button type="submit" class="btn-submit-review">
-                                    Submit Review
+                                <button type="submit" class="mh-submit-review-btn">
+                                    <span>Submit Review</span>
+                                    <i class="ph ph-paper-plane-tilt"></i>
                                 </button>
                             </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar Column -->
+                <div class="col-12 col-lg-4 ps-lg-4 mt-5 mt-lg-0">
+                    <div class="package-details-siteber">
+                        <div class="mh-booking-form-card" data-aos-duration="1000" data-aos-delay="300">
+                            <div class="mh-booking-form-header">
+                                <h4 class="mh-booking-form-title">Book This Tour</h4>
+                                <p class="mh-booking-form-subtitle">Reserve your spot today</p>
+                            </div>
+                            <form action="https://api.web3forms.com/submit" method="POST" id="tourBookingForm" class="mh-booking-form">
+                                <!-- Web3Forms Hidden Fields -->
+                                <input type="hidden" name="access_key" value="17f8248d-f761-4fdd-9239-dc733c75b854">
+                                <input type="hidden" name="from_name" value="TOUR BOOKING">
+                                <input type="hidden" name="subject" value="TOUR BOOKING - Cool Relaxing Visit FROM Marshallholidays.com">
+                                <input type="hidden" name="tour_package" value="Cool Relaxing Visit">
+                                <input type="hidden" name="redirect" value="https://web3forms.com/success">
+
+                                <div class="mh-form-group">
+                                    <label class="mh-form-label">
+                                        <i class="ph ph-user"></i>
+                                        Full Name*
+                                    </label>
+                                    <input type="text" name="name" class="mh-form-input" placeholder="Enter your full name" required>
+                                </div>
+
+                                <div class="mh-form-group">
+                                    <label class="mh-form-label">
+                                        <i class="ph ph-envelope"></i>
+                                        Email Address*
+                                    </label>
+                                    <input type="email" name="email" class="mh-form-input" placeholder="your.email@example.com" required>
+                                </div>
+
+                                <div class="mh-form-group">
+                                    <label class="mh-form-label">
+                                        <i class="ph ph-phone"></i>
+                                        Phone Number*
+                                    </label>
+                                    <input type="tel" name="phone" class="mh-form-input" placeholder="+94 XX XXX XXXX" required>
+                                </div>
+
+                                <div class="mh-form-group">
+                                    <label class="mh-form-label">
+                                        <i class="ph ph-users"></i>
+                                        Number of Passengers*
+                                    </label>
+                                    <select name="passengers" class="mh-form-select" required>
+                                        <option value="">Select passengers</option>
+                                        <option value="1 Person">1 Person</option>
+                                        <option value="2 People">2 People</option>
+                                        <option value="3-5 People">3-5 People</option>
+                                        <option value="6+ People">6+ People</option>
+                                    </select>
+                                </div>
+
+                                <div class="mh-form-group">
+                                    <label class="mh-form-label">
+                                        <i class="ph ph-calendar-check"></i>
+                                        Check-in Date*
+                                    </label>
+                                    <input type="date" name="checkin_date" class="mh-form-input" required>
+                                </div>
+
+                                <div class="mh-form-group">
+                                    <label class="mh-form-label">
+                                        <i class="ph ph-calendar-x"></i>
+                                        Check-out Date*
+                                    </label>
+                                    <input type="date" name="checkout_date" class="mh-form-input" required>
+                                </div>
+
+                                <button type="submit" class="mh-booking-submit-btn">
+                                    <span>Book Now</span>
+                                    <i class="ph ph-arrow-right"></i>
+                                </button>
+                            </form>
+                        </div>
+                        <div class=" tw-rounded-xl bg-white tw-px-12 tw-pt-14 tw-pb-12 tw-mb-7" data-aos-duration="1000" data-aos-delay="300">
+                            <h6 class="tw-text-xl tw-mb-8">Book With Confidence</h6>
+                            <div>
+                                <a class="text-paragraph-color fw-medium tw-mb-4" href="#">Customer care available 24/7</a>
+                                <a class="text-paragraph-color fw-medium tw-mb-4" href="#">Hand-picked Tours & Activities</a>
+                                <a class="text-paragraph-color fw-medium tw-mb-4" href="#">Free Travel Insureance</a>
+                                <a class="text-paragraph-color fw-medium tw-mb-4" href="#">No-hassle best price guarantee</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -585,8 +875,10 @@
 <script src="assets/js/aos.js"></script>
 <script src="assets/js/gsap.min.js"></script>
 <script src="assets/js/ScrollTrigger.min.js"></script>
-<script src="assets/js/ScrollSmoother.min.js"></script>
-<script src="assets/js/custom-gsap.js"></script>
+<!-- ScrollSmoother - Disabled to prevent accordion jumping issues -->
+<!-- <script src="assets/js/ScrollSmoother.min.js"></script> -->
+<!-- custom GSAP - Disabled to prevent accordion jumping issues -->
+<!-- <script src="assets/js/custom-gsap.js"></script> -->
 <script src="assets/js/script.js"></script>
 <!-- Custom Star Rating System -->
 <script src="assets/js/custom-stars.js"></script>
@@ -809,6 +1101,66 @@
             link.addEventListener('click', function() {
                 console.log('Menu link clicked');
                 setTimeout(() => closeMenu(), 100);
+            });
+        });
+    });
+</script>
+
+<!-- Booking Form Date Picker JavaScript -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Set minimum date to today for both date inputs
+        const today = new Date().toISOString().split('T')[0];
+        const checkinDate = document.querySelector('input[name="checkin_date"]');
+        const checkoutDate = document.querySelector('input[name="checkout_date"]');
+
+        if (checkinDate) {
+            checkinDate.setAttribute('min', today);
+
+            // Update checkout min date when checkin changes
+            checkinDate.addEventListener('change', function() {
+                if (checkoutDate) {
+                    checkoutDate.setAttribute('min', this.value);
+                    // Clear checkout if it's before checkin
+                    if (checkoutDate.value && checkoutDate.value < this.value) {
+                        checkoutDate.value = '';
+                    }
+                }
+            });
+        }
+
+        if (checkoutDate) {
+            checkoutDate.setAttribute('min', today);
+        }
+    });
+</script>
+
+<!-- Tour Itinerary Accordion JavaScript -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const itineraryItems = document.querySelectorAll('.itinerary-item');
+
+        itineraryItems.forEach((item, index) => {
+            const header = item.querySelector('.itinerary-header');
+
+            // Open first item by default
+            if (index === 0) {
+                item.classList.add('active');
+            }
+
+            // Add click handler
+            header.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                const isActive = item.classList.contains('active');
+
+                // Close all items
+                itineraryItems.forEach(i => i.classList.remove('active'));
+
+                // Toggle current item
+                if (!isActive) {
+                    item.classList.add('active');
+                }
             });
         });
     });

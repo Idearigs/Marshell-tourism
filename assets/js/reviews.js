@@ -391,19 +391,19 @@ class ReviewSystem {
 
         let starsHtml = '';
 
-        // Full stars
+        // Full stars - filled and golden
         for (let i = 0; i < fullStars; i++) {
-            starsHtml += `<i class="ph ph-star-fill ${starClass} text-warning"></i>`;
+            starsHtml += `<i class="ph-fill ph-star ${starClass}" style="color: #fbbf24;"></i>`;
         }
 
         // Half star
         if (hasHalfStar) {
-            starsHtml += `<i class="ph ph-star-half ${starClass} text-warning"></i>`;
+            starsHtml += `<i class="ph ph-star-half ${starClass}" style="color: #fbbf24;"></i>`;
         }
 
-        // Empty stars
+        // Empty stars - outlined and gray
         for (let i = 0; i < emptyStars; i++) {
-            starsHtml += `<i class="ph ph-star ${starClass} text-muted"></i>`;
+            starsHtml += `<i class="ph ph-star ${starClass}" style="color: #d1d5db;"></i>`;
         }
 
         return starsHtml;
