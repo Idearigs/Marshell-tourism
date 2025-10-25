@@ -1,3 +1,34 @@
+<?php
+session_start();
+require_once 'includes/config.php';
+
+// Check if admin is logged in (for edit mode)
+$isAdmin = isset($_SESSION['admin_logged_in']) && $_SESSION['admin_logged_in'] === true;
+
+// Get database connection and fetch active locations with their gallery images
+$pdo = getDBConnection();
+$stmt = $pdo->prepare("SELECT DISTINCT * FROM tour_locations WHERE status = 'active' ORDER BY id ASC");
+$stmt->execute();
+$locations = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+// Fetch gallery images for each location
+foreach ($locations as $key => $location) {
+    $stmt = $pdo->prepare("SELECT * FROM location_images WHERE location_id = ? ORDER BY display_order ASC, id ASC");
+    $stmt->execute([$location['id']]);
+    $locations[$key]['gallery_images'] = $stmt->fetchAll(PDO::FETCH_ASSOC);
+}
+
+// Ensure no duplicate IDs due to PHP array reference bugs
+$uniqueLocations = [];
+$seenIds = [];
+foreach ($locations as $loc) {
+    if (!in_array($loc['id'], $seenIds)) {
+        $uniqueLocations[] = $loc;
+        $seenIds[] = $loc['id'];
+    }
+}
+$locations = $uniqueLocations;
+?>
 <!DOCTYPE html>
 <html lang="en" class="rent-car-page">
 
@@ -95,6 +126,74 @@
 
     <?php include 'includes/tour-navbar.php'; ?>
 
+    <?php if ($isAdmin): ?>
+    <!-- Admin Toolbar -->
+    <div id="adminToolbar" style="position: fixed; top: 90px; right: 20px; z-index: 10000; background: linear-gradient(135deg, #2c5aa0 0%, #1e3a8a 100%); padding: 15px 20px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.2);">
+        <div style="color: white; margin-bottom: 10px; font-weight: 600; font-size: 14px;">
+            <i class="ph ph-user-gear" style="margin-right: 8px;"></i>Admin Mode
+        </div>
+        <div style="background: rgba(255,255,255,0.15); padding: 8px 12px; border-radius: 6px; margin-bottom: 10px;">
+            <div style="color: white; font-size: 12px; margin-bottom: 5px; opacity: 0.9;">Editing Mode:</div>
+            <select id="deviceModeSelector" onchange="switchDeviceMode()" style="width: 100%; padding: 6px; border-radius: 4px; border: none; font-weight: 600; color: #2c5aa0;">
+                <option value="desktop">🖥️ Desktop View</option>
+                <option value="mobile">📱 Mobile View</option>
+            </select>
+        </div>
+        <button id="toggleEditMode" onclick="toggleEditMode()" style="background: white; color: #2c5aa0; border: none; padding: 10px 20px; border-radius: 8px; font-weight: 600; cursor: pointer; width: 100%; margin-bottom: 8px; transition: all 0.3s;">
+            <i class="ph ph-pencil-simple" style="margin-right: 5px;"></i>
+            <span id="editModeText">Enable Edit Mode</span>
+        </button>
+        <button onclick="toggleQuickAddLocation()" style="background: rgba(255,255,255,0.2); color: white; border: none; padding: 8px 16px; border-radius: 8px; font-weight: 500; cursor: pointer; width: 100%; font-size: 13px; margin-bottom: 8px;">
+            <i class="ph ph-plus-circle" style="margin-right: 5px;"></i>Quick Add Location
+        </button>
+        <button onclick="window.location.href='admin/manage-locations.php'" style="background: rgba(255,255,255,0.2); color: white; border: none; padding: 8px 16px; border-radius: 8px; font-weight: 500; cursor: pointer; width: 100%; font-size: 13px;">
+            <i class="ph ph-gear" style="margin-right: 5px;"></i>Full Admin Panel
+        </button>
+    </div>
+
+    <!-- Quick Add Location Form -->
+    <div id="quickAddForm" style="display: none; position: fixed; top: 90px; right: 280px; z-index: 10000; background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.3); width: 320px; max-height: 80vh; overflow-y: auto;">
+        <h4 style="margin: 0 0 15px 0; color: #2c5aa0; font-size: 1.1rem;">
+            <i class="ph ph-map-pin-plus"></i> Quick Add Location
+        </h4>
+        <form id="quickAddLocationForm">
+            <div style="margin-bottom: 12px;">
+                <label style="display: block; margin-bottom: 5px; font-size: 13px; font-weight: 600; color: #333;">Location Name *</label>
+                <input type="text" id="quickName" required style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 6px; font-size: 13px;">
+            </div>
+            <div style="margin-bottom: 12px;">
+                <label style="display: block; margin-bottom: 5px; font-size: 13px; font-weight: 600; color: #333;">Description *</label>
+                <textarea id="quickDescription" required rows="3" style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 6px; font-size: 13px; resize: vertical;"></textarea>
+            </div>
+            <div style="margin-bottom: 12px;">
+                <label style="display: block; margin-bottom: 5px; font-size: 13px; font-weight: 600; color: #333;">Category</label>
+                <select id="quickCategory" style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 6px; font-size: 13px;">
+                    <option value="normal">Normal</option>
+                    <option value="beach">Beach</option>
+                    <option value="religious">Religious</option>
+                    <option value="cultural">Cultural</option>
+                    <option value="nature">Nature</option>
+                    <option value="adventure">Adventure</option>
+                </select>
+            </div>
+            <div style="margin-bottom: 15px;">
+                <label style="display: block; margin-bottom: 5px; font-size: 13px; font-weight: 600; color: #333;">Image URL (optional)</label>
+                <input type="url" id="quickImageUrl" placeholder="https://example.com/image.jpg" style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 6px; font-size: 13px;">
+                <small style="color: #666; font-size: 11px;">Paste from Google Images</small>
+            </div>
+            <div style="display: flex; gap: 8px;">
+                <button type="submit" style="flex: 1; background: #2c5aa0; color: white; border: none; padding: 10px; border-radius: 6px; font-weight: 600; cursor: pointer; font-size: 13px;">
+                    <i class="ph ph-plus"></i> Add Location
+                </button>
+                <button type="button" onclick="toggleQuickAddLocation()" style="flex: 0 0 auto; background: #6b7280; color: white; border: none; padding: 10px 15px; border-radius: 6px; cursor: pointer; font-size: 13px;">
+                    <i class="ph ph-x"></i>
+                </button>
+            </div>
+        </form>
+        <div id="quickAddStatus" style="margin-top: 12px; padding: 10px; border-radius: 6px; display: none; font-size: 13px;"></div>
+    </div>
+    <?php endif; ?>
+
     <div id="scrollSmoother-container">
 
         <!-- ==================== Hero Section Start Here ==================== -->
@@ -165,25 +264,27 @@
                         <div class="rent-car-map-container">
                             <img src="assets/images/sri-lanka-image.png" alt="Sri Lanka Map" class="rent-car-sri-lanka-map">
 
-                            <!-- Location Pins -->
-                            <div class="rent-car-location-pin" style="top: 15%; left: 25%;" data-location="colombo" data-name="Colombo" data-description="Commercial capital with vibrant city life" data-category="normal">
-                                <i class="ph-fill ph-map-pin"></i>
+                            <!-- Location Pins - Dynamically Loaded from Database -->
+                            <?php foreach ($locations as $location): ?>
+                            <div class="rent-car-location-pin location-pin-editable"
+                                 data-id="<?php echo $location['id']; ?>"
+                                 data-location="<?php echo strtolower(str_replace(' ', '-', $location['name'])); ?>"
+                                 data-name="<?php echo htmlspecialchars($location['name']); ?>"
+                                 data-description="<?php echo htmlspecialchars($location['description']); ?>"
+                                 data-category="<?php echo $location['category']; ?>"
+                                 data-image="<?php echo htmlspecialchars($location['image'] ?? ''); ?>"
+                                 data-gallery='<?php echo json_encode($location['gallery_images']); ?>'
+                                 data-desktop-x="<?php echo $location['position_x']; ?>"
+                                 data-desktop-y="<?php echo $location['position_y']; ?>"
+                                 data-mobile-x="<?php echo $location['mobile_position_x'] ?? $location['position_x']; ?>"
+                                 data-mobile-y="<?php echo $location['mobile_position_y'] ?? $location['position_y']; ?>"
+                                 title="ID: <?php echo $location['id']; ?> - <?php echo htmlspecialchars($location['name']); ?>">
+                                <i class="ph-fill <?php echo $location['icon_type']; ?>"></i>
+                                <span class="location-name-label">
+                                    <?php if ($isAdmin): ?><small style="opacity: 0.7;">[<?php echo $location['id']; ?>]</small> <?php endif; ?><?php echo htmlspecialchars($location['name']); ?>
+                                </span>
                             </div>
-                            <div class="rent-car-location-pin" style="top: 35%; left: 45%;" data-location="kandy" data-name="Kandy" data-description="Cultural capital and Temple of Tooth" data-category="religious">
-                                <i class="ph-fill ph-flower-lotus"></i>
-                            </div>
-                            <div class="rent-car-location-pin" style="top: 25%; left: 35%;" data-location="anuradhapura" data-name="Anuradhapura" data-description="Ancient Buddhist capital" data-category="religious">
-                                <i class="ph-fill ph-flower-lotus"></i>
-                            </div>
-                            <div class="rent-car-location-pin" style="top: 70%; left: 30%;" data-location="galle" data-name="Galle" data-description="Historic Dutch fort and coastal beauty" data-category="normal">
-                                <i class="ph-fill ph-map-pin"></i>
-                            </div>
-                            <div class="rent-car-location-pin" style="top: 60%; left: 65%;" data-location="ella" data-name="Ella" data-description="Hill country paradise with tea plantations" data-category="normal">
-                                <i class="ph-fill ph-map-pin"></i>
-                            </div>
-                            <div class="rent-car-location-pin" style="top: 75%; left: 65%;" data-location="mirissa" data-name="Mirissa" data-description="Pristine beaches and whale watching" data-category="beach">
-                                <i class="ph-fill ph-sun"></i>
-                            </div>
+                            <?php endforeach; ?>
                         </div>
                     </div>
 
@@ -746,7 +847,10 @@
                     </div>
                     <div class="d-flex align-items-center mb-3">
                         <i class="ph ph-phone me-3" style="color: #2c5aa0;"></i>
-                        <a href="tel:+94252223456" class="rent-car-footer-link mb-0">+94 25 222 3456</a>
+                        <div>
+                            <a href="tel:+94772585242" class="rent-car-footer-link mb-0 d-block">+94 772585242</a>
+                            <a href="tel:+94711165242" class="rent-car-footer-link mb-0 d-block">+94 711165242</a>
+                        </div>
                     </div>
                     <div class="d-flex align-items-start">
                         <i class="ph ph-map-pin me-3 mt-1" style="color: #2c5aa0;"></i>
@@ -782,6 +886,7 @@
         };
 
         let selectedVehicle = null;
+        let selectedDestinations = [];
 
         // Vehicle selection
         document.querySelectorAll('.vehicle-card-inner').forEach(card => {
@@ -826,13 +931,303 @@
             e.preventDefault();
             alert('Thank you for your booking! We will contact you shortly to confirm your reservation.');
         });
+
+        // Location selection functionality
+        function addLocationClickListeners() {
+            const locationPins = document.querySelectorAll('.location-pin-editable');
+
+            locationPins.forEach(pin => {
+                pin.addEventListener('click', function(e) {
+                    // Don't add location if in edit mode
+                    <?php if ($isAdmin): ?>
+                    if (editModeEnabled) return;
+                    <?php endif; ?>
+
+                    const locationId = this.dataset.id;
+                    const locationName = this.dataset.name;
+                    const locationDescription = this.dataset.description;
+                    const locationCategory = this.dataset.category;
+                    const locationImage = this.dataset.image;
+                    const galleryImages = JSON.parse(this.dataset.gallery || '[]');
+
+                    // Debug: Log what was clicked
+                    console.log('Clicked location:', {
+                        id: locationId,
+                        name: locationName,
+                        currentDestinations: selectedDestinations.map(d => ({id: d.id, name: d.name}))
+                    });
+
+                    // Check if already selected (compare as string to handle any type mismatches)
+                    if (selectedDestinations.find(dest => String(dest.id) === String(locationId))) {
+                        showLocationNotification('Already Added', `${locationName} is already in your trip`, 'warning');
+                        return;
+                    }
+
+                    // Add to selected destinations
+                    const destination = {
+                        id: locationId,
+                        name: locationName,
+                        description: locationDescription,
+                        category: locationCategory,
+                        image: locationImage || 'assets/images/locations/default-location.svg', // Use database image or default
+                        gallery: galleryImages // Array of gallery images
+                    };
+
+                    selectedDestinations.push(destination);
+                    updateDestinationsUI();
+
+                    // Mark pin as selected
+                    this.classList.add('selected');
+
+                    showLocationNotification('Added!', `${locationName} added to your trip`, 'success');
+
+                    // Enable proceed button if destinations selected
+                    document.getElementById('proceedToVehicles').disabled = selectedDestinations.length === 0;
+                });
+            });
+        }
+
+        function updateDestinationsUI() {
+            const container = document.getElementById('selectedDestinations');
+
+            if (selectedDestinations.length === 0) {
+                container.innerHTML = '<p class="text-muted text-center py-5">Click on map locations to add them to your trip</p>';
+                return;
+            }
+
+            container.innerHTML = selectedDestinations.map((dest, index) => {
+                // Use first gallery image if available, otherwise use main image
+                let cardImage = dest.image;
+                if (dest.gallery && dest.gallery.length > 0) {
+                    cardImage = dest.gallery[0].image_url;
+                }
+
+                return `
+                    <div class="rent-car-destination-card" data-destination-id="${dest.id}">
+                        <div class="d-flex align-items-center">
+                            <div class="destination-image-container">
+                                <img src="${cardImage}" alt="${dest.name}" class="destination-image">
+                                <div class="destination-number">${index + 1}</div>
+                            </div>
+                            <div class="destination-content">
+                                <div class="destination-name">${dest.name}</div>
+                                <a href="javascript:void(0)" class="read-more-link" onclick="showLocationDetails('${dest.id}')">
+                                    Read More <i class="ph ph-arrow-right"></i>
+                                </a>
+                            </div>
+                            <button class="btn-remove-destination" onclick="removeDestination('${dest.id}')" title="Remove">
+                                <i class="ph ph-x"></i>
+                            </button>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function removeDestination(locationId) {
+            selectedDestinations = selectedDestinations.filter(dest => dest.id !== locationId);
+            updateDestinationsUI();
+
+            // Remove selected class from pin
+            const pin = document.querySelector(`.location-pin-editable[data-id="${locationId}"]`);
+            if (pin) pin.classList.remove('selected');
+
+            // Disable proceed button if no destinations
+            document.getElementById('proceedToVehicles').disabled = selectedDestinations.length === 0;
+        }
+
+        function showLocationDetails(locationId) {
+            const location = selectedDestinations.find(dest => dest.id === locationId);
+            if (!location) return;
+
+            // Determine which images to show in slideshow
+            let slideshowImages = [];
+            if (location.gallery && location.gallery.length > 0) {
+                // Use gallery images if available
+                slideshowImages = location.gallery.map(img => img.image_url);
+            } else if (location.image) {
+                // Fall back to single main image
+                slideshowImages = [location.image];
+            } else {
+                // Use default placeholder
+                slideshowImages = ['assets/images/locations/default-location.svg'];
+            }
+
+            // Create modal with slideshow
+            const modal = document.createElement('div');
+            modal.className = 'location-details-modal';
+            modal.innerHTML = `
+                <div class="location-details-content">
+                    <button class="modal-close-btn" onclick="closeLocationDetails()">
+                        <i class="ph ph-x"></i>
+                    </button>
+
+                    <!-- Image Slideshow -->
+                    <div class="location-slideshow">
+                        ${slideshowImages.length > 1 ? `
+                            <button class="slideshow-prev" onclick="changeSlide(-1, event)">
+                                <i class="ph ph-caret-left"></i>
+                            </button>
+                        ` : ''}
+
+                        <div class="slideshow-images">
+                            ${slideshowImages.map((imgUrl, index) => `
+                                <img src="${imgUrl}"
+                                     alt="${location.name}"
+                                     class="location-details-image ${index === 0 ? 'active' : ''}"
+                                     data-slide-index="${index}">
+                            `).join('')}
+                        </div>
+
+                        ${slideshowImages.length > 1 ? `
+                            <button class="slideshow-next" onclick="changeSlide(1, event)">
+                                <i class="ph ph-caret-right"></i>
+                            </button>
+
+                            <!-- Slide indicators -->
+                            <div class="slideshow-indicators">
+                                ${slideshowImages.map((_, index) => `
+                                    <span class="indicator ${index === 0 ? 'active' : ''}"
+                                          onclick="goToSlide(${index}, event)"></span>
+                                `).join('')}
+                            </div>
+                        ` : ''}
+                    </div>
+
+                    <h3 class="location-details-title">${location.name}</h3>
+                    <p class="location-details-description">${location.description}</p>
+                    <div class="location-details-category">
+                        <i class="ph ph-tag"></i> ${location.category.charAt(0).toUpperCase() + location.category.slice(1)}
+                    </div>
+                </div>
+            `;
+
+            document.body.appendChild(modal);
+            setTimeout(() => modal.classList.add('show'), 10);
+
+            // Initialize slideshow index
+            modal.dataset.currentSlide = '0';
+
+            // Close modal when clicking outside the content
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    closeLocationDetails();
+                }
+            });
+        }
+
+        function closeLocationDetails() {
+            const modal = document.querySelector('.location-details-modal');
+            if (modal) {
+                modal.classList.remove('show');
+                setTimeout(() => modal.remove(), 300);
+            }
+        }
+
+        function changeSlide(direction, event) {
+            event.stopPropagation();
+            const modal = document.querySelector('.location-details-modal');
+            if (!modal) return;
+
+            const images = modal.querySelectorAll('.location-details-image');
+            const indicators = modal.querySelectorAll('.indicator');
+            let currentIndex = parseInt(modal.dataset.currentSlide || '0');
+
+            // Hide current slide
+            images[currentIndex].classList.remove('active');
+            if (indicators[currentIndex]) indicators[currentIndex].classList.remove('active');
+
+            // Calculate new index
+            currentIndex += direction;
+            if (currentIndex < 0) currentIndex = images.length - 1;
+            if (currentIndex >= images.length) currentIndex = 0;
+
+            // Show new slide
+            images[currentIndex].classList.add('active');
+            if (indicators[currentIndex]) indicators[currentIndex].classList.add('active');
+
+            modal.dataset.currentSlide = currentIndex.toString();
+        }
+
+        function goToSlide(index, event) {
+            event.stopPropagation();
+            const modal = document.querySelector('.location-details-modal');
+            if (!modal) return;
+
+            const images = modal.querySelectorAll('.location-details-image');
+            const indicators = modal.querySelectorAll('.indicator');
+            const currentIndex = parseInt(modal.dataset.currentSlide || '0');
+
+            // Hide current slide
+            images[currentIndex].classList.remove('active');
+            if (indicators[currentIndex]) indicators[currentIndex].classList.remove('active');
+
+            // Show new slide
+            images[index].classList.add('active');
+            if (indicators[index]) indicators[index].classList.add('active');
+
+            modal.dataset.currentSlide = index.toString();
+        }
+
+        function showLocationNotification(title, message, type) {
+            const colors = {
+                success: '#10b981',
+                warning: '#f59e0b',
+                info: '#3b82f6'
+            };
+
+            const notif = document.createElement('div');
+            notif.className = 'location-notification';
+            notif.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                z-index: 10001;
+                background: white;
+                padding: 15px 20px;
+                border-radius: 10px;
+                box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+                border-left: 4px solid ${colors[type]};
+                min-width: 280px;
+                animation: slideInRight 0.3s ease-out;
+            `;
+
+            notif.innerHTML = `
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <div style="width: 28px; height: 28px; border-radius: 50%; background: ${colors[type]}; display: flex; align-items: center; justify-content: center; color: white; font-size: 16px;">
+                        ${type === 'success' ? '✓' : type === 'warning' ? '!' : 'i'}
+                    </div>
+                    <div>
+                        <div style="font-weight: 600; color: #1f2937; margin-bottom: 2px;">${title}</div>
+                        <div style="font-size: 13px; color: #6b7280;">${message}</div>
+                    </div>
+                </div>
+            `;
+
+            document.body.appendChild(notif);
+
+            setTimeout(() => {
+                notif.style.animation = 'slideOutRight 0.3s ease-out';
+                setTimeout(() => notif.remove(), 300);
+            }, 2500);
+        }
+
+        // Initialize location click listeners when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            addLocationClickListeners();
+        });
     </script>
 
     <!-- Include necessary JS files -->
     <script src="assets/js/jquery-3.7.1.min.js"></script>
     <script src="assets/js/phosphor-icon.js"></script>
     <script src="assets/js/boostrap.bundle.min.js"></script>
-    <script src="assets/js/main.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Don't load main.js on customize page to avoid errors -->
+    <!-- <script src="assets/js/main.js"></script> -->
 
     <!-- Car Rental Form Submission Script -->
     <script>
@@ -1091,6 +1486,391 @@
             }
         });
     </script>
+
+    <!-- Device Detection and Position Loading Script -->
+    <script>
+        // Detect device type
+        function isMobileDevice() {
+            return window.innerWidth <= 768;
+        }
+
+        // Current editing mode (for admins)
+        let currentEditingMode = isMobileDevice() ? 'mobile' : 'desktop'; // Auto-detect on load
+
+        // Load positions based on device
+        function loadPositions() {
+            const pins = document.querySelectorAll('.location-pin-editable');
+            const isMobile = isMobileDevice();
+
+            pins.forEach(pin => {
+                // Skip if pin is being dragged
+                if (pin.classList.contains('dragging')) {
+                    return;
+                }
+
+                <?php if ($isAdmin): ?>
+                // Admin sees based on selected mode
+                const x = currentEditingMode === 'mobile' ? pin.dataset.mobileX : pin.dataset.desktopX;
+                const y = currentEditingMode === 'mobile' ? pin.dataset.mobileY : pin.dataset.desktopY;
+                <?php else: ?>
+                // Regular users see based on their actual device
+                const x = isMobile ? pin.dataset.mobileX : pin.dataset.desktopX;
+                const y = isMobile ? pin.dataset.mobileY : pin.dataset.desktopY;
+                <?php endif; ?>
+
+                pin.style.left = x + '%';
+                pin.style.top = y + '%';
+            });
+        }
+
+        // Load positions on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            <?php if ($isAdmin): ?>
+            // Update dropdown to match current device
+            const selector = document.getElementById('deviceModeSelector');
+            selector.value = currentEditingMode;
+            <?php endif; ?>
+
+            loadPositions();
+        });
+
+        // Reload positions on window resize (for responsive behavior)
+        let resizeTimer;
+        window.addEventListener('resize', function() {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(function() {
+                // Auto-switch editing mode based on window size for admins
+                <?php if ($isAdmin): ?>
+                const newMode = isMobileDevice() ? 'mobile' : 'desktop';
+                if (currentEditingMode !== newMode) {
+                    currentEditingMode = newMode;
+                    document.getElementById('deviceModeSelector').value = currentEditingMode;
+                }
+                <?php endif; ?>
+                loadPositions();
+            }, 250);
+        });
+
+        <?php if ($isAdmin): ?>
+        // Switch between desktop/mobile editing mode
+        function switchDeviceMode() {
+            const selector = document.getElementById('deviceModeSelector');
+            currentEditingMode = selector.value;
+            loadPositions();
+
+            showEditNotification('Switched Mode', `Now editing ${currentEditingMode} positions`, 'info');
+        }
+        <?php endif; ?>
+    </script>
+
+    <?php if ($isAdmin): ?>
+    <!-- Admin Edit Mode Script -->
+    <script>
+        let editModeEnabled = false;
+        let draggedPin = null;
+        let isDragging = false;
+
+        function toggleEditMode() {
+            editModeEnabled = !editModeEnabled;
+            const editBtn = document.getElementById('toggleEditMode');
+            const editText = document.getElementById('editModeText');
+            const pins = document.querySelectorAll('.location-pin-editable');
+
+            if (editModeEnabled) {
+                // Enable edit mode
+                editText.textContent = 'Disable Edit Mode';
+                editBtn.style.background = '#10b981';
+                editBtn.style.color = 'white';
+
+                // Show notification
+                showEditNotification('Edit Mode Enabled', 'Click and drag any location pin to reposition it. Changes are saved automatically.', 'success');
+
+                // Make pins draggable
+                pins.forEach(pin => {
+                    pin.style.cursor = 'move';
+                    pin.style.border = '3px dashed #fbbf24';
+                    pin.style.boxShadow = '0 0 0 4px rgba(251, 191, 36, 0.2)';
+
+                    // Show location name always in edit mode
+                    const label = pin.querySelector('.location-name-label');
+                    if (label) {
+                        label.style.opacity = '1';
+                        label.style.visibility = 'visible';
+                        label.style.left = '48px';
+                    }
+
+                    pin.addEventListener('mousedown', startDrag);
+                    pin.addEventListener('touchstart', startDrag, { passive: false });
+                });
+
+                // Disable location selection functionality
+                pins.forEach(pin => {
+                    pin.style.pointerEvents = 'none';
+                    setTimeout(() => pin.style.pointerEvents = 'auto', 100);
+                });
+
+            } else {
+                // Disable edit mode
+                editText.textContent = 'Enable Edit Mode';
+                editBtn.style.background = 'white';
+                editBtn.style.color = '#2c5aa0';
+
+                showEditNotification('Edit Mode Disabled', 'Location positioning has been locked.', 'info');
+
+                // Remove draggable styling
+                pins.forEach(pin => {
+                    pin.style.cursor = 'pointer';
+                    pin.style.border = '3px solid white';
+                    pin.style.boxShadow = '0 4px 15px rgba(44, 90, 160, 0.3)';
+
+                    const label = pin.querySelector('.location-name-label');
+                    if (label) {
+                        label.style.opacity = '';
+                        label.style.visibility = '';
+                        label.style.left = '';
+                    }
+
+                    pin.removeEventListener('mousedown', startDrag);
+                    pin.removeEventListener('touchstart', startDrag);
+                });
+            }
+        }
+
+        function startDrag(e) {
+            if (!editModeEnabled) return;
+            e.preventDefault();
+            e.stopPropagation();
+
+            draggedPin = this;
+            isDragging = true;
+            draggedPin.classList.add('dragging');
+            draggedPin.style.zIndex = '1000';
+        }
+
+        // Handle mouse move
+        document.addEventListener('mousemove', handleDragMove);
+        // Handle touch move
+        document.addEventListener('touchmove', handleDragMove, { passive: false });
+
+        function handleDragMove(e) {
+            if (!isDragging || !draggedPin) return;
+
+            e.preventDefault();
+
+            const mapContainer = document.querySelector('.rent-car-map-container');
+            const rect = mapContainer.getBoundingClientRect();
+
+            // Get clientX and clientY from either mouse or touch event
+            const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+            const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+
+            let x = ((clientX - rect.left) / rect.width) * 100;
+            let y = ((clientY - rect.top) / rect.height) * 100;
+
+            // Clamp values
+            x = Math.max(0, Math.min(100, x));
+            y = Math.max(0, Math.min(100, y));
+
+            draggedPin.style.left = x + '%';
+            draggedPin.style.top = y + '%';
+
+            // Update data attributes
+            draggedPin.dataset.posX = x.toFixed(2);
+            draggedPin.dataset.posY = y.toFixed(2);
+        }
+
+        // Handle mouse up
+        document.addEventListener('mouseup', handleDragEnd);
+        // Handle touch end
+        document.addEventListener('touchend', handleDragEnd);
+
+        async function handleDragEnd() {
+            if (!isDragging || !draggedPin) return;
+
+            isDragging = false;
+            draggedPin.classList.remove('dragging');
+            draggedPin.style.zIndex = '';
+
+            // Auto-save position
+            const locationId = draggedPin.dataset.id;
+            const locationName = draggedPin.dataset.name;
+            const posX = parseFloat(draggedPin.style.left);
+            const posY = parseFloat(draggedPin.style.top);
+
+            // Update the data attributes
+            if (currentEditingMode === 'mobile') {
+                draggedPin.dataset.mobileX = posX.toFixed(2);
+                draggedPin.dataset.mobileY = posY.toFixed(2);
+            } else {
+                draggedPin.dataset.desktopX = posX.toFixed(2);
+                draggedPin.dataset.desktopY = posY.toFixed(2);
+            }
+
+            // Save to database
+            try {
+                const formData = new FormData();
+                formData.append('id', locationId);
+                formData.append('device_type', currentEditingMode);
+                formData.append('position_x', posX.toFixed(2));
+                formData.append('position_y', posY.toFixed(2));
+
+                const response = await fetch('admin/api/update-position.php', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    showEditNotification('Saved!', `${locationName} ${currentEditingMode} position: X: ${posX.toFixed(2)}%, Y: ${posY.toFixed(2)}%`, 'success');
+                } else {
+                    showEditNotification('Error!', result.message, 'error');
+                }
+            } catch (error) {
+                showEditNotification('Error!', 'Failed to save position. Please try again.', 'error');
+                console.error('Error:', error);
+            }
+
+            draggedPin = null;
+        }
+
+        function showEditNotification(title, message, type) {
+            const existingNotif = document.querySelector('.edit-notification');
+            if (existingNotif) existingNotif.remove();
+
+            const colors = {
+                success: '#10b981',
+                error: '#ef4444',
+                info: '#3b82f6'
+            };
+
+            const notif = document.createElement('div');
+            notif.className = 'edit-notification';
+            notif.style.cssText = `
+                position: fixed;
+                top: 20px;
+                left: 50%;
+                transform: translateX(-50%);
+                z-index: 10001;
+                background: white;
+                padding: 15px 25px;
+                border-radius: 12px;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+                border-left: 4px solid ${colors[type]};
+                min-width: 300px;
+                max-width: 500px;
+                animation: slideDown 0.3s ease-out;
+            `;
+
+            notif.innerHTML = `
+                <div style="display: flex; align-items: center; gap: 12px;">
+                    <div style="width: 32px; height: 32px; border-radius: 50%; background: ${colors[type]}; display: flex; align-items: center; justify-content: center; color: white; font-size: 18px; flex-shrink: 0;">
+                        ${type === 'success' ? '✓' : type === 'error' ? '✕' : 'i'}
+                    </div>
+                    <div style="flex: 1;">
+                        <div style="font-weight: 700; color: #1f2937; margin-bottom: 4px;">${title}</div>
+                        <div style="font-size: 14px; color: #6b7280;">${message}</div>
+                    </div>
+                </div>
+            `;
+
+            document.body.appendChild(notif);
+
+            setTimeout(() => {
+                notif.style.animation = 'slideUp 0.3s ease-out';
+                setTimeout(() => notif.remove(), 300);
+            }, 3000);
+        }
+
+        // Add animations
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes slideDown {
+                from { transform: translateX(-50%) translateY(-100%); opacity: 0; }
+                to { transform: translateX(-50%) translateY(0); opacity: 1; }
+            }
+            @keyframes slideUp {
+                from { transform: translateX(-50%) translateY(0); opacity: 1; }
+                to { transform: translateX(-50%) translateY(-100%); opacity: 0; }
+            }
+            .location-pin-editable.dragging {
+                transform: translate(-50%, -50%) scale(1.2);
+                box-shadow: 0 8px 30px rgba(44, 90, 160, 0.6) !important;
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Quick Add Location Functions
+        function toggleQuickAddLocation() {
+            const form = document.getElementById('quickAddForm');
+            if (form.style.display === 'none' || !form.style.display) {
+                form.style.display = 'block';
+            } else {
+                form.style.display = 'none';
+                // Reset form
+                document.getElementById('quickAddLocationForm').reset();
+                document.getElementById('quickAddStatus').style.display = 'none';
+            }
+        }
+
+        document.getElementById('quickAddLocationForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('quickName').value.trim();
+            const description = document.getElementById('quickDescription').value.trim();
+            const category = document.getElementById('quickCategory').value;
+            const imageUrl = document.getElementById('quickImageUrl').value.trim();
+
+            // Brand new API with different parameter names
+            const formData = new FormData();
+            formData.append('location_name', name);  // Changed from 'name'
+            formData.append('location_description', description);  // Changed from 'description'
+            formData.append('location_category', category);  // Changed from 'category'
+            formData.append('image_url', imageUrl);
+            formData.append('position_x', '50');
+            formData.append('position_y', '50');
+
+            const statusDiv = document.getElementById('quickAddStatus');
+            statusDiv.style.display = 'block';
+            statusDiv.style.background = '#f3f4f6';
+            statusDiv.style.color = '#666';
+            statusDiv.innerHTML = '<i class="ph ph-spinner ph-spin"></i> Adding location...';
+
+            try {
+                // NEW API ENDPOINT - completely separate from location-operations.php
+                const response = await fetch('admin/api/quick-add-location.php', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    statusDiv.style.background = '#d1fae5';
+                    statusDiv.style.color = '#065f46';
+                    statusDiv.innerHTML = `<i class="ph ph-check-circle"></i> Location "${result.location_name}" added! Refreshing...`;
+
+                    // Reset form
+                    document.getElementById('quickAddLocationForm').reset();
+
+                    // Reload page after 1 second to show new location
+                    setTimeout(() => {
+                        window.location.reload();
+                    }, 1000);
+                } else {
+                    statusDiv.style.background = '#fee2e2';
+                    statusDiv.style.color = '#991b1b';
+                    statusDiv.innerHTML = `<i class="ph ph-x-circle"></i> Error: ${result.message}`;
+                }
+            } catch (error) {
+                statusDiv.style.background = '#fee2e2';
+                statusDiv.style.color = '#991b1b';
+                statusDiv.innerHTML = '<i class="ph ph-x-circle"></i> Failed to add location. Please try again.';
+                console.error('Error:', error);
+            }
+        });
+    </script>
+    <?php endif; ?>
 
 </body>
 </html>

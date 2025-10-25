@@ -841,7 +841,7 @@
                     </div>
                     <div class="d-flex align-items-center mb-3">
                         <i class="ph ph-phone me-3" style="color: #2c5aa0;"></i>
-                        <a href="tel:+94252223456" class="rent-car-footer-link mb-0">+94 25 222 3456</a>
+                        <div><a href="tel:+94772585242" class="rent-car-footer-link mb-0 d-block">+94 772585242</a><a href="tel:+94711165242" class="rent-car-footer-link mb-0 d-block">+94 711165242</a></div>
                     </div>
                     <div class="d-flex align-items-start">
                         <i class="ph ph-map-pin me-3 mt-1" style="color: #2c5aa0;"></i>
